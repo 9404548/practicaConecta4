@@ -1,0 +1,362 @@
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm
+  1   0000              PANTALLA_BIENVENIDA: INCBIN "connect4screen.SCR"
+  2   1B00                  INCLUDE "pantalla_juego.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantalla_juego.asm
+  1+  1B00              SCR_PTLLA_JUEGO:
+  2+  1B00 C5               PUSH BC
+  2+  1B01 E5             PUSH HL
+  2+  1B02 D5             PUSH DE
+  2+  1B03 F5             PUSH AF
+  3+  1B04 3E 00            LD A, 0
+  4+  1B06 CD 14 1B         CALL SET_GRID_EMPTY
+  5+  1B09 21 A5 40         LD HL, $40A5
+  6+  1B0C CD 1E 1B         CALL DRAW_EMPTY_CIRCLES
+  7+  1B0F F1               POP AF
+  7+  1B10 D1             POP DE
+  7+  1B11 E1             POP HL
+  7+  1B12 C1             POP BC
+  8+  1B13 C9               RET
+  9+  1B14
+ 10+  1B14              SET_GRID_EMPTY:
+ 11+  1B14 C5               PUSH BC
+ 12+  1B15 06 07            LD B, 7
+ 13+  1B17              GRIDLOOP:
+ 14+  1B17 CD 49 1B         CALL SET_COLUMN_COLOR
+ 15+  1B1A 10 FB            DJNZ GRIDLOOP
+ 16+  1B1C                  ; CALL SET_COLUMN_COLOR
+ 17+  1B1C                  ; CALL SET_COLUMN_COLOR
+ 18+  1B1C                  ; CALL SET_COLUMN_COLOR
+ 19+  1B1C                  ; CALL SET_COLUMN_COLOR
+ 20+  1B1C                  ; CALL SET_COLUMN_COLOR
+ 21+  1B1C                  ; CALL SET_COLUMN_COLOR
+ 22+  1B1C C1               POP BC
+ 23+  1B1D C9               RET
+ 24+  1B1E
+ 25+  1B1E              DRAW_EMPTY_CIRCLES:
+ 26+  1B1E C5               PUSH BC
+ 27+  1B1F 06 07            LD B, 7
+ 28+  1B21              EMPTYLOOP:
+ 29+  1B21 CD 28 1B         CALL DRAW_CIRCLE_COLUMN
+ 30+  1B24 10 FB            DJNZ EMPTYLOOP
+ 31+  1B26                  ; CALL DRAW_CIRCLE_COLUMN
+ 32+  1B26                  ; CALL DRAW_CIRCLE_COLUMN
+ 33+  1B26                  ; CALL DRAW_CIRCLE_COLUMN
+ 34+  1B26                  ; CALL DRAW_CIRCLE_COLUMN
+ 35+  1B26                  ; CALL DRAW_CIRCLE_COLUMN
+ 36+  1B26                  ; CALL DRAW_CIRCLE_COLUMN
+ 37+  1B26                  ; CALL DRAW_CIRCLE_COLUMN
+ 38+  1B26 C1               POP BC
+ 39+  1B27 C9               RET
+ 40+  1B28
+ 41+  1B28              DRAW_CIRCLE_COLUMN:
+ 42+  1B28 C5               PUSH BC
+ 43+  1B29 06 06            LD B, 6
+ 44+  1B2B              COLUMNLOOP:
+ 45+  1B2B CD 60 1B         CALL DRAW_CIRCLE
+ 46+  1B2E 10 FB            DJNZ COLUMNLOOP
+ 47+  1B30                  ; CALL DRAW_CIRCLE
+ 48+  1B30                  ; CALL DRAW_CIRCLE
+ 49+  1B30                  ; CALL DRAW_CIRCLE
+ 50+  1B30                  ; CALL DRAW_CIRCLE
+ 51+  1B30                  ; CALL DRAW_CIRCLE
+ 52+  1B30 01 C3 EF         LD BC, $EFC3
+ 53+  1B33 09               ADD HL, BC
+ 54+  1B34 C1               POP BC
+ 55+  1B35 C9               RET
+ 56+  1B36
+ 57+  1B36              VERIFY_4000:
+ 58+  1B36 3E 41            LD A, $41
+ 59+  1B38 BC               CP H
+ 60+  1B39 CC 43 1B         CALL Z, SET_4800
+ 61+  1B3C 3E 49            LD A, $49
+ 62+  1B3E BC               CP H
+ 63+  1B3F CC 46 1B         CALL Z, SET_5000
+ 64+  1B42 C9               RET
+ 65+  1B43
+ 66+  1B43              SET_4800:
+ 67+  1B43 26 48            LD H, $48
+ 68+  1B45 C9               RET
+ 69+  1B46
+ 70+  1B46              SET_5000:
+ 71+  1B46 26 50            LD H, $50
+ 72+  1B48 C9               RET
+ 73+  1B49
+ 74+  1B49              SET_COLUMN_COLOR:
+ 75+  1B49 CD ED 1C         CALL SET_C_COLOR_E
+ 76+  1B4C CD ED 1C         CALL SET_C_COLOR_E
+ 77+  1B4F CD ED 1C         CALL SET_C_COLOR_E
+ 78+  1B52 CD ED 1C         CALL SET_C_COLOR_E
+ 79+  1B55 CD ED 1C         CALL SET_C_COLOR_E
+ 80+  1B58 CD ED 1C         CALL SET_C_COLOR_E
+ 81+  1B5B 01 C3 FD         LD BC, $FDC3
+ 82+  1B5E 09               ADD HL, BC
+ 83+  1B5F C9               RET
+ 84+  1B60
+ 85+  1B60              DRAW_CIRCLE:
+ 86+  1B60
+ 87+  1B60 01 1D 00         LD BC, $001D
+ 88+  1B63
+ 89+  1B63 CD 8B 1B         CALL UL_CIRCLE
+ 90+  1B66 CD B1 1B         CALL UM_CIRCLE
+ 91+  1B69 CD D4 1B         CALL UR_CIRCLE
+ 92+  1B6C
+ 93+  1B6C 09               ADD HL, BC
+ 94+  1B6D CD 36 1B         CALL VERIFY_4000
+ 95+  1B70
+ 96+  1B70 CD FA 1B         CALL ML_CIRCLE
+ 97+  1B73 CD 1D 1C         CALL MM_CIRCLE
+ 98+  1B76 CD 3C 1C         CALL MR_CIRCLE
+ 99+  1B79
+100+  1B79 09               ADD HL, BC
+101+  1B7A CD 36 1B         CALL VERIFY_4000
+102+  1B7D
+103+  1B7D CD 5F 1C         CALL LL_CIRCLE
+104+  1B80 CD 85 1C         CALL LM_CIRCLE
+105+  1B83 CD A8 1C         CALL LR_CIRCLE
+106+  1B86
+107+  1B86 09               ADD HL, BC
+108+  1B87 CD 36 1B         CALL VERIFY_4000
+109+  1B8A
+110+  1B8A C9               RET
+111+  1B8B
+112+  1B8B              UL_CIRCLE:
+113+  1B8B 3E 00            LD A, %00000000
+114+  1B8D 77               LD (HL), A
+115+  1B8E CD CE 1C         CALL INC_AND_LOAD_H
+116+  1B91 3E 03            LD A, %00000011
+117+  1B93 CD CE 1C         CALL INC_AND_LOAD_H
+118+  1B96 3E 07            LD A, %00000111
+119+  1B98 CD CE 1C         CALL INC_AND_LOAD_H
+120+  1B9B 3E 0F            LD A, %00001111
+121+  1B9D CD CE 1C         CALL INC_AND_LOAD_H
+122+  1BA0 3E 1F            LD A, %00011111
+123+  1BA2 CD CE 1C         CALL INC_AND_LOAD_H
+124+  1BA5 3E 3F            LD A, %00111111
+125+  1BA7 CD CE 1C         CALL INC_AND_LOAD_H
+126+  1BAA CD CE 1C         CALL INC_AND_LOAD_H
+127+  1BAD CD D8 1C         CALL SETBACK_HL
+128+  1BB0 C9               RET
+129+  1BB1
+130+  1BB1              UM_CIRCLE:
+131+  1BB1 3E 00            LD A, %00000000
+132+  1BB3 25               DEC H
+133+  1BB4 CD CE 1C         CALL INC_AND_LOAD_H
+134+  1BB7 3E 7E            LD A, %01111110
+135+  1BB9 CD CE 1C         CALL INC_AND_LOAD_H
+136+  1BBC 3E FF            LD A, %11111111
+137+  1BBE CD CE 1C         CALL INC_AND_LOAD_H
+138+  1BC1 CD CE 1C         CALL INC_AND_LOAD_H
+139+  1BC4 CD CE 1C         CALL INC_AND_LOAD_H
+140+  1BC7 CD CE 1C         CALL INC_AND_LOAD_H
+141+  1BCA CD CE 1C         CALL INC_AND_LOAD_H
+142+  1BCD CD CE 1C         CALL INC_AND_LOAD_H
+143+  1BD0 CD D8 1C         CALL SETBACK_HL
+144+  1BD3 C9               RET
+145+  1BD4
+146+  1BD4              UR_CIRCLE:
+147+  1BD4 3E 00            LD A, %00000000
+148+  1BD6 77               LD (HL), A
+149+  1BD7 CD CE 1C         CALL INC_AND_LOAD_H
+150+  1BDA 3E C0            LD A, %11000000
+151+  1BDC CD CE 1C         CALL INC_AND_LOAD_H
+152+  1BDF 3E E0            LD A, %11100000
+153+  1BE1 CD CE 1C         CALL INC_AND_LOAD_H
+154+  1BE4 3E F0            LD A, %11110000
+155+  1BE6 CD CE 1C         CALL INC_AND_LOAD_H
+156+  1BE9 3E F8            LD A, %11111000
+157+  1BEB CD CE 1C         CALL INC_AND_LOAD_H
+158+  1BEE 3E FC            LD A, %11111100
+159+  1BF0 CD CE 1C         CALL INC_AND_LOAD_H
+160+  1BF3 CD CE 1C         CALL INC_AND_LOAD_H
+161+  1BF6 CD D8 1C         CALL SETBACK_HL
+162+  1BF9 C9               RET
+163+  1BFA
+164+  1BFA              ML_CIRCLE:
+165+  1BFA 3E 3F            LD A, %00111111
+166+  1BFC 25               DEC H
+167+  1BFD CD CE 1C         CALL INC_AND_LOAD_H
+168+  1C00 3E 7F            LD A, %01111111
+169+  1C02 CD CE 1C         CALL INC_AND_LOAD_H
+170+  1C05 CD CE 1C         CALL INC_AND_LOAD_H
+171+  1C08 CD CE 1C         CALL INC_AND_LOAD_H
+172+  1C0B CD CE 1C         CALL INC_AND_LOAD_H
+173+  1C0E CD CE 1C         CALL INC_AND_LOAD_H
+174+  1C11 CD CE 1C         CALL INC_AND_LOAD_H
+175+  1C14 3E 3F            LD A, %00111111
+176+  1C16 CD CE 1C         CALL INC_AND_LOAD_H
+177+  1C19 CD D8 1C         CALL SETBACK_HL
+178+  1C1C C9               RET
+179+  1C1D
+180+  1C1D              MM_CIRCLE:
+181+  1C1D 3E FF            LD A, %11111111
+182+  1C1F 25               DEC H
+183+  1C20 CD CE 1C         CALL INC_AND_LOAD_H
+184+  1C23 CD CE 1C         CALL INC_AND_LOAD_H
+185+  1C26 CD CE 1C         CALL INC_AND_LOAD_H
+186+  1C29 CD CE 1C         CALL INC_AND_LOAD_H
+187+  1C2C CD CE 1C         CALL INC_AND_LOAD_H
+188+  1C2F CD CE 1C         CALL INC_AND_LOAD_H
+189+  1C32 CD CE 1C         CALL INC_AND_LOAD_H
+190+  1C35 CD CE 1C         CALL INC_AND_LOAD_H
+191+  1C38 CD D8 1C         CALL SETBACK_HL
+192+  1C3B C9               RET
+193+  1C3C
+194+  1C3C              MR_CIRCLE:
+195+  1C3C 3E FC            LD A, %11111100
+196+  1C3E 25               DEC H
+197+  1C3F CD CE 1C         CALL INC_AND_LOAD_H
+198+  1C42 3E FE            LD A, %11111110
+199+  1C44 CD CE 1C         CALL INC_AND_LOAD_H
+200+  1C47 CD CE 1C         CALL INC_AND_LOAD_H
+201+  1C4A CD CE 1C         CALL INC_AND_LOAD_H
+202+  1C4D CD CE 1C         CALL INC_AND_LOAD_H
+203+  1C50 CD CE 1C         CALL INC_AND_LOAD_H
+204+  1C53 CD CE 1C         CALL INC_AND_LOAD_H
+205+  1C56 3E FC            LD A, %11111100
+206+  1C58 CD CE 1C         CALL INC_AND_LOAD_H
+207+  1C5B CD D8 1C         CALL SETBACK_HL
+208+  1C5E C9               RET
+209+  1C5F
+210+  1C5F              LL_CIRCLE:
+211+  1C5F 3E 3F            LD A, %00111111
+212+  1C61 77               LD (HL), A
+213+  1C62 CD CE 1C         CALL INC_AND_LOAD_H
+214+  1C65 3E 1F            LD A, %00011111
+215+  1C67 CD CE 1C         CALL INC_AND_LOAD_H
+216+  1C6A 3E 0F            LD A, %00001111
+217+  1C6C CD CE 1C         CALL INC_AND_LOAD_H
+218+  1C6F 3E 07            LD A, %00000111
+219+  1C71 CD CE 1C         CALL INC_AND_LOAD_H
+220+  1C74 3E 03            LD A, %00000011
+221+  1C76 CD CE 1C         CALL INC_AND_LOAD_H
+222+  1C79 3E 00            LD A, %00000000
+223+  1C7B CD CE 1C         CALL INC_AND_LOAD_H
+224+  1C7E CD CE 1C         CALL INC_AND_LOAD_H
+225+  1C81 CD D8 1C         CALL SETBACK_HL
+226+  1C84 C9               RET
+227+  1C85
+228+  1C85              LM_CIRCLE:
+229+  1C85 3E FF            LD A, %11111111
+230+  1C87 25               DEC H
+231+  1C88 CD CE 1C         CALL INC_AND_LOAD_H
+232+  1C8B CD CE 1C         CALL INC_AND_LOAD_H
+233+  1C8E CD CE 1C         CALL INC_AND_LOAD_H
+234+  1C91 CD CE 1C         CALL INC_AND_LOAD_H
+235+  1C94 CD CE 1C         CALL INC_AND_LOAD_H
+236+  1C97 CD CE 1C         CALL INC_AND_LOAD_H
+237+  1C9A 3E 7E            LD A, %01111110
+238+  1C9C CD CE 1C         CALL INC_AND_LOAD_H
+239+  1C9F 3E 00            LD A, %00000000
+240+  1CA1 CD CE 1C         CALL INC_AND_LOAD_H
+241+  1CA4 CD D8 1C         CALL SETBACK_HL
+242+  1CA7 C9               RET
+243+  1CA8
+244+  1CA8              LR_CIRCLE:
+245+  1CA8 3E FC            LD A, %11111100
+246+  1CAA 77               LD (HL), A
+247+  1CAB CD CE 1C         CALL INC_AND_LOAD_H
+248+  1CAE 3E F8            LD A, %11111000
+249+  1CB0 CD CE 1C         CALL INC_AND_LOAD_H
+250+  1CB3 3E F0            LD A, %11110000
+251+  1CB5 CD CE 1C         CALL INC_AND_LOAD_H
+252+  1CB8 3E E0            LD A, %11100000
+253+  1CBA CD CE 1C         CALL INC_AND_LOAD_H
+254+  1CBD 3E C0            LD A, %11000000
+255+  1CBF CD CE 1C         CALL INC_AND_LOAD_H
+256+  1CC2 3E 00            LD A, %00000000
+257+  1CC4 CD CE 1C         CALL INC_AND_LOAD_H
+258+  1CC7 CD CE 1C         CALL INC_AND_LOAD_H
+259+  1CCA CD D8 1C         CALL SETBACK_HL
+260+  1CCD C9               RET
+261+  1CCE
+262+  1CCE              INC_AND_LOAD_H:
+263+  1CCE 50 59            LD DE, BC
+264+  1CD0 01 00 01         LD BC, $0100
+265+  1CD3 09               ADD HL, BC
+266+  1CD4 77               LD (HL), A
+267+  1CD5 42 4B            LD BC, DE
+268+  1CD7 C9               RET
+269+  1CD8
+270+  1CD8              SETBACK_HL:
+271+  1CD8 50 59            LD DE, BC
+272+  1CDA 01 01 F9         LD BC, $F901
+273+  1CDD 09               ADD HL, BC
+274+  1CDE 42 4B            LD BC, DE
+275+  1CE0 C9               RET
+276+  1CE1
+277+  1CE1              INC_HL_3X3:
+278+  1CE1 77               LD (HL), A
+279+  1CE2 50 59            LD DE, BC
+280+  1CE4 23               INC HL
+281+  1CE5 77               LD (HL), A
+282+  1CE6 23               INC HL
+283+  1CE7 77               LD (HL), A
+284+  1CE8 01 1E 00         LD BC, 30
+285+  1CEB 09               ADD HL, BC
+286+  1CEC C9               RET
+287+  1CED
+288+  1CED              SET_C_COLOR_E:
+289+  1CED 3E 0F            LD A, 1*8+7
+290+  1CEF CD E1 1C         CALL INC_HL_3X3
+291+  1CF2 CD E1 1C         CALL INC_HL_3X3
+292+  1CF5 CD E1 1C         CALL INC_HL_3X3
+293+  1CF8 C9               RET
+294+  1CF9
+295+  1CF9              CONVERT_58_2_40 ; CONVIERTE UNA DIRECCION DE MEMORIA QUE COMIENZA CON $58XX A $40XX
+296+  1CF9 01 00 E8         LD BC, $E800
+297+  1CFC 09               ADD HL, BC
+298+  1CFD F1               POP AF
+298+  1CFE D1             POP DE
+298+  1CFF E1             POP HL
+298+  1D00 C1             POP BC
+299+  1D01 C9               RET
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantalla_juego.asm
+  3   1D02
+  4   1D02              GB_BIENVENIDA:
+  5   1D02 D5               PUSH DE
+  5   1D03 E5             PUSH HL
+  5   1D04 C5             PUSH BC
+  5   1D05 F5             PUSH AF
+  6   1D06
+  7   1D06 11 00 40         LD DE, $4000
+  8   1D09 21 00 00         LD HL, PANTALLA_BIENVENIDA
+  9   1D0C 01 00 1B         LD BC, $5B00 - $4000
+ 10   1D0F CD 13 1D         CALL BIENVENIDA_BUCLE
+ 11   1D12 C9               RET
+ 12   1D13              BIENVENIDA_BUCLE:
+ 13   1D13 ED B0            LDIR
+ 14   1D15 F1               POP AF
+ 14   1D16 C1             POP BC
+ 14   1D17 E1             POP HL
+ 14   1D18 D1             POP DE
+ 15   1D19 C9               RET
+ 16   1D1A
+ 17   1D1A              GB_ADIOS:
+ 18   1D1A CD 26 1D         CALL PTLLA_NEGRA
+ 19   1D1D C9               RET
+ 20   1D1E
+ 21   1D1E              GB_FIN_NEXT:
+ 22   1D1E CD 26 1D         CALL PTLLA_NEGRA
+ 23   1D21 C9               RET
+ 24   1D22
+ 25   1D22              GB_PTLLA_INICIO_DE_JUEGO:
+ 26   1D22 CD 00 1B         CALL SCR_PTLLA_JUEGO
+ 27   1D25 C9               RET
+ 28   1D26
+ 29   1D26
+ 30   1D26              PTLLA_NEGRA:
+ 31   1D26 C5               PUSH BC
+ 31   1D27 D5             PUSH DE
+ 31   1D28 E5             PUSH HL
+ 31   1D29 F5             PUSH AF
+ 32   1D2A              PTLLA_NEGRA_BUCLE:
+ 33   1D2A 3E 00            LD A, 0
+ 34   1D2C 21 00 58         LD HL, $5800
+ 35   1D2F 01 00 03         LD BC, $5B00 - $5800
+ 36   1D32 77               LD (HL), A
+ 37   1D33 23               INC HL
+ 38   1D34 0B               DEC BC
+ 39   1D35 20 F3            JR NZ, PTLLA_NEGRA_BUCLE
+ 40   1D37 C9               RET
+ 41   1D38
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm

@@ -1,0 +1,74 @@
+K_SON: ; LECTURA DE TECLADO PARA S O N
+    LD C, $FE
+KSON_BUCLE: 
+    LD B, $FD
+    IN A, (C)
+    BIT 1, A
+    JR Z, KSON_S
+
+    LD B, $7F
+    IN A, (C)
+    BIT 3, A
+    JR Z, KSON_N
+
+    JR NZ, KSON_BUCLE
+
+KSON_N:
+    LD D, "N"
+    JR KSON_RELEASE
+
+KSON_S:
+    LD D, "S"
+
+KSON_RELEASE:
+    IN A, (C)
+    AND $1F
+    CP $1F
+    JR NZ, KSON_RELEASE
+
+    RET ; FIN DE KSON
+
+
+K_LR_ENTER: ; LECTURA DE TECLADO PARA Q (LEFT) W (RIGHT) O ENTER (SOLTAR FICHA)
+    LD C, $FE
+
+KLRE_BUCLE: 
+    LD B, $FB
+    IN A, (C)
+    BIT 0, A
+    JR Z, KLRE_Q
+    BIT 1, A
+    JR Z, KLRE_W
+
+    LD B, $BF
+    IN A, (C)
+    BIT 0, A
+    JR Z, KLRE_ENTER
+
+    JR KLRE_BUCLE
+
+KLRE_Q:
+    LD D, 'Q'
+
+KLRE_RELEASE_QW:
+    LD B, $FB
+    IN A, (C)
+    AND $1F
+    CP $1F
+    JR NZ, KLRE_RELEASE_QW
+    RET
+
+KLRE_W:
+    LD D, 'W'
+    JR KLRE_RELEASE_QW
+
+KLRE_ENTER:
+    LD D, 13 ; ASCII PARA ENTER EN ZXSPECTRUM48
+
+KLRE_RELEASE_ENTER:
+    LD B, $BF
+    IN A, (C)
+    AND $1F
+    CP $1F
+    JR NZ, KLRE_RELEASE_ENTER
+    RET ; FIN DE LECTURA Q W ENTER
