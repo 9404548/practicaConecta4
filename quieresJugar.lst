@@ -1,0 +1,264 @@
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\quieresJugar.asm
+  1   0000 C3 03 04         JP MENSAJE_BIENVENIDA
+  2   0003
+  3   0003                  INCLUDE "s_n.ASM"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\s_n.ASM
+  1+  0003              S_N:
+  2+  0003 0E FE            LD C, $FE
+  3+  0005              SN_BUCLE:
+  4+  0005 06 FD            LD B, $FD
+  5+  0007 ED 78            IN A, (C)
+  6+  0009 CB 4F            BIT 1, A
+  7+  000B 28 0C            JR Z, SN_S
+  8+  000D 06 7F            LD B, $7F
+  9+  000F ED 78            IN A, (C)
+ 10+  0011 CB 5F            BIT 3, A
+ 11+  0013 20 F0            JR NZ, SN_BUCLE
+ 12+  0015              SN_N:
+ 13+  0015 16 4E            LD D, "N"
+ 14+  0017 18 02            JR SN_SEGUIR
+ 15+  0019              SN_S:
+ 16+  0019 16 53            LD D, "S"
+ 17+  001B              SN_SEGUIR:
+ 18+  001B ED 78            IN A, (C)
+ 19+  001D E6 1F            AND $1F
+ 20+  001F FE 1F            CP $1F
+ 21+  0021 20 F8            JR NZ, SN_SEGUIR
+ 22+  0023 7A               LD A,D
+ 23+  0024 C9               RET
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\s_n.ASM
+  4   0025                  INCLUDE "printat.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm
+  1+  0025              ; -------------------------------
+  2+  0025              ; ZX Spectrum Text print library
+  3+  0025              ; Daniel León - AOC - UFV 2020
+  4+  0025              ; -------------------------------
+  5+  0025
+  6+  0025
+  7+  0025              ; ----------------------------------------------------------------------------------------
+  8+  0025              ; PRINTAT - Print a string in a position and attributes as per registers:
+  9+  0025              ;		IN	A	: Bit 7=1 For Flash / Bit 6=1 For Brigh / Bit 5,4,3 for Paper / Bit 2,1,0 for Ink
+ 10+  0025              ;		IN	B	: Row 0..23
+ 11+  0025              ;		IN	C	: Column 0..31
+ 12+  0025              ;		IN	IX	: Address of text (Text must end in a 0)
+ 13+  0025              ; ----------------------------------------------------------------------------------------
+ 14+  0025 CD 34 00     PRINTAT:	CALL PREP_PRT				; Update Attribute var &Screen & Attributes pointers
+ 15+  0028              ; ----------------------------------------------------------------------------------------
+ 16+  0028              ;		VVV Do not move PRINTSTR below as PRINTAT continues into PRINTSTR routine
+ 17+  0028              ; ----------------------------------------------------------------------------------------
+ 18+  0028              ; PRINTSTR - Prints String - IX Points to the String start
+ 19+  0028              ; ----------------------------------------------------------------------------------------
+ 20+  0028 DD 7E 00     PRINTSTR:   LD A,(IX)					; A Contains first char to print
+ 21+  002B B7           			OR A						; check for end of string (0)
+ 22+  002C C8           			RET Z						; Finish printing if 0
+ 23+  002D CD 62 00     			CALL PRINTCHNUM
+ 24+  0030 DD 23        			INC IX						; Move to next char in string
+ 25+  0032 18 F4        			JR PRINTSTR					; Start over printing sequence
+ 26+  0034              ; ----------------------------------------------------------------------------------------
+ 27+  0034
+ 28+  0034
+ 29+  0034              ;-----------------------------------------------------------------------------------------
+ 30+  0034              ; PREP_PRT - Updates Print_Attr, SCR & ATTR Vars
+ 31+  0034              ;-----------------------------------------------------------------------------------------
+ 32+  0034 32 A8 00     PREP_PRT:	LD (PRINT_ATTR),A			; Set Attribute
+ 33+  0037 CD 3D 00     PREP_PRT_2:	CALL CRtoSCREEN
+ 34+  003A C3 4F 00     			JP CRtoATTR
+ 35+  003D              ;-----------------------------------------------------------------------------------------
+ 36+  003D
+ 37+  003D              ;-----------------------------------------------------------------------------------------
+ 38+  003D              ; CRtoSCREEN - Converts a scr char coord into a SCREEN Address   b,c = y,x positions
+ 39+  003D              ;	IN  - B=Row, C=Column
+ 40+  003D              ;	OUT - HL=Address in screen also stored in (SCR_CUR_PTR)
+ 41+  003D              ;	Conversion:
+ 42+  003D              ;			Row FFfff   Column CCCCC
+ 43+  003D              ;			HL=%010FF000 fffCCCCC
+ 44+  003D              ;-----------------------------------------------------------------------------------------
+ 45+  003D              CRtoSCREEN:
+ 46+  003D 78           			LD A,B						; %___FFfff
+ 47+  003E F6 40        			OR #40						; %010FFfff
+ 48+  0040 E6 F8        			AND #F8						; %010FF000
+ 49+  0042 67           			LD H,A
+ 50+  0043
+ 51+  0043 78           			LD A,B						; %___FFfff
+ 52+  0044 E6 07        			AND #7						; %00000fff
+ 53+  0046 0F           			RRCA						; %f00000ff
+ 54+  0047 0F           			RRCA						; %ff00000f
+ 55+  0048 0F           			RRCA						; %fff00000
+ 56+  0049 B1           			OR C						; %fffCCCCC
+ 57+  004A 6F           			LD L,A
+ 58+  004B 22 A4 00                 LD (SCR_CUR_PTR),HL			; Update Variable
+ 59+  004E C9                       RET
+ 60+  004F              ; ----------------------------------------------------------------------------------------
+ 61+  004F
+ 62+  004F
+ 63+  004F
+ 64+  004F              ;-----------------------------------------------------------------------------------------
+ 65+  004F              ; CRtoATTR - Converts a screen char coord  into a ATTR Address  b,c = y,x positions
+ 66+  004F              ;	IN  - B=Row, C=Column
+ 67+  004F              ;	OUT - HL=Address in screen also stored in (SCR_ATTR_PTR)
+ 68+  004F              ;	Conversion:
+ 69+  004F              ;			Row FFfff   Column CCCCC
+ 70+  004F              ;			HL=%010110FF fffCCCCC
+ 71+  004F              ;-----------------------------------------------------------------------------------------
+ 72+  004F              CRtoATTR:
+ 73+  004F 78           			LD A,B						; %___FFfff
+ 74+  0050 0F           			RRCA						; %f000FFff
+ 75+  0051 0F           			RRCA						; %ff000FFf
+ 76+  0052 0F           			RRCA						; %fff000FF
+ 77+  0053 6F           			LD L,A
+ 78+  0054 E6 03        			AND 3						; %000000FF	value of FF can be only 00,01,10
+ 79+  0056 F6 58        			OR #58						; %010110FF value will be #58, #59 or #5A
+ 80+  0058 67           			LD H,A
+ 81+  0059
+ 82+  0059 7D           			LD A,L						; %fff000FF
+ 83+  005A E6 E0        			AND #E0						; %fff00000
+ 84+  005C B1           			OR C						; %fffCCCCC
+ 85+  005D 6F           			LD L,A
+ 86+  005E
+ 87+  005E 22 A6 00                 LD (SCR_ATTR_PTR),HL		; Update Variable
+ 88+  0061 C9                       RET
+ 89+  0062              ; ----------------------------------------------------------------------------------------
+ 90+  0062
+ 91+  0062
+ 92+  0062
+ 93+  0062              ; ----------------------------------------------------------------------------------------
+ 94+  0062              ; PRINTCHNUM - Prints Char Number N (stored in A)
+ 95+  0062              ;-----------------------------------------------------------------------------------------
+ 96+  0062              PRINTCHNUM:	;SUB 32						; Adjust Ascii to charset
+ 97+  0062 26 00        			LD H,0						; Multiply value by 8 to get to right Char in Charset
+ 98+  0064 6F           			LD L,A
+ 99+  0065 29           			ADD HL,HL
+100+  0066 29           			ADD HL,HL
+101+  0067 29           			ADD HL,HL
+102+  0068 11 A9 FF     			LD DE, CHARSET-(8*32)		; Optimize in compile time (instead of sub 32)
+103+  006B 19           			ADD HL,DE
+104+  006C EB           			EX  DE,HL					;Value in DE
+105+  006D              			; Continues to printchar below
+106+  006D              ; ----------------------------------------------------------------------------------------
+107+  006D
+108+  006D
+109+  006D              ; ----------------------------------------------------------------------------------------
+110+  006D              ; PRINTCHAR - Prints Char  (DE points to the char. Uses HL as last Cur Pointer)
+111+  006D              ; ----------------------------------------------------------------------------------------
+112+  006D              PRINTCHAR:
+113+  006D 06 08        			LD B,8						; 8 Lines per char
+114+  006F 2A A4 00                 LD HL, (SCR_CUR_PTR)		; Load Cursor Pointer y,x
+115+  0072
+116+  0072 1A           BYTEPCHAR:	LD A,(DE)					; Get Char to be printed, first line
+117+  0073 77           			LD (HL),A					; Move to Printing location
+118+  0074 24                       INC H						; inc H so next line in char (ZX Spectrum Screen RAM)
+119+  0075 13                       INC DE 						; next line to be printed
+120+  0076 10 FA                    DJNZ BYTEPCHAR				; Repeat 8 lines
+121+  0078 3A A8 00                 LD A,(PRINT_ATTR) 			; Load Attributes to print char with
+122+  007B 2A A6 00                 LD HL, (SCR_ATTR_PTR)
+123+  007E 77                       LD (HL),A
+124+  007F 21 A6 00                 LD HL, SCR_ATTR_PTR			; Get pointer to ATTR
+125+  0082 34                       INC (HL)					; Move Attribute cursor to next char
+126+  0083 21 A4 00     			LD HL, SCR_CUR_PTR
+127+  0086 34           			INC (HL)					; update Cursor pointer to next position
+128+  0087 C9                       RET
+129+  0088              ; ----------------------------------------------------------------------------------------
+130+  0088
+131+  0088
+132+  0088
+133+  0088              ; ----------------------------------------------------------------------------------------
+134+  0088              ; INK2PAPER - moves ink of attribute stored in (PRINT_ATTR) to paper and sets ink to 0
+135+  0088              ; 				Sets bright 1 and flash 0
+136+  0088              ; ----------------------------------------------------------------------------------------
+137+  0088 3A A8 00     INK2PAPER:	LD A, (PRINT_ATTR)		    ; Get storedAttribute
+138+  008B E6 07                    AND 7						; get Attr INK in A
+139+  008D 07           			RLCA
+140+  008E 07           			RLCA
+141+  008F 07           			RLCA						; move Ink to Paper
+142+  0090 F6 40        			OR 64						; ink 0 bright 1
+143+  0092 32 A8 00     			LD (PRINT_ATTR),A		    ; Get storedAttribute
+144+  0095 C9           			RET
+145+  0096              ; ----------------------------------------------------------------------------------------
+146+  0096
+147+  0096
+148+  0096
+149+  0096
+150+  0096 21 00 40     CLEARSCR:	LD HL,$4000					; Erases screen by writing 0 to all pixels and attributes
+151+  0099 11 01 40     			LD DE,$4001
+152+  009C 01 FF 1A     			LD BC,6911
+153+  009F 36 00        			LD (HL),0
+154+  00A1 ED B0        			LDIR
+155+  00A3 C9           			RET
+156+  00A4
+157+  00A4
+158+  00A4              SCR_CUR_PTR
+158+  00A4 00 00          	db $00, $00				; Cursor Pointer in Screen (2 bytes) (HL)
+159+  00A6 00 00        SCR_ATTR_PTR: 	db $00, $00				; Attr Pointer in Screen (2 bytes) (HL)
+160+  00A8 00           PRINT_ATTR:		db $00					; Attribute used by printchar routine (1 byte)
+161+  00A9
+162+  00A9              CHARSET: incbin "charset.bin"			; Charset used
+163+  03A9
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm
+  5   03A9
+  6   03A9 20 20 20 20  FILA_VACIA_B: DB "                        ", 0
+  6   03AD 20 20 20 20
+  6   03B1 20 20 20 20
+  6   03B5 20 20 20 20
+  6   03B9 20 20 20 20
+  6   03BD 20 20 20 20
+  6   03C1 00
+  7   03C2 20 42 69 65  BIENVENIDA: DB " Bienvenido a Conecta 4 ", 0
+  7   03C6 6E 76 65 6E
+  7   03CA 69 64 6F 20
+  7   03CE 61 20 43 6F
+  7   03D2 6E 65 63 74
+  7   03D6 61 20 34 20
+  7   03DA 00
+  8   03DB 20 51 75 69  JUGAR: DB " Quieres jugar?   ", 0
+  8   03DF 65 72 65 73
+  8   03E3 20 6A 75 67
+  8   03E7 61 72 3F 20
+  8   03EB 20 20 00
+  9   03EE 20 20 20 20  FILA_VACIA_J: DB "                  ", 0
+  9   03F2 20 20 20 20
+  9   03F6 20 20 20 20
+  9   03FA 20 20 20 20
+  9   03FE 20 20 00
+ 10   0401 00 00        CARACTER: DB 0, 0
+ 11   0403              COLOR EQU 6
+ 12   0403
+ 13   0403              MENSAJE_BIENVENIDA:
+ 14   0403 06 01            LD B, 1
+ 15   0405 0E 04            LD C, 4
+ 16   0407 DD 21 A9 03      LD IX, FILA_VACIA_B
+ 17   040B CD 25 00         CALL PRINTAT
+ 18   040E 06 03            LD B, 3
+ 19   0410 DD 21 A9 03      LD IX, FILA_VACIA_B
+ 20   0414 CD 25 00         CALL PRINTAT
+ 21   0417 06 02            LD B, 2
+ 22   0419 3E 02            LD A, 2
+ 23   041B DD 21 C2 03      LD IX, BIENVENIDA
+ 24   041F CD 25 00         CALL PRINTAT
+ 25   0422
+ 26   0422
+ 27   0422 06 14            LD B, 20
+ 28   0424 0E 01            LD C, 1
+ 29   0426 DD 21 EE 03      LD IX, FILA_VACIA_J
+ 30   042A CD 25 00         CALL PRINTAT
+ 31   042D 06 16            LD B, 22
+ 32   042F DD 21 EE 03      LD IX, FILA_VACIA_J
+ 33   0433 CD 25 00         CALL PRINTAT
+ 34   0436 06 15            LD B, 21
+ 35   0438 3E 06            LD A, COLOR
+ 36   043A DD 21 DB 03      LD IX, JUGAR
+ 37   043E CD 25 00         CALL PRINTAT
+ 38   0441
+ 39   0441 3E B0            LD A, 128 + 8*COLOR
+ 40   0443 32 B1 5A         LD($5800 + 21*32 + 17), A
+ 41   0446 CD 03 00         CALL S_N
+ 42   0449 32 01 04         LD (CARACTER), A
+ 43   044C 57               LD D, A
+ 44   044D 3E 06            LD A, COLOR
+ 45   044F 06 15            LD B, 21
+ 46   0451 0E 11            LD C, 17
+ 47   0453 DD 21 01 04      LD IX, CARACTER
+ 48   0457 CD 25 00         CALL PRINTAT
+ 49   045A 7A               LD A, D
+ 50   045B C9               RET
+ 51   045C
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\quieresJugar.asm

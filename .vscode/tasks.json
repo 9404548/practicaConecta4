@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sjasmplus",
+            "type": "shell",
+            "command": "C:\\Users\\luisx\\OneDrive - UFV\\curso2\\AOC\\compileasm\\sjasmplus-1.20.3.win\\sjasmplus.exe",
+            "args": [
+                "--lst=${fileDirname}/${fileBasenameNoExtension}.lst",
+                "--sld=${fileDirname}/${fileBasenameNoExtension}.sld",
+                "--raw=${fileDirname}/${fileBasenameNoExtension}.bin",
+                "--fullpath",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

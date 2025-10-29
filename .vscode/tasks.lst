@@ -1,0 +1,62 @@
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(1): error: Invalid labelname: {
+ 1    0000              {
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(2): error: Unrecognized instruction: "version"
+ 2    0000                  "version"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(2): error: Unrecognized instruction: "2.0.0",
+ 2    0000                "2.0.0",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(3): error: Unrecognized instruction: "tasks"
+ 3    0000                  "tasks"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(3): error: Unrecognized instruction: [
+ 3    0000                [
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(4): error: Unrecognized instruction: {
+ 4    0000                      {
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(5): error: Unrecognized instruction: "label"
+ 5    0000                          "label"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(5): error: Unrecognized instruction: "sjasmplus",
+ 5    0000                "sjasmplus",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(6): error: Unrecognized instruction: "type"
+ 6    0000                          "type"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(6): error: Unrecognized instruction: "shell",
+ 6    0000                "shell",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(7): error: Unrecognized instruction: "command"
+ 7    0000                          "command"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(7): error: Unrecognized instruction: "C:\\Users\\luisx\\OneDrive - UFV\\curso2\\AOC\\compileasm\\sjasmplus-1.20.3.win\\sjasmplus.exe",
+ 7    0000                "C:\\Users\\luisx\\OneDrive - UFV\\curso2\\AOC\\compileasm\\sjasmplus-1.20.3.win\\sjasmplus.exe",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(8): error: Unrecognized instruction: "args"
+ 8    0000                          "args"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(8): error: Unrecognized instruction: [
+ 8    0000                [
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(9): error: Unrecognized instruction: "--lst=${fileDirname}/${fileBasenameNoExtension}.lst",
+ 9    0000                              "--lst=${fileDirname}/${fileBasenameNoExtension}.lst",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(10): error: Unrecognized instruction: "--sld=${fileDirname}/${fileBasenameNoExtension}.sld",
+10    0000                              "--sld=${fileDirname}/${fileBasenameNoExtension}.sld",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(11): error: Unrecognized instruction: "--raw=${fileDirname}/${fileBasenameNoExtension}.bin",
+11    0000                              "--raw=${fileDirname}/${fileBasenameNoExtension}.bin",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(12): error: Unrecognized instruction: "--fullpath",
+12    0000                              "--fullpath",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(13): error: Unrecognized instruction: "${file}"
+13    0000                              "${file}"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(14): error: Unrecognized instruction: ],
+14    0000                          ],
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(15): error: Unrecognized instruction: "group"
+15    0000                          "group"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(15): error: Unrecognized instruction: {
+15    0000                {
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(16): error: Unrecognized instruction: "kind"
+16    0000                              "kind"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(16): error: Unrecognized instruction: "build",
+16    0000                "build",
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(17): error: Unrecognized instruction: "isDefault"
+17    0000                              "isDefault"
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(17): error: Unrecognized instruction: true
+17    0000                true
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(18): error: Unrecognized instruction: }
+18    0000                          }
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(19): error: Unrecognized instruction: }
+19    0000                      }
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(20): error: Unrecognized instruction: ]
+20    0000                  ]
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json(21): error: Invalid labelname: }
+21    0000              }
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\ejercicio00\.vscode\tasks.json
