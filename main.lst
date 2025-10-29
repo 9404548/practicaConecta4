@@ -1,1083 +1,886 @@
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallasSimples.asm(57): error: Duplicate label: CARACTER
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(14): error: Duplicate label: PRINTAT
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(20): error: Duplicate label: PRINTSTR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(32): error: Duplicate label: PREP_PRT
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(33): error: Duplicate label: PREP_PRT_2
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(45): error: Duplicate label: CRtoSCREEN
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(72): error: Duplicate label: CRtoATTR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(96): error: Duplicate label: PRINTCHNUM
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(112): error: Duplicate label: PRINTCHAR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(116): error: Duplicate label: BYTEPCHAR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(137): error: Duplicate label: INK2PAPER
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(150): error: Duplicate label: CLEARSCR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(158): error: Duplicate label: SCR_CUR_PTR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(159): error: Duplicate label: SCR_ATTR_PTR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(160): error: Duplicate label: PRINT_ATTR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(162): error: Duplicate label: CHARSET
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm(21): error: Duplicate label: FIN
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm(30): error: Duplicate label: ADIOS
 # file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm
   1   0000                  DEVICE ZXSPECTRUM48
   2   0000                  ORG $8000
   3   8000 31 00 00         LD SP, 0
   4   8003 3E 00            LD A, 0 ; VALOR INICIAL DE A
   5   8005 D3 FE            OUT ($FE), A ; COLOREA EL MARCO DE LA PANTALLA NEGRO
-  6   8007 C3 BA A5         JP INICIO
-  7   800A              CONTADOR EQU 255
-  8   800A                  INCLUDE "cargarPantalla.asm"
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\cargarPantalla.asm
-  1+  800A              CARGAR_PANTALLA_INICIAL:
-  2+  800A D5               PUSH DE
-  2+  800B E5             PUSH HL
-  2+  800C C5             PUSH BC
-  2+  800D F5             PUSH AF
-  3+  800E
-  4+  800E 11 00 40         LD DE, $4000
-  5+  8011 21 21 80         LD HL, PANTALLA_INICIAL
-  6+  8014 01 00 1B         LD BC, $5B00 - $4000
-  7+  8017 CD 1A 80         CALL CPANT_BUCLE
-  8+  801A
-  9+  801A              ; CARGAR_PANTALLA_ADIOS:
- 10+  801A              ;     PUSH DE: PUSH HL: PUSH BC: PUSH AF
- 11+  801A
- 12+  801A              ;     LD DE, $4000
- 13+  801A              ;     LD HL, PANTALLA_INICIAL
- 14+  801A              ;     LD BC, $5B00 - $4000
- 15+  801A              ;     CALL CPANT_BUCLE
- 16+  801A
- 17+  801A              ; CARGAR_PANTALLA_FIN:
- 18+  801A              ;     PUSH DE: PUSH HL: PUSH BC: PUSH AF
- 19+  801A
- 20+  801A              ;     LD DE, $4000
- 21+  801A              ;     LD HL, PANTALLA_INICIAL
- 22+  801A              ;     LD BC, $5B00 - $4000
- 23+  801A
- 24+  801A              CPANT_BUCLE:
- 25+  801A ED B0            LDIR
- 26+  801C F1               POP AF
- 26+  801D C1             POP BC
- 26+  801E E1             POP HL
- 26+  801F D1             POP DE
- 27+  8020 C9               RET
- 28+  8021
- 29+  8021              PANTALLA_INICIAL: INCBIN "connect4screen.SCR"
- 30+  9B21
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\cargarPantalla.asm
-  9   9B21                  INCLUDE "quieresJugar.asm"
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\quieresJugar.asm
-  1+  9B21                  INCLUDE "s_n.ASM"
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\s_n.ASM
-  1++ 9B21              S_N:
-  2++ 9B21 0E FE            LD C, $FE
-  3++ 9B23              SN_BUCLE:
-  4++ 9B23 06 FD            LD B, $FD
-  5++ 9B25 ED 78            IN A, (C)
-  6++ 9B27 CB 4F            BIT 1, A
-  7++ 9B29 28 0C            JR Z, SN_S
-  8++ 9B2B 06 7F            LD B, $7F
-  9++ 9B2D ED 78            IN A, (C)
- 10++ 9B2F CB 5F            BIT 3, A
- 11++ 9B31 20 F0            JR NZ, SN_BUCLE
- 12++ 9B33              SN_N:
- 13++ 9B33 16 4E            LD D, "N"
- 14++ 9B35 18 02            JR SN_SEGUIR
- 15++ 9B37              SN_S:
- 16++ 9B37 16 53            LD D, "S"
- 17++ 9B39              SN_SEGUIR:
- 18++ 9B39 ED 78            IN A, (C)
- 19++ 9B3B E6 1F            AND $1F
- 20++ 9B3D FE 1F            CP $1F
- 21++ 9B3F 20 F8            JR NZ, SN_SEGUIR
- 22++ 9B41
- 23++ 9B41 C9               RET
- 24++ 9B42
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\s_n.ASM
-  2+  9B42                  INCLUDE "printat.asm"
+  6   8007 C3 00 A2         JP INICIO
+  7   800A
+  8   800A              ; CONSTANTES
+  9   800A              CONTADOR EQU 255
+ 10   800A              NUM_FILAS EQU 24
+ 11   800A              NUM_COLS EQU 32
+ 12   800A
+ 13   800A              COLOR_TEXTO_AZUL EQU 1
+ 14   800A              COLOR_TEXTO_ROJO EQU 2
+ 15   800A              COLOR_TEXTO_AMARILLO EQU 6
+ 16   800A              BLINK EQU 128
+ 17   800A
+ 18   800A              ; INCLUDES
+ 19   800A                  INCLUDE "colors.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm
+ 20   800A                  INCLUDE "graphics_basic.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm
+  1+  800A              PANTALLA_BIENVENIDA: INCBIN "connect4screen.SCR"
+  2+  9B0A                  INCLUDE "pantalla_juego.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantalla_juego.asm
+  1++ 9B0A              SCR_PTLLA_JUEGO:
+  2++ 9B0A C5               PUSH BC
+  2++ 9B0B E5             PUSH HL
+  2++ 9B0C D5             PUSH DE
+  2++ 9B0D F5             PUSH AF
+  3++ 9B0E 3E 00            LD A, 0
+  4++ 9B10 21 A5 58         LD HL, $58A5
+  5++ 9B13 CD 21 9B         CALL SET_GRID_EMPTY
+  6++ 9B16 21 A5 40         LD HL, $40A5
+  7++ 9B19 CD 37 9B         CALL DRAW_EMPTY_CIRCLES
+  8++ 9B1C F1               POP AF
+  8++ 9B1D D1             POP DE
+  8++ 9B1E E1             POP HL
+  8++ 9B1F C1             POP BC
+  9++ 9B20 C9               RET
+ 10++ 9B21
+ 11++ 9B21              SET_GRID_EMPTY:
+ 12++ 9B21 CD 7A 9B         CALL SET_COLUMN_COLOR
+ 13++ 9B24 CD 7A 9B         CALL SET_COLUMN_COLOR
+ 14++ 9B27 CD 7A 9B         CALL SET_COLUMN_COLOR
+ 15++ 9B2A CD 7A 9B         CALL SET_COLUMN_COLOR
+ 16++ 9B2D CD 7A 9B         CALL SET_COLUMN_COLOR
+ 17++ 9B30 CD 7A 9B         CALL SET_COLUMN_COLOR
+ 18++ 9B33 CD 7A 9B         CALL SET_COLUMN_COLOR
+ 19++ 9B36 C9               RET
+ 20++ 9B37
+ 21++ 9B37              DRAW_EMPTY_CIRCLES:
+ 22++ 9B37 CD 50 9B         CALL DRAW_CIRCLE_COLUMN
+ 23++ 9B3A CD 50 9B         CALL DRAW_CIRCLE_COLUMN
+ 24++ 9B3D CD 50 9B         CALL DRAW_CIRCLE_COLUMN
+ 25++ 9B40 CD 50 9B         CALL DRAW_CIRCLE_COLUMN
+ 26++ 9B43 CD 50 9B         CALL DRAW_CIRCLE_COLUMN
+ 27++ 9B46 CD 50 9B         CALL DRAW_CIRCLE_COLUMN
+ 28++ 9B49 CD 50 9B         CALL DRAW_CIRCLE_COLUMN
+ 29++ 9B4C CD 50 9B         CALL DRAW_CIRCLE_COLUMN
+ 30++ 9B4F C9               RET
+ 31++ 9B50
+ 32++ 9B50              DRAW_CIRCLE_COLUMN:
+ 33++ 9B50 CD 91 9B         CALL DRAW_CIRCLE
+ 34++ 9B53 CD 91 9B         CALL DRAW_CIRCLE
+ 35++ 9B56 CD 91 9B         CALL DRAW_CIRCLE
+ 36++ 9B59 CD 91 9B         CALL DRAW_CIRCLE
+ 37++ 9B5C CD 91 9B         CALL DRAW_CIRCLE
+ 38++ 9B5F CD 91 9B         CALL DRAW_CIRCLE
+ 39++ 9B62 01 C3 EF         LD BC, $EFC3
+ 40++ 9B65 09               ADD HL, BC
+ 41++ 9B66 C9               RET
+ 42++ 9B67
+ 43++ 9B67              VERIFY_4000:
+ 44++ 9B67 3E 41            LD A, $41
+ 45++ 9B69 BC               CP H
+ 46++ 9B6A CC 74 9B         CALL Z, SET_4800
+ 47++ 9B6D 3E 49            LD A, $49
+ 48++ 9B6F BC               CP H
+ 49++ 9B70 CC 77 9B         CALL Z, SET_5000
+ 50++ 9B73 C9               RET
+ 51++ 9B74
+ 52++ 9B74              SET_4800:
+ 53++ 9B74 26 48            LD H, $48
+ 54++ 9B76 C9               RET
+ 55++ 9B77
+ 56++ 9B77              SET_5000:
+ 57++ 9B77 26 50            LD H, $50
+ 58++ 9B79 C9               RET
+ 59++ 9B7A
+ 60++ 9B7A              SET_COLUMN_COLOR:
+ 61++ 9B7A CD 1E 9D         CALL SET_C_COLOR_E
+ 62++ 9B7D CD 1E 9D         CALL SET_C_COLOR_E
+ 63++ 9B80 CD 1E 9D         CALL SET_C_COLOR_E
+ 64++ 9B83 CD 1E 9D         CALL SET_C_COLOR_E
+ 65++ 9B86 CD 1E 9D         CALL SET_C_COLOR_E
+ 66++ 9B89 CD 1E 9D         CALL SET_C_COLOR_E
+ 67++ 9B8C 01 C3 FD         LD BC, $FDC3
+ 68++ 9B8F 09               ADD HL, BC
+ 69++ 9B90 C9               RET
+ 70++ 9B91
+ 71++ 9B91              DRAW_CIRCLE:
+ 72++ 9B91
+ 73++ 9B91 01 1D 00         LD BC, $001D
+ 74++ 9B94
+ 75++ 9B94 CD BC 9B         CALL UL_CIRCLE
+ 76++ 9B97 CD E2 9B         CALL UM_CIRCLE
+ 77++ 9B9A CD 05 9C         CALL UR_CIRCLE
+ 78++ 9B9D
+ 79++ 9B9D 09               ADD HL, BC
+ 80++ 9B9E CD 67 9B         CALL VERIFY_4000
+ 81++ 9BA1
+ 82++ 9BA1 CD 2B 9C         CALL ML_CIRCLE
+ 83++ 9BA4 CD 4E 9C         CALL MM_CIRCLE
+ 84++ 9BA7 CD 6D 9C         CALL MR_CIRCLE
+ 85++ 9BAA
+ 86++ 9BAA 09               ADD HL, BC
+ 87++ 9BAB CD 67 9B         CALL VERIFY_4000
+ 88++ 9BAE
+ 89++ 9BAE CD 90 9C         CALL LL_CIRCLE
+ 90++ 9BB1 CD B6 9C         CALL LM_CIRCLE
+ 91++ 9BB4 CD D9 9C         CALL LR_CIRCLE
+ 92++ 9BB7
+ 93++ 9BB7 09               ADD HL, BC
+ 94++ 9BB8 CD 67 9B         CALL VERIFY_4000
+ 95++ 9BBB
+ 96++ 9BBB C9               RET
+ 97++ 9BBC
+ 98++ 9BBC              UL_CIRCLE:
+ 99++ 9BBC 3E 00            LD A, %00000000
+100++ 9BBE 77               LD (HL), A
+101++ 9BBF CD FF 9C         CALL INC_AND_LOAD_H
+102++ 9BC2 3E 03            LD A, %00000011
+103++ 9BC4 CD FF 9C         CALL INC_AND_LOAD_H
+104++ 9BC7 3E 07            LD A, %00000111
+105++ 9BC9 CD FF 9C         CALL INC_AND_LOAD_H
+106++ 9BCC 3E 0F            LD A, %00001111
+107++ 9BCE CD FF 9C         CALL INC_AND_LOAD_H
+108++ 9BD1 3E 1F            LD A, %00011111
+109++ 9BD3 CD FF 9C         CALL INC_AND_LOAD_H
+110++ 9BD6 3E 3F            LD A, %00111111
+111++ 9BD8 CD FF 9C         CALL INC_AND_LOAD_H
+112++ 9BDB CD FF 9C         CALL INC_AND_LOAD_H
+113++ 9BDE CD 09 9D         CALL SETBACK_HL
+114++ 9BE1 C9               RET
+115++ 9BE2
+116++ 9BE2              UM_CIRCLE:
+117++ 9BE2 3E 00            LD A, %00000000
+118++ 9BE4 25               DEC H
+119++ 9BE5 CD FF 9C         CALL INC_AND_LOAD_H
+120++ 9BE8 3E 7E            LD A, %01111110
+121++ 9BEA CD FF 9C         CALL INC_AND_LOAD_H
+122++ 9BED 3E FF            LD A, %11111111
+123++ 9BEF CD FF 9C         CALL INC_AND_LOAD_H
+124++ 9BF2 CD FF 9C         CALL INC_AND_LOAD_H
+125++ 9BF5 CD FF 9C         CALL INC_AND_LOAD_H
+126++ 9BF8 CD FF 9C         CALL INC_AND_LOAD_H
+127++ 9BFB CD FF 9C         CALL INC_AND_LOAD_H
+128++ 9BFE CD FF 9C         CALL INC_AND_LOAD_H
+129++ 9C01 CD 09 9D         CALL SETBACK_HL
+130++ 9C04 C9               RET
+131++ 9C05
+132++ 9C05              UR_CIRCLE:
+133++ 9C05 3E 00            LD A, %00000000
+134++ 9C07 77               LD (HL), A
+135++ 9C08 CD FF 9C         CALL INC_AND_LOAD_H
+136++ 9C0B 3E C0            LD A, %11000000
+137++ 9C0D CD FF 9C         CALL INC_AND_LOAD_H
+138++ 9C10 3E E0            LD A, %11100000
+139++ 9C12 CD FF 9C         CALL INC_AND_LOAD_H
+140++ 9C15 3E F0            LD A, %11110000
+141++ 9C17 CD FF 9C         CALL INC_AND_LOAD_H
+142++ 9C1A 3E F8            LD A, %11111000
+143++ 9C1C CD FF 9C         CALL INC_AND_LOAD_H
+144++ 9C1F 3E FC            LD A, %11111100
+145++ 9C21 CD FF 9C         CALL INC_AND_LOAD_H
+146++ 9C24 CD FF 9C         CALL INC_AND_LOAD_H
+147++ 9C27 CD 09 9D         CALL SETBACK_HL
+148++ 9C2A C9               RET
+149++ 9C2B
+150++ 9C2B              ML_CIRCLE:
+151++ 9C2B 3E 3F            LD A, %00111111
+152++ 9C2D 25               DEC H
+153++ 9C2E CD FF 9C         CALL INC_AND_LOAD_H
+154++ 9C31 3E 7F            LD A, %01111111
+155++ 9C33 CD FF 9C         CALL INC_AND_LOAD_H
+156++ 9C36 CD FF 9C         CALL INC_AND_LOAD_H
+157++ 9C39 CD FF 9C         CALL INC_AND_LOAD_H
+158++ 9C3C CD FF 9C         CALL INC_AND_LOAD_H
+159++ 9C3F CD FF 9C         CALL INC_AND_LOAD_H
+160++ 9C42 CD FF 9C         CALL INC_AND_LOAD_H
+161++ 9C45 3E 3F            LD A, %00111111
+162++ 9C47 CD FF 9C         CALL INC_AND_LOAD_H
+163++ 9C4A CD 09 9D         CALL SETBACK_HL
+164++ 9C4D C9               RET
+165++ 9C4E
+166++ 9C4E              MM_CIRCLE:
+167++ 9C4E 3E FF            LD A, %11111111
+168++ 9C50 25               DEC H
+169++ 9C51 CD FF 9C         CALL INC_AND_LOAD_H
+170++ 9C54 CD FF 9C         CALL INC_AND_LOAD_H
+171++ 9C57 CD FF 9C         CALL INC_AND_LOAD_H
+172++ 9C5A CD FF 9C         CALL INC_AND_LOAD_H
+173++ 9C5D CD FF 9C         CALL INC_AND_LOAD_H
+174++ 9C60 CD FF 9C         CALL INC_AND_LOAD_H
+175++ 9C63 CD FF 9C         CALL INC_AND_LOAD_H
+176++ 9C66 CD FF 9C         CALL INC_AND_LOAD_H
+177++ 9C69 CD 09 9D         CALL SETBACK_HL
+178++ 9C6C C9               RET
+179++ 9C6D
+180++ 9C6D              MR_CIRCLE:
+181++ 9C6D 3E FC            LD A, %11111100
+182++ 9C6F 25               DEC H
+183++ 9C70 CD FF 9C         CALL INC_AND_LOAD_H
+184++ 9C73 3E FE            LD A, %11111110
+185++ 9C75 CD FF 9C         CALL INC_AND_LOAD_H
+186++ 9C78 CD FF 9C         CALL INC_AND_LOAD_H
+187++ 9C7B CD FF 9C         CALL INC_AND_LOAD_H
+188++ 9C7E CD FF 9C         CALL INC_AND_LOAD_H
+189++ 9C81 CD FF 9C         CALL INC_AND_LOAD_H
+190++ 9C84 CD FF 9C         CALL INC_AND_LOAD_H
+191++ 9C87 3E FC            LD A, %11111100
+192++ 9C89 CD FF 9C         CALL INC_AND_LOAD_H
+193++ 9C8C CD 09 9D         CALL SETBACK_HL
+194++ 9C8F C9               RET
+195++ 9C90
+196++ 9C90              LL_CIRCLE:
+197++ 9C90 3E 3F            LD A, %00111111
+198++ 9C92 77               LD (HL), A
+199++ 9C93 CD FF 9C         CALL INC_AND_LOAD_H
+200++ 9C96 3E 1F            LD A, %00011111
+201++ 9C98 CD FF 9C         CALL INC_AND_LOAD_H
+202++ 9C9B 3E 0F            LD A, %00001111
+203++ 9C9D CD FF 9C         CALL INC_AND_LOAD_H
+204++ 9CA0 3E 07            LD A, %00000111
+205++ 9CA2 CD FF 9C         CALL INC_AND_LOAD_H
+206++ 9CA5 3E 03            LD A, %00000011
+207++ 9CA7 CD FF 9C         CALL INC_AND_LOAD_H
+208++ 9CAA 3E 00            LD A, %00000000
+209++ 9CAC CD FF 9C         CALL INC_AND_LOAD_H
+210++ 9CAF CD FF 9C         CALL INC_AND_LOAD_H
+211++ 9CB2 CD 09 9D         CALL SETBACK_HL
+212++ 9CB5 C9               RET
+213++ 9CB6
+214++ 9CB6              LM_CIRCLE:
+215++ 9CB6 3E FF            LD A, %11111111
+216++ 9CB8 25               DEC H
+217++ 9CB9 CD FF 9C         CALL INC_AND_LOAD_H
+218++ 9CBC CD FF 9C         CALL INC_AND_LOAD_H
+219++ 9CBF CD FF 9C         CALL INC_AND_LOAD_H
+220++ 9CC2 CD FF 9C         CALL INC_AND_LOAD_H
+221++ 9CC5 CD FF 9C         CALL INC_AND_LOAD_H
+222++ 9CC8 CD FF 9C         CALL INC_AND_LOAD_H
+223++ 9CCB 3E 7E            LD A, %01111110
+224++ 9CCD CD FF 9C         CALL INC_AND_LOAD_H
+225++ 9CD0 3E 00            LD A, %00000000
+226++ 9CD2 CD FF 9C         CALL INC_AND_LOAD_H
+227++ 9CD5 CD 09 9D         CALL SETBACK_HL
+228++ 9CD8 C9               RET
+229++ 9CD9
+230++ 9CD9              LR_CIRCLE:
+231++ 9CD9 3E FC            LD A, %11111100
+232++ 9CDB 77               LD (HL), A
+233++ 9CDC CD FF 9C         CALL INC_AND_LOAD_H
+234++ 9CDF 3E F8            LD A, %11111000
+235++ 9CE1 CD FF 9C         CALL INC_AND_LOAD_H
+236++ 9CE4 3E F0            LD A, %11110000
+237++ 9CE6 CD FF 9C         CALL INC_AND_LOAD_H
+238++ 9CE9 3E E0            LD A, %11100000
+239++ 9CEB CD FF 9C         CALL INC_AND_LOAD_H
+240++ 9CEE 3E C0            LD A, %11000000
+241++ 9CF0 CD FF 9C         CALL INC_AND_LOAD_H
+242++ 9CF3 3E 00            LD A, %00000000
+243++ 9CF5 CD FF 9C         CALL INC_AND_LOAD_H
+244++ 9CF8 CD FF 9C         CALL INC_AND_LOAD_H
+245++ 9CFB CD 09 9D         CALL SETBACK_HL
+246++ 9CFE C9               RET
+247++ 9CFF
+248++ 9CFF              INC_AND_LOAD_H:
+249++ 9CFF 50 59            LD DE, BC
+250++ 9D01 01 00 01         LD BC, $0100
+251++ 9D04 09               ADD HL, BC
+252++ 9D05 77               LD (HL), A
+253++ 9D06 42 4B            LD BC, DE
+254++ 9D08 C9               RET
+255++ 9D09
+256++ 9D09              SETBACK_HL:
+257++ 9D09 50 59            LD DE, BC
+258++ 9D0B 01 01 F9         LD BC, $F901
+259++ 9D0E 09               ADD HL, BC
+260++ 9D0F 42 4B            LD BC, DE
+261++ 9D11 C9               RET
+262++ 9D12
+263++ 9D12              INC_HL_3X3:
+264++ 9D12 77               LD (HL), A
+265++ 9D13 50 59            LD DE, BC
+266++ 9D15 23               INC HL
+267++ 9D16 77               LD (HL), A
+268++ 9D17 23               INC HL
+269++ 9D18 77               LD (HL), A
+270++ 9D19 01 1E 00         LD BC, 30
+271++ 9D1C 09               ADD HL, BC
+272++ 9D1D C9               RET
+273++ 9D1E
+274++ 9D1E              SET_C_COLOR_E:
+275++ 9D1E 3E 0F            LD A, 1*8+7
+276++ 9D20 CD 12 9D         CALL INC_HL_3X3
+277++ 9D23 CD 12 9D         CALL INC_HL_3X3
+278++ 9D26 CD 12 9D         CALL INC_HL_3X3
+279++ 9D29 C9               RET
+280++ 9D2A
+281++ 9D2A              CONVERT_58_2_40 ; CONVIERTE UNA DIRECCION DE MEMORIA QUE COMIENZA CON $58XX A $40XX
+282++ 9D2A 01 00 E8         LD BC, $E800
+283++ 9D2D 09               ADD HL, BC
+284++ 9D2E F1               POP AF
+284++ 9D2F D1             POP DE
+284++ 9D30 E1             POP HL
+284++ 9D31 C1             POP BC
+285++ 9D32 C9               RET
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantalla_juego.asm
+  3+  9D33
+  4+  9D33              GB_BIENVENIDA:
+  5+  9D33 D5               PUSH DE
+  5+  9D34 E5             PUSH HL
+  5+  9D35 C5             PUSH BC
+  5+  9D36 F5             PUSH AF
+  6+  9D37
+  7+  9D37 11 00 40         LD DE, $4000
+  8+  9D3A 21 0A 80         LD HL, PANTALLA_BIENVENIDA
+  9+  9D3D 01 00 1B         LD BC, $5B00 - $4000
+ 10+  9D40              BIENVENIDA_BUCLE:
+ 11+  9D40 ED B0            LDIR
+ 12+  9D42 F1               POP AF
+ 12+  9D43 C1             POP BC
+ 12+  9D44 E1             POP HL
+ 12+  9D45 D1             POP DE
+ 13+  9D46 C9               RET
+ 14+  9D47
+ 15+  9D47              GB_ADIOS:
+ 16+  9D47 CD 56 9D         CALL PTLLA_NEGRA
+ 17+  9D4A C9               RET
+ 18+  9D4B
+ 19+  9D4B              GB_FIN_NEXT:
+ 20+  9D4B CD 56 9D         CALL PTLLA_NEGRA
+ 21+  9D4E C9               RET
+ 22+  9D4F
+ 23+  9D4F              GB_PTLLA_INICIO_DE_JUEGO:
+ 24+  9D4F CD 56 9D         CALL PTLLA_NEGRA
+ 25+  9D52 CD 0A 9B         CALL SCR_PTLLA_JUEGO
+ 26+  9D55 C9               RET
+ 27+  9D56
+ 28+  9D56
+ 29+  9D56              PTLLA_NEGRA:
+ 30+  9D56 C5               PUSH BC
+ 30+  9D57 D5             PUSH DE
+ 30+  9D58 E5             PUSH HL
+ 30+  9D59 F5             PUSH AF
+ 31+  9D5A
+ 32+  9D5A 21 00 58         LD   HL,$5800
+ 33+  9D5D 11 01 58         LD   DE,$5801
+ 34+  9D60 36 00            LD   (HL),0
+ 35+  9D62 01 FF 02         LD   BC,768-1
+ 36+  9D65 ED B0            LDIR
+ 37+  9D67
+ 38+  9D67 F1               POP AF
+ 38+  9D68 E1             POP HL
+ 38+  9D69 D1             POP DE
+ 38+  9D6A C1             POP BC
+ 39+  9D6B C9               RET
+ 40+  9D6C
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm
+ 21   9D6C                  INCLUDE "graphics_core.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm
+  1+  9D6C              GC_COLOR_JUGADOR_ACTUAL:
+  2+  9D6C              ; SET_C_COLOR_R:
+  3+  9D6C              ;     LD A, 1*8+2
+  4+  9D6C              ;     CALL INC_HL_3X3
+  5+  9D6C              ;     CALL INC_HL_3X3
+  6+  9D6C              ;     CALL INC_HL_3X3
+  7+  9D6C              ;     RET
+  8+  9D6C
+  9+  9D6C              ; SET_C_COLOR_Y: ; LA RUTINA CAMBIA EL COLOR DE UN DETERMINADO BLOQUE 3X3 A AMARILLO
+ 10+  9D6C              ;     LD A, 1*8+6
+ 11+  9D6C              ;     CALL INC_HL_3X3
+ 12+  9D6C              ;     CALL INC_HL_3X3
+ 13+  9D6C              ;     CALL INC_HL_3X3
+ 14+  9D6C              ;     RET
+ 15+  9D6C
+ 16+  9D6C              ; ; SET_PRED ; Rutina para indicar que el jugador actual es el rojo
+ 17+  9D6C              ; ;     LD HL, $5845
+ 18+  9D6C              ; ;     LD A, 2
+ 19+  9D6C              ; ;     CALL INC_HL_3X3
+ 20+  9D6C              ; ;     CALL INC_HL_3X3
+ 21+  9D6C              ; ;     CALL INC_HL_3X3
+ 22+  9D6C              ; ;     LD HL, $5845
+ 23+  9D6C              ; ;     CALL CONVERT_58_2_40
+ 24+  9D6C              ; ;     CALL DRAW_CIRCLE
+ 25+  9D6C              ; ;     RET
+ 26+  9D6C
+ 27+  9D6C              ; ; SET_PYEL ; Rutina para indicar que el jugador actual es el amarillo
+ 28+  9D6C              ; ;     LD HL, $5857
+ 29+  9D6C              ; ;     LD A, 6
+ 30+  9D6C              ; ;     CALL INC_HL_3X3
+ 31+  9D6C              ; ;     CALL INC_HL_3X3
+ 32+  9D6C              ; ;     CALL INC_HL_3X3
+ 33+  9D6C              ; ;     LD HL, $5857
+ 34+  9D6C              ; ;     CALL CONVERT_58_2_40
+ 35+  9D6C              ; ;     CALL DRAW_CIRCLE
+ 36+  9D6C              ; ;     RET
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm
+ 22   9D6C                  INCLUDE "keyboard.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm
+  1+  9D6C              K_SON: ; LECTURA DE TECLADO PARA S O N
+  2+  9D6C 0E FE            LD C, $FE
+  3+  9D6E              KSON_BUCLE:
+  4+  9D6E 06 FD            LD B, $FD
+  5+  9D70 ED 78            IN A, (C)
+  6+  9D72 CB 4F            BIT 1, A
+  7+  9D74 28 0E            JR Z, KSON_S
+  8+  9D76
+  9+  9D76 06 7F            LD B, $7F
+ 10+  9D78 ED 78            IN A, (C)
+ 11+  9D7A CB 5F            BIT 3, A
+ 12+  9D7C 28 02            JR Z, KSON_N
+ 13+  9D7E
+ 14+  9D7E 20 EE            JR NZ, KSON_BUCLE
+ 15+  9D80
+ 16+  9D80              KSON_N:
+ 17+  9D80 16 4E            LD D, "N"
+ 18+  9D82 18 02            JR KSON_RELEASE
+ 19+  9D84
+ 20+  9D84              KSON_S:
+ 21+  9D84 16 53            LD D, "S"
+ 22+  9D86
+ 23+  9D86              KSON_RELEASE:
+ 24+  9D86 ED 78            IN A, (C)
+ 25+  9D88 E6 1F            AND $1F
+ 26+  9D8A FE 1F            CP $1F
+ 27+  9D8C 20 F8            JR NZ, KSON_RELEASE
+ 28+  9D8E
+ 29+  9D8E C9               RET ; FIN DE KSON
+ 30+  9D8F
+ 31+  9D8F
+ 32+  9D8F              K_LR_ENTER: ; LECTURA DE TECLADO PARA Q (LEFT) W (RIGHT) O ENTER (SOLTAR FICHA)
+ 33+  9D8F 0E FE            LD C, $FE
+ 34+  9D91
+ 35+  9D91              KLRE_BUCLE:
+ 36+  9D91 06 FB            LD B, $FB
+ 37+  9D93 ED 78            IN A, (C)
+ 38+  9D95 CB 47            BIT 0, A
+ 39+  9D97 28 0E            JR Z, KLRE_Q
+ 40+  9D99 CB 4F            BIT 1, A
+ 41+  9D9B 28 17            JR Z, KLRE_W
+ 42+  9D9D
+ 43+  9D9D 06 BF            LD B, $BF
+ 44+  9D9F ED 78            IN A, (C)
+ 45+  9DA1 CB 47            BIT 0, A
+ 46+  9DA3 28 13            JR Z, KLRE_ENTER
+ 47+  9DA5
+ 48+  9DA5 18 EA            JR KLRE_BUCLE
+ 49+  9DA7
+ 50+  9DA7              KLRE_Q:
+ 51+  9DA7 16 51            LD D, 'Q'
+ 52+  9DA9
+ 53+  9DA9              KLRE_RELEASE_QW:
+ 54+  9DA9 06 FB            LD B, $FB
+ 55+  9DAB ED 78            IN A, (C)
+ 56+  9DAD E6 1F            AND $1F
+ 57+  9DAF FE 1F            CP $1F
+ 58+  9DB1 20 F6            JR NZ, KLRE_RELEASE_QW
+ 59+  9DB3 C9               RET
+ 60+  9DB4
+ 61+  9DB4              KLRE_W:
+ 62+  9DB4 16 57            LD D, 'W'
+ 63+  9DB6 18 F1            JR KLRE_RELEASE_QW
+ 64+  9DB8
+ 65+  9DB8              KLRE_ENTER:
+ 66+  9DB8 16 0D            LD D, 13 ; ASCII PARA ENTER EN ZXSPECTRUM48
+ 67+  9DBA
+ 68+  9DBA              KLRE_RELEASE_ENTER:
+ 69+  9DBA 06 BF            LD B, $BF
+ 70+  9DBC ED 78            IN A, (C)
+ 71+  9DBE E6 1F            AND $1F
+ 72+  9DC0 FE 1F            CP $1F
+ 73+  9DC2 20 F6            JR NZ, KLRE_RELEASE_ENTER
+ 74+  9DC4 C9               RET ; FIN DE LECTURA Q W ENTER
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm
+ 23   9DC5                  INCLUDE "logic_checks.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm
+  1+  9DC5              LC_VALIDPLAY:
+  2+  9DC5
+  3+  9DC5              LC_COMPROBAR_FIN:
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm
+ 24   9DC5                  INCLUDE "logic_flow.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm
+  1+  9DC5              LF_INICIALIZACION:
+  2+  9DC5
+  3+  9DC5              LF_SWITCH_JUGADOR:
+  4+  9DC5
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm
+ 25   9DC5                  INCLUDE "variables.asm"
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm
+# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm
+ 26   9DC5                  INCLUDE "printat.asm"
 # file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm
-  1++ 9B42              ; -------------------------------
-  2++ 9B42              ; ZX Spectrum Text print library
-  3++ 9B42              ; Daniel León - AOC - UFV 2020
-  4++ 9B42              ; -------------------------------
-  5++ 9B42
-  6++ 9B42
-  7++ 9B42              ; ----------------------------------------------------------------------------------------
-  8++ 9B42              ; PRINTAT - Print a string in a position and attributes as per registers:
-  9++ 9B42              ;		IN	A	: Bit 7=1 For Flash / Bit 6=1 For Brigh / Bit 5,4,3 for Paper / Bit 2,1,0 for Ink
- 10++ 9B42              ;		IN	B	: Row 0..23
- 11++ 9B42              ;		IN	C	: Column 0..31
- 12++ 9B42              ;		IN	IX	: Address of text (Text must end in a 0)
- 13++ 9B42              ; ----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(14): warning: Label has different value in pass 3: previous value 41526 not equal 39746
- 14++ 9B42 CD 45 A2     PRINTAT:	CALL PREP_PRT				; Update Attribute var &Screen & Attributes pointers
- 15++ 9B45              ; ----------------------------------------------------------------------------------------
- 16++ 9B45              ;		VVV Do not move PRINTSTR below as PRINTAT continues into PRINTSTR routine
- 17++ 9B45              ; ----------------------------------------------------------------------------------------
- 18++ 9B45              ; PRINTSTR - Prints String - IX Points to the String start
- 19++ 9B45              ; ----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(20): warning: Label has different value in pass 3: previous value 41529 not equal 39749
- 20++ 9B45 DD 7E 00     PRINTSTR:   LD A,(IX)					; A Contains first char to print
- 21++ 9B48 B7           			OR A						; check for end of string (0)
- 22++ 9B49 C8           			RET Z						; Finish printing if 0
- 23++ 9B4A CD 73 A2     			CALL PRINTCHNUM
- 24++ 9B4D DD 23        			INC IX						; Move to next char in string
- 25++ 9B4F 18 F4        			JR PRINTSTR					; Start over printing sequence
- 26++ 9B51              ; ----------------------------------------------------------------------------------------
- 27++ 9B51
- 28++ 9B51
- 29++ 9B51              ;-----------------------------------------------------------------------------------------
- 30++ 9B51              ; PREP_PRT - Updates Print_Attr, SCR & ATTR Vars
- 31++ 9B51              ;-----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(32): warning: Label has different value in pass 3: previous value 41541 not equal 39761
- 32++ 9B51 32 B9 A2     PREP_PRT:	LD (PRINT_ATTR),A			; Set Attribute
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(33): warning: Label has different value in pass 3: previous value 41544 not equal 39764
- 33++ 9B54 CD 4E A2     PREP_PRT_2:	CALL CRtoSCREEN
- 34++ 9B57 C3 60 A2     			JP CRtoATTR
- 35++ 9B5A              ;-----------------------------------------------------------------------------------------
- 36++ 9B5A
- 37++ 9B5A              ;-----------------------------------------------------------------------------------------
- 38++ 9B5A              ; CRtoSCREEN - Converts a scr char coord into a SCREEN Address   b,c = y,x positions
- 39++ 9B5A              ;	IN  - B=Row, C=Column
- 40++ 9B5A              ;	OUT - HL=Address in screen also stored in (SCR_CUR_PTR)
- 41++ 9B5A              ;	Conversion:
- 42++ 9B5A              ;			Row FFfff   Column CCCCC
- 43++ 9B5A              ;			HL=%010FF000 fffCCCCC
- 44++ 9B5A              ;-----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(45): warning: Label has different value in pass 3: previous value 41550 not equal 39770
- 45++ 9B5A              CRtoSCREEN:
- 46++ 9B5A 78           			LD A,B						; %___FFfff
- 47++ 9B5B F6 40        			OR #40						; %010FFfff
- 48++ 9B5D E6 F8        			AND #F8						; %010FF000
- 49++ 9B5F 67           			LD H,A
- 50++ 9B60
- 51++ 9B60 78           			LD A,B						; %___FFfff
- 52++ 9B61 E6 07        			AND #7						; %00000fff
- 53++ 9B63 0F           			RRCA						; %f00000ff
- 54++ 9B64 0F           			RRCA						; %ff00000f
- 55++ 9B65 0F           			RRCA						; %fff00000
- 56++ 9B66 B1           			OR C						; %fffCCCCC
- 57++ 9B67 6F           			LD L,A
- 58++ 9B68 22 B5 A2                 LD (SCR_CUR_PTR),HL			; Update Variable
- 59++ 9B6B C9                       RET
- 60++ 9B6C              ; ----------------------------------------------------------------------------------------
- 61++ 9B6C
- 62++ 9B6C
- 63++ 9B6C
- 64++ 9B6C              ;-----------------------------------------------------------------------------------------
- 65++ 9B6C              ; CRtoATTR - Converts a screen char coord  into a ATTR Address  b,c = y,x positions
- 66++ 9B6C              ;	IN  - B=Row, C=Column
- 67++ 9B6C              ;	OUT - HL=Address in screen also stored in (SCR_ATTR_PTR)
- 68++ 9B6C              ;	Conversion:
- 69++ 9B6C              ;			Row FFfff   Column CCCCC
- 70++ 9B6C              ;			HL=%010110FF fffCCCCC
- 71++ 9B6C              ;-----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(72): warning: Label has different value in pass 3: previous value 41568 not equal 39788
- 72++ 9B6C              CRtoATTR:
- 73++ 9B6C 78           			LD A,B						; %___FFfff
- 74++ 9B6D 0F           			RRCA						; %f000FFff
- 75++ 9B6E 0F           			RRCA						; %ff000FFf
- 76++ 9B6F 0F           			RRCA						; %fff000FF
- 77++ 9B70 6F           			LD L,A
- 78++ 9B71 E6 03        			AND 3						; %000000FF	value of FF can be only 00,01,10
- 79++ 9B73 F6 58        			OR #58						; %010110FF value will be #58, #59 or #5A
- 80++ 9B75 67           			LD H,A
- 81++ 9B76
- 82++ 9B76 7D           			LD A,L						; %fff000FF
- 83++ 9B77 E6 E0        			AND #E0						; %fff00000
- 84++ 9B79 B1           			OR C						; %fffCCCCC
- 85++ 9B7A 6F           			LD L,A
- 86++ 9B7B
- 87++ 9B7B 22 B7 A2                 LD (SCR_ATTR_PTR),HL		; Update Variable
- 88++ 9B7E C9                       RET
- 89++ 9B7F              ; ----------------------------------------------------------------------------------------
- 90++ 9B7F
- 91++ 9B7F
- 92++ 9B7F
- 93++ 9B7F              ; ----------------------------------------------------------------------------------------
- 94++ 9B7F              ; PRINTCHNUM - Prints Char Number N (stored in A)
- 95++ 9B7F              ;-----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(96): warning: Label has different value in pass 3: previous value 41587 not equal 39807
- 96++ 9B7F              PRINTCHNUM:	;SUB 32						; Adjust Ascii to charset
- 97++ 9B7F 26 00        			LD H,0						; Multiply value by 8 to get to right Char in Charset
- 98++ 9B81 6F           			LD L,A
- 99++ 9B82 29           			ADD HL,HL
-100++ 9B83 29           			ADD HL,HL
-101++ 9B84 29           			ADD HL,HL
-102++ 9B85 11 BA A1     			LD DE, CHARSET-(8*32)		; Optimize in compile time (instead of sub 32)
-103++ 9B88 19           			ADD HL,DE
-104++ 9B89 EB           			EX  DE,HL					;Value in DE
-105++ 9B8A              			; Continues to printchar below
-106++ 9B8A              ; ----------------------------------------------------------------------------------------
-107++ 9B8A
-108++ 9B8A
-109++ 9B8A              ; ----------------------------------------------------------------------------------------
-110++ 9B8A              ; PRINTCHAR - Prints Char  (DE points to the char. Uses HL as last Cur Pointer)
-111++ 9B8A              ; ----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(112): warning: Label has different value in pass 3: previous value 41598 not equal 39818
-112++ 9B8A              PRINTCHAR:
-113++ 9B8A 06 08        			LD B,8						; 8 Lines per char
-114++ 9B8C 2A B5 A2                 LD HL, (SCR_CUR_PTR)		; Load Cursor Pointer y,x
-115++ 9B8F
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(116): warning: Label has different value in pass 3: previous value 41603 not equal 39823
-116++ 9B8F 1A           BYTEPCHAR:	LD A,(DE)					; Get Char to be printed, first line
-117++ 9B90 77           			LD (HL),A					; Move to Printing location
-118++ 9B91 24                       INC H						; inc H so next line in char (ZX Spectrum Screen RAM)
-119++ 9B92 13                       INC DE 						; next line to be printed
-120++ 9B93 10 FA                    DJNZ BYTEPCHAR				; Repeat 8 lines
-121++ 9B95 3A B9 A2                 LD A,(PRINT_ATTR) 			; Load Attributes to print char with
-122++ 9B98 2A B7 A2                 LD HL, (SCR_ATTR_PTR)
-123++ 9B9B 77                       LD (HL),A
-124++ 9B9C 21 B7 A2                 LD HL, SCR_ATTR_PTR			; Get pointer to ATTR
-125++ 9B9F 34                       INC (HL)					; Move Attribute cursor to next char
-126++ 9BA0 21 B5 A2     			LD HL, SCR_CUR_PTR
-127++ 9BA3 34           			INC (HL)					; update Cursor pointer to next position
-128++ 9BA4 C9                       RET
-129++ 9BA5              ; ----------------------------------------------------------------------------------------
-130++ 9BA5
-131++ 9BA5
-132++ 9BA5
-133++ 9BA5              ; ----------------------------------------------------------------------------------------
-134++ 9BA5              ; INK2PAPER - moves ink of attribute stored in (PRINT_ATTR) to paper and sets ink to 0
-135++ 9BA5              ; 				Sets bright 1 and flash 0
-136++ 9BA5              ; ----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(137): warning: Label has different value in pass 3: previous value 41625 not equal 39845
-137++ 9BA5 3A B9 A2     INK2PAPER:	LD A, (PRINT_ATTR)		    ; Get storedAttribute
-138++ 9BA8 E6 07                    AND 7						; get Attr INK in A
-139++ 9BAA 07           			RLCA
-140++ 9BAB 07           			RLCA
-141++ 9BAC 07           			RLCA						; move Ink to Paper
-142++ 9BAD F6 40        			OR 64						; ink 0 bright 1
-143++ 9BAF 32 B9 A2     			LD (PRINT_ATTR),A		    ; Get storedAttribute
-144++ 9BB2 C9           			RET
-145++ 9BB3              ; ----------------------------------------------------------------------------------------
-146++ 9BB3
-147++ 9BB3
-148++ 9BB3
-149++ 9BB3
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(150): warning: Label has different value in pass 3: previous value 41639 not equal 39859
-150++ 9BB3 21 00 40     CLEARSCR:	LD HL,$4000					; Erases screen by writing 0 to all pixels and attributes
-151++ 9BB6 11 01 40     			LD DE,$4001
-152++ 9BB9 01 FF 1A     			LD BC,6911
-153++ 9BBC 36 00        			LD (HL),0
-154++ 9BBE ED B0        			LDIR
-155++ 9BC0 C9           			RET
-156++ 9BC1
-157++ 9BC1
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(158): warning: Label has different value in pass 3: previous value 41653 not equal 39873
-158++ 9BC1              SCR_CUR_PTR
-158++ 9BC1 00 00          	db $00, $00				; Cursor Pointer in Screen (2 bytes) (HL)
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(159): warning: Label has different value in pass 3: previous value 41655 not equal 39875
-159++ 9BC3 00 00        SCR_ATTR_PTR: 	db $00, $00				; Attr Pointer in Screen (2 bytes) (HL)
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(160): warning: Label has different value in pass 3: previous value 41657 not equal 39877
-160++ 9BC5 00           PRINT_ATTR:		db $00					; Attribute used by printchar routine (1 byte)
-161++ 9BC6
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm(162): warning: Label has different value in pass 3: previous value 41658 not equal 39878
-162++ 9BC6              CHARSET: incbin "charset.bin"			; Charset used
-163++ 9EC6
+  1+  9DC5              ; -------------------------------
+  2+  9DC5              ; ZX Spectrum Text print library
+  3+  9DC5              ; Daniel León - AOC - UFV 2020
+  4+  9DC5              ; -------------------------------
+  5+  9DC5
+  6+  9DC5
+  7+  9DC5              ; ----------------------------------------------------------------------------------------
+  8+  9DC5              ; PRINTAT - Print a string in a position and attributes as per registers:
+  9+  9DC5              ;		IN	A	: Bit 7=1 For Flash / Bit 6=1 For Brigh / Bit 5,4,3 for Paper / Bit 2,1,0 for Ink
+ 10+  9DC5              ;		IN	B	: Row 0..23
+ 11+  9DC5              ;		IN	C	: Column 0..31
+ 12+  9DC5              ;		IN	IX	: Address of text (Text must end in a 0)
+ 13+  9DC5              ; ----------------------------------------------------------------------------------------
+ 14+  9DC5 CD D4 9D     PRINTAT:	CALL PREP_PRT				; Update Attribute var &Screen & Attributes pointers
+ 15+  9DC8              ; ----------------------------------------------------------------------------------------
+ 16+  9DC8              ;		VVV Do not move PRINTSTR below as PRINTAT continues into PRINTSTR routine
+ 17+  9DC8              ; ----------------------------------------------------------------------------------------
+ 18+  9DC8              ; PRINTSTR - Prints String - IX Points to the String start
+ 19+  9DC8              ; ----------------------------------------------------------------------------------------
+ 20+  9DC8 DD 7E 00     PRINTSTR:   LD A,(IX)					; A Contains first char to print
+ 21+  9DCB B7           			OR A						; check for end of string (0)
+ 22+  9DCC C8           			RET Z						; Finish printing if 0
+ 23+  9DCD CD 02 9E     			CALL PRINTCHNUM
+ 24+  9DD0 DD 23        			INC IX						; Move to next char in string
+ 25+  9DD2 18 F4        			JR PRINTSTR					; Start over printing sequence
+ 26+  9DD4              ; ----------------------------------------------------------------------------------------
+ 27+  9DD4
+ 28+  9DD4
+ 29+  9DD4              ;-----------------------------------------------------------------------------------------
+ 30+  9DD4              ; PREP_PRT - Updates Print_Attr, SCR & ATTR Vars
+ 31+  9DD4              ;-----------------------------------------------------------------------------------------
+ 32+  9DD4 32 48 9E     PREP_PRT:	LD (PRINT_ATTR),A			; Set Attribute
+ 33+  9DD7 CD DD 9D     PREP_PRT_2:	CALL CRtoSCREEN
+ 34+  9DDA C3 EF 9D     			JP CRtoATTR
+ 35+  9DDD              ;-----------------------------------------------------------------------------------------
+ 36+  9DDD
+ 37+  9DDD              ;-----------------------------------------------------------------------------------------
+ 38+  9DDD              ; CRtoSCREEN - Converts a scr char coord into a SCREEN Address   b,c = y,x positions
+ 39+  9DDD              ;	IN  - B=Row, C=Column
+ 40+  9DDD              ;	OUT - HL=Address in screen also stored in (SCR_CUR_PTR)
+ 41+  9DDD              ;	Conversion:
+ 42+  9DDD              ;			Row FFfff   Column CCCCC
+ 43+  9DDD              ;			HL=%010FF000 fffCCCCC
+ 44+  9DDD              ;-----------------------------------------------------------------------------------------
+ 45+  9DDD              CRtoSCREEN:
+ 46+  9DDD 78           			LD A,B						; %___FFfff
+ 47+  9DDE F6 40        			OR #40						; %010FFfff
+ 48+  9DE0 E6 F8        			AND #F8						; %010FF000
+ 49+  9DE2 67           			LD H,A
+ 50+  9DE3
+ 51+  9DE3 78           			LD A,B						; %___FFfff
+ 52+  9DE4 E6 07        			AND #7						; %00000fff
+ 53+  9DE6 0F           			RRCA						; %f00000ff
+ 54+  9DE7 0F           			RRCA						; %ff00000f
+ 55+  9DE8 0F           			RRCA						; %fff00000
+ 56+  9DE9 B1           			OR C						; %fffCCCCC
+ 57+  9DEA 6F           			LD L,A
+ 58+  9DEB 22 44 9E                 LD (SCR_CUR_PTR),HL			; Update Variable
+ 59+  9DEE C9                       RET
+ 60+  9DEF              ; ----------------------------------------------------------------------------------------
+ 61+  9DEF
+ 62+  9DEF
+ 63+  9DEF
+ 64+  9DEF              ;-----------------------------------------------------------------------------------------
+ 65+  9DEF              ; CRtoATTR - Converts a screen char coord  into a ATTR Address  b,c = y,x positions
+ 66+  9DEF              ;	IN  - B=Row, C=Column
+ 67+  9DEF              ;	OUT - HL=Address in screen also stored in (SCR_ATTR_PTR)
+ 68+  9DEF              ;	Conversion:
+ 69+  9DEF              ;			Row FFfff   Column CCCCC
+ 70+  9DEF              ;			HL=%010110FF fffCCCCC
+ 71+  9DEF              ;-----------------------------------------------------------------------------------------
+ 72+  9DEF              CRtoATTR:
+ 73+  9DEF 78           			LD A,B						; %___FFfff
+ 74+  9DF0 0F           			RRCA						; %f000FFff
+ 75+  9DF1 0F           			RRCA						; %ff000FFf
+ 76+  9DF2 0F           			RRCA						; %fff000FF
+ 77+  9DF3 6F           			LD L,A
+ 78+  9DF4 E6 03        			AND 3						; %000000FF	value of FF can be only 00,01,10
+ 79+  9DF6 F6 58        			OR #58						; %010110FF value will be #58, #59 or #5A
+ 80+  9DF8 67           			LD H,A
+ 81+  9DF9
+ 82+  9DF9 7D           			LD A,L						; %fff000FF
+ 83+  9DFA E6 E0        			AND #E0						; %fff00000
+ 84+  9DFC B1           			OR C						; %fffCCCCC
+ 85+  9DFD 6F           			LD L,A
+ 86+  9DFE
+ 87+  9DFE 22 46 9E                 LD (SCR_ATTR_PTR),HL		; Update Variable
+ 88+  9E01 C9                       RET
+ 89+  9E02              ; ----------------------------------------------------------------------------------------
+ 90+  9E02
+ 91+  9E02
+ 92+  9E02
+ 93+  9E02              ; ----------------------------------------------------------------------------------------
+ 94+  9E02              ; PRINTCHNUM - Prints Char Number N (stored in A)
+ 95+  9E02              ;-----------------------------------------------------------------------------------------
+ 96+  9E02              PRINTCHNUM:	;SUB 32						; Adjust Ascii to charset
+ 97+  9E02 26 00        			LD H,0						; Multiply value by 8 to get to right Char in Charset
+ 98+  9E04 6F           			LD L,A
+ 99+  9E05 29           			ADD HL,HL
+100+  9E06 29           			ADD HL,HL
+101+  9E07 29           			ADD HL,HL
+102+  9E08 11 49 9D     			LD DE, CHARSET-(8*32)		; Optimize in compile time (instead of sub 32)
+103+  9E0B 19           			ADD HL,DE
+104+  9E0C EB           			EX  DE,HL					;Value in DE
+105+  9E0D              			; Continues to printchar below
+106+  9E0D              ; ----------------------------------------------------------------------------------------
+107+  9E0D
+108+  9E0D
+109+  9E0D              ; ----------------------------------------------------------------------------------------
+110+  9E0D              ; PRINTCHAR - Prints Char  (DE points to the char. Uses HL as last Cur Pointer)
+111+  9E0D              ; ----------------------------------------------------------------------------------------
+112+  9E0D              PRINTCHAR:
+113+  9E0D 06 08        			LD B,8						; 8 Lines per char
+114+  9E0F 2A 44 9E                 LD HL, (SCR_CUR_PTR)		; Load Cursor Pointer y,x
+115+  9E12
+116+  9E12 1A           BYTEPCHAR:	LD A,(DE)					; Get Char to be printed, first line
+117+  9E13 77           			LD (HL),A					; Move to Printing location
+118+  9E14 24                       INC H						; inc H so next line in char (ZX Spectrum Screen RAM)
+119+  9E15 13                       INC DE 						; next line to be printed
+120+  9E16 10 FA                    DJNZ BYTEPCHAR				; Repeat 8 lines
+121+  9E18 3A 48 9E                 LD A,(PRINT_ATTR) 			; Load Attributes to print char with
+122+  9E1B 2A 46 9E                 LD HL, (SCR_ATTR_PTR)
+123+  9E1E 77                       LD (HL),A
+124+  9E1F 21 46 9E                 LD HL, SCR_ATTR_PTR			; Get pointer to ATTR
+125+  9E22 34                       INC (HL)					; Move Attribute cursor to next char
+126+  9E23 21 44 9E     			LD HL, SCR_CUR_PTR
+127+  9E26 34           			INC (HL)					; update Cursor pointer to next position
+128+  9E27 C9                       RET
+129+  9E28              ; ----------------------------------------------------------------------------------------
+130+  9E28
+131+  9E28
+132+  9E28
+133+  9E28              ; ----------------------------------------------------------------------------------------
+134+  9E28              ; INK2PAPER - moves ink of attribute stored in (PRINT_ATTR) to paper and sets ink to 0
+135+  9E28              ; 				Sets bright 1 and flash 0
+136+  9E28              ; ----------------------------------------------------------------------------------------
+137+  9E28 3A 48 9E     INK2PAPER:	LD A, (PRINT_ATTR)		    ; Get storedAttribute
+138+  9E2B E6 07                    AND 7						; get Attr INK in A
+139+  9E2D 07           			RLCA
+140+  9E2E 07           			RLCA
+141+  9E2F 07           			RLCA						; move Ink to Paper
+142+  9E30 F6 40        			OR 64						; ink 0 bright 1
+143+  9E32 32 48 9E     			LD (PRINT_ATTR),A		    ; Get storedAttribute
+144+  9E35 C9           			RET
+145+  9E36              ; ----------------------------------------------------------------------------------------
+146+  9E36
+147+  9E36
+148+  9E36
+149+  9E36
+150+  9E36 21 00 40     CLEARSCR:	LD HL,$4000					; Erases screen by writing 0 to all pixels and attributes
+151+  9E39 11 01 40     			LD DE,$4001
+152+  9E3C 01 FF 1A     			LD BC,6911
+153+  9E3F 36 00        			LD (HL),0
+154+  9E41 ED B0        			LDIR
+155+  9E43 C9           			RET
+156+  9E44
+157+  9E44
+158+  9E44              SCR_CUR_PTR
+158+  9E44 00 00          	db $00, $00				; Cursor Pointer in Screen (2 bytes) (HL)
+159+  9E46 00 00        SCR_ATTR_PTR: 	db $00, $00				; Attr Pointer in Screen (2 bytes) (HL)
+160+  9E48 00           PRINT_ATTR:		db $00					; Attribute used by printchar routine (1 byte)
+161+  9E49
+162+  9E49              CHARSET: incbin "charset.bin"			; Charset used
+163+  A149
 # file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm
-  3+  9EC6
-  4+  9EC6 20 20 20 20  FILA_VACIA_B: DB "                        ", 0
-  4+  9ECA 20 20 20 20
-  4+  9ECE 20 20 20 20
-  4+  9ED2 20 20 20 20
-  4+  9ED6 20 20 20 20
-  4+  9EDA 20 20 20 20
-  4+  9EDE 00
-  5+  9EDF 20 42 69 65  BIENVENIDA: DB " Bienvenido a Conecta 4 ", 0
-  5+  9EE3 6E 76 65 6E
-  5+  9EE7 69 64 6F 20
-  5+  9EEB 61 20 43 6F
-  5+  9EEF 6E 65 63 74
-  5+  9EF3 61 20 34 20
-  5+  9EF7 00
-  6+  9EF8 20 51 75 69  JUGAR: DB " Quieres jugar?   ", 0
-  6+  9EFC 65 72 65 73
-  6+  9F00 20 6A 75 67
-  6+  9F04 61 72 3F 20
-  6+  9F08 20 20 00
-  7+  9F0B 20 20 20 20  FILA_VACIA_J: DB "                  ", 0
-  7+  9F0F 20 20 20 20
-  7+  9F13 20 20 20 20
-  7+  9F17 20 20 20 20
-  7+  9F1B 20 20 00
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\quieresJugar.asm(8): warning: Label has different value in pass 3: previous value 41524 not equal 40734
-  8+  9F1E 00 00        CARACTER: DB 0, 0
-  9+  9F20              COLOR_AMARILLO EQU 6
- 10+  9F20
- 11+  9F20              MENSAJE_BIENVENIDA:
- 12+  9F20 06 01            LD B, 1
- 13+  9F22 0E 04            LD C, 4
- 14+  9F24 DD 21 C6 9E      LD IX, FILA_VACIA_B
- 15+  9F28 CD 42 9B         CALL PRINTAT
- 16+  9F2B 06 03            LD B, 3
- 17+  9F2D DD 21 C6 9E      LD IX, FILA_VACIA_B
- 18+  9F31 CD 42 9B         CALL PRINTAT
- 19+  9F34 06 02            LD B, 2
- 20+  9F36 3E 02            LD A, 2
- 21+  9F38 DD 21 DF 9E      LD IX, BIENVENIDA
- 22+  9F3C CD 42 9B         CALL PRINTAT
- 23+  9F3F
- 24+  9F3F 06 14            LD B, 20
- 25+  9F41 0E 01            LD C, 1
- 26+  9F43 DD 21 0B 9F      LD IX, FILA_VACIA_J
- 27+  9F47 CD 42 9B         CALL PRINTAT
- 28+  9F4A 06 16            LD B, 22
- 29+  9F4C DD 21 0B 9F      LD IX, FILA_VACIA_J
- 30+  9F50 CD 42 9B         CALL PRINTAT
- 31+  9F53 06 15            LD B, 21
- 32+  9F55 3E 06            LD A, COLOR_AMARILLO
- 33+  9F57 DD 21 F8 9E      LD IX, JUGAR
- 34+  9F5B CD 42 9B         CALL PRINTAT
- 35+  9F5E
- 36+  9F5E 3E B0            LD A, 128 + 8*COLOR_AMARILLO
- 37+  9F60 32 B1 5A         LD($5800 + 21*32 + 17), A
- 38+  9F63 CD 21 9B         CALL S_N
- 39+  9F66 32 1E 9F         LD (CARACTER), A
- 40+  9F69 F5               PUSH AF
- 41+  9F6A 3E 06            LD A, COLOR_AMARILLO
- 42+  9F6C 06 15            LD B, 21
- 43+  9F6E 0E 11            LD C, 17
- 44+  9F70 DD 21 1E 9F      LD IX, CARACTER
- 45+  9F74 CD 42 9B         CALL PRINTAT
- 46+  9F77 F1               POP AF
- 47+  9F78
- 48+  9F78 C9               RET
- 49+  9F79
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\quieresJugar.asm
- 10   9F79                  INCLUDE "pantallaJuego.asm"
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallaJuego.asm
-  1+  9F79              PTLLA_JUEGO:
-  2+  9F79 C5               PUSH BC
-  2+  9F7A E5             PUSH HL
-  2+  9F7B D5             PUSH DE
-  2+  9F7C F5             PUSH AF
-  3+  9F7D 3E 00            LD A, 0
-  4+  9F7F CD 8D 9F         CALL SET_GRID_EMPTY
-  5+  9F82 21 A5 40         LD HL, $40A5
-  6+  9F85 CD 97 9F         CALL DRAW_EMPTY_CIRCLES
-  7+  9F88                  ; CALL SET_PRED
-  8+  9F88                  ; CALL SET_PYEL
-  9+  9F88 F1               POP AF
-  9+  9F89 D1             POP DE
-  9+  9F8A E1             POP HL
-  9+  9F8B C1             POP BC
- 10+  9F8C C9               RET
- 11+  9F8D
- 12+  9F8D              SET_GRID_EMPTY:
- 13+  9F8D C5               PUSH BC
- 14+  9F8E 06 07            LD B, 7
- 15+  9F90              GRIDLOOP:
- 16+  9F90 CD C2 9F         CALL SET_COLUMN_COLOR
- 17+  9F93 10 FB            DJNZ GRIDLOOP
- 18+  9F95                  ; CALL SET_COLUMN_COLOR
- 19+  9F95                  ; CALL SET_COLUMN_COLOR
- 20+  9F95                  ; CALL SET_COLUMN_COLOR
- 21+  9F95                  ; CALL SET_COLUMN_COLOR
- 22+  9F95                  ; CALL SET_COLUMN_COLOR
- 23+  9F95                  ; CALL SET_COLUMN_COLOR
- 24+  9F95 C1               POP BC
- 25+  9F96 C9               RET
- 26+  9F97
- 27+  9F97              DRAW_EMPTY_CIRCLES:
- 28+  9F97 C5               PUSH BC
- 29+  9F98 06 07            LD B, 7
- 30+  9F9A              EMPTYLOOP:
- 31+  9F9A CD A1 9F         CALL DRAW_CIRCLE_COLUMN
- 32+  9F9D 10 FB            DJNZ EMPTYLOOP
- 33+  9F9F                  ; CALL DRAW_CIRCLE_COLUMN
- 34+  9F9F                  ; CALL DRAW_CIRCLE_COLUMN
- 35+  9F9F                  ; CALL DRAW_CIRCLE_COLUMN
- 36+  9F9F                  ; CALL DRAW_CIRCLE_COLUMN
- 37+  9F9F                  ; CALL DRAW_CIRCLE_COLUMN
- 38+  9F9F                  ; CALL DRAW_CIRCLE_COLUMN
- 39+  9F9F                  ; CALL DRAW_CIRCLE_COLUMN
- 40+  9F9F C1               POP BC
- 41+  9FA0 C9               RET
- 42+  9FA1
- 43+  9FA1              DRAW_CIRCLE_COLUMN:
- 44+  9FA1 C5               PUSH BC
- 45+  9FA2 06 06            LD B, 6
- 46+  9FA4              COLUMNLOOP:
- 47+  9FA4 CD D9 9F         CALL DRAW_CIRCLE
- 48+  9FA7 10 FB            DJNZ COLUMNLOOP
- 49+  9FA9                  ; CALL DRAW_CIRCLE
- 50+  9FA9                  ; CALL DRAW_CIRCLE
- 51+  9FA9                  ; CALL DRAW_CIRCLE
- 52+  9FA9                  ; CALL DRAW_CIRCLE
- 53+  9FA9                  ; CALL DRAW_CIRCLE
- 54+  9FA9 01 C3 EF         LD BC, $EFC3
- 55+  9FAC 09               ADD HL, BC
- 56+  9FAD C1               POP BC
- 57+  9FAE C9               RET
- 58+  9FAF
- 59+  9FAF              VERIFY_4000:
- 60+  9FAF 3E 41            LD A, $41
- 61+  9FB1 BC               CP H
- 62+  9FB2 CC BC 9F         CALL Z, SET_4800
- 63+  9FB5 3E 49            LD A, $49
- 64+  9FB7 BC               CP H
- 65+  9FB8 CC BF 9F         CALL Z, SET_5000
- 66+  9FBB C9               RET
- 67+  9FBC
- 68+  9FBC              SET_4800:
- 69+  9FBC 26 48            LD H, $48
- 70+  9FBE C9               RET
- 71+  9FBF
- 72+  9FBF              SET_5000:
- 73+  9FBF 26 50            LD H, $50
- 74+  9FC1 C9               RET
- 75+  9FC2
- 76+  9FC2              SET_COLUMN_COLOR:
- 77+  9FC2 CD 66 A1         CALL SET_C_COLOR_E
- 78+  9FC5 CD 66 A1         CALL SET_C_COLOR_E
- 79+  9FC8 CD 66 A1         CALL SET_C_COLOR_E
- 80+  9FCB CD 66 A1         CALL SET_C_COLOR_E
- 81+  9FCE CD 66 A1         CALL SET_C_COLOR_E
- 82+  9FD1 CD 66 A1         CALL SET_C_COLOR_E
- 83+  9FD4 01 C3 FD         LD BC, $FDC3
- 84+  9FD7 09               ADD HL, BC
- 85+  9FD8 C9               RET
- 86+  9FD9
- 87+  9FD9              DRAW_CIRCLE:
- 88+  9FD9
- 89+  9FD9 01 1D 00         LD BC, $001D
- 90+  9FDC
- 91+  9FDC CD 04 A0         CALL UL_CIRCLE
- 92+  9FDF CD 2A A0         CALL UM_CIRCLE
- 93+  9FE2 CD 4D A0         CALL UR_CIRCLE
- 94+  9FE5
- 95+  9FE5 09               ADD HL, BC
- 96+  9FE6 CD AF 9F         CALL VERIFY_4000
- 97+  9FE9
- 98+  9FE9 CD 73 A0         CALL ML_CIRCLE
- 99+  9FEC CD 96 A0         CALL MM_CIRCLE
-100+  9FEF CD B5 A0         CALL MR_CIRCLE
-101+  9FF2
-102+  9FF2 09               ADD HL, BC
-103+  9FF3 CD AF 9F         CALL VERIFY_4000
-104+  9FF6
-105+  9FF6 CD D8 A0         CALL LL_CIRCLE
-106+  9FF9 CD FE A0         CALL LM_CIRCLE
-107+  9FFC CD 21 A1         CALL LR_CIRCLE
-108+  9FFF
-109+  9FFF 09               ADD HL, BC
-110+  A000 CD AF 9F         CALL VERIFY_4000
-111+  A003
-112+  A003 C9               RET
-113+  A004
-114+  A004              UL_CIRCLE:
-115+  A004 3E 00            LD A, %00000000
-116+  A006 77               LD (HL), A
-117+  A007 CD 47 A1         CALL INC_AND_LOAD_H
-118+  A00A 3E 03            LD A, %00000011
-119+  A00C CD 47 A1         CALL INC_AND_LOAD_H
-120+  A00F 3E 07            LD A, %00000111
-121+  A011 CD 47 A1         CALL INC_AND_LOAD_H
-122+  A014 3E 0F            LD A, %00001111
-123+  A016 CD 47 A1         CALL INC_AND_LOAD_H
-124+  A019 3E 1F            LD A, %00011111
-125+  A01B CD 47 A1         CALL INC_AND_LOAD_H
-126+  A01E 3E 3F            LD A, %00111111
-127+  A020 CD 47 A1         CALL INC_AND_LOAD_H
-128+  A023 CD 47 A1         CALL INC_AND_LOAD_H
-129+  A026 CD 51 A1         CALL SETBACK_HL
-130+  A029 C9               RET
-131+  A02A
-132+  A02A              UM_CIRCLE:
-133+  A02A 3E 00            LD A, %00000000
-134+  A02C 25               DEC H
-135+  A02D CD 47 A1         CALL INC_AND_LOAD_H
-136+  A030 3E 7E            LD A, %01111110
-137+  A032 CD 47 A1         CALL INC_AND_LOAD_H
-138+  A035 3E FF            LD A, %11111111
-139+  A037 CD 47 A1         CALL INC_AND_LOAD_H
-140+  A03A CD 47 A1         CALL INC_AND_LOAD_H
-141+  A03D CD 47 A1         CALL INC_AND_LOAD_H
-142+  A040 CD 47 A1         CALL INC_AND_LOAD_H
-143+  A043 CD 47 A1         CALL INC_AND_LOAD_H
-144+  A046 CD 47 A1         CALL INC_AND_LOAD_H
-145+  A049 CD 51 A1         CALL SETBACK_HL
-146+  A04C C9               RET
-147+  A04D
-148+  A04D              UR_CIRCLE:
-149+  A04D 3E 00            LD A, %00000000
-150+  A04F 77               LD (HL), A
-151+  A050 CD 47 A1         CALL INC_AND_LOAD_H
-152+  A053 3E C0            LD A, %11000000
-153+  A055 CD 47 A1         CALL INC_AND_LOAD_H
-154+  A058 3E E0            LD A, %11100000
-155+  A05A CD 47 A1         CALL INC_AND_LOAD_H
-156+  A05D 3E F0            LD A, %11110000
-157+  A05F CD 47 A1         CALL INC_AND_LOAD_H
-158+  A062 3E F8            LD A, %11111000
-159+  A064 CD 47 A1         CALL INC_AND_LOAD_H
-160+  A067 3E FC            LD A, %11111100
-161+  A069 CD 47 A1         CALL INC_AND_LOAD_H
-162+  A06C CD 47 A1         CALL INC_AND_LOAD_H
-163+  A06F CD 51 A1         CALL SETBACK_HL
-164+  A072 C9               RET
-165+  A073
-166+  A073              ML_CIRCLE:
-167+  A073 3E 3F            LD A, %00111111
-168+  A075 25               DEC H
-169+  A076 CD 47 A1         CALL INC_AND_LOAD_H
-170+  A079 3E 7F            LD A, %01111111
-171+  A07B CD 47 A1         CALL INC_AND_LOAD_H
-172+  A07E CD 47 A1         CALL INC_AND_LOAD_H
-173+  A081 CD 47 A1         CALL INC_AND_LOAD_H
-174+  A084 CD 47 A1         CALL INC_AND_LOAD_H
-175+  A087 CD 47 A1         CALL INC_AND_LOAD_H
-176+  A08A CD 47 A1         CALL INC_AND_LOAD_H
-177+  A08D 3E 3F            LD A, %00111111
-178+  A08F CD 47 A1         CALL INC_AND_LOAD_H
-179+  A092 CD 51 A1         CALL SETBACK_HL
-180+  A095 C9               RET
-181+  A096
-182+  A096              MM_CIRCLE:
-183+  A096 3E FF            LD A, %11111111
-184+  A098 25               DEC H
-185+  A099 CD 47 A1         CALL INC_AND_LOAD_H
-186+  A09C CD 47 A1         CALL INC_AND_LOAD_H
-187+  A09F CD 47 A1         CALL INC_AND_LOAD_H
-188+  A0A2 CD 47 A1         CALL INC_AND_LOAD_H
-189+  A0A5 CD 47 A1         CALL INC_AND_LOAD_H
-190+  A0A8 CD 47 A1         CALL INC_AND_LOAD_H
-191+  A0AB CD 47 A1         CALL INC_AND_LOAD_H
-192+  A0AE CD 47 A1         CALL INC_AND_LOAD_H
-193+  A0B1 CD 51 A1         CALL SETBACK_HL
-194+  A0B4 C9               RET
-195+  A0B5
-196+  A0B5              MR_CIRCLE:
-197+  A0B5 3E FC            LD A, %11111100
-198+  A0B7 25               DEC H
-199+  A0B8 CD 47 A1         CALL INC_AND_LOAD_H
-200+  A0BB 3E FE            LD A, %11111110
-201+  A0BD CD 47 A1         CALL INC_AND_LOAD_H
-202+  A0C0 CD 47 A1         CALL INC_AND_LOAD_H
-203+  A0C3 CD 47 A1         CALL INC_AND_LOAD_H
-204+  A0C6 CD 47 A1         CALL INC_AND_LOAD_H
-205+  A0C9 CD 47 A1         CALL INC_AND_LOAD_H
-206+  A0CC CD 47 A1         CALL INC_AND_LOAD_H
-207+  A0CF 3E FC            LD A, %11111100
-208+  A0D1 CD 47 A1         CALL INC_AND_LOAD_H
-209+  A0D4 CD 51 A1         CALL SETBACK_HL
-210+  A0D7 C9               RET
-211+  A0D8
-212+  A0D8              LL_CIRCLE:
-213+  A0D8 3E 3F            LD A, %00111111
-214+  A0DA 77               LD (HL), A
-215+  A0DB CD 47 A1         CALL INC_AND_LOAD_H
-216+  A0DE 3E 1F            LD A, %00011111
-217+  A0E0 CD 47 A1         CALL INC_AND_LOAD_H
-218+  A0E3 3E 0F            LD A, %00001111
-219+  A0E5 CD 47 A1         CALL INC_AND_LOAD_H
-220+  A0E8 3E 07            LD A, %00000111
-221+  A0EA CD 47 A1         CALL INC_AND_LOAD_H
-222+  A0ED 3E 03            LD A, %00000011
-223+  A0EF CD 47 A1         CALL INC_AND_LOAD_H
-224+  A0F2 3E 00            LD A, %00000000
-225+  A0F4 CD 47 A1         CALL INC_AND_LOAD_H
-226+  A0F7 CD 47 A1         CALL INC_AND_LOAD_H
-227+  A0FA CD 51 A1         CALL SETBACK_HL
-228+  A0FD C9               RET
-229+  A0FE
-230+  A0FE              LM_CIRCLE:
-231+  A0FE 3E FF            LD A, %11111111
-232+  A100 25               DEC H
-233+  A101 CD 47 A1         CALL INC_AND_LOAD_H
-234+  A104 CD 47 A1         CALL INC_AND_LOAD_H
-235+  A107 CD 47 A1         CALL INC_AND_LOAD_H
-236+  A10A CD 47 A1         CALL INC_AND_LOAD_H
-237+  A10D CD 47 A1         CALL INC_AND_LOAD_H
-238+  A110 CD 47 A1         CALL INC_AND_LOAD_H
-239+  A113 3E 7E            LD A, %01111110
-240+  A115 CD 47 A1         CALL INC_AND_LOAD_H
-241+  A118 3E 00            LD A, %00000000
-242+  A11A CD 47 A1         CALL INC_AND_LOAD_H
-243+  A11D CD 51 A1         CALL SETBACK_HL
-244+  A120 C9               RET
-245+  A121
-246+  A121              LR_CIRCLE:
-247+  A121 3E FC            LD A, %11111100
-248+  A123 77               LD (HL), A
-249+  A124 CD 47 A1         CALL INC_AND_LOAD_H
-250+  A127 3E F8            LD A, %11111000
-251+  A129 CD 47 A1         CALL INC_AND_LOAD_H
-252+  A12C 3E F0            LD A, %11110000
-253+  A12E CD 47 A1         CALL INC_AND_LOAD_H
-254+  A131 3E E0            LD A, %11100000
-255+  A133 CD 47 A1         CALL INC_AND_LOAD_H
-256+  A136 3E C0            LD A, %11000000
-257+  A138 CD 47 A1         CALL INC_AND_LOAD_H
-258+  A13B 3E 00            LD A, %00000000
-259+  A13D CD 47 A1         CALL INC_AND_LOAD_H
-260+  A140 CD 47 A1         CALL INC_AND_LOAD_H
-261+  A143 CD 51 A1         CALL SETBACK_HL
-262+  A146 C9               RET
-263+  A147
-264+  A147              INC_AND_LOAD_H:
-265+  A147 50 59            LD DE, BC
-266+  A149 01 00 01         LD BC, $0100
-267+  A14C 09               ADD HL, BC
-268+  A14D 77               LD (HL), A
-269+  A14E 42 4B            LD BC, DE
-270+  A150 C9               RET
-271+  A151
-272+  A151              SETBACK_HL:
-273+  A151 50 59            LD DE, BC
-274+  A153 01 01 F9         LD BC, $F901
-275+  A156 09               ADD HL, BC
-276+  A157 42 4B            LD BC, DE
-277+  A159 C9               RET
-278+  A15A
-279+  A15A              INC_HL_3X3:
-280+  A15A 77               LD (HL), A
-281+  A15B 50 59            LD DE, BC
-282+  A15D 23               INC HL
-283+  A15E 77               LD (HL), A
-284+  A15F 23               INC HL
-285+  A160 77               LD (HL), A
-286+  A161 01 1E 00         LD BC, 30
-287+  A164 09               ADD HL, BC
-288+  A165 C9               RET
-289+  A166
-290+  A166              SET_C_COLOR_E:
-291+  A166 3E 0F            LD A, 1*8+7
-292+  A168 CD 5A A1         CALL INC_HL_3X3
-293+  A16B CD 5A A1         CALL INC_HL_3X3
-294+  A16E CD 5A A1         CALL INC_HL_3X3
-295+  A171 C9               RET
-296+  A172
-297+  A172              SET_C_COLOR_R:
-298+  A172 3E 0A            LD A, 1*8+2
-299+  A174 CD 5A A1         CALL INC_HL_3X3
-300+  A177 CD 5A A1         CALL INC_HL_3X3
-301+  A17A CD 5A A1         CALL INC_HL_3X3
-302+  A17D C9               RET
-303+  A17E
-304+  A17E              SET_C_COLOR_Y: ; LA RUTINA CAMBIA EL COLOR DE UN DETERMINADO BLOQUE 3X3 A AMARILLO
-305+  A17E 3E 0E            LD A, 1*8+6
-306+  A180 CD 5A A1         CALL INC_HL_3X3
-307+  A183 CD 5A A1         CALL INC_HL_3X3
-308+  A186 CD 5A A1         CALL INC_HL_3X3
-309+  A189 C9               RET
-310+  A18A
-311+  A18A              ; SET_PRED ; Rutina para indicar que el jugador actual es el rojo
-312+  A18A              ;     LD HL, $5845
-313+  A18A              ;     LD A, 2
-314+  A18A              ;     CALL INC_HL_3X3
-315+  A18A              ;     CALL INC_HL_3X3
-316+  A18A              ;     CALL INC_HL_3X3
-317+  A18A              ;     LD HL, $5845
-318+  A18A              ;     CALL CONVERT_58_2_40
-319+  A18A              ;     CALL DRAW_CIRCLE
-320+  A18A              ;     RET
-321+  A18A
-322+  A18A              ; SET_PYEL ; Rutina para indicar que el jugador actual es el amarillo
-323+  A18A              ;     LD HL, $5857
-324+  A18A              ;     LD A, 6
-325+  A18A              ;     CALL INC_HL_3X3
-326+  A18A              ;     CALL INC_HL_3X3
-327+  A18A              ;     CALL INC_HL_3X3
-328+  A18A              ;     LD HL, $5857
-329+  A18A              ;     CALL CONVERT_58_2_40
-330+  A18A              ;     CALL DRAW_CIRCLE
-331+  A18A              ;     RET
-332+  A18A
-333+  A18A              CONVERT_58_2_40 ; CONVIERTE UNA DIRECCION DE MEMORIA QUE COMIENZA CON $58XX A $40XX
-334+  A18A 01 00 E8         LD BC, $E800
-335+  A18D 09               ADD HL, BC
-336+  A18E F1               POP AF
-336+  A18F D1             POP DE
-336+  A190 E1             POP HL
-336+  A191 C1             POP BC
-337+  A192 C9               RET
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallaJuego.asm
- 11   A193                  INCLUDE "pantallasSimples.asm"
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallasSimples.asm
-  1+  A193              PTLLA_NEGRA:
-  2+  A193 C5               PUSH BC
-  2+  A194 D5             PUSH DE
-  2+  A195 E5             PUSH HL
-  2+  A196 F5             PUSH AF
-  3+  A197              PTLLA_NEGRA_BUCLE:
-  4+  A197 3E 00            LD A, 0
-  5+  A199 21 00 58         LD HL, $5800
-  6+  A19C 01 00 03         LD BC, $5B00 - $5800
-  7+  A19F 77               LD (HL), A
-  8+  A1A0 23               INC HL
-  9+  A1A1 0B               DEC BC
- 10+  A1A2 20 F3            JR NZ, PTLLA_NEGRA_BUCLE
- 11+  A1A4 18 45            JR VOLVER
- 12+  A1A6
- 13+  A1A6              PTLLA_ADIOS:
- 14+  A1A6 3E 10            LD A, 2*8
- 15+  A1A8 06 0B            LD B, 11
- 16+  A1AA 0E 04            LD C, 4
- 17+  A1AC DD 21 CB A5      LD IX, ADIOS
- 18+  A1B0 CD 42 9B         CALL PRINTAT
- 19+  A1B3 18 36            JR VOLVER
- 20+  A1B5
- 21+  A1B5              PTLLA_FIN:
- 22+  A1B5 CD 93 A1         CALL PTLLA_NEGRA
- 23+  A1B8 3E 01            LD A, 1
- 24+  A1BA 06 01            LD B, 1
- 25+  A1BC 0E 02            LD C, 2
- 26+  A1BE DD 21 C3 A5      LD IX, FIN
- 27+  A1C2 CD 42 9B         CALL PRINTAT
- 28+  A1C5 3E 06            LD A, 6
- 29+  A1C7 06 0B            LD B, 11
- 30+  A1C9 0E 01            LD C, 1
- 31+  A1CB DD 21 18 A2      LD IX, OTRA
- 32+  A1CF
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallasSimples.asm(33): error: Label not found: COLOR
- 33+  A1CF 3E 80            LD A, 128 + 8*COLOR
- 34+  A1D1 32 7E 59         LD($5800 + 11*32 + 30), A
- 35+  A1D4 CD 21 9B         CALL S_N
- 36+  A1D7 32 1E 9F         LD (CARACTER), A
- 37+  A1DA 57               LD D, A
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallasSimples.asm(38): error: Label not found: COLOR
- 38+  A1DB 3E 00            LD A, COLOR
- 39+  A1DD 06 0B            LD B, 11
- 40+  A1DF 0E 1E            LD C, 30
- 41+  A1E1 DD 21 1E 9F      LD IX, CARACTER
- 42+  A1E5 CD 42 9B         CALL PRINTAT
- 43+  A1E8 7A               LD A, D
- 44+  A1E9 18 00            JR VOLVER
- 45+  A1EB
- 46+  A1EB              VOLVER:
- 47+  A1EB 77               LD (HL), A
- 48+  A1EC F1               POP AF
- 48+  A1ED E1             POP HL
- 48+  A1EE D1             POP DE
- 48+  A1EF C1             POP BC
- 49+  A1F0 C9               RET
- 50+  A1F1
- 51+  A1F1              AZUL EQU 1
- 52+  A1F1              ROJO EQU 2
- 53+  A1F1              AMARILLO EQU 6
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallasSimples.asm(54): warning: Label has different value in pass 3: previous value 42443 not equal 41457
- 54+  A1F1 20 41 44 49  ADIOS: DB " ADIOS!!!! ", 0
- 54+  A1F5 4F 53 21 21
- 54+  A1F9 21 21 20 00
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallasSimples.asm(55): warning: Label has different value in pass 3: previous value 42435 not equal 41469
- 55+  A1FD 20 4C 41 20  FIN: DB " LA PARTIDA HA FINALIZADO ", 0
- 55+  A201 50 41 52 54
- 55+  A205 49 44 41 20
- 55+  A209 48 41 20 46
- 55+  A20D 49 4E 41 4C
- 55+  A211 49 5A 41 44
- 55+  A215 4F 20 00
- 56+  A218 51 55 49 45  OTRA: DB "QUIERES JUGAR OTRA PARTIDA?", 0
- 56+  A21C 52 45 53 20
- 56+  A220 4A 55 47 41
- 56+  A224 52 20 4F 54
- 56+  A228 52 41 20 50
- 56+  A22C 41 52 54 49
- 56+  A230 44 41 3F 00
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallasSimples.asm(57): warning: Label has different value in pass 3: previous value 40734 not equal 41524
- 57+  A234 00 00        CARACTER: DB 0, 0
- 58+  A236
- 59+  A236                  INCLUDE "PRINTAT.ASM"
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM
-  1++ A236              ; -------------------------------
-  2++ A236              ; ZX Spectrum Text print library
-  3++ A236              ; Daniel León - AOC - UFV 2020
-  4++ A236              ; -------------------------------
-  5++ A236
-  6++ A236
-  7++ A236              ; ----------------------------------------------------------------------------------------
-  8++ A236              ; PRINTAT - Print a string in a position and attributes as per registers:
-  9++ A236              ;		IN	A	: Bit 7=1 For Flash / Bit 6=1 For Brigh / Bit 5,4,3 for Paper / Bit 2,1,0 for Ink
- 10++ A236              ;		IN	B	: Row 0..23
- 11++ A236              ;		IN	C	: Column 0..31
- 12++ A236              ;		IN	IX	: Address of text (Text must end in a 0)
- 13++ A236              ; ----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(14): warning: Label has different value in pass 3: previous value 39746 not equal 41526
- 14++ A236 CD 51 9B     PRINTAT:	CALL PREP_PRT				; Update Attribute var &Screen & Attributes pointers
- 15++ A239              ; ----------------------------------------------------------------------------------------
- 16++ A239              ;		VVV Do not move PRINTSTR below as PRINTAT continues into PRINTSTR routine
- 17++ A239              ; ----------------------------------------------------------------------------------------
- 18++ A239              ; PRINTSTR - Prints String - IX Points to the String start
- 19++ A239              ; ----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(20): warning: Label has different value in pass 3: previous value 39749 not equal 41529
- 20++ A239 DD 7E 00     PRINTSTR:   LD A,(IX)					; A Contains first char to print
- 21++ A23C B7           			OR A						; check for end of string (0)
- 22++ A23D C8           			RET Z						; Finish printing if 0
- 23++ A23E CD 7F 9B     			CALL PRINTCHNUM
- 24++ A241 DD 23        			INC IX						; Move to next char in string
- 25++ A243 18 F4        			JR PRINTSTR					; Start over printing sequence
- 26++ A245              ; ----------------------------------------------------------------------------------------
- 27++ A245
- 28++ A245
- 29++ A245              ;-----------------------------------------------------------------------------------------
- 30++ A245              ; PREP_PRT - Updates Print_Attr, SCR & ATTR Vars
- 31++ A245              ;-----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(32): warning: Label has different value in pass 3: previous value 39761 not equal 41541
- 32++ A245 32 C5 9B     PREP_PRT:	LD (PRINT_ATTR),A			; Set Attribute
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(33): warning: Label has different value in pass 3: previous value 39764 not equal 41544
- 33++ A248 CD 5A 9B     PREP_PRT_2:	CALL CRtoSCREEN
- 34++ A24B C3 6C 9B     			JP CRtoATTR
- 35++ A24E              ;-----------------------------------------------------------------------------------------
- 36++ A24E
- 37++ A24E              ;-----------------------------------------------------------------------------------------
- 38++ A24E              ; CRtoSCREEN - Converts a scr char coord into a SCREEN Address   b,c = y,x positions
- 39++ A24E              ;	IN  - B=Row, C=Column
- 40++ A24E              ;	OUT - HL=Address in screen also stored in (SCR_CUR_PTR)
- 41++ A24E              ;	Conversion:
- 42++ A24E              ;			Row FFfff   Column CCCCC
- 43++ A24E              ;			HL=%010FF000 fffCCCCC
- 44++ A24E              ;-----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(45): warning: Label has different value in pass 3: previous value 39770 not equal 41550
- 45++ A24E              CRtoSCREEN:
- 46++ A24E 78           			LD A,B						; %___FFfff
- 47++ A24F F6 40        			OR #40						; %010FFfff
- 48++ A251 E6 F8        			AND #F8						; %010FF000
- 49++ A253 67           			LD H,A
- 50++ A254
- 51++ A254 78           			LD A,B						; %___FFfff
- 52++ A255 E6 07        			AND #7						; %00000fff
- 53++ A257 0F           			RRCA						; %f00000ff
- 54++ A258 0F           			RRCA						; %ff00000f
- 55++ A259 0F           			RRCA						; %fff00000
- 56++ A25A B1           			OR C						; %fffCCCCC
- 57++ A25B 6F           			LD L,A
- 58++ A25C 22 C1 9B                 LD (SCR_CUR_PTR),HL			; Update Variable
- 59++ A25F C9                       RET
- 60++ A260              ; ----------------------------------------------------------------------------------------
- 61++ A260
- 62++ A260
- 63++ A260
- 64++ A260              ;-----------------------------------------------------------------------------------------
- 65++ A260              ; CRtoATTR - Converts a screen char coord  into a ATTR Address  b,c = y,x positions
- 66++ A260              ;	IN  - B=Row, C=Column
- 67++ A260              ;	OUT - HL=Address in screen also stored in (SCR_ATTR_PTR)
- 68++ A260              ;	Conversion:
- 69++ A260              ;			Row FFfff   Column CCCCC
- 70++ A260              ;			HL=%010110FF fffCCCCC
- 71++ A260              ;-----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(72): warning: Label has different value in pass 3: previous value 39788 not equal 41568
- 72++ A260              CRtoATTR:
- 73++ A260 78           			LD A,B						; %___FFfff
- 74++ A261 0F           			RRCA						; %f000FFff
- 75++ A262 0F           			RRCA						; %ff000FFf
- 76++ A263 0F           			RRCA						; %fff000FF
- 77++ A264 6F           			LD L,A
- 78++ A265 E6 03        			AND 3						; %000000FF	value of FF can be only 00,01,10
- 79++ A267 F6 58        			OR #58						; %010110FF value will be #58, #59 or #5A
- 80++ A269 67           			LD H,A
- 81++ A26A
- 82++ A26A 7D           			LD A,L						; %fff000FF
- 83++ A26B E6 E0        			AND #E0						; %fff00000
- 84++ A26D B1           			OR C						; %fffCCCCC
- 85++ A26E 6F           			LD L,A
- 86++ A26F
- 87++ A26F 22 C3 9B                 LD (SCR_ATTR_PTR),HL		; Update Variable
- 88++ A272 C9                       RET
- 89++ A273              ; ----------------------------------------------------------------------------------------
- 90++ A273
- 91++ A273
- 92++ A273
- 93++ A273              ; ----------------------------------------------------------------------------------------
- 94++ A273              ; PRINTCHNUM - Prints Char Number N (stored in A)
- 95++ A273              ;-----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(96): warning: Label has different value in pass 3: previous value 39807 not equal 41587
- 96++ A273              PRINTCHNUM:	;SUB 32						; Adjust Ascii to charset
- 97++ A273 26 00        			LD H,0						; Multiply value by 8 to get to right Char in Charset
- 98++ A275 6F           			LD L,A
- 99++ A276 29           			ADD HL,HL
-100++ A277 29           			ADD HL,HL
-101++ A278 29           			ADD HL,HL
-102++ A279 11 C6 9A     			LD DE, CHARSET-(8*32)		; Optimize in compile time (instead of sub 32)
-103++ A27C 19           			ADD HL,DE
-104++ A27D EB           			EX  DE,HL					;Value in DE
-105++ A27E              			; Continues to printchar below
-106++ A27E              ; ----------------------------------------------------------------------------------------
-107++ A27E
-108++ A27E
-109++ A27E              ; ----------------------------------------------------------------------------------------
-110++ A27E              ; PRINTCHAR - Prints Char  (DE points to the char. Uses HL as last Cur Pointer)
-111++ A27E              ; ----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(112): warning: Label has different value in pass 3: previous value 39818 not equal 41598
-112++ A27E              PRINTCHAR:
-113++ A27E 06 08        			LD B,8						; 8 Lines per char
-114++ A280 2A C1 9B                 LD HL, (SCR_CUR_PTR)		; Load Cursor Pointer y,x
-115++ A283
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(116): warning: Label has different value in pass 3: previous value 39823 not equal 41603
-116++ A283 1A           BYTEPCHAR:	LD A,(DE)					; Get Char to be printed, first line
-117++ A284 77           			LD (HL),A					; Move to Printing location
-118++ A285 24                       INC H						; inc H so next line in char (ZX Spectrum Screen RAM)
-119++ A286 13                       INC DE 						; next line to be printed
-120++ A287 10 FA                    DJNZ BYTEPCHAR				; Repeat 8 lines
-121++ A289 3A C5 9B                 LD A,(PRINT_ATTR) 			; Load Attributes to print char with
-122++ A28C 2A C3 9B                 LD HL, (SCR_ATTR_PTR)
-123++ A28F 77                       LD (HL),A
-124++ A290 21 C3 9B                 LD HL, SCR_ATTR_PTR			; Get pointer to ATTR
-125++ A293 34                       INC (HL)					; Move Attribute cursor to next char
-126++ A294 21 C1 9B     			LD HL, SCR_CUR_PTR
-127++ A297 34           			INC (HL)					; update Cursor pointer to next position
-128++ A298 C9                       RET
-129++ A299              ; ----------------------------------------------------------------------------------------
-130++ A299
-131++ A299
-132++ A299
-133++ A299              ; ----------------------------------------------------------------------------------------
-134++ A299              ; INK2PAPER - moves ink of attribute stored in (PRINT_ATTR) to paper and sets ink to 0
-135++ A299              ; 				Sets bright 1 and flash 0
-136++ A299              ; ----------------------------------------------------------------------------------------
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(137): warning: Label has different value in pass 3: previous value 39845 not equal 41625
-137++ A299 3A C5 9B     INK2PAPER:	LD A, (PRINT_ATTR)		    ; Get storedAttribute
-138++ A29C E6 07                    AND 7						; get Attr INK in A
-139++ A29E 07           			RLCA
-140++ A29F 07           			RLCA
-141++ A2A0 07           			RLCA						; move Ink to Paper
-142++ A2A1 F6 40        			OR 64						; ink 0 bright 1
-143++ A2A3 32 C5 9B     			LD (PRINT_ATTR),A		    ; Get storedAttribute
-144++ A2A6 C9           			RET
-145++ A2A7              ; ----------------------------------------------------------------------------------------
-146++ A2A7
-147++ A2A7
-148++ A2A7
-149++ A2A7
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(150): warning: Label has different value in pass 3: previous value 39859 not equal 41639
-150++ A2A7 21 00 40     CLEARSCR:	LD HL,$4000					; Erases screen by writing 0 to all pixels and attributes
-151++ A2AA 11 01 40     			LD DE,$4001
-152++ A2AD 01 FF 1A     			LD BC,6911
-153++ A2B0 36 00        			LD (HL),0
-154++ A2B2 ED B0        			LDIR
-155++ A2B4 C9           			RET
-156++ A2B5
-157++ A2B5
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(158): warning: Label has different value in pass 3: previous value 39873 not equal 41653
-158++ A2B5              SCR_CUR_PTR
-158++ A2B5 00 00          	db $00, $00				; Cursor Pointer in Screen (2 bytes) (HL)
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(159): warning: Label has different value in pass 3: previous value 39875 not equal 41655
-159++ A2B7 00 00        SCR_ATTR_PTR: 	db $00, $00				; Attr Pointer in Screen (2 bytes) (HL)
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(160): warning: Label has different value in pass 3: previous value 39877 not equal 41657
-160++ A2B9 00           PRINT_ATTR:		db $00					; Attribute used by printchar routine (1 byte)
-161++ A2BA
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM(162): warning: Label has different value in pass 3: previous value 39878 not equal 41658
-162++ A2BA              CHARSET: incbin "charset.bin"			; Charset used
-163++ A5BA
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\PRINTAT.ASM
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\pantallasSimples.asm
- 12   A5BA
- 13   A5BA              INICIO:
- 14   A5BA CD C4 A5         CALL BIENVENIDA_JUEGO
- 15   A5BD              JUEGO:
- 16   A5BD CD D3 A5         CALL PARTIDA
- 17   A5C0 CD BD A5         CALL JUEGO
- 18   A5C3
- 19   A5C3              JUGAR_PARTIDA:
- 20   A5C3
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm(21): warning: Label has different value in pass 3: previous value 41469 not equal 42435
- 21   A5C3 76           FIN: HALT
- 22   A5C4
- 23   A5C4              BIENVENIDA_JUEGO:
- 24   A5C4 CD 0A 80         CALL CARGAR_PANTALLA_INICIAL
- 25   A5C7 CD 20 9F         CALL MENSAJE_BIENVENIDA
- 26   A5CA
- 27   A5CA                  ; GESTIONAR RESPUESTA (SI O NO)
- 28   A5CA C9               RET
- 29   A5CB
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm(30): warning: Label has different value in pass 3: previous value 41457 not equal 42443
- 30   A5CB              ADIOS:
- 31   A5CB CD 93 A1         CALL PTLLA_NEGRA
- 32   A5CE CD A6 A1         CALL PTLLA_ADIOS
- 33   A5D1 18 F0            JR FIN
- 34   A5D3
- 35   A5D3              PARTIDA:
- 36   A5D3 CD 93 A1         CALL PTLLA_NEGRA
- 37   A5D6 21 05 04         LD HL, $0405
- 38   A5D9 CD E1 A5         CALL COORD_ATRIB
- 39   A5DC CD 79 9F         CALL PTLLA_JUEGO
- 40   A5DF 18 E2            JR FIN
- 41   A5E1
- 42   A5E1              COORD_ATRIB:
- 43   A5E1              ; PREREQUISITO: HABER SELECCIONADO UNA FILA Y UNA COLUMNA (H Y L) SOBRE LA QUE SE QUIERE OBTENER UNA DIRECCIÓN VIDEORAM
- 44   A5E1              ; H = FILA
- 45   A5E1              ; L = COLUMNA
- 46   A5E1              ; HL = DIRECCIÓN DE LA VIDEORAM
- 47   A5E1
- 48   A5E1 F5               PUSH AF
- 49   A5E2 7C               LD A, H ; 0 0 0 H4 H3 H2 H1 H0
- 50   A5E3 CB 27            SLA A
- 50   A5E5 CB 27          SLA A
- 50   A5E7 CB 27          SLA A
- 50   A5E9 CB 27          SLA A
- 50   A5EB CB 27          SLA A ; H2 H1 H0 0 0 0 0 0
- 51   A5ED B5               OR L ; H2 H1 H0 L4 L3 L2 L1 L0
- 52   A5EE 7C               LD A, H ; 0 0 0 H4 H3 H2 H1 H0
- 53   A5EF CB 2F            SRA A
- 53   A5F1 CB 2F          SRA A
- 53   A5F3 CB 2F          SRA A; 0 0 0 0 0 0 H4 H3
- 54   A5F5 F6 58            OR $58 ; 0 1 0 1 1 0 H4 H3
- 55   A5F7                  ; HL = 0 1 0 1 1 0 H4 H3 H2 H1 H0 L4 L3 L2 L1 L0
- 56   A5F7 F1               POP AF
- 57   A5F8 C9               RET
- 58   A5F9
- 59   A5F9              COORD_ATRIB_PXLS: ; DEVUELVE LA DIRECCION A LA PRIMERA FILA DE 8 PIXELS DEL BLOQUE INDICADO POR FILA Y COLUMNA
- 60   A5F9
- 61   A5F9 F5               PUSH AF
- 61   A5FA C5             PUSH BC
- 62   A5FB 7C               LD A, H ; 0 0 0 H4 H3 H2 H1 H0
- 63   A5FC CB 27            SLA A
- 63   A5FE CB 27          SLA A
- 63   A600 CB 27          SLA A
- 63   A602 CB 27          SLA A
- 63   A604 CB 27          SLA A ; H2 H1 H0 0 0 0 0 0
- 64   A606 B5               OR L ; H2 H1 H0 L4 L3 L2 L1 L0
- 65   A607 7C               LD A, H ; 0 0 0 H4 H3 H2 H1 H0
- 66   A608 CB 2F            SRA A
- 66   A60A CB 2F          SRA A
- 66   A60C CB 2F          SRA A ; 0 0 0 0 0 0 H4 H3
- 67   A60E F6 58            OR $58 ; 0 1 0 1 1 0 H4 H3
- 68   A610                  ; HL = 0 1 0 1 1 0 H4 H3 H2 H1 H0 L4 L3 L2 L1 L0
- 69   A610 01 00 E8         LD BC, $E800
- 70   A613 09               ADD HL, BC
- 71   A614 C1               POP BC
- 71   A615 F1             POP AF
- 72   A616 C9               RET
- 73   A617
- 74   A617
- 75   A617              ; COORD_ATRIB_TABLERO:
- 76   A617              ;     ; PREREQUISITO: HABER PASADO UNA COORDENADA HL (FILA COLUMNA) POR COORD_ATRIB
- 77   A617              ;     ; + 4*32 + 5
- 78   A617              ;     ADD HL, %10000101 ; COORD ESTANDARIZADA A QUE EL TABLERO INICIA EN LA FILA 4, COL 5
- 79   A617              ;     RET
- 80   A617
- 81   A617              ; COORD_ATRIB_JUGADOR:
- 82   A617              ;     ; PREREQUISITO: HABER PASADO UNA COORDENADA HL (FILA COLUMNA) POR COORD_ATRIB
- 83   A617              ;     ; + 32 + 5
- 84   A617              ;     ADD HL, %00100101 ; COORD ESTANDARIZADA A QUE EL INDICADOR DE JUGADOR INICIA EN LA FILA 1, COL 5
- 85   A617              ;     RET
- 86   A617
- 87   A617              ; PINTAR_FICHA_R:
- 88   A617              ;     CALL COORD_ATRIB
- 89   A617              ;     CALL COORD_ATRIB_TABLERO
- 90   A617              ;     CALL SET_C_COLOR_R
- 91   A617              ;     RET
- 92   A617
- 93   A617              ; PINTAR_FICHA_Y:
- 94   A617              ;     CALL COORD_ATRIB
- 95   A617              ;     CALL COORD_ATRIB_TABLERO
- 96   A617              ;     CALL SET_C_COLOR_y
- 97   A617              ;     RET
- 98   A617
- 99   A617              ESPERAR:
-100   A617 C5               PUSH BC
-101   A618 F5               PUSH AF
-102   A619 01 FF 00         LD BC, CONTADOR
-103   A61C              ESPERAR1:
-104   A61C 0B               DEC BC ; 6C
-105   A61D 78               LD A, B ; 4C
-106   A61E B1               OR C ; 4C
-107   A61F 00               NOP ; 4C
-108   A620 20 FA            JR NZ, ESPERAR1 ; 12C
-109   A622                  ; DURACION TOTAL = APPROX 0,49 SEG
-110   A622 F1               POP AF
-111   A623 C1               POP BC
-112   A624 C9               RET
-113   A625
-114   A625              RET
-115   A625
+ 27   A149
+ 28   A149              ; STRINGS PARA IMPRESION
+ 29   A149
+ 30   A149 20 20 20 20  STRING_FILA_VACIA_B: DB "                        ", 0
+ 30   A14D 20 20 20 20
+ 30   A151 20 20 20 20
+ 30   A155 20 20 20 20
+ 30   A159 20 20 20 20
+ 30   A15D 20 20 20 20
+ 30   A161 00
+ 31   A162 20 42 69 65  STRING_BIENVENIDA: DB " Bienvenido a Conecta 4 ", 0
+ 31   A166 6E 76 65 6E
+ 31   A16A 69 64 6F 20
+ 31   A16E 61 20 43 6F
+ 31   A172 6E 65 63 74
+ 31   A176 61 20 34 20
+ 31   A17A 00
+ 32   A17B 20 51 75 69  STRING_JUGAR: DB " Quieres jugar? S/N:   ", 0
+ 32   A17F 65 72 65 73
+ 32   A183 20 6A 75 67
+ 32   A187 61 72 3F 20
+ 32   A18B 53 2F 4E 3A
+ 32   A18F 20 20 20 00
+ 33   A193 20 20 20 20  STRING_FILA_VACIA_J: DB "                       ", 0
+ 33   A197 20 20 20 20
+ 33   A19B 20 20 20 20
+ 33   A19F 20 20 20 20
+ 33   A1A3 20 20 20 20
+ 33   A1A7 20 20 20 00
+ 34   A1AB 20 20 20 20  STRING_FILA_VACIA_A: DB "            ", 0
+ 34   A1AF 20 20 20 20
+ 34   A1B3 20 20 20 20
+ 34   A1B7 00
+ 35   A1B8 20 20 41 44  STRING_ADIOS: DB "  ADIOS!!!! ", 0
+ 35   A1BC 49 4F 53 21
+ 35   A1C0 21 21 21 20
+ 35   A1C4 00
+ 36   A1C5 20 4C 41 20  STRING_FIN: DB " LA PARTIDA HA FINALIZADO ", 0
+ 36   A1C9 50 41 52 54
+ 36   A1CD 49 44 41 20
+ 36   A1D1 48 41 20 46
+ 36   A1D5 49 4E 41 4C
+ 36   A1D9 49 5A 41 44
+ 36   A1DD 4F 20 00
+ 37   A1E0 51 55 49 45  STRING_OTRA: DB "QUIERES JUGAR OTRA VEZ? S/N: ", 0
+ 37   A1E4 52 45 53 20
+ 37   A1E8 4A 55 47 41
+ 37   A1EC 52 20 4F 54
+ 37   A1F0 52 41 20 56
+ 37   A1F4 45 5A 3F 20
+ 37   A1F8 53 2F 4E 3A
+ 37   A1FC 20 00
+ 38   A1FE 00 00        CHAR_CARACTER: DB 0, 0
+ 39   A200
+ 40   A200              ; INICIO DEL FLUJO DEL PROGRAMA FUNCIONAL
+ 41   A200              INICIO:
+ 42   A200 CD 33 9D         CALL GB_BIENVENIDA
+ 43   A203 CD 7F A2         CALL PRINT_BIENVENIDA
+ 44   A206 CD BE A2         CALL BLINKER_JUGAR
+ 45   A209 CD 6C 9D         CALL K_SON
+ 46   A20C 7A               LD A, D
+ 47   A20D 32 FE A1         LD (CHAR_CARACTER), A
+ 48   A210 3E 06            LD A, COLOR_TEXTO_AMARILLO
+ 49   A212 CD C9 A2         CALL PRINT_CHAR_SON
+ 50   A215 3A FE A1         LD A, (CHAR_CARACTER)
+ 51   A218 FE 53            CP 'S'
+ 52   A21A CC 41 A2         CALL Z, LOGICA_JUEGO
+ 53   A21D FE 4E            CP 'N'
+ 54   A21F CC 22 A2         CALL Z, ADIOS
+ 55   A222
+ 56   A222              ADIOS:
+ 57   A222 CD 47 9D         CALL GB_ADIOS
+ 58   A225 CD D5 A2         CALL PRINT_ADIOS
+ 59   A228              FINAL:
+ 60   A228 06 0A            LD B, 10
+ 61   A22A CD 59 A2         CALL ESPERAR
+ 62   A22D 10 F9            DJNZ FINAL
+ 63   A22F 76               HALT
+ 64   A230
+ 65   A230              FIN_NEXT: ; TERMINO LA PARTIDA, OFRECEMOS OTRA O FINALIZAR
+ 66   A230 CD 4B 9D         CALL GB_FIN_NEXT
+ 67   A233 CD 6C 9D         CALL K_SON
+ 68   A236 7A               LD A, D
+ 69   A237 FE 53            CP 'S'
+ 70   A239 CC 41 A2         CALL Z, LOGICA_JUEGO
+ 71   A23C FE 4E            CP 'N'
+ 72   A23E CC 22 A2         CALL Z, ADIOS
+ 73   A241
+ 74   A241              LOGICA_JUEGO:
+ 75   A241 CD 4F 9D         CALL GB_PTLLA_INICIO_DE_JUEGO
+ 76   A244 76               HALT
+ 77   A245 CD C5 9D         CALL LF_INICIALIZACION
+ 78   A248              BUCLE_JUEGO:
+ 79   A248 CD C5 9D         CALL LF_SWITCH_JUGADOR
+ 80   A24B              GESTIONAR_JUGADA:
+ 81   A24B CD 6C 9D         CALL GC_COLOR_JUGADOR_ACTUAL
+ 82   A24E CD 8F 9D         CALL K_LR_ENTER
+ 83   A251 CD C5 9D         CALL LC_VALIDPLAY
+ 84   A254                  ; SI SE DETECTO LEFT
+ 85   A254                  ; CALL (CONDICION DE DETECCION), GC_LEFT
+ 86   A254                  ; SI SE DETECTO RIGHT
+ 87   A254                  ; CALL (CONDICION DE DETECCION), GC_RIGHT
+ 88   A254                  ; SI SE DETECTO ENTER
+ 89   A254                  ; CALL (CONDICION DE DETECCION), GC_ENTER
+ 90   A254              COMPROBAR_FIN_JUEGO:
+ 91   A254 CD C5 9D         CALL LC_COMPROBAR_FIN
+ 92   A257                  ; SI SE DETECTO EL FIN DEL JUEGO
+ 93   A257                  ; JR (CONDICION DE FIN), FIN_NEXT
+ 94   A257                  ; SI SE DETECTA QUE EL JUEGO SIGUE
+ 95   A257 18 EF            JR BUCLE_JUEGO
+ 96   A259
+ 97   A259              ESPERAR:
+ 98   A259 C5               PUSH BC
+ 99   A25A F5               PUSH AF
+100   A25B 01 FF 00         LD BC, CONTADOR
+101   A25E              ESPERAR1:
+102   A25E 0B               DEC BC ; 6C
+103   A25F 78               LD A, B ; 4C
+104   A260 B1               OR C ; 4C
+105   A261 00               NOP ; 4C
+106   A262 20 FA            JR NZ, ESPERAR1 ; 12C
+107   A264                  ; DURACION TOTAL = APPROX 0,49 SEG
+108   A264 F1               POP AF
+109   A265 C1               POP BC
+110   A266 C9               RET
+111   A267
+112   A267              COORD_ATRIB:
+113   A267                  ; PREREQUISITO: HABER SELECCIONADO UNA FILA Y UNA COLUMNA (H Y L) SOBRE LA QUE SE QUIERE OBTENER UNA DIRECCIÓN VIDEORAM
+114   A267                  ; H = FILA
+115   A267                  ; L = COLUMNA
+116   A267                  ; HL = DIRECCIÓN DE LA VIDEORAM
+117   A267
+118   A267 F5               PUSH AF
+119   A268 7C               LD A, H ; 0 0 0 H4 H3 H2 H1 H0
+120   A269 CB 27            SLA A
+120   A26B CB 27          SLA A
+120   A26D CB 27          SLA A
+120   A26F CB 27          SLA A
+120   A271 CB 27          SLA A ; H2 H1 H0 0 0 0 0 0
+121   A273 B5               OR L ; H2 H1 H0 L4 L3 L2 L1 L0
+122   A274 7C               LD A, H ; 0 0 0 H4 H3 H2 H1 H0
+123   A275 CB 2F            SRA A
+123   A277 CB 2F          SRA A
+123   A279 CB 2F          SRA A; 0 0 0 0 0 0 H4 H3
+124   A27B F6 58            OR $58 ; 0 1 0 1 1 0 H4 H3
+125   A27D                  ; HL = 0 1 0 1 1 0 H4 H3 H2 H1 H0 L4 L3 L2 L1 L0
+126   A27D F1               POP AF
+127   A27E C9               RET
+128   A27F
+129   A27F              PRINT_BIENVENIDA:
+130   A27F 06 01            LD B, 1
+131   A281 0E 04            LD C, 4
+132   A283 DD 21 49 A1      LD IX, STRING_FILA_VACIA_B
+133   A287 CD C5 9D         CALL PRINTAT
+134   A28A 06 03            LD B, 3
+135   A28C DD 21 49 A1      LD IX, STRING_FILA_VACIA_B
+136   A290 CD C5 9D         CALL PRINTAT
+137   A293 06 02            LD B, 2
+138   A295 3E 02            LD A, COLOR_TEXTO_ROJO
+139   A297 DD 21 62 A1      LD IX, STRING_BIENVENIDA
+140   A29B CD C5 9D         CALL PRINTAT
+141   A29E
+142   A29E 06 14            LD B, 20
+143   A2A0 0E 01            LD C, 1
+144   A2A2 DD 21 93 A1      LD IX, STRING_FILA_VACIA_J
+145   A2A6 CD C5 9D         CALL PRINTAT
+146   A2A9 06 16            LD B, 22
+147   A2AB DD 21 93 A1      LD IX, STRING_FILA_VACIA_J
+148   A2AF CD C5 9D         CALL PRINTAT
+149   A2B2 06 15            LD B, 21
+150   A2B4 3E 06            LD A, COLOR_TEXTO_AMARILLO
+151   A2B6 DD 21 7B A1      LD IX, STRING_JUGAR
+152   A2BA CD C5 9D         CALL PRINTAT
+153   A2BD
+154   A2BD C9               RET
+155   A2BE
+156   A2BE              BLINKER_JUGAR:
+157   A2BE 06 15            LD B, 21
+158   A2C0 0E 11            LD C, 17
+159   A2C2 21 B6 5A         LD HL, $5800 + 21*NUM_COLS + 22
+160   A2C5 3E B0            LD A, BLINK + 8*COLOR_TEXTO_AMARILLO
+161   A2C7 77               LD (HL), A
+162   A2C8
+163   A2C8 C9               RET
+164   A2C9
+165   A2C9              PRINT_CHAR_SON:
+166   A2C9 06 15            LD B, 21
+167   A2CB 0E 16            LD C, 22
+168   A2CD DD 21 FE A1      LD IX, CHAR_CARACTER
+169   A2D1 CD C5 9D         CALL PRINTAT
+170   A2D4
+171   A2D4 C9               RET
+172   A2D5
+173   A2D5              PRINT_ADIOS:
+174   A2D5
+175   A2D5 06 0A            LD B, 10
+176   A2D7 0E 0A            LD C, 10
+177   A2D9 3E 10            LD A, 8*COLOR_TEXTO_ROJO
+178   A2DB DD 21 AB A1      LD IX, STRING_FILA_VACIA_A
+179   A2DF CD C5 9D         CALL PRINTAT
+180   A2E2 06 0C            LD B, 12
+181   A2E4 3E 10            LD A, 8*COLOR_TEXTO_ROJO
+182   A2E6 DD 21 AB A1      LD IX, STRING_FILA_VACIA_A
+183   A2EA CD C5 9D         CALL PRINTAT
+184   A2ED 06 0B            LD B, 11
+185   A2EF 3E 10            LD A, 8*COLOR_TEXTO_ROJO
+186   A2F1 DD 21 B8 A1      LD IX, STRING_ADIOS
+187   A2F5 CD C5 9D         CALL PRINTAT
+188   A2F8
+189   A2F8 C9               RET
+190   A2F9
+191   A2F9              PRINT_FIN:
+192   A2F9
 # file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm
