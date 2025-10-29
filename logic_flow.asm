@@ -1,0 +1,14 @@
+ESPERAR:
+    PUSH BC
+    PUSH AF
+    LD BC, CONTADOR
+ESPERAR1: 
+    DEC BC ; 6C
+    LD A, B ; 4C
+    OR C ; 4C
+    NOP ; 4C
+    JR NZ, ESPERAR1 ; 12C
+    ; DURACION TOTAL = APPROX 0,49 SEG
+    POP AF
+    POP BC
+    RET
