@@ -577,13 +577,13 @@ C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.as
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|129||0|2|40547|L|,LC_VALIDPLAY,,+used
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|131||0|2|40547|F|LC_COMPROBAR_FIN
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|131||0|2|40547|L|,LC_COMPROBAR_FIN,,+used
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|1||0|2|40547|F|ESPERAR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|1||0|2|40547|L|,ESPERAR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|1||0|2|40547|F|LF_ESPERAR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|1||0|2|40547|L|,LF_ESPERAR,
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|2||0|2|40547|T|
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|3||0|2|40548|T|
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|4||0|2|40549|T|
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|5||0|2|40552|F|ESPERAR1
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|5||0|2|40552|L|,ESPERAR1,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|5||0|2|40552|F|LF_ESPERAR1
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|5||0|2|40552|L|,LF_ESPERAR1,
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|6||0|2|40552|T|
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|7||0|2|40553|T|
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|8||0|2|40554|T|

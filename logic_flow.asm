@@ -1,8 +1,8 @@
-ESPERAR:
+LF_ESPERAR:
     PUSH BC
     PUSH AF
     LD BC, CONTADOR
-ESPERAR1: 
+LF_ESPERAR1: 
     DEC BC ; 6C
     LD A, B ; 4C
     OR C ; 4C

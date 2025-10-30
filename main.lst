@@ -1,6 +1,4 @@
 C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm(131): error: Duplicate label: LC_COMPROBAR_FIN
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm(98): error: Duplicate label: ESPERAR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm(102): error: Duplicate label: ESPERAR1
 # file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm
   1   0000                  DEVICE ZXSPECTRUM48
   2   0000                  ORG $8000
@@ -665,18 +663,17 @@ C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.as
 # file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm
  24   9E63                  INCLUDE "logic_flow.asm"
 # file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm(1): warning: Label has different value in pass 3: previous value 41735 not equal 40547
-  1+  9E63              ESPERAR:
+  1+  9E63              LF_ESPERAR:
   2+  9E63 C5               PUSH BC
   3+  9E64 F5               PUSH AF
   4+  9E65 01 FF 00         LD BC, CONTADOR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm(5): warning: Label has different value in pass 3: previous value 41740 not equal 40552
-  5+  9E68              ESPERAR1:
+  5+  9E68              LF_ESPERAR1:
   6+  9E68 0B               DEC BC ; 6C
   7+  9E69 78               LD A, B ; 4C
   8+  9E6A B1               OR C ; 4C
   9+  9E6B 00               NOP ; 4C
- 10+  9E6C 20 FA            JR NZ, ESPERAR1 ; 12C
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm(10): error: [JR] Target out of range (+1182)
+ 10+  9E6C 20 00            JR NZ, ESPERAR1 ; 12C
  11+  9E6E                  ; DURACION TOTAL = APPROX 0,49 SEG
  12+  9E6E F1               POP AF
  13+  9E6F C1               POP BC
@@ -931,7 +928,7 @@ C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm(
  58   A2D1 CD 83 A3         CALL PRINT_ADIOS
  59   A2D4              FINAL:
  60   A2D4 06 0A            LD B, 10
- 61   A2D6 CD 63 9E         CALL ESPERAR
+ 61   A2D6 CD 07 A3         CALL ESPERAR
  62   A2D9 10 F9            DJNZ FINAL
  63   A2DB 76               HALT
  64   A2DC
@@ -968,12 +965,10 @@ C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm(
  95   A303 28 D7            JR Z, FIN_NEXT
  96   A305 18 ED            JR BUCLE_JUEGO
  97   A307
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm(98): warning: Label has different value in pass 3: previous value 40547 not equal 41735
  98   A307              ESPERAR:
  99   A307 C5               PUSH BC
 100   A308 F5               PUSH AF
 101   A309 01 FF 00         LD BC, CONTADOR
-C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm(102): warning: Label has different value in pass 3: previous value 40552 not equal 41740
 102   A30C              ESPERAR1:
 103   A30C 0B               DEC BC ; 6C
 104   A30D 78               LD A, B ; 4C
