@@ -282,6 +282,7 @@ SETBACK_HL:
     RET
 
 INC_HL_3X3:
+    PUSH AF: PUSH BC: PUSH DE
     LD (HL), A
     LD DE, BC
     INC HL
@@ -290,6 +291,7 @@ INC_HL_3X3:
     LD (HL), A
     LD BC, 30
     ADD HL, BC
+    POP DE: POP BC: POP AF
     RET
 
 SET_C_COLOR_E:

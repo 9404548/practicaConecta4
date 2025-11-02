@@ -22,10 +22,11 @@ LF_SWITCH_JUGADOR:
     JR Z, SET_P1
     CP PLAYER1
     JR Z, SET_P2
-    RET
+    ; RET
 SET_P1:
     LD D, PLAYER1
-    RET
+    JR SALIDA
 SET_P2:
     LD D, PLAYER2
+SALIDA:
     RET
