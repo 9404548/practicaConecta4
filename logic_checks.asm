@@ -7,6 +7,130 @@ TABLERO_ALTO EQU 6
 ESTADO_TABLERO EQU $D000      ; dirección base en memoria donde se almacena el tablero (fila-major)
 ; Nota: se espera que otras rutinas escriban la columna/fila en las direcciones ULTIMA_FICHA_* antes de llamar
 
+LC_COMPROBAR_TABLERO_LLENO:
+    LD IX, TABLERO_ACTUAL
+    LD B, 7
+    LD DE, 6
+CTL_BUCLE:
+    LD A, (IX)
+    OR A
+    JP Z, LF_RESUMIR_JUEGO 
+    ADD IX, DE
+    DJNZ CTL_BUCLE
+    JP Z, LF_EMPATE_TABLERO_LLENO
+
+    
+
+LC_COMPROBAR_VICTORIA_JUGADOR:
+    ; COMPROBAR 4 EN RAYA VERTICAL
+    ; COMPROBAR 4 EN RAYA HORIZONTAL
+    ; COMPROBAR 4 EN RAYA DIAGONAL
+
+LC_COMPROBAR_4_EN_RAYA_HORIZONTAL:
+    LD IX, TABLERO_ACTUAL
+    LD D, 0
+    LD E, H
+    ADD IX, DE ; POSICION ACTUAL ES H,0
+    LD DE, 6
+    LD B, 7
+    LD HL, (JUGADOR_ACTUAL)
+    LD C, 0
+LCCH_CONTAR_4_EN_RAYA:
+    LD A, (IX)
+    CP L
+    ADD IX, DE ; AHORA MIRA LA SIGUIENTE COLUMNA, NO HE CAMBIADO FLAG Z
+    CALL Z, LC_CHECKS_INC_AND_CP_4RAYA
+    CALL NZ, LC_CHECKS_RESET_CONSECUTIVOS
+    DJNZ LCCH_CONTAR_4_EN_RAYA
+    RET
+
+
+LC_COMPROBAR_4_EN_RAYA_VERTICAL:
+    LD IX, TABLERO_ACTUAL
+    ; ADD 6 * COLUMNA EN LA QUE SE SOLTÓ LA FICHA + FILA EN LA QUE SE SOLTÓ
+    LD B, ; 6 - FILA EN LA QUE SE SOLTÓ
+    LD HL, (JUGGADOR_ACTUAL)
+    LD C, 0
+LCCV_CONTAR_4_EN_RAYA:
+    LD A, (IX)
+    CP L
+    INC IX
+    CALL Z, LC_CHECKS_INC_AND_CP_4RAYA
+    CALL NZ, LC_CHECKS_RESET_CONSECUTIVOS
+    DJNZ LCCV_CONTAR_4_EN_RAYA
+    RET
+
+
+LC_COMPROBAR_4_EN_RAYA_DIAGONALES:
+    LD IX, TABLERO_ACTUAL
+    ADD IX, ;6 * COLUMNA + FILA 
+    CALL LCCD_LEFT
+    CALL LCCD_RIGHT
+    RET
+
+LCCD_LEFT:
+    ; COMPROBAR SEMIDIAGONALES SDUL Y SDLR 
+    ; REALIZAR SUMA DE CONSECUTIVAS = SDUL + SDLR + 1
+    LD C, 0
+LCCV_CONTAR_4_EN_RAYA:
+
+
+
+
+LC_CHECKS_INC_AND_CP_4RAYA:
+    PUSH AF
+    INC C
+    LD A, C
+    CP 4
+    RET Z, FIN_PARTIDA
+    POP AF
+    RET
+
+LC_CHECKS_RESET_CONSECUTIVOS:
+    LD C, 0
+    RET
+
+LC_SLOT_POINTER:
+; SLOT_POINTER - Calcula dirección de videoram a partir de fila/columna
+; H = fila, L = columna, HL = dirección de videoram
+    ; PREREQUISITO: HABER SELECCIONADO UNA FILA Y UNA COLUMNA (H Y L) SOBRE LA QUE SE QUIERE OBTENER UNA DIRECCIÓN VIDEORAM
+    ; H = FILA
+    ; L = COLUMNA
+    ; HL = DIRECCIÓN DE LA VIDEORAM
+
+    PUSH AF
+    LD A, H ; 0 0 0 H4 H3 H2 H1 H0
+    SLA A: SLA A: SLA A: SLA A: SLA A ; H2 H1 H0 0 0 0 0 0
+    OR L ; H2 H1 H0 L4 L3 L2 L1 L0
+    LD A, H ; 0 0 0 H4 H3 H2 H1 H0
+    SRA A: SRA A: SRA A; 0 0 0 0 0 0 H4 H3 
+    OR $58 ; 0 1 0 1 1 0 H4 H3
+    ; HL = 0 1 0 1 1 0 H4 H3 H2 H1 H0 L4 L3 L2 L1 L0
+    POP AF
+    RET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ; LC_COMPROBAR_FIN
 ;  - Rutina principal que invoca las comprobaciones de victoria en las cuatro direcciones.
 ;  - Guarda registros y llama a subrutinas: vertical, horizontal, diagonal1, diagonal2.

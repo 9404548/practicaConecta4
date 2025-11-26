@@ -12,7 +12,7 @@ CHAR_CARACTER: DB 0, 0                               ; buffer de 1 byte para el 
 
 ; PANTALLA DE INICIO
 PANTALLA_BIENVENIDA: INCBIN "connect4screen.SCR"
-    INCLUDE "pantalla_juego.asm"  ; incluye definiciones/constantes relacionadas con la pantalla
+    INCLUDE "pantalla_juego.asm"  ; rutinas que dibujan el tablero que recibe fichas circulares
 
 GB_BIENVENIDA:
     ; Guardamos registros usados antes de manipular la pantalla

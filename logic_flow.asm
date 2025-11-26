@@ -20,11 +20,12 @@ LF_ESPERAR1:
     RET
 
 ; LF_INICIALIZACION
-;  - Inicializa el estado gráfico del juego (por ejemplo, dibuja la fila superior de círculos)
+;  - Inicializa el estado lógico y gráfico del juego (por ejemplo, dibuja la fila superior de círculos)
 ;  - D = PLAYER2 (jugador inicial por defecto)
 ;  - Llama a GC_DRAW_CIRCLES_TOP para preparar la pantalla
 LF_INICIALIZACION:
     LD D, PLAYER2
+    CALL LF_BOARD_RESET
     CALL GC_DRAW_CIRCLES_TOP
     RET
 
@@ -45,4 +46,14 @@ SET_P1:
 SET_P2:
     LD D, PLAYER2
 SALIDA:
+    RET
+
+; RESETEA LA CONDICION DEL TABLERO ACTUAL A TODO CEROS.
+LF_BOARD_RESET:
+    LD B, 42
+    LD IX, TABLERO_ACTUAL
+    XOR A
+BR_BUCLE:
+    LD (IX), A
+    DJNZ BR_BUCLE
     RET

@@ -102,25 +102,6 @@ ESPERAR1:
     POP BC
     RET
 
-; COORD_ATRIB - Calcula dirección de videoram a partir de fila/columna
-; H = fila, L = columna, HL = dirección de videoram
-COORD_ATRIB:
-    ; PREREQUISITO: HABER SELECCIONADO UNA FILA Y UNA COLUMNA (H Y L) SOBRE LA QUE SE QUIERE OBTENER UNA DIRECCIÓN VIDEORAM
-    ; H = FILA
-    ; L = COLUMNA
-    ; HL = DIRECCIÓN DE LA VIDEORAM
-
-    PUSH AF
-    LD A, H ; 0 0 0 H4 H3 H2 H1 H0
-    SLA A: SLA A: SLA A: SLA A: SLA A ; H2 H1 H0 0 0 0 0 0
-    OR L ; H2 H1 H0 L4 L3 L2 L1 L0
-    LD A, H ; 0 0 0 H4 H3 H2 H1 H0
-    SRA A: SRA A: SRA A; 0 0 0 0 0 0 H4 H3 
-    OR $58 ; 0 1 0 1 1 0 H4 H3
-    ; HL = 0 1 0 1 1 0 H4 H3 H2 H1 H0 L4 L3 L2 L1 L0
-    POP AF
-    RET
-
 ; JUGADA_DESPLAZAMIENTO - Administra desplazamiento tras Q/W
 JUGADA_DESPLAZAMIENTO:
     CP 'W'

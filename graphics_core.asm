@@ -6,7 +6,7 @@
 ;      INC_HL_3X3 escribe/avanza sobre un bloque 3x3 usando (HL)
 ;  - Efecto: carga A con D|BLINK y aplica ese atributo en la celda base $5845 (3 llamadas -> 3 filas del bloque)
 GC_COLOR_JUGADOR_ACTUAL:
-    LD A, D
+    LD A, (JUGADOR_ACTUAL)
     ADD BLINK
     PUSH AF
     LD HL, $5845

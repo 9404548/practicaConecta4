@@ -1,4 +1,12 @@
+VARIABLES: JR VARIABLES
 ; variables.asm - Definición de constantes globales para el juego
+JUGADOR1 EQU 1
+JUGADOR2 EQU 2
+
+COLOR_JUGADOR1 EQU ROJO
+COLOR_JUGADOR2 EQU AMARILLO
+
+JUGADOR_ACTUAL: DB JUGADOR2
 
 ; CONTADOR: valor usado para temporización en rutinas de espera (delay)
 CONTADOR EQU 255
@@ -8,3 +16,23 @@ NUM_FILAS EQU 24
 
 ; NUM_COLS: número total de columnas en la pantalla (útil para posicionamiento y bucles)
 NUM_COLS EQU 32
+
+FILAS_TABLERO EQU 6
+COLUMNAS_TABLERO EQU 7
+
+COLUMN_BOARD_SIZE EQU 7 ; DESPLAZAMIENTO QUE SE DEBE HACER PARA MOVERSE POR COLUMNAS EN EL TABLERO DE DB
+ROW_BOARD_SIZE    EQU 1 ; DESPLAZAMIENTO QUE SE DEBE HACER PARA MOVERSE POR FILAS EN EL TABLERO DE DB
+
+DELTAX: DB 0
+DELTAY: DB 0
+
+TOP_BORDER:     DB $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+TABLERO_ACTUAL: DB 0,0,0,0,0,0, $FF ; 00 10 20 30 40 50 (DE LA TOP LEFT A LA BOTTOM LEFT)
+                DB 0,0,0,0,0,0, $FF ; 01 11 21 31 41 51
+                DB 0,0,0,0,0,0, $FF ; 02 12 22 32 42 52
+                DB 0,0,0,0,0,0, $FF ; 03 13 23 33 43 53
+                DB 0,0,0,0,0,0, $FF ; 04 14 24 34 44 54 
+                DB 0,0,0,0,0,0, $FF ; 05 15 25 35 45 55
+                DB 0,0,0,0,0,0, $FF ; 06 16 26 36 46 56 (DE LA TOP RIGHT A LA BOTTOM RIGHT)
+                DB $FF, $FF, $FF, $FF, $FF, $FF, $FF
+
