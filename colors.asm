@@ -13,9 +13,9 @@ PLAYER2             EQU 6    ; Color del jugador 2 (aquí: amarillo)
 NEGRO               EQU 0    ; Color negro / fondo (valor 0)
 AZUL                EQU 1
 ; DISPONIBLES PARA JUGADORES, EL AZUL Y EL NEGRO DEBEN QUEDAR RESERVADOS PARA EL TABLERO
-ROJO                EQU 2
-MAGENTA             EQU 3
-VERDE               EQU 4
-CELESTE             EQU 5
-AMARILLO            EQU 6
-BLANCO              EQU 7
+COLOR_ROJO                EQU 2
+COLOR_MAGENTA             EQU 3
+COLOR_VERDE               EQU 4
+COLOR_CELESTE             EQU 5
+COLOR_AMARILLO            EQU 6
+COLOR_BLANCO              EQU 7

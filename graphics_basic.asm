@@ -8,10 +8,21 @@ STRING_FILA_VACIA_A: DB "            ", 0           ; fila vacía (alineación e
 STRING_ADIOS: DB "  ADIOS!!!! ", 0                 ; mensaje de despedida
 STRING_FIN: DB " LA PARTIDA HA FINALIZADO ", 0     ; mensaje cuando termina la partida
 STRING_OTRA: DB " QUIERES JUGAR OTRA VEZ? S/N:   ", 0 ; preguntar por otra partida
+STRING_CONTROLES_J1: DB "Q=IZQ, W=DER", 0
+STRING_CONTROLES_J2: DB "O=IZQ, P=DER", 0
+MENSAJE_VICTORIA: DB " HA GANADO EL JUGADOR ", 0
+NOMBRE_GANADOR: DB "           "
+                DB "   ROJO    "
+                DB "  MAGENTA  "
+                DB "   VERDE   "
+                DB "  CELESTE  "
+                DB " AMARILLO  "
+                DB "  BLANCO   "
 CHAR_CARACTER: DB 0, 0                               ; buffer de 1 byte para el caracter pulsado
 
 ; PANTALLA DE INICIO
 PANTALLA_BIENVENIDA: INCBIN "connect4screen.SCR"
+PANTALLA_JUEGO: INCBIN "connect4gameScreen.scr"
     INCLUDE "pantalla_juego.asm"  ; rutinas que dibujan el tablero que recibe fichas circulares
 
 GB_BIENVENIDA:
@@ -94,7 +105,11 @@ PRINT_ADIOS:
 
 GB_FIN_NEXT:
     PUSH DE: PUSH HL: PUSH BC: PUSH AF
-    CALL PTLLA_NEGRA
+    CALL PRINT_GANADOR
+    RET 
+
+
+    
 PRINT_FIN:
     LD B, 15
     LD C, 3
@@ -113,7 +128,47 @@ PRINT_FIN:
 GB_PTLLA_INICIO_DE_JUEGO:
     ; Inicializa la pantalla del juego (limpia y carga la plantilla de juego)
     CALL PTLLA_NEGRA
-    CALL SCR_PTLLA_JUEGO
+    ; Guardamos registros usados antes de manipular la pantalla
+    PUSH DE: PUSH HL: PUSH BC: PUSH AF
+
+    ; Copia la imagen BIN a la VRAM/direccion de pantalla
+    LD DE, $4000                 ; dirección destino en memoria de pantalla (ejemplo)
+    LD HL, PANTALLA_JUEGO  ; dirección fuente (bin incluido)
+    LD BC, $5B00 - $4000        ; longitud en bytes a copiar
+PTLLA_JUEGO_BUCLE:
+    LDIR ; copia BC bytes desde (HL) a (DE) incrementando HL/DE
+
+    POP AF: POP BC: POP HL: POP DE
+
+PRINT_CONTROLES:
+    LD B, 0
+    LD C, 1
+    LD A, COLOR_JUGADOR1    ; atributo/color para el texto de adiós
+    LD IX, STRING_CONTROLES_J1
+    CALL PRINTAT
+    LD C, 20
+    LD A, COLOR_JUGADOR2
+    LD IX, STRING_CONTROLES_J2
+    CALL PRINTAT
+    RET
+
+PRINT_GANADOR:
+    LD B, 11
+    LD C, 4
+    LD A, COLOR_BLANCO    ; atributo/color para el texto de adiós
+    LD IX, MENSAJE_VICTORIA
+    CALL PRINTAT
+    LD B, 12
+    LD C, 10
+    PUSH BC
+    LD IX, NOMBRE_GANADOR
+    LD A, (GANADOR): PUSH AF
+    LD B, A: DEC B: DEC B
+CONSEGUIR_GANADOR
+    INC IX
+    DJNZ
+    POP AF: POP BC
+    CALL PRINTAT
     RET
 
 PTLLA_NEGRA:

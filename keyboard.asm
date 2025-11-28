@@ -39,8 +39,11 @@ KSON_RELEASE:
 
 K_LR_ENTER_F: ; LECTURA DE TECLADO PARA Q (LEFT), W (RIGHT), ENTER (soltar ficha) o F
     LD C, $FE            ; puerto de lectura
-
-KLREF_BUCLE: 
+    PUSH AF
+KLREF_BUCLE:
+    LD A, (JUGADOR_ACTUAL)
+    CP 2
+    JR Z, KLREF_BUCLE_J2
     LD B, $FB            ; seleccionar/activar fila de teclado
     IN A, (C)
     BIT 0, A             ; si bit0 = 0 -> tecla Q
@@ -60,6 +63,47 @@ KLREF_BUCLE:
 
     JR KLREF_BUCLE       ; repetir hasta detectar una tecla
 
+KLREF_BUCLE_J2:
+    LD B, $DF            ; seleccionar/activar fila de teclado
+    IN A, (C)
+    BIT 0, A             ; si bit0 = 0 -> tecla P
+    JR Z, KLREF_P
+    BIT 1, A             ; si bit1 = 0 -> tecla O
+    JR Z, KLREF_O
+
+    LD B, $BF            ; cambiar fila/mascara para ENTER
+    IN A, (C)
+    BIT 0, A             ; si bit0 = 0 -> ENTER
+    JR Z, KLREF_ENTER
+
+    LD B, $FD            ; otra fila para F
+    IN A, (C)
+    BIT 3, A             ; si bit3 = 0 -> tecla F
+    JR Z, KLREF_F
+
+    JR KLREF_BUCLE       ; repetir hasta detectar una tecla
+
+KLREF_P:
+    LD D, 'P'
+    JR KLREF_RELEASE_OP
+
+KLREF_O:
+    LD D, 'O'
+
+KLREF_RELEASE_OP:
+    ; Espera a la liberación de Q o W (misma rutina de liberación compartida)
+    LD B, $DF
+    IN A, (C)
+    AND $1F
+    CP $1F
+    JR NZ, KLREF_RELEASE_OP
+    POP AF
+    RET
+
+KLREF_W:
+    LD D, 'W'            ; devuelve 'W' en D
+    JR KLREF_RELEASE_QW
+
 KLREF_Q:
     LD D, 'Q'            ; devuelve 'Q' en D
 
@@ -70,11 +114,9 @@ KLREF_RELEASE_QW:
     AND $1F
     CP $1F
     JR NZ, KLREF_RELEASE_QW
+    POP AF
     RET
 
-KLREF_W:
-    LD D, 'W'            ; devuelve 'W' en D
-    JR KLREF_RELEASE_QW
 
 KLREF_ENTER:
     LD D, 13             ; código ASCII usado para ENTER en ZX Spectrum (valor 13)
@@ -86,6 +128,7 @@ KLREF_RELEASE_ENTER:
     AND $1F
     CP $1F
     JR NZ, KLREF_RELEASE_ENTER
+    POP AF
     RET ; FIN DE LECTURA Q W ENTER
 
 KLREF_F:
@@ -98,4 +141,5 @@ KLREF_RELEASE_F:
     AND $1F
     CP $1F
     JR NZ, KLREF_RELEASE_F
+    POP AF
     RET

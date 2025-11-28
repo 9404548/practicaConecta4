@@ -47,9 +47,14 @@ LCCH_CONTAR_4_EN_RAYA:
 
 LC_COMPROBAR_4_EN_RAYA_VERTICAL:
     LD IX, TABLERO_ACTUAL
+
+    LD BC, HL: LD H, 0: LD A, B: LD B, 0
+    ADD HL, BC: ADD HL, BC: ADD HL, BC: ADD HL, BC: ADD HL, BC
+    LD C, A: ADD HL, BC
+
     ; ADD 6 * COLUMNA EN LA QUE SE SOLTÓ LA FICHA + FILA EN LA QUE SE SOLTÓ
-    LD B, ; 6 - FILA EN LA QUE SE SOLTÓ
-    LD HL, (JUGGADOR_ACTUAL)
+    ; LD B, 6 - FILA EN LA QUE SE SOLTÓ
+    LD HL, (JUGADOR_ACTUAL)
     LD C, 0
 LCCV_CONTAR_4_EN_RAYA:
     LD A, (IX)
@@ -63,7 +68,7 @@ LCCV_CONTAR_4_EN_RAYA:
 
 LC_COMPROBAR_4_EN_RAYA_DIAGONALES:
     LD IX, TABLERO_ACTUAL
-    ADD IX, ;6 * COLUMNA + FILA 
+    ;ADD IX, 6 * COLUMNA + FILA 
     CALL LCCD_LEFT
     CALL LCCD_RIGHT
     RET
@@ -72,7 +77,10 @@ LCCD_LEFT:
     ; COMPROBAR SEMIDIAGONALES SDUL Y SDLR 
     ; REALIZAR SUMA DE CONSECUTIVAS = SDUL + SDLR + 1
     LD C, 0
-LCCV_CONTAR_4_EN_RAYA:
+LCCD_RIGHT:
+
+
+LCCD_CONTAR_4_EN_RAYA:
 
 
 
@@ -82,29 +90,36 @@ LC_CHECKS_INC_AND_CP_4RAYA:
     INC C
     LD A, C
     CP 4
-    RET Z, FIN_PARTIDA
+    RET NZ
     POP AF
-    RET
+    ; CALL FIN_PARTIDA
 
 LC_CHECKS_RESET_CONSECUTIVOS:
     LD C, 0
     RET
 
 LC_SLOT_POINTER:
-; SLOT_POINTER - Calcula dirección de videoram a partir de fila/columna
-; H = fila, L = columna, HL = dirección de videoram
+; SLOT_POINTER - Calcula dirección de videoram a partir de fila/columna del tablero, no de la pantalla
+; H = fila del tablero, L = columna del tablero, HL = dirección de videoram
     ; PREREQUISITO: HABER SELECCIONADO UNA FILA Y UNA COLUMNA (H Y L) SOBRE LA QUE SE QUIERE OBTENER UNA DIRECCIÓN VIDEORAM
     ; H = FILA
     ; L = COLUMNA
     ; HL = DIRECCIÓN DE LA VIDEORAM
 
     PUSH AF
+    LD A, L
+    ADD L: ADD L: ADD 5
+    LD L, A
     LD A, H ; 0 0 0 H4 H3 H2 H1 H0
+    ADD H: ADD H: ADD 2
+    LD H, A
     SLA A: SLA A: SLA A: SLA A: SLA A ; H2 H1 H0 0 0 0 0 0
     OR L ; H2 H1 H0 L4 L3 L2 L1 L0
+    LD L, A
     LD A, H ; 0 0 0 H4 H3 H2 H1 H0
     SRA A: SRA A: SRA A; 0 0 0 0 0 0 H4 H3 
     OR $58 ; 0 1 0 1 1 0 H4 H3
+    LD H, A
     ; HL = 0 1 0 1 1 0 H4 H3 H2 H1 H0 L4 L3 L2 L1 L0
     POP AF
     RET
@@ -175,7 +190,7 @@ COINCIDE_SIGUIENTE:
     ADD HL        ; avance de HL por el salto indicado en BC (implementación depende del llamado)
     POP BC
 
-    DJNZ, COMPROBAR_BUCLE   ; repetir C veces 
+    DJNZ COMPROBAR_BUCLE   ; repetir C veces 
 
     AND A         ; limpiar carry si el bucle termina sin victoria
     JR FINALIZAR_CHECK
@@ -267,42 +282,63 @@ FIN_DE_JUEGO_DETECTADO:
     POP AF : POP BC : POP DE : POP IX 
     RET
 
+
+
+
+
+
+
+
+
+
+
+
+
 LC_VALIDPLAY:
     ; Comprueba si la jugada solicitada por el jugador es válida:
-    ;   - Para Q/W (izquierda/derecha) se comprueba que la celda objetivo no esté ocupada
+    ;   - Recibe en HL el valor actual de la ficha, no el valor al que se podría desplazar, será 0,L
+    ;   - Para Q/W y O/P (izquierda/derecha) se comprueba que la celda objetivo no esté ocupada
     ;   - Para F se considerará válida si la columna no está ocupada en la posición del cursor
+    ;   - Para ENTER se considerará válida si la columna actual no está llena
     LD A, D
-    CP 'Q'
-    JR Z, VALIDLEFT
-    CP 'W'
-    JR Z, VALIDRIGHT
-    ; AQUI AGREGAREMOS DESPUES LA COMPROBACION PARA JUGADA VALIDA DE ENTER
+    CP 'Q': JR Z, VALIDLEFT
+    CP 'O': JR Z, VALIDLEFT
+    CP 'W': JR Z, VALIDRIGHT
+    CP 'P': JR Z, VALIDRIGHT
+    CP 13 ; COMPARA CON ASCII DE ENTER
+    JR Z, VALIDENTER
     CP 'F'
     JR Z, VALID
 VALIDLEFT:
     PUSH HL
-    LD HL, $5845
+    LD HL, $00
+    CALL LC_SLOT_POINTER
     LD A, (HL)
     POP HL
-    CP BLINK + PLAYER1
-    JR Z, NONVALID
-    CP BLINK + PLAYER2
-    JR Z, NONVALID
-    JR VALID
+    CP BLINK
+    JR C, VALID
+    JR NONVALID
 VALIDRIGHT:
     PUSH HL
-    LD HL, $5857
+    LD HL, $06
+    CALL LC_SLOT_POINTER
     LD A, (HL)
     POP HL
-    CP BLINK + PLAYER1
-    JR Z, NONVALID
-    CP BLINK + PLAYER2
-    JR Z, NONVALID
-    JR VALID
+    CP BLINK
+    JR C, VALID
+    JR NONVALID
+VALIDENTER:
+    PUSH DE: PUSH HL
+    CALL U_CALC_TABLERO_POS
+    LD A, (IX)
+    POP HL: POP DE
+    CP 0: JR Z, VALID
+
 NONVALID:
     LD A, 1
     RET
 VALID:
     LD A, 2
     RET
-    
+
+
