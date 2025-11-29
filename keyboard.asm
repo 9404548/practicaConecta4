@@ -37,7 +37,7 @@ KSON_RELEASE:
     RET ; FIN DE KSON (D contiene 'S' o 'N')
 
 
-K_LR_ENTER_F: ; LECTURA DE TECLADO PARA Q (LEFT), W (RIGHT), ENTER (soltar ficha) o F
+K_LR_E_F: ; LECTURA DE TECLADO PARA Q (LEFT), W (RIGHT), ENTER (soltar ficha) o F
     LD C, $FE            ; puerto de lectura
     PUSH AF
 KLREF_BUCLE:
@@ -50,11 +50,8 @@ KLREF_BUCLE:
     JR Z, KLREF_Q
     BIT 1, A             ; si bit1 = 0 -> tecla W
     JR Z, KLREF_W
-
-    LD B, $BF            ; cambiar fila/mascara para ENTER
-    IN A, (C)
-    BIT 0, A             ; si bit0 = 0 -> ENTER
-    JR Z, KLREF_ENTER
+    BIT 2, A 
+    JR Z, KLREF_E
 
     LD B, $FD            ; otra fila para F
     IN A, (C)
@@ -70,56 +67,58 @@ KLREF_BUCLE_J2:
     JR Z, KLREF_P
     BIT 1, A             ; si bit1 = 0 -> tecla O
     JR Z, KLREF_O
-
-    LD B, $BF            ; cambiar fila/mascara para ENTER
-    IN A, (C)
-    BIT 0, A             ; si bit0 = 0 -> ENTER
-    JR Z, KLREF_ENTER
+    BIT 2, A 
+    JR Z, KLREF_I
 
     LD B, $FD            ; otra fila para F
     IN A, (C)
     BIT 3, A             ; si bit3 = 0 -> tecla F
     JR Z, KLREF_F
 
-    JR KLREF_BUCLE       ; repetir hasta detectar una tecla
+    JR KLREF_BUCLE_J2       ; repetir hasta detectar una tecla
 
 KLREF_P:
     LD D, 'P'
-    JR KLREF_RELEASE_OP
+    JR KLREF_RELEASE_IOP
 
 KLREF_O:
     LD D, 'O'
+    JR KLREF_RELEASE_IOP
 
-KLREF_RELEASE_OP:
+KLREF_I:
+    LD D, 'I'
+
+KLREF_RELEASE_IOP:
     ; Espera a la liberación de Q o W (misma rutina de liberación compartida)
     LD B, $DF
     IN A, (C)
     AND $1F
     CP $1F
-    JR NZ, KLREF_RELEASE_OP
+    JR NZ, KLREF_RELEASE_IOP
     POP AF
     RET
 
+KLREF_E:
+    LD D, 'E'            ; devuelve 'E' en D
+    JR KLREF_RELEASE_QWE
+
 KLREF_W:
     LD D, 'W'            ; devuelve 'W' en D
-    JR KLREF_RELEASE_QW
+    JR KLREF_RELEASE_QWE
 
 KLREF_Q:
     LD D, 'Q'            ; devuelve 'Q' en D
 
-KLREF_RELEASE_QW:
+KLREF_RELEASE_QWE:
     ; Espera a la liberación de Q o W (misma rutina de liberación compartida)
     LD B, $FB
     IN A, (C)
     AND $1F
     CP $1F
-    JR NZ, KLREF_RELEASE_QW
+    JR NZ, KLREF_RELEASE_QWE
     POP AF
     RET
 
-
-KLREF_ENTER:
-    LD D, 13             ; código ASCII usado para ENTER en ZX Spectrum (valor 13)
 
 KLREF_RELEASE_ENTER:
     ; Espera a la liberación de la tecla ENTER
