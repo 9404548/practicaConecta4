@@ -67,6 +67,9 @@ GC_RIGHT:
 
     RET
 
+; GC_ENTER
+;   - Rutina que realiza los procesos gráficos tras pulsar para bajar una ficha en una determinada columna 
+;   - La rutina simula la caída de la ficha borrando, pintando, esperando y comprobando si puede volver a bajar.
 GC_ENTER:
     PUSH AF
     PUSH BC
@@ -77,19 +80,19 @@ GC_ENTER:
 ; - INC H para moverse a la siguiente fila
 ; - Se hace una pausa para que se vea el movimiento
 SOLTAR_FICHA_BUCLE:
-    ; ERASE current circle
+    ; Borrar círculo actual
     LD A, NEGRO
     CALL GC_COLOR_CIRCLE
-    
+    ; Pintarlo una fila más abajo
     INC H
     LD A, (COLOR_JUGADOR_ACTUAL)
     CALL GC_COLOR_CIRCLE
-
+    ; Esperar
     CALL U_ESPERAR
 
-    ; Calculate TABLERO_ACTUAL position for new H,L
-    CALL U_CALC_TABLERO_POS      ; Returns IX pointing to TABLERO_ACTUAL[H][L]
-    ; Check if position is free
+    ; Comprobar si se puede volver a pintar
+    CALL U_CALC_TABLERO_POS      ; Devuelve IX en la posición (H,L) fila, columna actual.
+    ; Comprobar si la posición de abajo está libre 
     LD A, (IX)
     OR A
     JR NZ, FICHA_LANDED ; Si no es cero, la posición está ocupada y se tiene que bajar la ficha
@@ -99,16 +102,11 @@ SOLTAR_FICHA_BUCLE:
 ; - DEC H devuelve la coordenada a la ultima posicion vacia valida
 ; - Con LD (IX), A se guarda la ficha del jugador actual en la "memoria del tablero"
 FICHA_LANDED:
-    ; Paint final circle position  
-    ; DEC H                      ; Go back to last valid position
-    ; LD A, (COLOR_JUGADOR_ACTUAL)
-    ; CALL GC_COLOR_CIRCLE
-    
     ; Calculate correct TABLERO_ACTUAL position and save piece
     DEC H
-    CALL U_CALC_TABLERO_POS      ; IX now points to correct position
-    LD A, (JUGADOR_ACTUAL)
-    LD (IX), A
+    CALL U_CALC_TABLERO_POS      ; IX apunta a la posición actual en memoria
+    LD A, (JUGADOR_ACTUAL) ; 1 o 2, según el turno.
+    LD (IX), A ; Guarda que ese espacio está ocupado por el jugador que ha tirado
     
     POP DE: POP BC :POP AF
     RET

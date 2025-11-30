@@ -7,6 +7,7 @@ TABLERO_ALTO EQU 6
 ESTADO_TABLERO EQU $D000      ; dirección base en memoria donde se almacena el tablero (fila-major)
 ; Nota: se espera que otras rutinas escriban la columna/fila en las direcciones ULTIMA_FICHA_* antes de llamar
 
+; Comrpueba el resultado del juego tras una jugada, necesita modificaciones
 LC_COMPROBAR_RESULTADO:
     CALL LC_COMPROBAR_VICTORIA_JUGADOR
     CP 0: RET Z ; RET SI ALGUIEN GANÓ, A = 0
@@ -15,6 +16,7 @@ LC_COMPROBAR_RESULTADO:
     LD A, 128: OR A
     RET ; RET SI NADIE GANÓ Y NO SE LLENÓ EL TABLERO, A = 128
 
+; Rutina para comprobar si el tablero se ha llenado
 LC_COMPROBAR_TABLERO_LLENO:
     LD IX, TABLERO_ACTUAL
     LD B, 7
@@ -27,9 +29,8 @@ CTL_BUCLE:
     DJNZ CTL_BUCLE
     LD A, 1
     RET ; RET CON EMPATE, A = 128
-
-    
-
+   
+; Rutina que comprueba si el jugador ha ganado por alguna línea, ya sea vertical, horizontal o diagonal.
 LC_COMPROBAR_VICTORIA_JUGADOR:
     CALL LC_COMPROBAR_4_EN_RAYA_HORIZONTAL
     CP 0: CALL NZ, HAY_GANADOR
@@ -39,55 +40,49 @@ LC_COMPROBAR_VICTORIA_JUGADOR:
     CP 0: CALL NZ, HAY_GANADOR
     RET ; RET SIN GANADOR, A = 1, RET CON GANADOR, A = 0
 
+; Guarda en la variable ganador el color del jugador actual
 HAY_GANADOR:
     LD A, (COLOR_JUGADOR_ACTUAL)
     LD (GANADOR), A
     XOR A
     RET ; RET CON GANADOR, A = 0
 
-
-
-
-
-
-
-
 ; ############################################################################
 ; ############### COMPROBAR 4 EN RAYA EN DISTINTAS DIRECCIONES ###############
 ; ############################################################################
 
+; Comprueba si se ha obtenido 4 en raya por línea horizontal
 LC_COMPROBAR_4_EN_RAYA_HORIZONTAL:
     PUSH HL
     LD IX, TABLERO_ACTUAL
     CALL U_CALC_TABLERO_POS
-    LD DE, $FFF9
+    LD DE, $FFF9 ; -7 en complemento a 2 para desplazarse por columnas hacia la izquierda en IX
     LD C, 0   
 CONTAR_IZQUIERDA:
-    LD A, (JUGADOR_ACTUAL)
-    LD B, A 
-    ADD IX, DE
-    LD A, (IX)
-    CP B
-    CALL Z, INC_CNT_IZQ
-    JR Z, CONTAR_IZQUIERDA
+    LD A, (JUGADOR_ACTUAL) ; Se guarda el color del jugador actual
+    LD B, A ; Se guarda en B
+    ADD IX, DE ; Desplazamos IX una columna a la izquierda
+    LD A, (IX) ; Guardamos el contenido de IX en A
+    CP B ; Comparamos con B
+    CALL Z, INC_CNT_IZQ ; Si son iguales, debemos incrementar el contador de consecutivos que hay hacia la 'izquierda' de la ficha
+    JR Z, CONTAR_IZQUIERDA ; Si fueron iguales, podemos continuar contando más fichas en esta dirección
 
     POP HL
-    CALL U_CALC_TABLERO_POS
-    LD DE, COLUMN_BOARD_SIZE
-CONTAR_DERECHA:
-    LD A, (JUGADOR_ACTUAL)
+    CALL U_CALC_TABLERO_POS ; Volvemos al IX de la ficha que fue soltada en este turno
+    LD DE, COLUMN_BOARD_SIZE ; Cargamos 7 en DE
+CONTAR_DERECHA: ; Mismo concepto que CONTAR_IZQUIERDA, pero desplaza en columnas hacia la derecha en vez de la izquierda
+    LD A, (JUGADOR_ACTUAL) 
     LD B, A 
     ADD IX, DE
     LD A, (IX)
     CP B 
     CALL Z, INC_CNT_DER
     JR Z, CONTAR_DERECHA
-    CALL CONTAR_TOTALES
+    CALL CONTAR_TOTALES ; Cuenta el total de consecutivos a la izquierda y derecha de la ficha soltada.
     RET
 
 ; COMPROBACION DE VICTORIA EN VERTICAL
-
-LC_COMPROBAR_4_EN_RAYA_VERTICAL:
+LC_COMPROBAR_4_EN_RAYA_VERTICAL: ; Mismo concepto que comprobación en horizontal, pero puede hacer DEC IX e INC IX directamente
     PUSH HL
     LD IX, TABLERO_ACTUAL
     CALL U_CALC_TABLERO_POS
@@ -115,18 +110,16 @@ CONTAR_ABAJO:
     RET
 
 ; COMPROBACION DE VICTORIA EN DIAGONALES
-
 LC_COMPROBAR_4_EN_RAYA_DIAGONALES:
     LD IX, TABLERO_ACTUAL
     CALL U_CALC_TABLERO_POS
-    LD DE, $FFF9
     LD C, 0   
     PUSH HL
 CONTAR_UPPER_LEFT:
     ; DESPLAZAMIENTO DE IX
     LD A, (JUGADOR_ACTUAL)
     LD B, A
-    DEC H: DEC L 
+    DEC H: DEC L ; Movemos IX a la posición diagonal superior izquierda
     CALL U_CALC_TABLERO_POS
     LD A, (IX)
     CP B 
@@ -138,21 +131,21 @@ CONTAR_LOWER_RIGHT:
     ; DESPLAZAMIENTO DE IX
     LD A, (JUGADOR_ACTUAL)
     LD B, A
-    INC H: INC L
+    INC H: INC L ; Movemos IX a la posición diagonal inferior derecha
     CALL U_CALC_TABLERO_POS
     LD A, (IX)
     CP B
     CALL Z, INC_CNT_DER
     JR Z, CONTAR_LOWER_RIGHT
     POP HL
-    CALL CONTAR_TOTALES
-    RET NZ
+    CALL CONTAR_TOTALES ; Contamos totales en esa diagonal Superior Izquierda + Inferior Derecha
+    RET NZ ; RET aquí si ya se consiguió que los totales superaran 3.
     PUSH HL 
-CONTAR_UPPER_RIGHT:
+CONTAR_UPPER_RIGHT: ; Mismo concepto que el conteo de la otra diagonal
     ; DESPLAZAMIENTO DE IX
     LD A, (JUGADOR_ACTUAL)
     LD B, A
-    DEC H: INC L 
+    DEC H: INC L ; Movemos IX una fila arriba y una columna a la derecha
     CALL U_CALC_TABLERO_POS
     LD A, (IX)
     CP B 
@@ -164,7 +157,7 @@ CONTAR_LOWER_LEFT:
     ; DESPLAZAMIENTO DE IX
     LD A, (JUGADOR_ACTUAL)
     LD B, A
-    INC H: DEC L 
+    INC H: DEC L ; Movemos IX una fila abajo y una columna a la izquierda
     CALL U_CALC_TABLERO_POS
     LD A, (IX)
     CP B 
@@ -174,38 +167,40 @@ CONTAR_LOWER_LEFT:
     CALL CONTAR_TOTALES
     RET
 
-
+; Contar total de consecutivos a partir de un punto 
 CONTAR_TOTALES:
-    LD A, (LEFT_COUNTER)
-    LD C, A 
-    LD A, (RIGHT_COUNTER)
-    ADD A, C
-    INC A
-    CP 4
-    JR NC, SALIDA_CONTAR_TOTALES
-    LD A, 0
-    LD (LEFT_COUNTER), A 
+    LD A, (LEFT_COUNTER) ; Guardamos el contador lateral 1
+    LD C, A ; Lo guardamos en C
+    LD A, (RIGHT_COUNTER) ; Guardamos el contador lateral 2 
+    ADD A, C ; Le agregamos C - A = Left_Counter + Right_Counter
+    INC A ; A = Left_Counter + Right_Counter + 1
+    ; Ficha soltada + consecutivas a un lado + consecutivas al opuesto
+    CP 4 ; Comparamos con 4
+    JR NC, SALIDA_CONTAR_TOTALES ; Si fue 4 o más, el flag carry estará en 0 = NC
+    LD A, 0 ; Guardar A = 0
+    LD (LEFT_COUNTER), A ; Reiniciamos los contadores
     LD (RIGHT_COUNTER), A
 SALIDA_CONTAR_TOTALES:
-    OR A
+    OR A ; No modifica A pero activa flags según el caso
     RET ; RET CON EL VALOR DE GANADOR (A != 0) o NO
 
+; Cuenta consecutivos a un lado de la ficha soltada
 INC_CNT_IZQ:
     PUSH AF
     LD A, (LEFT_COUNTER)
-    INC A 
-    LD (LEFT_COUNTER), A
+    INC A ; Incrementa el contador por 1
+    LD (LEFT_COUNTER), A ; Guarda el nuevo valor en la variable
     POP AF
     RET
 
+; Cuenta consecutivos al lado opuesto de la rutina superior 
 INC_CNT_DER:
     PUSH AF
     LD A, (RIGHT_COUNTER)
-    INC A 
-    LD (RIGHT_COUNTER), A
+    INC A ; Incrementa el contador por 1
+    LD (RIGHT_COUNTER), A ; Guarda el nuevo valor en la variable
     POP AF
     RET
-
 
 
 LC_SLOT_POINTER:
@@ -232,177 +227,7 @@ LC_SLOT_POINTER:
     LD H, A
     ; HL = 0 1 0 1 1 0 H4 H3 H2 H1 H0 L4 L3 L2 L1 L0
     POP AF
-    RET
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-; LC_COMPROBAR_FIN
-;  - Rutina principal que invoca las comprobaciones de victoria en las cuatro direcciones.
-;  - Guarda registros y llama a subrutinas: vertical, horizontal, diagonal1, diagonal2.
-;  - Si alguna detecta victoria devuelve con CARRY=1 (JR C, FIN_DE_JUEGO_DETECTADO)
-LC_COMPROBAR_FIN:
-    PUSH AF : PUSH BC : PUSH DE : PUSH IX 
-    ; VERIFICACIONES (cada llamada debe preservar o restaurar los registros que use)
-    CALL LC_CHECK_VERTICAL
-    JR C, FIN_DE_JUEGO_DETECTADO
-
-    CALL LC_CHECK_HORIZONTAL
-    JR C, FIN_DE_JUEGO_DETECTADO
-
-    CALL LC_CHECK_DIAGONAL1
-    JR C, FIN_DE_JUEGO_DETECTADO
-
-    CALL LC_CHECK_DIAGONAL2
-    JR C, FIN_DE_JUEGO_DETECTADO
-
-    ; COMPROBAR SI HA GANADO UN JUGADOR
-
-    ; COMPROBAR SI HAY EMPATE
-LC_COMPROBAR_4ENLINEA:
-    PUSH AF : PUSH BC : PUSH DE : PUSH IX 
-    LD C,4        ; numero de iteraciones (comprobar 4 fichas)
-    LD E,0        ; contador de fichas seguidas encontradas
-COMPROBAR_BUCLE:
-    LD D, (HL)    ; carga en D el valor/color de la casilla apuntada por HL
-    CP D          ; compara A con D (se asume que A es el color a buscar o que D contiene el jugador actual)
-    JR NZ, NO_COINCIDE
-
-    INC E         ; si coincide, incrementa el contador de seguidas
-    LD D,4        ; numero objetivo de fichas para ganar (4)
-    CP E          ; comparar contador con 4
-    JR Z, HAY_VICTORIA
-    JR COINCIDE_SIGUIENTE
-
-COINCIDE_SIGUIENTE:
-    PUSH BC
-    LD B,0        ; prepara salto/offset en BC (si corresponde al modo de avance)
-    LD C,B
-    ADD HL        ; avance de HL por el salto indicado en BC (implementación depende del llamado)
-    POP BC
-
-    DJNZ COMPROBAR_BUCLE   ; repetir C veces 
-
-    AND A         ; limpiar carry si el bucle termina sin victoria
-    JR FINALIZAR_CHECK
-
-FINALIZAR_CHECK:
-    POP IX: POP DE: POP HL
-    RET
-HAY_VICTORIA:
-    SCF            ; activa carry para indicar victoria al llamador
-NO_COINCIDE:
-    LD E,0         ; reinicia contador de fichas seguidas
-
-
-; SE COMPRUEBAN LAS POSICIONES DE LAS FICHAS: VERTICAL, HORIZONTAL, DIAG IZQ y DIAG DER
-
-LC_CHECK_VERTICAL:
-;  - Comprueba hacia abajo desde la última ficha (solo dirección vertical descendente)
-;  - Flujo:
-;    * Cargar fila y columna última
-;    * Calcular offset = fila * TABLERO_ANCHO + columna
-;    * Ajustar HL a la dirección dentro de ESTADO_TABLERO
-;    * Preparar A con el color a buscar y B con el salto vertical (TABLERO_ANCHO)
-;    * Llamar a LC_COMPROBAR_4ENLINEA para comprobar 4 en línea
-    LD A, (ULTIMA_FICHA_FILA)
-    LD B, TABLERO_ANCHO
-    CALL MULTIPLY_A_B ; HL = FILA * ANCHO (resultado en DE)
-    LD A, (ULTIMA_FICHA_COLUMNA)
-    ADD L   ; HL = FILA*ANCHO + COLUMna (forma de sumar columna al offset en HL)
-    LD HL, ESTADO_TABLERO
-    ADD HL, DE  ; HL = direccion de la ultima ficha en memoria del tablero
-
-    LD A, ; AQUI IRIA EL JUGADOR ACTUAL (valor/color buscado)
-    LD B, TABLERO_ANCHO
-
-    CALL LC_COMPROBAR_4ENLINEA
-
-    POP HL: POP DE: POP BC: POP AF
-    RET
-
-; LC_CHECK_HORIZONTAL
-;  - Comprueba la fila de la última ficha en busca de 4 en línea horizontalmente
-;  - Ajusta HL al inicio de la fila y itera incrementando HL por 1 byte (salto horizontal)
-LC_CHECK_HORIZONTAL:
-    PUSH AF: PUSH BC: PUSH DE: PUSH HL
-    ; calcular posicion inicial de la fila
-    LD A, (ULTIMA_FICHA_FILA)
-    LD B, TABLERO_ANCHO
-    CALL MULTIPLY_A_B
-    LD HL, ESTADO_TABLERO
-    ADD HL, DE
-    LD C,4  ; bucle de 4 repeticiones (se prueban 4 ventanas)
-
-HORIZONTAL_BUCLE:
-    PUSH HL
-    LD A, ; AQUI LA DIRECCION DE MEMORIA DEL JUGADOR ACTUAL (EL COLOR A BUSCAR)
-    LD B,1  ; salto horizontal = 1 byte (siguiente columna)
-    CALL LC_COMPROBAR_4ENLINEA
-
-    POP HL
-    JR C, HORIZONTAL_VICTORIA   ; si LC_COMPROBAR_4ENLINEA puso carry, es victoria
-
-    INC HL  ; pasar a la siguiente columna
-    DJNZ HORIZONTAL_BUCLE
-
-HORIZONTAL_SIN_VICTORIA:
-    AND A   ; limpiar flags (C=0)
-    POP HL: POP DE: POP BC: POP AF
-    RET
-HORIZONTAL_VICTORIA:
-    SCF
-    POP HL: POP DE: POP BC: POP AF
-    RET
-MULTIPLY_A_B:
-    ; Rutina ingenua para multiplicar A * B y dejar el resultado en DE (usando HL como acumulador)
-    PUSH AF : PUSH BC
-    LD HL, 0
-    LD C,A 
-    LD A,0  ; contador
-MULT_BUCLE:
-    ADD HL,BC
-    INC A
-    CP C 
-    JR NZ, MULT_BUCLE
-    POP BC: POP AF
-    RET
-FIN_DE_JUEGO_DETECTADO:
-    ; Salida cuando alguna comprobación detectó fin de juego (victoria)
-    LD A,0
-    POP AF : POP BC : POP DE : POP IX 
-    RET
-
-
-
-
-
-
-
-
-
-
-
-
+    RET 
 
 LC_VALIDPLAY:
     ; Comprueba si la jugada solicitada por el jugador es válida:
@@ -417,32 +242,36 @@ LC_VALIDPLAY:
     CP 'O': JR Z, VALIDRIGHT
     CP 'E': JR Z, VALIDENTER
     CP 'P': JR Z, VALIDENTER
-    CP 'F'
-    JR Z, VALID
+    CP 'F': JR Z, VALID ; F = Fin de la partida, siempre es válido
+
+; Comprueba si fue una pulsación váida para mover la ficha a la izquierda
 VALIDLEFT:
     PUSH HL
     LD HL, $00
     CALL LC_SLOT_POINTER
     LD A, (HL)
     POP HL
-    CP BLINK
-    JR C, VALID
+    CP BLINK ; si el atributo de color en HL es menor que blink (que lo será si no está sobre la posición más izquierda del tablero)
+    JR C, VALID ; se hará una activación del flag C, por lo que será válida la pulsación
     JR NONVALID
+
+; Comprueba si fue una pulsación válida para mover la ficha a la derecha
 VALIDRIGHT:
     PUSH HL
-    LD HL, $06
+    LD HL, $06 ; mismo concepto que validleft, pero la comparación se hace con el contenido de la fila 0, columna 6 en vez de la 0,0
     CALL LC_SLOT_POINTER
     LD A, (HL)
     POP HL
     CP BLINK
     JR C, VALID
     JR NONVALID
-VALIDENTER:
+VALIDENTER: ; mismo concepto que validleft y right, pero la comparación se hace con la ficha inmediatamente inferior
     PUSH DE: PUSH HL
     CALL U_CALC_TABLERO_POS
     LD A, (IX)
     POP HL: POP DE
-    CP 0: JR Z, VALID
+    CP 0: JR Z, VALID ; si aquí no saltó a valid, lee directamente la siguiente instrucción,
+                      ; que serán las correspondientes a NONVALID 
 
 NONVALID:
     LD A, 1

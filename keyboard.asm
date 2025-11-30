@@ -133,17 +133,6 @@ KLREF_RELEASE_QWE:
     POP AF
     RET
 
-; KLREF_RELEASE_ENTER
-; - Espera a la liberación de la tecla ENTER
-KLREF_RELEASE_ENTER:
-    LD B, $BF
-    IN A, (C)
-    AND $1F
-    CP $1F
-    JR NZ, KLREF_RELEASE_ENTER
-    POP AF
-    RET ; FIN DE LECTURA Q W ENTER
-
 KLREF_F:
     LD D, 'F'            ; devuelve 'F' en D
 

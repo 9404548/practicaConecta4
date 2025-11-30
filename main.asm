@@ -10,7 +10,7 @@
 
 ; INCLUDES - módulos y rutinas auxiliares
     INCLUDE "colors.asm"         ; Definiciones de colores y jugadores
-    INCLUDE "variables.asm"      ; Variables globales y estado
+    INCLUDE "variables.asm"      ; Variables globales y estado del juego
     INCLUDE "keyboard.asm"       ; Rutinas de lectura de teclado
     INCLUDE "printat.asm"        ; Rutina de impresión en pantalla
     INCLUDE "graphics_basic.asm" ; Rutinas gráficas básicas
@@ -95,5 +95,3 @@ COMPROBAR_FIN_JUEGO:
     CP 64
     JR C, EMPATE ; HUBO EMPATE
     JR BUCLE_JUEGO                ; Si no hay fin, sigue el juego
-
-

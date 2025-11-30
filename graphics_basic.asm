@@ -25,8 +25,8 @@ NOMBRE_GANADOR: DB "           "
 CHAR_CARACTER: DB 0, 0                               ; buffer de 1 byte para el caracter pulsado
 
 ; PANTALLA DE INICIO
-PANTALLA_BIENVENIDA: INCBIN "connect4screen.SCR"
-PANTALLA_JUEGO: INCBIN "connect4gameScreen.scr"
+PANTALLA_BIENVENIDA: INCBIN "connect4screen.SCR" ; Pantalla inicial (portada) del juego
+PANTALLA_JUEGO: INCBIN "connect4gameScreen.scr" ; Pantalla del tablero en la partida
 
 GB_BIENVENIDA:
     ; Guardamos registros usados antes de manipular la pantalla
@@ -106,12 +106,18 @@ PRINT_ADIOS:
 
     RET
 
+; GB_FIN_NEXT
+; Imprime la pantalla y mensajes de fin de la partida, incluyendo el ganador de la partida
+; y si se desea jugar nuevamente o no
 GB_FIN_NEXT:
     PUSH DE: PUSH HL: PUSH BC: PUSH AF
     CALL PRINT_GANADOR
     POP AF: POP BC: POP HL: POP DE
     RET 
 
+; GB_EMPATE
+; Imprime el mensaje informando que la partida ha finalizado en un empate, ya que el tablero
+; se llenó sin que ningún jugador consiguiera 4 en raya
 GB_EMPATE:
     PUSH DE: PUSH HL: PUSH BC: PUSH AF
     LD IX, STRING_FILA_VACIA_E
@@ -133,6 +139,8 @@ PRINT_FIN:
     LD A, 8*COLOR_TEXTO_ROJO
     LD IX, STRING_EMPATE
     CALL PRINTAT
+
+; Impresion del mensaje ofreciendo jugar otra partida
 PRINT_OTRA:
     LD B, 21
     LD C, 0
@@ -143,6 +151,9 @@ PRINT_OTRA:
     CALL GB_BLINKER_JUGAR
     RET
 
+; GB_PTLLA_INICIO_DE_JUEGO
+; Imprime la pantalla inicial del tablero con la cuadrícula de 6x7 y los círculos (de momento no visibles)
+; por encima del tablero. 
 GB_PTLLA_INICIO_DE_JUEGO:
     ; Inicializa la pantalla del juego (limpia y carga la plantilla de juego)
     CALL PTLLA_NEGRA
@@ -158,6 +169,7 @@ PTLLA_JUEGO_BUCLE:
 
     POP AF: POP BC: POP HL: POP DE
 
+; Rutina que imprime los controles para cada jugador, en su respectivo color
 PRINT_CONTROLES:
     LD B, 0
     LD C, 1
@@ -185,6 +197,7 @@ PRINT_CONTROLES:
     CALL PRINTAT
     RET
 
+; Impresion del ganador, incluye mensaje general de victoria + el nombre del jugador ganador en su color.
 PRINT_GANADOR:
     LD B, 11
     LD C, 4
@@ -201,9 +214,10 @@ PRINT_GANADOR:
 CONSEGUIR_GANADOR:
     ADD IX, DE 
     DJNZ CONSEGUIR_GANADOR
+
     POP AF: POP BC
     CALL PRINTAT
-    CALL PRINT_OTRA
+    CALL PRINT_OTRA ; Imprime el mensaje ofreciendo jugar otra partida
     RET
 
 PTLLA_NEGRA:

@@ -1,37 +1,37 @@
 UTILITIES: JR UTILITIES
 
 U_CALC_TABLERO_POS:
-    ; Calculate IX = TABLERO_ACTUAL + (L * 7) + H
-    ; Where H = row, L = column in original grid coordinates
+    ; Calcula IX = TABLERO_ACTUAL + (L * 7) + H
+    ; Donde H = row, L = columna en coordenadas originales de tablero
     
-    LD A, L                    ; Get column (L)
-    LD B, A                    ; Save L in B
+    LD A, L                    ; Guarda columna (L)
+    LD B, A                    ; guarda L en B
     ADD A, A                   ; A = L * 2
     ADD A, A                   ; A = L * 4  
     ADD A, A                   ; A = L * 8
-    SUB B                      ; A = L * 7 (since 8L - L = 7L)
+    SUB B                      ; A = L * 7 (ya que 8L - L = 7L)
     ADD A, H                   ; A = (L * 7) + H
     
-    LD IX, TABLERO_ACTUAL      ; Base address
+    LD IX, TABLERO_ACTUAL      ; Dirección de (0,0)
     LD D, 0
-    LD E, A                    ; DE = offset
-    ADD IX, DE                 ; IX points to TABLERO_ACTUAL[L][H]
+    LD E, A                    ; DE = desplazamiento
+    ADD IX, DE                 ; IX apunta a tablero actual (h,l)
     
     RET
 
-; Rutina de espera (~0,5 seg)
+; Rutina de espera
 U_ESPERAR:
     PUSH BC
-    LD BC, 76923               ; Approximately 2M / 26 T-states per loop
+    LD BC, 11387               
     
 ESPERAR_LOOP:
-    DEC BC                     ; 6 T-states
-    LD A, B                    ; 4 T-states
-    OR C                       ; 4 T-states
-    NOP                        ; 4 T-states
-    NOP                        ; 4 T-states  
-    NOP                        ; 4 T-states
-    JR NZ, ESPERAR_LOOP        ; 12 T-states (taken)
+    DEC BC                     ; 6C
+    LD A, B                    ; 4C
+    OR C                       ; 4C
+    NOP                        ; 4C
+    NOP                        ; 4C  
+    NOP                        ; 4C
+    JR NZ, ESPERAR_LOOP        ; 12C
     
     POP BC
     RET
