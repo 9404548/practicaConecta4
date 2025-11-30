@@ -62,7 +62,7 @@ BUCLE_JUEGO:
 GESTIONAR_JUGADA:
     CALL GC_COLOR_JUGADOR_ACTUAL  ; Muestra el jugador actual en pantalla (HL = $5845)
 JUGADA:
-    CALL K_LR_ENTER_F             ; Lee entrada (Q/W/O/P/ENTER/F)
+    CALL K_LR_E_F             ; Lee entrada (Q/W/O/P/ENTER/F)
     LD A, D
     PUSH AF
     CALL LC_VALIDPLAY             ; Comprueba si la jugada es válida

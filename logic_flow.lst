@@ -1,0 +1,75 @@
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm
+ 1    0000              ; logic_flow.asm - Rutinas de control de flujo principal del juego
+ 2    0000
+ 3    0000              ; LF_ESPERAR
+ 4    0000              ;  - Rutina de espera/bloqueo para temporización (delay)
+ 5    0000              ;  - Usa un bucle con BC como contador para generar una pausa de ~0,49 segundos
+ 6    0000              ;  - No modifica registros fuera de BC/AF
+ 7    0000              LF_ESPERAR:
+ 8    0000 C5               PUSH BC
+ 9    0001 F5               PUSH AF
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(10): error: Label not found: CONTADOR
+10    0002 01 00 00         LD BC, CONTADOR      ; carga el valor de espera en BC
+11    0005              LF_ESPERAR1:
+12    0005 0B               DEC BC               ; decrementa el contador
+13    0006 78               LD A, B
+14    0007 B1               OR C                 ; si BC != 0, sigue esperando
+15    0008 00               NOP                  ; instrucción de relleno para ajustar la duración
+16    0009 20 FA            JR NZ, LF_ESPERAR1   ; repite hasta que BC = 0
+17    000B                  ; DURACION TOTAL = APROX 0,49 SEG (según valor de CONTADOR y velocidad CPU)
+18    000B F1               POP AF
+19    000C C1               POP BC
+20    000D C9               RET
+21    000E
+22    000E              ; LF_INICIALIZACION
+23    000E              ;  - Inicializa el estado lógico y gráfico del juego (por ejemplo, dibuja la fila superior de círculos)
+24    000E              ;  - D = PLAYER2 (jugador inicial por defecto)
+25    000E              ;  - Llama a GC_DRAW_CIRCLES_TOP para preparar la pantalla
+26    000E              LF_INICIALIZACION:
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(27): error: Label not found: PLAYER2
+27    000E 16 00            LD D, PLAYER2
+28    0010 CD 27 00         CALL LF_BOARD_RESET
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(29): error: Label not found: GC_DRAW_CIRCLES_TOP
+29    0013 CD 00 00         CALL GC_DRAW_CIRCLES_TOP
+30    0016 C9               RET
+31    0017
+32    0017              ; LF_SWITCH_JUGADOR
+33    0017              ;  - Cambia el jugador actual (D) entre PLAYER1 y PLAYER2
+34    0017              ;  - Si D = PLAYER2, lo cambia a PLAYER1; si D = PLAYER1, lo cambia a PLAYER2
+35    0017              ;  - Usa saltos condicionales para seleccionar el nuevo valor
+36    0017              LF_SWITCH_JUGADOR:
+37    0017 7A               LD A, D
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(38): error: Label not found: PLAYER2
+38    0018 FE 00            CP PLAYER2
+39    001A 28 04            JR Z, SET_P1         ; si era PLAYER2, pasa a PLAYER1
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(40): error: Label not found: PLAYER1
+40    001C FE 00            CP PLAYER1
+41    001E 28 04            JR Z, SET_P2         ; si era PLAYER1, pasa a PLAYER2
+42    0020                  ; RET                ; si no coincide, no hace nada
+43    0020              SET_P1:
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(44): error: Label not found: PLAYER1
+44    0020 16 00            LD D, PLAYER1
+45    0022 18 02            JR SALIDA
+46    0024              SET_P2:
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(47): error: Label not found: PLAYER2
+47    0024 16 00            LD D, PLAYER2
+48    0026              SALIDA:
+49    0026 C9               RET
+50    0027
+51    0027              ; RESETEA LA CONDICION DEL TABLERO ACTUAL A TODO CEROS.
+52    0027              LF_BOARD_RESET:
+53    0027 06 2A            LD B, 42
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(54): error: Label not found: TABLERO_ACTUAL
+54    0029 DD 21 00 00      LD IX, TABLERO_ACTUAL
+55    002D AF               XOR A
+56    002E              BR_BUCLE:
+57    002E DD 77 00         LD (IX), A
+58    0031 10 FB            DJNZ BR_BUCLE
+59    0033 C9               RET
+60    0034
+61    0034              LF_RESUMIR_JUEGO:
+62    0034 3E 00            LD A, 0
+C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm(63): error: Label not found: JUGADOR_ACTUAL
+63    0036 32 00 00         LD (JUGADOR_ACTUAL), A
+64    0039 C9               RET
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm

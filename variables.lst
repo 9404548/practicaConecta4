@@ -1,0 +1,70 @@
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm
+ 1    0000              ; VARIABLES: JR VARIABLES
+ 2    0000              ; ; variables.asm - Definición de constantes globales para el juego
+ 3    0000              ; JUGADOR1 EQU 1
+ 4    0000              ; JUGADOR2 EQU 2
+ 5    0000
+ 6    0000              ; COLOR_JUGADOR1 EQU ROJO
+ 7    0000              ; COLOR_JUGADOR2 EQU AMARILLO
+ 8    0000
+ 9    0000              ; JUGADOR_ACTUAL: DB JUGADOR2
+10    0000
+11    0000              ; ; CONTADOR: valor usado para temporización en rutinas de espera (delay)
+12    0000              ; CONTADOR EQU 255
+13    0000
+14    0000              ; ; NUM_FILAS: número total de filas en la pantalla (útil para posicionamiento y bucles)
+15    0000              ; NUM_FILAS EQU 24
+16    0000
+17    0000              ; ; NUM_COLS: número total de columnas en la pantalla (útil para posicionamiento y bucles)
+18    0000              ; NUM_COLS EQU 32
+19    0000
+20    0000              ; FILAS_TABLERO EQU 6
+21    0000              ; COLUMNAS_TABLERO EQU 7
+22    0000
+23    0000              ; COLUMN_BOARD_SIZE EQU 7 ; DESPLAZAMIENTO QUE SE DEBE HACER PARA MOVERSE POR COLUMNAS EN EL TABLERO DE DB
+24    0000              ; ROW_BOARD_SIZE    EQU 1 ; DESPLAZAMIENTO QUE SE DEBE HACER PARA MOVERSE POR FILAS EN EL TABLERO DE DB
+25    0000
+26    0000              ; DELTAX: DB 0
+27    0000              ; DELTAY: DB 0
+28    0000
+29    0000              ; COLUMNA_ACTUAL: DB 3
+30    0000
+31    0000              ; TOP_BORDER:     DB $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF
+32    0000              ; TABLERO_ACTUAL: DB 0,0,0,0,0,0, $FF ; 00 10 20 30 40 50 (DE LA TOP LEFT A LA BOTTOM LEFT)
+33    0000              ;                 DB 0,0,0,0,0,0, $FF ; 01 11 21 31 41 51
+34    0000              ;                 DB 0,0,0,0,0,0, $FF ; 02 12 22 32 42 52
+35    0000              ;                 DB 0,0,0,0,0,0, $FF ; 03 13 23 33 43 53
+36    0000              ;                 DB 0,0,0,0,0,0, $FF ; 04 14 24 34 44 54
+37    0000              ;                 DB 0,0,0,0,0,0, $FF ; 05 15 25 35 45 55
+38    0000              ;                 DB 0,0,0,0,0,0, $FF ; 06 16 26 36 46 56 (DE LA TOP RIGHT A LA BOTTOM RIGHT)
+39    0000              ;                 DB $FF, $FF, $FF, $FF, $FF, $FF, $FF
+40    0000
+41    0000              ; variables.asm
+42    0000 18 FE        VARIABLES: JR VARIABLES
+43    0002
+44    0002              JUGADOR1 EQU 1
+45    0002              JUGADOR2 EQU 2
+46    0002
+47    0002              COLOR_JUGADOR1 EQU 2
+48    0002              COLOR_JUGADOR2 EQU 5
+49    0002
+50    0002              ; Variables de Estado
+51    0002 02           JUGADOR_ACTUAL: DB JUGADOR2
+52    0003 03           COLUMNA_ACTUAL: DB 3        ; Empezamos en la columna central (0-6)
+53    0004 00           ULTIMA_FICHA_COLUMNA: DB 0  ; Para saber dónde dibujar la caída
+54    0005 00           ULTIMA_FICHA_FILA:    DB 0  ; Para saber dónde dibujar la caída
+55    0006
+56    0006              ; Constantes
+57    0006              CONTADOR EQU 255
+58    0006              NUM_FILAS EQU 24
+59    0006              NUM_COLS EQU 32
+60    0006              TABLERO_ANCHO EQU 7
+61    0006              TABLERO_ALTO EQU 6
+62    0006
+63    0006              ; Tablero: 6 filas x 7 columnas = 42 bytes
+64    0006              ; 0=Vacío, 1=Jugador1, 2=Jugador2
+65    0006              TABLERO_ACTUAL:
+66    0006 00 00 00...      DS 42, 0   ; Define Space: Reserva 42 bytes a 0
+67    0030
+68    0030
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm
