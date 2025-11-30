@@ -1,4 +1,4 @@
-# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm
   1   0000              ; main.asm - Programa principal Conecta 4 (ZX Spectrum)
   2   0000              ; Inicialización, bucle principal, gestión de jugadas y subrutinas auxiliares
   3   0000
@@ -11,7 +11,7 @@
  10   800A
  11   800A              ; INCLUDES - módulos y rutinas auxiliares
  12   800A                  INCLUDE "colors.asm"         ; Definiciones de colores y jugadores
-# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm
   1+  800A              ; CONSTANTES DE COLORES
   2+  800A              ; Valores de atributos de color (ej.: usado para imprimir texto en pantalla)
   3+  800A              COLOR_TEXTO_AZUL     EQU 1    ; Color azul (atributo de color 1)
@@ -30,7 +30,7 @@
  16+  800A              COLOR_BLANCO              EQU 7
 # file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm
  13   800A                  INCLUDE "variables.asm"      ; Variables globales y estado
-# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm
+# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm
   1+  800A 18 FE        VARIABLES: JR VARIABLES
   2+  800C              ; variables.asm - Definición de constantes globales para el juego
   3+  800C              JUGADOR1 EQU 1
@@ -91,141 +91,156 @@
   7+  8051
   8+  8051              K_SON: ; LECTURA DE TECLADO PARA 'S' O 'N' (respuesta S/N)
   9+  8051 0E FE            LD C, $FE            ; puerto de lectura del teclado
- 10+  8053              KSON_BUCLE:
- 11+  8053 06 FD            LD B, $FD            ; (valor de fila / máscara usada en el esquema de teclado)
- 12+  8055 ED 78            IN A, (C)            ; leer estado de las líneas del teclado
- 13+  8057 CB 4F            BIT 1, A             ; prueba el bit 1 -> si Z (bit=0) la tecla correspondiente está pulsada
- 14+  8059 28 0E            JR Z, KSON_S
- 15+  805B
- 16+  805B 06 7F            LD B, $7F            ; cambiar máscara/fila para comprobar la otra tecla
- 17+  805D ED 78            IN A, (C)
- 18+  805F CB 5F            BIT 3, A             ; prueba el bit 3 -> si Z la tecla 'N' está pulsada
- 19+  8061 28 02            JR Z, KSON_N
- 20+  8063
- 21+  8063 20 EE            JR NZ, KSON_BUCLE    ; si ninguna detectada, repetir
- 22+  8065
- 23+  8065              KSON_N:
- 24+  8065 16 4E            LD D, 'N'            ; devuelve en D el carácter 'N' si se detectó esa tecla
- 25+  8067 18 02            JR KSON_RELEASE
- 26+  8069
- 27+  8069              KSON_S:
- 28+  8069 16 53            LD D, 'S'            ; devuelve en D el carácter 'S' si se detectó esa tecla
- 29+  806B
- 30+  806B              KSON_RELEASE:
- 31+  806B                  ; Espera a que la tecla sea liberada antes de retornar (anti-rebotes/simple debounce)
- 32+  806B ED 78            IN A, (C)
- 33+  806D E6 1F            AND $1F
- 34+  806F FE 1F            CP $1F
- 35+  8071 20 F8            JR NZ, KSON_RELEASE
- 36+  8073
- 37+  8073 C9               RET ; FIN DE KSON (D contiene 'S' o 'N')
- 38+  8074
- 39+  8074
- 40+  8074              K_LR_E_F: ; LECTURA DE TECLADO PARA Q (LEFT), W (RIGHT), ENTER (soltar ficha) o F
- 41+  8074 0E FE            LD C, $FE            ; puerto de lectura
- 42+  8076 F5               PUSH AF
- 43+  8077              KLREF_BUCLE:
- 44+  8077 3A 0C 80         LD A, (JUGADOR_ACTUAL)
- 45+  807A FE 02            CP 2
- 46+  807C 28 1A            JR Z, KLREF_BUCLE_J2
- 47+  807E 06 FB            LD B, $FB            ; seleccionar/activar fila de teclado
- 48+  8080 ED 78            IN A, (C)
- 49+  8082 CB 47            BIT 0, A             ; si bit0 = 0 -> tecla Q
- 50+  8084 28 4A            JR Z, KLREF_Q
- 51+  8086 CB 4F            BIT 1, A             ; si bit1 = 0 -> tecla W
- 52+  8088 28 42            JR Z, KLREF_W
- 53+  808A CB 57            BIT 2, A
- 54+  808C 28 3A            JR Z, KLREF_E
- 55+  808E
- 56+  808E 06 FD            LD B, $FD            ; otra fila para F
- 57+  8090 ED 78            IN A, (C)
- 58+  8092 CB 5F            BIT 3, A             ; si bit3 = 0 -> tecla F
- 59+  8094 28 54            JR Z, KLREF_F
- 60+  8096
- 61+  8096 18 DF            JR KLREF_BUCLE       ; repetir hasta detectar una tecla
- 62+  8098
- 63+  8098              KLREF_BUCLE_J2:
- 64+  8098 06 DF            LD B, $DF            ; seleccionar/activar fila de teclado
- 65+  809A ED 78            IN A, (C)
- 66+  809C CB 47            BIT 0, A             ; si bit0 = 0 -> tecla P
- 67+  809E 28 12            JR Z, KLREF_P
- 68+  80A0 CB 4F            BIT 1, A             ; si bit1 = 0 -> tecla O
- 69+  80A2 28 12            JR Z, KLREF_O
- 70+  80A4 CB 57            BIT 2, A
- 71+  80A6 28 12            JR Z, KLREF_I
- 72+  80A8
- 73+  80A8 06 FD            LD B, $FD            ; otra fila para F
- 74+  80AA ED 78            IN A, (C)
- 75+  80AC CB 5F            BIT 3, A             ; si bit3 = 0 -> tecla F
- 76+  80AE 28 3A            JR Z, KLREF_F
- 77+  80B0
- 78+  80B0 18 E6            JR KLREF_BUCLE_J2       ; repetir hasta detectar una tecla
- 79+  80B2
- 80+  80B2              KLREF_P:
- 81+  80B2 16 50            LD D, 'P'
- 82+  80B4 18 06            JR KLREF_RELEASE_IOP
- 83+  80B6
- 84+  80B6              KLREF_O:
- 85+  80B6 16 4F            LD D, 'O'
- 86+  80B8 18 02            JR KLREF_RELEASE_IOP
- 87+  80BA
- 88+  80BA              KLREF_I:
- 89+  80BA 16 49            LD D, 'I'
- 90+  80BC
- 91+  80BC              KLREF_RELEASE_IOP:
- 92+  80BC                  ; Espera a la liberación de Q o W (misma rutina de liberación compartida)
- 93+  80BC 06 DF            LD B, $DF
- 94+  80BE ED 78            IN A, (C)
- 95+  80C0 E6 1F            AND $1F
- 96+  80C2 FE 1F            CP $1F
- 97+  80C4 20 F6            JR NZ, KLREF_RELEASE_IOP
- 98+  80C6 F1               POP AF
- 99+  80C7 C9               RET
-100+  80C8
-101+  80C8              KLREF_E:
-102+  80C8 16 45            LD D, 'E'            ; devuelve 'E' en D
-103+  80CA 18 06            JR KLREF_RELEASE_QWE
-104+  80CC
-105+  80CC              KLREF_W:
-106+  80CC 16 57            LD D, 'W'            ; devuelve 'W' en D
-107+  80CE 18 02            JR KLREF_RELEASE_QWE
-108+  80D0
-109+  80D0              KLREF_Q:
-110+  80D0 16 51            LD D, 'Q'            ; devuelve 'Q' en D
-111+  80D2
-112+  80D2              KLREF_RELEASE_QWE:
-113+  80D2                  ; Espera a la liberación de Q o W (misma rutina de liberación compartida)
-114+  80D2 06 FB            LD B, $FB
-115+  80D4 ED 78            IN A, (C)
-116+  80D6 E6 1F            AND $1F
-117+  80D8 FE 1F            CP $1F
-118+  80DA 20 F6            JR NZ, KLREF_RELEASE_QWE
-119+  80DC F1               POP AF
-120+  80DD C9               RET
-121+  80DE
-122+  80DE
-123+  80DE              KLREF_RELEASE_ENTER:
-124+  80DE                  ; Espera a la liberación de la tecla ENTER
-125+  80DE 06 BF            LD B, $BF
-126+  80E0 ED 78            IN A, (C)
-127+  80E2 E6 1F            AND $1F
-128+  80E4 FE 1F            CP $1F
-129+  80E6 20 F6            JR NZ, KLREF_RELEASE_ENTER
-130+  80E8 F1               POP AF
-131+  80E9 C9               RET ; FIN DE LECTURA Q W ENTER
-132+  80EA
-133+  80EA              KLREF_F:
-134+  80EA 16 46            LD D, 'F'            ; devuelve 'F' en D
-135+  80EC
-136+  80EC              KLREF_RELEASE_F:
-137+  80EC                  ; Espera a la liberación de la tecla F
-138+  80EC 06 FD            LD B, $FD
-139+  80EE ED 78            IN A, (C)
-140+  80F0 E6 1F            AND $1F
-141+  80F2 FE 1F            CP $1F
-142+  80F4 20 F6            JR NZ, KLREF_RELEASE_F
-143+  80F6 F1               POP AF
-144+  80F7 C9               RET
+ 10+  8053
+ 11+  8053              ; KSON_BUCLE
+ 12+  8053              ; - Bucle que escanea el teclado hasta detectar S o N
+ 13+  8053              KSON_BUCLE:
+ 14+  8053 06 FD            LD B, $FD            ; (valor de fila / máscara usada en el esquema de teclado)
+ 15+  8055 ED 78            IN A, (C)            ; leer estado de las líneas del teclado
+ 16+  8057 CB 4F            BIT 1, A             ; prueba el bit 1 -> si Z (bit=0) la tecla correspondiente está pulsada
+ 17+  8059 28 0E            JR Z, KSON_S
+ 18+  805B
+ 19+  805B 06 7F            LD B, $7F            ; cambiar máscara/fila para comprobar la otra tecla
+ 20+  805D ED 78            IN A, (C)
+ 21+  805F CB 5F            BIT 3, A             ; prueba el bit 3 -> si Z la tecla 'N' está pulsada
+ 22+  8061 28 02            JR Z, KSON_N
+ 23+  8063
+ 24+  8063 20 EE            JR NZ, KSON_BUCLE    ; si ninguna detectada, repetir
+ 25+  8065
+ 26+  8065              KSON_N:
+ 27+  8065 16 4E            LD D, 'N'            ; devuelve en D el carácter 'N' si se detectó esa tecla
+ 28+  8067 18 02            JR KSON_RELEASE
+ 29+  8069
+ 30+  8069              KSON_S:
+ 31+  8069 16 53            LD D, 'S'            ; devuelve en D el carácter 'S' si se detectó esa tecla
+ 32+  806B
+ 33+  806B              ; KSON_RELEASE
+ 34+  806B              ; - Espera a que la tecla no este pulsada antes de retornar (anti-rebotes/simple debounce)
+ 35+  806B              KSON_RELEASE:
+ 36+  806B ED 78            IN A, (C)
+ 37+  806D E6 1F            AND $1F
+ 38+  806F FE 1F            CP $1F
+ 39+  8071 20 F8            JR NZ, KSON_RELEASE
+ 40+  8073
+ 41+  8073 C9               RET ; FIN DE KSON (D contiene 'S' o 'N')
+ 42+  8074
+ 43+  8074              ; K_LR_E_F
+ 44+  8074              ; - Rutina de lectura de teclado para las teclas Q (LEFT), W (RIGHT), ENTER (soltar ficha) o F
+ 45+  8074              K_LR_E_F:
+ 46+  8074 0E FE            LD C, $FE            ; puerto de lectura
+ 47+  8076 F5               PUSH AF
+ 48+  8077
+ 49+  8077              ; KLREF_BUCLE
+ 50+  8077              ; - Bucle que lee el teclado hasta detectar una de las teclas Q, W, ENTER o F con el uso de los bits
+ 51+  8077              ; - Esta rutina es para el jugador 1
+ 52+  8077              KLREF_BUCLE:
+ 53+  8077 3A 0C 80         LD A, (JUGADOR_ACTUAL)
+ 54+  807A FE 02            CP 2
+ 55+  807C 28 1A            JR Z, KLREF_BUCLE_J2
+ 56+  807E 06 FB            LD B, $FB            ; seleccionar/activar fila de teclado
+ 57+  8080 ED 78            IN A, (C)
+ 58+  8082 CB 47            BIT 0, A             ; si bit0 = 0 -> tecla Q
+ 59+  8084 28 4A            JR Z, KLREF_Q
+ 60+  8086 CB 4F            BIT 1, A             ; si bit1 = 0 -> tecla W
+ 61+  8088 28 42            JR Z, KLREF_W
+ 62+  808A CB 57            BIT 2, A
+ 63+  808C 28 3A            JR Z, KLREF_E
+ 64+  808E
+ 65+  808E 06 FD            LD B, $FD            ; otra fila para F
+ 66+  8090 ED 78            IN A, (C)
+ 67+  8092 CB 5F            BIT 3, A             ; si bit3 = 0 -> tecla F
+ 68+  8094 28 54            JR Z, KLREF_F
+ 69+  8096
+ 70+  8096 18 DF            JR KLREF_BUCLE       ; repetir hasta detectar una tecla
+ 71+  8098
+ 72+  8098              ; KLREF_BUCLE_J2
+ 73+  8098              ; - Bucle que lee el teclado hasta detectar una de las teclas O, P, ENTER o F
+ 74+  8098              ; - Esta rutina es para el jugador 2
+ 75+  8098              KLREF_BUCLE_J2:
+ 76+  8098 06 DF            LD B, $DF            ; seleccionar/activar fila de teclado
+ 77+  809A ED 78            IN A, (C)
+ 78+  809C CB 47            BIT 0, A             ; si bit0 = 0 -> tecla P
+ 79+  809E 28 12            JR Z, KLREF_P
+ 80+  80A0 CB 4F            BIT 1, A             ; si bit1 = 0 -> tecla O
+ 81+  80A2 28 12            JR Z, KLREF_O
+ 82+  80A4 CB 57            BIT 2, A
+ 83+  80A6 28 12            JR Z, KLREF_I
+ 84+  80A8
+ 85+  80A8 06 FD            LD B, $FD            ; otra fila para F
+ 86+  80AA ED 78            IN A, (C)
+ 87+  80AC CB 5F            BIT 3, A             ; si bit3 = 0 -> tecla F
+ 88+  80AE 28 3A            JR Z, KLREF_F
+ 89+  80B0
+ 90+  80B0 18 E6            JR KLREF_BUCLE_J2       ; repetir hasta detectar una tecla
+ 91+  80B2
+ 92+  80B2              KLREF_P:
+ 93+  80B2 16 50            LD D, 'P'   ; devuelve en D el carácter 'P' si se detectó esa tecla
+ 94+  80B4 18 06            JR KLREF_RELEASE_IOP
+ 95+  80B6
+ 96+  80B6              KLREF_O:
+ 97+  80B6 16 4F            LD D, 'O'   ; devuelve en D el carácter 'O' si se detectó esa tecla
+ 98+  80B8 18 02            JR KLREF_RELEASE_IOP
+ 99+  80BA
+100+  80BA              KLREF_I:
+101+  80BA 16 49            LD D, 'I'   ; devuelve en D el carácter 'I' si se detectó esa tecla
+102+  80BC
+103+  80BC              ; KLREF_RELEASE_IOP
+104+  80BC              ; - Espera a que la tecla P u O no este pulsada antes de retornar (anti-rebotes/simple debounce)
+105+  80BC              KLREF_RELEASE_IOP:
+106+  80BC 06 DF            LD B, $DF
+107+  80BE ED 78            IN A, (C)
+108+  80C0 E6 1F            AND $1F
+109+  80C2 FE 1F            CP $1F
+110+  80C4 20 F6            JR NZ, KLREF_RELEASE_IOP
+111+  80C6 F1               POP AF
+112+  80C7 C9               RET
+113+  80C8
+114+  80C8              KLREF_E:
+115+  80C8 16 45            LD D, 'E'            ; devuelve 'E' en D
+116+  80CA 18 06            JR KLREF_RELEASE_QWE
+117+  80CC
+118+  80CC              KLREF_W:
+119+  80CC 16 57            LD D, 'W'            ; devuelve 'W' en D
+120+  80CE 18 02            JR KLREF_RELEASE_QWE
+121+  80D0
+122+  80D0              KLREF_Q:
+123+  80D0 16 51            LD D, 'Q'            ; devuelve 'Q' en D
+124+  80D2
+125+  80D2              ; KLREF_RELEASE_QWE
+126+  80D2              ; - Espera a que la tecla Q o W no este pulsada antes de retornar (anti-rebotes/simple debounce)
+127+  80D2              KLREF_RELEASE_QWE:
+128+  80D2 06 FB            LD B, $FB
+129+  80D4 ED 78            IN A, (C)
+130+  80D6 E6 1F            AND $1F
+131+  80D8 FE 1F            CP $1F
+132+  80DA 20 F6            JR NZ, KLREF_RELEASE_QWE
+133+  80DC F1               POP AF
+134+  80DD C9               RET
+135+  80DE
+136+  80DE              ; KLREF_RELEASE_ENTER
+137+  80DE              ; - Espera a la liberación de la tecla ENTER
+138+  80DE              KLREF_RELEASE_ENTER:
+139+  80DE 06 BF            LD B, $BF
+140+  80E0 ED 78            IN A, (C)
+141+  80E2 E6 1F            AND $1F
+142+  80E4 FE 1F            CP $1F
+143+  80E6 20 F6            JR NZ, KLREF_RELEASE_ENTER
+144+  80E8 F1               POP AF
+145+  80E9 C9               RET ; FIN DE LECTURA Q W ENTER
+146+  80EA
+147+  80EA              KLREF_F:
+148+  80EA 16 46            LD D, 'F'            ; devuelve 'F' en D
+149+  80EC
+150+  80EC              ; KLREF_RELEASE_F
+151+  80EC              ; - Espera a la liberación de la tecla F
+152+  80EC              KLREF_RELEASE_F:
+153+  80EC 06 FD            LD B, $FD
+154+  80EE ED 78            IN A, (C)
+155+  80F0 E6 1F            AND $1F
+156+  80F2 FE 1F            CP $1F
+157+  80F4 20 F6            JR NZ, KLREF_RELEASE_F
+158+  80F6 F1               POP AF
+159+  80F7 C9               RET
 # file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm
  15   80F8                  INCLUDE "printat.asm"        ; Rutina de impresión en pantalla
 # file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm
@@ -737,7 +752,7 @@
  13+  BD4A C6 80            ADD BLINK
  14+  BD4C CD 54 BD         CALL GC_COLOR_CIRCLE
  15+  BD4F C9               RET
- 16+  BD50
+ 16+  BD50              ; El jugador 2 empieza en la columna 6 (Fila = 0, Columna = 6)
  17+  BD50              SET_HL_J2
  18+  BD50 21 06 00         LD HL, $06
  19+  BD53 C9               RET
@@ -819,41 +834,48 @@
  72+  BD9D C5               PUSH BC
  73+  BD9E D5               PUSH DE
  74+  BD9F
- 75+  BD9F              SOLTAR_FICHA_BUCLE:
- 76+  BD9F                  ; ERASE current circle
- 77+  BD9F 3E 00            LD A, NEGRO
- 78+  BDA1 CD 54 BD         CALL GC_COLOR_CIRCLE
- 79+  BDA4
- 80+  BDA4 24               INC H
- 81+  BDA5 3A 0D 80         LD A, (COLOR_JUGADOR_ACTUAL)
- 82+  BDA8 CD 54 BD         CALL GC_COLOR_CIRCLE
- 83+  BDAB
- 84+  BDAB CD 83 C0         CALL U_ESPERAR
- 85+  BDAE
- 86+  BDAE                  ; Calculate TABLERO_ACTUAL position for new H,L
- 87+  BDAE CD 72 C0         CALL U_CALC_TABLERO_POS      ; Returns IX pointing to TABLERO_ACTUAL[H][L]
- 88+  BDB1                  ; Check if position is free
- 89+  BDB1 DD 7E 00         LD A, (IX)
- 90+  BDB4 B7               OR A
- 91+  BDB5 20 02            JR NZ, FICHA_LANDED
- 92+  BDB7 18 E6            JR SOLTAR_FICHA_BUCLE
- 93+  BDB9
- 94+  BDB9              FICHA_LANDED:
- 95+  BDB9                  ; Paint final circle position
- 96+  BDB9                  ; DEC H                      ; Go back to last valid position
- 97+  BDB9                  ; LD A, (COLOR_JUGADOR_ACTUAL)
- 98+  BDB9                  ; CALL GC_COLOR_CIRCLE
- 99+  BDB9
-100+  BDB9                  ; Calculate correct TABLERO_ACTUAL position and save piece
-101+  BDB9 25               DEC H
-102+  BDBA CD 72 C0         CALL U_CALC_TABLERO_POS      ; IX now points to correct position
-103+  BDBD 3A 0C 80         LD A, (JUGADOR_ACTUAL)
-104+  BDC0 DD 77 00         LD (IX), A
-105+  BDC3
-106+  BDC3 D1               POP DE
-106+  BDC4 C1             POP BC
-106+  BDC5 F1            POP AF
-107+  BDC6 C9               RET
+ 75+  BD9F              ; SOLTAR_FICHA_BUCLE
+ 76+  BD9F              ; - Rutina que simula la caída de una ficha en la columna seleccionada
+ 77+  BD9F              ; - INC H para moverse a la siguiente fila
+ 78+  BD9F              ; - Se hace una pausa para que se vea el movimiento
+ 79+  BD9F              SOLTAR_FICHA_BUCLE:
+ 80+  BD9F                  ; ERASE current circle
+ 81+  BD9F 3E 00            LD A, NEGRO
+ 82+  BDA1 CD 54 BD         CALL GC_COLOR_CIRCLE
+ 83+  BDA4
+ 84+  BDA4 24               INC H
+ 85+  BDA5 3A 0D 80         LD A, (COLOR_JUGADOR_ACTUAL)
+ 86+  BDA8 CD 54 BD         CALL GC_COLOR_CIRCLE
+ 87+  BDAB
+ 88+  BDAB CD 83 C0         CALL U_ESPERAR
+ 89+  BDAE
+ 90+  BDAE                  ; Calculate TABLERO_ACTUAL position for new H,L
+ 91+  BDAE CD 72 C0         CALL U_CALC_TABLERO_POS      ; Returns IX pointing to TABLERO_ACTUAL[H][L]
+ 92+  BDB1                  ; Check if position is free
+ 93+  BDB1 DD 7E 00         LD A, (IX)
+ 94+  BDB4 B7               OR A
+ 95+  BDB5 20 02            JR NZ, FICHA_LANDED ; Si no es cero, la posición está ocupada y se tiene que bajar la ficha
+ 96+  BDB7 18 E6            JR SOLTAR_FICHA_BUCLE   ; Si es cero, se sigue bajando la ficha
+ 97+  BDB9
+ 98+  BDB9              ; FICHA_LANDED
+ 99+  BDB9              ; - DEC H devuelve la coordenada a la ultima posicion vacia valida
+100+  BDB9              ; - Con LD (IX), A se guarda la ficha del jugador actual en la "memoria del tablero"
+101+  BDB9              FICHA_LANDED:
+102+  BDB9                  ; Paint final circle position
+103+  BDB9                  ; DEC H                      ; Go back to last valid position
+104+  BDB9                  ; LD A, (COLOR_JUGADOR_ACTUAL)
+105+  BDB9                  ; CALL GC_COLOR_CIRCLE
+106+  BDB9
+107+  BDB9                  ; Calculate correct TABLERO_ACTUAL position and save piece
+108+  BDB9 25               DEC H
+109+  BDBA CD 72 C0         CALL U_CALC_TABLERO_POS      ; IX now points to correct position
+110+  BDBD 3A 0C 80         LD A, (JUGADOR_ACTUAL)
+111+  BDC0 DD 77 00         LD (IX), A
+112+  BDC3
+113+  BDC3 D1               POP DE
+113+  BDC4 C1             POP BC
+113+  BDC5 F1            POP AF
+114+  BDC6 C9               RET
 # file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm
  18   BDC7                  INCLUDE "logic_flow.asm"     ; Flujo principal del juego
 # file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm
