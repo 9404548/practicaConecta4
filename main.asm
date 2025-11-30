@@ -53,6 +53,14 @@ FIN_NEXT:
     CP 'N'
     CALL Z, ADIOS                ; Si se pulsó 'N', muestra pantalla de despedida
 
+EMPATE:
+    CALL GB_EMPATE
+    CALL K_SON                   ; Lee teclado (S/N)
+    LD A, D
+    CP 'S'
+    CALL Z, LOGICA_JUEGO         ; Si se pulsó 'S', inicia nuevo juego
+    CP 'N'
+    CALL Z, ADIOS                ; Si se pulsó 'N', muestra pantalla de despedida
 ; Lógica principal del juego
 LOGICA_JUEGO:
     CALL GB_PTLLA_INICIO_DE_JUEGO ; Dibuja pantalla de inicio de juego
@@ -62,29 +70,30 @@ BUCLE_JUEGO:
 GESTIONAR_JUGADA:
     CALL GC_COLOR_JUGADOR_ACTUAL  ; Muestra el jugador actual en pantalla (HL = $5845)
 JUGADA:
-    CALL K_LR_ENTER_F             ; Lee entrada (Q/W/O/P/ENTER/F)
+    CALL K_LR_E_F             ; Lee entrada (Q/W/O/P/ENTER/F)
     LD A, D
     PUSH AF
     CALL LC_VALIDPLAY             ; Comprueba si la jugada es válida
     CP 1
     JR Z, JUGADA                  ; Si no fue válida, espera nueva jugada
     POP AF
-    CP 'W': CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
-    CP 'Q':CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la izquierda
-    CP 'P': CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
+    CP 'Q': CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
+    CP 'W':CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la izquierda
+    CP 'I': CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
     CP 'O':CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la izquierda
-    CP 'J': JR NC, JUGADA
-    CP 13
-    CALL Z, GC_ENTER              ; Ejecuta acción de soltar ficha
-    CP 'F'
-    CALL Z, FIN_NEXT              ; Termina partida
+    CP $FF: JR Z, JUGADA
+    CP 'E': CALL Z, GC_ENTER
+    CP 'P': CALL Z, GC_ENTER             ; Ejecuta acción de soltar ficha
+
+    CP 'F': CALL Z, FIN_NEXT              ; Termina partida
+
     JR BUCLE_JUEGO
 ; Comprobación de fin de juego
 COMPROBAR_FIN_JUEGO:
-    CALL LC_COMPROBAR_VICTORIA_JUGADOR         ; Comprueba si hay victoria o empate
-    ; Si se detectó el fin del juego
-    ; JR (condición de fin), FIN_NEXT
-    JR Z, FIN_NEXT
+    CALL LC_COMPROBAR_RESULTADO        ; Comprueba si hay victoria o empate
+    JR Z, FIN_NEXT ; HAY GANADOR
+    CP 64
+    JR C, EMPATE ; HUBO EMPATE
     JR BUCLE_JUEGO                ; Si no hay fin, sigue el juego
 
 

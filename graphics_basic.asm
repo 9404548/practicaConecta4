@@ -6,10 +6,14 @@ STRING_JUGAR: DB " Quieres jugar? S/N:   ", 0          ; pregunta para iniciar p
 STRING_FILA_VACIA_J: DB "                       ", 0   ; otra fila vacía para espaciado
 STRING_FILA_VACIA_A: DB "            ", 0           ; fila vacía (alineación en pantalla)
 STRING_ADIOS: DB "  ADIOS!!!! ", 0                 ; mensaje de despedida
-STRING_FIN: DB " LA PARTIDA HA FINALIZADO ", 0     ; mensaje cuando termina la partida
-STRING_OTRA: DB " QUIERES JUGAR OTRA VEZ? S/N:   ", 0 ; preguntar por otra partida
+STRING_EMPATE: DB " HAN EMPATADO ", 0     ; mensaje cuando termina la partida
+STRING_FILA_VACIA_E: DB "              ", 0
+STRING_OTRA: DB " QUIEREN JUGAR OTRA VEZ? S/N:   ", 0 ; preguntar por otra partida
 STRING_CONTROLES_J1: DB "Q=IZQ, W=DER", 0
-STRING_CONTROLES_J2: DB "O=IZQ, P=DER", 0
+STRING_CONTROLES_J2: DB "I=IZQ, O=DER", 0
+STRING_BAJAR: DB "BAJAR= / ", 0
+STRING_BJ1: DB "E", 0
+STRING_BJ2: DB "P", 0
 MENSAJE_VICTORIA: DB " HA GANADO EL JUGADOR ", 0
 NOMBRE_GANADOR: DB "           "
                 DB "   ROJO    "
@@ -23,7 +27,6 @@ CHAR_CARACTER: DB 0, 0                               ; buffer de 1 byte para el 
 ; PANTALLA DE INICIO
 PANTALLA_BIENVENIDA: INCBIN "connect4screen.SCR"
 PANTALLA_JUEGO: INCBIN "connect4gameScreen.scr"
-    INCLUDE "pantalla_juego.asm"  ; rutinas que dibujan el tablero que recibe fichas circulares
 
 GB_BIENVENIDA:
     ; Guardamos registros usados antes de manipular la pantalla
@@ -106,16 +109,31 @@ PRINT_ADIOS:
 GB_FIN_NEXT:
     PUSH DE: PUSH HL: PUSH BC: PUSH AF
     CALL PRINT_GANADOR
+    POP AF: POP BC: POP HL: POP DE
     RET 
 
+GB_EMPATE:
+    PUSH DE: PUSH HL: PUSH BC: PUSH AF
+    LD IX, STRING_FILA_VACIA_E
+    LD B, 11
+    LD C, 8
+    LD A, COLOR_TEXTO_ROJO
+    CALL PRINTAT 
+    LD B, 13
+    CALL PRINTAT 
+    LD B, 12
+    LD IX, STRING_EMPATE
+    CALL PRINTAT 
+    POP AF: POP BC: POP HL: POP DE
+    RET
 
-    
 PRINT_FIN:
     LD B, 15
     LD C, 3
     LD A, 8*COLOR_TEXTO_ROJO
-    LD IX, STRING_FIN
+    LD IX, STRING_EMPATE
     CALL PRINTAT
+PRINT_OTRA:
     LD B, 21
     LD C, 0
     LD A, 8*COLOR_TEXTO_ROJO
@@ -150,6 +168,21 @@ PRINT_CONTROLES:
     LD A, COLOR_JUGADOR2
     LD IX, STRING_CONTROLES_J2
     CALL PRINTAT
+    LD B, 23
+    LD C, 10
+    LD A, COLOR_BLANCO
+    LD IX, STRING_BAJAR
+    CALL PRINTAT
+    LD B, 23
+    LD C, 16
+    LD A, COLOR_JUGADOR1
+    LD IX, STRING_BJ1
+    CALL PRINTAT
+    LD B, 23
+    LD C, 18
+    LD A, COLOR_JUGADOR2
+    LD IX, STRING_BJ2
+    CALL PRINTAT
     RET
 
 PRINT_GANADOR:
@@ -163,12 +196,14 @@ PRINT_GANADOR:
     PUSH BC
     LD IX, NOMBRE_GANADOR
     LD A, (GANADOR): PUSH AF
-    LD B, A: DEC B: DEC B
-CONSEGUIR_GANADOR
-    INC IX
-    DJNZ
+    LD B, A: DEC B
+    LD DE, 11
+CONSEGUIR_GANADOR:
+    ADD IX, DE 
+    DJNZ CONSEGUIR_GANADOR
     POP AF: POP BC
     CALL PRINTAT
+    CALL PRINT_OTRA
     RET
 
 PTLLA_NEGRA:

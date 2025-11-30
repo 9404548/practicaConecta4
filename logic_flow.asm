@@ -1,23 +1,6 @@
 ; logic_flow.asm - Rutinas de control de flujo principal del juego
 
-; LF_ESPERAR
-;  - Rutina de espera/bloqueo para temporización (delay)
-;  - Usa un bucle con BC como contador para generar una pausa de ~0,49 segundos
-;  - No modifica registros fuera de BC/AF
-LF_ESPERAR:
-    PUSH BC
-    PUSH AF
-    LD BC, CONTADOR      ; carga el valor de espera en BC
-LF_ESPERAR1: 
-    DEC BC               ; decrementa el contador
-    LD A, B
-    OR C                 ; si BC != 0, sigue esperando
-    NOP                  ; instrucción de relleno para ajustar la duración
-    JR NZ, LF_ESPERAR1   ; repite hasta que BC = 0
-    ; DURACION TOTAL = APROX 0,49 SEG (según valor de CONTADOR y velocidad CPU)
-    POP AF
-    POP BC
-    RET
+
 
 ; LF_INICIALIZACION
 ;  - Inicializa el estado lógico y gráfico del juego (por ejemplo, dibuja la fila superior de círculos)
@@ -80,9 +63,10 @@ BR_BUCLE_INTERNO:
 ; JUGADA_DESPLAZAMIENTO - Administra desplazamiento tras Q/W
 LF_JUGADA_DESPLAZAMIENTO:
     CP 'W': CALL Z, GC_RIGHT              ; Desplaza ficha a la derecha
-    CP 'P': CALL Z, GC_RIGHT              ; Desplaza ficha a la derecha
+    CP 'O': CALL Z, GC_RIGHT              ; Desplaza ficha a la derecha
     CP 'Q': CALL Z, GC_LEFT               ; Desplaza ficha a la izquierda
-    CP 'O': CALL Z, GC_LEFT               ; Desplaza ficha a la izquierda
+    CP 'I': CALL Z, GC_LEFT               ; Desplaza ficha a la izquierda
+    LD A, $FF
     RET
 
 LF_RESUMIR_JUEGO:
