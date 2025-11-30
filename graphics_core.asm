@@ -13,7 +13,7 @@ GC_COLOR_JUGADOR_ACTUAL:
     ADD BLINK
     CALL GC_COLOR_CIRCLE
     RET
-
+; El jugador 2 empieza en la columna 6 (Fila = 0, Columna = 6)
 SET_HL_J2
     LD HL, $06
     RET
@@ -71,7 +71,11 @@ GC_ENTER:
     PUSH AF
     PUSH BC
     PUSH DE
-    
+
+; SOLTAR_FICHA_BUCLE
+; - Rutina que simula la caída de una ficha en la columna seleccionada
+; - INC H para moverse a la siguiente fila
+; - Se hace una pausa para que se vea el movimiento
 SOLTAR_FICHA_BUCLE:
     ; ERASE current circle
     LD A, NEGRO
@@ -88,9 +92,12 @@ SOLTAR_FICHA_BUCLE:
     ; Check if position is free
     LD A, (IX)
     OR A
-    JR NZ, FICHA_LANDED
-    JR SOLTAR_FICHA_BUCLE
+    JR NZ, FICHA_LANDED ; Si no es cero, la posición está ocupada y se tiene que bajar la ficha
+    JR SOLTAR_FICHA_BUCLE   ; Si es cero, se sigue bajando la ficha
 
+; FICHA_LANDED
+; - DEC H devuelve la coordenada a la ultima posicion vacia valida
+; - Con LD (IX), A se guarda la ficha del jugador actual en la "memoria del tablero"
 FICHA_LANDED:
     ; Paint final circle position  
     ; DEC H                      ; Go back to last valid position

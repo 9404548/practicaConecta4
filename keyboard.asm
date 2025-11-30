@@ -7,6 +7,9 @@
 
 K_SON: ; LECTURA DE TECLADO PARA 'S' O 'N' (respuesta S/N)
     LD C, $FE            ; puerto de lectura del teclado
+
+; KSON_BUCLE
+; - Bucle que escanea el teclado hasta detectar S o N
 KSON_BUCLE: 
     LD B, $FD            ; (valor de fila / máscara usada en el esquema de teclado)
     IN A, (C)            ; leer estado de las líneas del teclado
@@ -27,8 +30,9 @@ KSON_N:
 KSON_S:
     LD D, 'S'            ; devuelve en D el carácter 'S' si se detectó esa tecla
 
+; KSON_RELEASE
+; - Espera a que la tecla no este pulsada antes de retornar (anti-rebotes/simple debounce)
 KSON_RELEASE:
-    ; Espera a que la tecla sea liberada antes de retornar (anti-rebotes/simple debounce)
     IN A, (C)
     AND $1F
     CP $1F
@@ -36,10 +40,15 @@ KSON_RELEASE:
 
     RET ; FIN DE KSON (D contiene 'S' o 'N')
 
-
-K_LR_E_F: ; LECTURA DE TECLADO PARA Q (LEFT), W (RIGHT), ENTER (soltar ficha) o F
+; K_LR_E_F
+; - Rutina de lectura de teclado para las teclas Q (LEFT), W (RIGHT), ENTER (soltar ficha) o F
+K_LR_E_F:
     LD C, $FE            ; puerto de lectura
     PUSH AF
+
+; KLREF_BUCLE
+; - Bucle que lee el teclado hasta detectar una de las teclas Q, W, ENTER o F con el uso de los bits 
+; - Esta rutina es para el jugador 1
 KLREF_BUCLE:
     LD A, (JUGADOR_ACTUAL)
     CP 2
@@ -60,6 +69,9 @@ KLREF_BUCLE:
 
     JR KLREF_BUCLE       ; repetir hasta detectar una tecla
 
+; KLREF_BUCLE_J2
+; - Bucle que lee el teclado hasta detectar una de las teclas O, P, ENTER o F
+; - Esta rutina es para el jugador 2
 KLREF_BUCLE_J2:
     LD B, $DF            ; seleccionar/activar fila de teclado
     IN A, (C)
@@ -78,18 +90,19 @@ KLREF_BUCLE_J2:
     JR KLREF_BUCLE_J2       ; repetir hasta detectar una tecla
 
 KLREF_P:
-    LD D, 'P'
+    LD D, 'P'   ; devuelve en D el carácter 'P' si se detectó esa tecla
     JR KLREF_RELEASE_IOP
 
 KLREF_O:
-    LD D, 'O'
+    LD D, 'O'   ; devuelve en D el carácter 'O' si se detectó esa tecla
     JR KLREF_RELEASE_IOP
 
 KLREF_I:
-    LD D, 'I'
+    LD D, 'I'   ; devuelve en D el carácter 'I' si se detectó esa tecla
 
+; KLREF_RELEASE_IOP
+; - Espera a que la tecla P u O no este pulsada antes de retornar (anti-rebotes/simple debounce)
 KLREF_RELEASE_IOP:
-    ; Espera a la liberación de Q o W (misma rutina de liberación compartida)
     LD B, $DF
     IN A, (C)
     AND $1F
@@ -109,8 +122,9 @@ KLREF_W:
 KLREF_Q:
     LD D, 'Q'            ; devuelve 'Q' en D
 
+; KLREF_RELEASE_QWE
+; - Espera a que la tecla Q o W no este pulsada antes de retornar (anti-rebotes/simple debounce)
 KLREF_RELEASE_QWE:
-    ; Espera a la liberación de Q o W (misma rutina de liberación compartida)
     LD B, $FB
     IN A, (C)
     AND $1F
@@ -119,9 +133,9 @@ KLREF_RELEASE_QWE:
     POP AF
     RET
 
-
+; KLREF_RELEASE_ENTER
+; - Espera a la liberación de la tecla ENTER
 KLREF_RELEASE_ENTER:
-    ; Espera a la liberación de la tecla ENTER
     LD B, $BF
     IN A, (C)
     AND $1F
@@ -133,8 +147,9 @@ KLREF_RELEASE_ENTER:
 KLREF_F:
     LD D, 'F'            ; devuelve 'F' en D
 
+; KLREF_RELEASE_F
+; - Espera a la liberación de la tecla F
 KLREF_RELEASE_F:
-    ; Espera a la liberación de la tecla F
     LD B, $FD
     IN A, (C)
     AND $1F

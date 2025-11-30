@@ -1,4 +1,4 @@
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm
   1   0000              ; main.asm - Programa principal Conecta 4 (ZX Spectrum)
   2   0000              ; Inicialización, bucle principal, gestión de jugadas y subrutinas auxiliares
   3   0000
@@ -11,7 +11,7 @@
  10   800A
  11   800A              ; INCLUDES - módulos y rutinas auxiliares
  12   800A                  INCLUDE "colors.asm"         ; Definiciones de colores y jugadores
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm
   1+  800A              ; CONSTANTES DE COLORES
   2+  800A              ; Valores de atributos de color (ej.: usado para imprimir texto en pantalla)
   3+  800A              COLOR_TEXTO_AZUL     EQU 1    ; Color azul (atributo de color 1)
@@ -30,7 +30,7 @@
  16+  800A              COLOR_BLANCO              EQU 7
 # file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm
  13   800A                  INCLUDE "variables.asm"      ; Variables globales y estado
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm
   1+  800A 18 FE        VARIABLES: JR VARIABLES
   2+  800C              ; variables.asm - Definición de constantes globales para el juego
   3+  800C              JUGADOR1 EQU 1
