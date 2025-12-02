@@ -70,13 +70,21 @@ PRINT_BIENVENIDA: ; IMPRIME EL MENSAJE DE BIENVENIDA
     ; Preparamos el atributo para el blinker (parpadeo)
     LD A, BLINK + 8*COLOR_TEXTO_AMARILLO ; BLINK combinado con un valor de color
 
-GB_BLINKER_JUGAR: ; Pinta en pantalla el atributo de parpadeo en la posición indicada
+; 
+GB_PRUEBA: ; Pinta en pantalla el atributo de parpadeo en la posición indicada
     LD B, 21
     LD C, 30
     LD HL, $5800 + 21*NUM_COLS + 30  ; dirección de la celda (fila*NUM_COLS + col) en buffer de pantalla
     LD (HL), A                        ; escribe el atributo (parpadeo) directamente en VRAM
     POP AF: POP BC: POP HL: POP DE    ; restaura registros y sale
 
+    RET
+; GB_BLINKER_JUGAR BUENO
+GB_BLINKER_JUGAR:
+    LD B, 21
+    LD C, 30
+    LD HL, $5800 + 21*NUM_COLS + 30  ; dirección de la celda (fila*NUM_COLS + col) en buffer de pantalla
+    LD (HL), A 
     RET
 
 GB_PRINT_CHAR_SON: ; Imprime el caracter que escribió el usuario en la misma posición del blinker
@@ -199,6 +207,7 @@ PRINT_CONTROLES:
 
 ; Impresion del ganador, incluye mensaje general de victoria + el nombre del jugador ganador en su color.
 PRINT_GANADOR:
+    CALL GB_PRINT_FONDO_GANADOR
     LD B, 11
     LD C, 4
     LD A, COLOR_BLANCO    ; atributo/color para el texto de adiós
@@ -231,4 +240,18 @@ PTLLA_NEGRA:
     LDIR    ; copia 768 bytes-1 para limpiar buffer de pantalla
 
     POP AF: POP HL: POP DE: POP BC
+    RET
+
+; PARA LA PANTALLA DE GANADOR, AL DARLE A LA F
+GB_PRINT_FONDO_GANADOR:
+    PUSH HL : PUSH BC : PUSH AF
+    LD HL, $5800
+    LD B, COLOR_BLANCO_FONDO_GANADOR
+BUCLE_PTLLA:
+    LD (HL), B
+    INC HL
+    LD A, H
+    CP $5B
+    JR NZ, BUCLE_PTLLA
+    POP AF : POP BC : POP HL
     RET
