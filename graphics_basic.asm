@@ -15,13 +15,13 @@ STRING_BAJAR: DB "BAJAR= / ", 0
 STRING_BJ1: DB "E", 0
 STRING_BJ2: DB "P", 0
 MENSAJE_VICTORIA: DB " HA GANADO EL JUGADOR ", 0
-NOMBRE_GANADOR: DB "           "
-                DB "   ROJO    "
-                DB "  MAGENTA  "
-                DB "   VERDE   "
-                DB "  CELESTE  "
-                DB " AMARILLO  "
-                DB "  BLANCO   "
+NOMBRE_GANADOR: DB "           ", 0 ; 11 caracteres + 1 byte para el 0 = 12 bytes
+                DB "   ROJO    ", 0
+                DB "  MAGENTA  ", 0
+                DB "   VERDE   ", 0
+                DB "  CELESTE  ", 0
+                DB " AMARILLO  ", 0
+                DB "  BLANCO   ", 0
 CHAR_CARACTER: DB 0, 0                               ; buffer de 1 byte para el caracter pulsado
 
 ; PANTALLA DE INICIO
@@ -213,18 +213,19 @@ PRINT_GANADOR:
     LD A, COLOR_BLANCO    ; atributo/color para el texto de adiós
     LD IX, MENSAJE_VICTORIA
     CALL PRINTAT
-    LD B, 12
-    LD C, 10
-    PUSH BC
+    LD B, 12    ; Fila donde saldra el nombre
+    LD C, 10    ; Columna 
+    PUSH BC ; Guardamos coordenadas
     LD IX, NOMBRE_GANADOR
-    LD A, (GANADOR): PUSH AF
+    LD A, (GANADOR): PUSH AF    ; Guardamos color
     LD B, A: DEC B
-    LD DE, 11
+    JR Z, IMPRIMIR_GANADOR
+    LD DE, 12   ; Longitud 11 letras + 1 cero
 CONSEGUIR_GANADOR:
     ADD IX, DE 
     DJNZ CONSEGUIR_GANADOR
-
-    POP AF: POP BC
+IMPRIMIR_GANADOR:
+    POP AF: POP BC  ; Recuperamos color y coordenadas
     CALL PRINTAT
     CALL PRINT_OTRA ; Imprime el mensaje ofreciendo jugar otra partida
     RET

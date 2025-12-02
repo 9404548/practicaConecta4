@@ -32,13 +32,29 @@ CTL_BUCLE:
    
 ; Rutina que comprueba si el jugador ha ganado por alguna línea, ya sea vertical, horizontal o diagonal.
 LC_COMPROBAR_VICTORIA_JUGADOR:
+    ; Comprobamos Horizontal
     CALL LC_COMPROBAR_4_EN_RAYA_HORIZONTAL
-    CP 0: CALL NZ, HAY_GANADOR
+    CP 4                         ; Comparamos el resultado con 4
+    JR NC, VICTORIA_CONFIRMADA   ; Si A >= 4 (No Carry), saltamos a victoria
+
+    ; Comprobamos Vertical
     CALL LC_COMPROBAR_4_EN_RAYA_VERTICAL
-    CP 0: CALL NZ, HAY_GANADOR
+    CP 4
+    JR NC, VICTORIA_CONFIRMADA
+
+    ; Comprobamos Diagonales
     CALL LC_COMPROBAR_4_EN_RAYA_DIAGONALES
-    CP 0: CALL NZ, HAY_GANADOR
-    RET ; RET SIN GANADOR, A = 1, RET CON GANADOR, A = 0
+    CP 4
+    JR NC, VICTORIA_CONFIRMADA
+
+    ; SI LLEGAMOS AQUÍ, NADIE GANÓ
+    LD A, 1      ; Cargamos 1 (Código de "Sigue jugando")
+    OR A         ; Aseguramos que el flag Z se apague 
+    RET          ; Volvemos
+
+VICTORIA_CONFIRMADA:
+    CALL HAY_GANADOR  ; Guarda el ganador y pone A=0
+    RET               ; Devuelve A=0 (Victoria)
 
 ; Guarda en la variable ganador el color del jugador actual
 HAY_GANADOR:

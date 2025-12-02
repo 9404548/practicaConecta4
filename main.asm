@@ -82,11 +82,23 @@ JUGADA:
     CP 'I': CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
     CP 'O':CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la izquierda
     CP $FF: JR Z, JUGADA
-    CP 'E': CALL Z, GC_ENTER
-    CP 'P': CALL Z, GC_ENTER             ; Ejecuta acción de soltar ficha
+    CP 'E': CALL Z, PROCESAR_JUGADA_FINAL
+    CP 'P': CALL Z, PROCESAR_JUGADA_FINAL             ; Ejecuta acción de soltar ficha
 
     CP 'F': CALL Z, FIN_NEXT              ; Termina partida
 
+    JR JUGADA
+PROCESAR_JUGADA_FINAL:
+    CALL GC_ENTER             ; La ficha cae 
+    
+    ; AQUI CONECTAMOS CON LA LOGICA
+    CALL LC_COMPROBAR_RESULTADO
+    JR Z, FIN_NEXT            ; ¡SI (A=0), HA GANADO, SE VA A LA PANTALLA
+    
+    ; SI NO GANASTE, COMPROBAR EMPATE O SEGUIR (MIRAMOS EL FLAG C YA QUE SI SE ACTIVA ES EMPATE(EL 1 DE EMPATE ES MENOR QUE 64))
+    ; SI NO SE ACTIVA EL FLAG C = CONTINUAR PARTIDA (128 = CONTINUAR PARTIDA Y ES > 64)
+    CP 64   ; COMPRUEBA EMPATE O SEGUIR JUEGO (NUMERO RANDOM ENTRE EL 1(EMPATE) Y 128(SEGUIR JUGANDO))
+    JR C, EMPATE
     JR BUCLE_JUEGO
 ; Comprobación de fin de juego
 COMPROBAR_FIN_JUEGO:

@@ -44,6 +44,11 @@ SALIDA:
 
 ; RESETEA LA CONDICION DEL TABLERO ACTUAL A TODO CEROS EN LA VARIABLE.
 LF_BOARD_RESET:
+    XOR A                   ; A = 0
+    LD (LEFT_COUNTER), A    ; Reseteamos contador izquierdo
+    LD (RIGHT_COUNTER), A   ; Reseteamos contador derecho
+    LD (GANADOR), A         ; Borramos el ganador anterior
+    
     LD B, 7
     LD IX, TABLERO_ACTUAL
     XOR A
