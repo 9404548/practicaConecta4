@@ -19,15 +19,15 @@ LC_COMPROBAR_RESULTADO:
 ; Rutina para comprobar si el tablero se ha llenado
 LC_COMPROBAR_TABLERO_LLENO:
     LD IX, TABLERO_ACTUAL
-    LD B, 7
-    LD DE, 6
+    LD B, 7 ; Contador de las 7 columnas
+    LD DE, 6   ; Desplazamiento de 6 en 6 para ir al siguiente slot de la columna
 CTL_BUCLE:
-    LD A, (IX)
-    OR A
-    RET Z ; RET SIN EMPATE, A = 0
-    ADD IX, DE
+    LD A, (IX)  ; Carga en A el valor de la celda actual que apunta IX
+    OR A    ; Verifica si hay un hueco vacio
+    RET Z ; RET SIN EMPATE, A = 0, hay hueco
+    ADD IX, DE  ; Salta a la siguiente posicion para comprobar ( IX + 6, siguiente fila)
     DJNZ CTL_BUCLE
-    LD A, 1
+    LD A, 1 ; No encontro huecos
     RET ; RET CON EMPATE, A = 128
    
 ; Rutina que comprueba si el jugador ha ganado por alguna línea, ya sea vertical, horizontal o diagonal.
@@ -71,7 +71,7 @@ HAY_GANADOR:
 LC_COMPROBAR_4_EN_RAYA_HORIZONTAL:
     PUSH HL
     LD IX, TABLERO_ACTUAL
-    CALL U_CALC_TABLERO_POS
+    CALL U_CALC_TABLERO_POS ; Calcula la direccion de memoria exacta de la ultima ficha puesta en IX
     LD DE, $FFF9 ; -7 en complemento a 2 para desplazarse por columnas hacia la izquierda en IX
     LD C, 0   
 CONTAR_IZQUIERDA:
@@ -129,56 +129,101 @@ CONTAR_ABAJO:
 LC_COMPROBAR_4_EN_RAYA_DIAGONALES:
     LD IX, TABLERO_ACTUAL
     CALL U_CALC_TABLERO_POS
-    LD C, 0   
+    ;LD C, 0   
     PUSH HL
 CONTAR_UPPER_LEFT:
-    ; DESPLAZAMIENTO DE IX
-    LD A, (JUGADOR_ACTUAL)
-    LD B, A
+    LD A, H
+    OR A
+    JR Z, FIN_UPPER_LEFT
+    LD A, L
+    OR A            ; CP 0
+    JR Z, FIN_UPPER_LEFT
+
     DEC H: DEC L ; Movemos IX a la posición diagonal superior izquierda
-    CALL U_CALC_TABLERO_POS
+    CALL U_CALC_TABLERO_POS ; Aqui B se corrompe con el numero de columna
+    ; DESPLAZAMIENTO DE IX
+    LD A, (JUGADOR_ACTUAL)  ; Se vuelve a leer quien esta jugando
+    LD B, A ; Se restaura el valor correcto de B
     LD A, (IX)
-    CP B 
-    CALL Z, INC_CNT_IZQ
-    JR Z, CONTAR_UPPER_LEFT
+    CP B    ; Ahora si se comparan los colores
+    JR NZ, FIN_UPPER_LEFT
+    CALL INC_CNT_IZQ
+    JR CONTAR_UPPER_LEFT
+FIN_UPPER_LEFT:
     POP HL
     PUSH HL
 CONTAR_LOWER_RIGHT:
-    ; DESPLAZAMIENTO DE IX
-    LD A, (JUGADOR_ACTUAL)
-    LD B, A
+    LD A, H
+    CP 5
+    JR Z, FIN_LOWER_RIGHT
+    LD A, L
+    CP 6
+    JR Z, FIN_LOWER_RIGHT
+
     INC H: INC L ; Movemos IX a la posición diagonal inferior derecha
     CALL U_CALC_TABLERO_POS
+    ; DESPLAZAMIENTO DE IX
+    LD A, (JUGADOR_ACTUAL)
+    LD B, A    
     LD A, (IX)
     CP B
+    JR NZ, FIN_LOWER_RIGHT
     CALL Z, INC_CNT_DER
-    JR Z, CONTAR_LOWER_RIGHT
+    JR CONTAR_LOWER_RIGHT
+FIN_LOWER_RIGHT:
     POP HL
     CALL CONTAR_TOTALES ; Contamos totales en esa diagonal Superior Izquierda + Inferior Derecha
     RET NZ ; RET aquí si ya se consiguió que los totales superaran 3.
-    PUSH HL 
-CONTAR_UPPER_RIGHT: ; Mismo concepto que el conteo de la otra diagonal
-    ; DESPLAZAMIENTO DE IX
-    LD A, (JUGADOR_ACTUAL)
-    LD B, A
-    DEC H: INC L ; Movemos IX una fila arriba y una columna a la derecha
-    CALL U_CALC_TABLERO_POS
-    LD A, (IX)
-    CP B 
-    CALL Z, INC_CNT_DER
-    JR Z, CONTAR_UPPER_RIGHT
-    POP HL 
     PUSH HL
-CONTAR_LOWER_LEFT:
-    ; DESPLAZAMIENTO DE IX
+CONTAR_UPPER_RIGHT:
+    ; Si Fila (H) = 0 o Columna (L) = 6, no podemos subir a la derecha
+    LD A, H
+    OR A
+    JR Z, FIN_UPPER_RIGHT
+    LD A, L
+    CP 6
+    JR Z, FIN_UPPER_RIGHT
+
+    DEC H: INC L
+    CALL U_CALC_TABLERO_POS
+    ; MOVIMIENTO
     LD A, (JUGADOR_ACTUAL)
     LD B, A
-    INC H: DEC L ; Movemos IX una fila abajo y una columna a la izquierda
-    CALL U_CALC_TABLERO_POS
+    ; COMPROBACIÓN
     LD A, (IX)
     CP B 
-    CALL Z, INC_CNT_IZQ
-    JR Z, CONTAR_LOWER_LEFT
+    JR NZ, FIN_UPPER_RIGHT
+    
+    CALL INC_CNT_DER ; Usamos el contador "derecho" para una mitad de esta diagonal
+    JR CONTAR_UPPER_RIGHT
+FIN_UPPER_RIGHT:
+
+    POP HL ; Recuperamos origen
+    PUSH HL ; Guardamos para la ultima dirección
+
+CONTAR_LOWER_LEFT:
+    ; Si Fila (H) = 5 o Columna (L) = 0, no podemos bajar a la izquierda
+    LD A, H
+    CP 5
+    JR Z, FIN_LOWER_LEFT
+    LD A, L
+    OR A
+    JR Z, FIN_LOWER_LEFT
+
+    INC H: DEC L
+    CALL U_CALC_TABLERO_POS
+    ; MOVIMIENTO
+    LD A, (JUGADOR_ACTUAL)
+    LD B, A
+    ; COMPROBACIÓN
+    LD A, (IX)
+    CP B 
+    JR NZ, FIN_LOWER_LEFT
+    
+    CALL INC_CNT_IZQ ; Usamos el contador "izquierdo" para la otra mitad
+    JR CONTAR_LOWER_LEFT
+FIN_LOWER_LEFT:
+    
     POP HL 
     CALL CONTAR_TOTALES
     RET
