@@ -12,7 +12,7 @@ LC_COMPROBAR_RESULTADO:
     CALL LC_COMPROBAR_VICTORIA_JUGADOR
     CP 0: RET Z ; RET SI ALGUIEN GANÓ, A = 0
     CALL LC_COMPROBAR_TABLERO_LLENO
-    CP 0: RET C ; RET SI NADIE GANÓ Y SE LLENÓ EL TABLERO, A = 1
+    CP 64: RET C ; RET SI NADIE GANÓ Y SE LLENÓ EL TABLERO, A = 1
     LD A, 128: OR A
     RET ; RET SI NADIE GANÓ Y NO SE LLENÓ EL TABLERO, A = 128
 
@@ -20,14 +20,14 @@ LC_COMPROBAR_RESULTADO:
 LC_COMPROBAR_TABLERO_LLENO:
     LD IX, TABLERO_ACTUAL
     LD B, 7 ; Contador de las 7 columnas
-    LD DE, 6   ; Desplazamiento de 6 en 6 para ir al siguiente slot de la columna
+    LD DE, COLUMN_BOARD_SIZE   ; Desplazamiento de 6 en 6 para ir al siguiente slot de la columna
 CTL_BUCLE:
     LD A, (IX)  ; Carga en A el valor de la celda actual que apunta IX
     OR A    ; Verifica si hay un hueco vacio
     RET Z ; RET SIN EMPATE, A = 0, hay hueco
     ADD IX, DE  ; Salta a la siguiente posicion para comprobar ( IX + 6, siguiente fila)
     DJNZ CTL_BUCLE
-    LD A, 1 ; No encontro huecos
+    LD A, 32 ; No encontro huecos
     RET ; RET CON EMPATE, A = 128
    
 ; Rutina que comprueba si el jugador ha ganado por alguna línea, ya sea vertical, horizontal o diagonal.
