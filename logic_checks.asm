@@ -28,7 +28,7 @@ CTL_BUCLE:
     ADD IX, DE  ; Salta a la siguiente posicion para comprobar ( IX + 6, siguiente fila)
     DJNZ CTL_BUCLE
     LD A, 32 ; No encontro huecos
-    RET ; RET CON EMPATE, A = 64
+    RET ; RET CON EMPATE, A = 32
    
 ; Rutina que comprueba si el jugador ha ganado por alguna línea, ya sea vertical, horizontal o diagonal.
 LC_COMPROBAR_VICTORIA_JUGADOR:

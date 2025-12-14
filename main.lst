@@ -1031,7 +1031,7 @@
  28+  BE7B DD 19            ADD IX, DE  ; Salta a la siguiente posicion para comprobar ( IX + 6, siguiente fila)
  29+  BE7D 10 F7            DJNZ CTL_BUCLE
  30+  BE7F 3E 20            LD A, 32 ; No encontro huecos
- 31+  BE81 C9               RET ; RET CON EMPATE, A = 64
+ 31+  BE81 C9               RET ; RET CON EMPATE, A = 32
  32+  BE82
  33+  BE82              ; Rutina que comprueba si el jugador ha ganado por alguna línea, ya sea vertical, horizontal o diagonal.
  34+  BE82              LC_COMPROBAR_VICTORIA_JUGADOR:
@@ -1493,11 +1493,12 @@
  93   C0E6
  94   C0E6                  ; AQUI CONECTAMOS CON LA LOGICA
  95   C0E6 CD 5D BE         CALL LC_COMPROBAR_RESULTADO
- 96   C0E9 28 94            JR Z, FIN_NEXT            ; ¡SI (A=0), HA GANADO, SE VA A LA PANTALLA
- 97   C0EB
- 98   C0EB                  ; SI NO GANASTE, COMPROBAR EMPATE O SEGUIR (MIRAMOS EL FLAG C YA QUE SI SE ACTIVA ES EMPATE(EL 1 DE EMPATE ES MENOR QUE 64))
- 99   C0EB                  ; SI NO SE ACTIVA EL FLAG C = CONTINUAR PARTIDA (128 = CONTINUAR PARTIDA Y ES > 64)
-100   C0EB FE 40            CP 64   ; COMPRUEBA EMPATE O SEGUIR JUEGO (NUMERO RANDOM ENTRE EL 1(EMPATE) Y 128(SEGUIR JUGANDO))
-101   C0ED 38 A1            JR C, EMPATE
-102   C0EF 18 B6            JR BUCLE_JUEGO
+ 96   C0E9 FE 00            CP 0
+ 96   C0EB 28 92          JR Z, FIN_NEXT            ; ¡SI (A=0), HA GANADO, SE VA A LA PANTALLA
+ 97   C0ED
+ 98   C0ED                  ; SI NO GANASTE, COMPROBAR EMPATE O SEGUIR (MIRAMOS EL FLAG C YA QUE SI SE ACTIVA ES EMPATE(EL 1 DE EMPATE ES MENOR QUE 64))
+ 99   C0ED                  ; SI NO SE ACTIVA EL FLAG C = CONTINUAR PARTIDA (128 = CONTINUAR PARTIDA Y ES > 64)
+100   C0ED FE 40            CP 64   ; COMPRUEBA EMPATE O SEGUIR JUEGO (NUMERO RANDOM ENTRE EL 1(EMPATE) Y 128(SEGUIR JUGANDO))
+101   C0EF 38 9F            JR C, EMPATE
+102   C0F1 18 B4            JR BUCLE_JUEGO
 # file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm
