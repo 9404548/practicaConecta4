@@ -100,10 +100,3 @@ PROCESAR_JUGADA_FINAL:
     CP 64   ; COMPRUEBA EMPATE O SEGUIR JUEGO (NUMERO RANDOM ENTRE EL 1(EMPATE) Y 128(SEGUIR JUGANDO))
     JR C, EMPATE
     JR BUCLE_JUEGO
-; Comprobación de fin de juego
-COMPROBAR_FIN_JUEGO:
-    CALL LC_COMPROBAR_RESULTADO        ; Comprueba si hay victoria o empate
-    JR Z, FIN_NEXT ; HAY GANADOR
-    CP 64
-    JR C, EMPATE ; HUBO EMPATE
-    JR BUCLE_JUEGO                ; Si no hay fin, sigue el juego
