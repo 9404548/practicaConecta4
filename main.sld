@@ -1,1187 +1,1193 @@
 |SLD.data.version|1
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|4||0|-1|-1|Z|pages.size:16384,pages.count:4,slots.count:4,slots.adr:0,16384,32768,49152
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|6||0|2|32768|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|7||0|2|32771|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|8||0|2|32773|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|9||0|2|32775|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|3||0|-1|1|D|COLOR_TEXTO_AZUL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|3||0|-1|1|L|,COLOR_TEXTO_AZUL,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|4||0|-1|2|D|COLOR_TEXTO_ROJO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|4||0|-1|2|L|,COLOR_TEXTO_ROJO,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|5||0|-1|6|D|COLOR_TEXTO_AMARILLO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|5||0|-1|6|L|,COLOR_TEXTO_AMARILLO,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|6||0|-1|128|D|BLINK
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|6||0|-1|128|L|,BLINK,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|8||0|-1|0|D|NEGRO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|8||0|-1|0|L|,NEGRO,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|9||0|-1|1|D|AZUL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|9||0|-1|1|L|,AZUL,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|11||0|-1|2|D|COLOR_ROJO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|11||0|-1|2|L|,COLOR_ROJO,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|12||0|-1|3|D|COLOR_MAGENTA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|12||0|-1|3|L|,COLOR_MAGENTA,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|13||0|-1|4|D|COLOR_VERDE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|13||0|-1|4|L|,COLOR_VERDE,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|14||0|-1|5|D|COLOR_CELESTE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|14||0|-1|5|L|,COLOR_CELESTE,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|15||0|-1|6|D|COLOR_AMARILLO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|15||0|-1|6|L|,COLOR_AMARILLO,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|16||0|-1|7|D|COLOR_BLANCO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|16||0|-1|7|L|,COLOR_BLANCO,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|18||0|-1|63|D|COLOR_BLANCO_FONDO_GANADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm|18||0|-1|63|L|,COLOR_BLANCO_FONDO_GANADOR,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|1||0|2|32778|F|VARIABLES
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|1||0|2|32778|L|,VARIABLES,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|1||0|2|32778|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|3||0|-1|1|D|JUGADOR1
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|3||0|-1|1|L|,JUGADOR1,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|4||0|-1|2|D|JUGADOR2
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|4||0|-1|2|L|,JUGADOR2,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|8||0|-1|5|D|COLOR_JUGADOR1
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|8||0|-1|5|L|,COLOR_JUGADOR1,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|9||0|-1|3|D|COLOR_JUGADOR2
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|9||0|-1|3|L|,COLOR_JUGADOR2,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|11||0|2|32780|F|JUGADOR_ACTUAL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|11||0|2|32780|L|,JUGADOR_ACTUAL,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|12||0|2|32781|F|COLOR_JUGADOR_ACTUAL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|12||0|2|32781|L|,COLOR_JUGADOR_ACTUAL,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|13||0|2|32782|F|GANADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|13||0|2|32782|L|,GANADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|15||0|-1|1573|D|CONTADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|15||0|-1|1573|L|,CONTADOR,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|17||0|-1|24|D|NUM_FILAS
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|17||0|-1|24|L|,NUM_FILAS,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|19||0|-1|32|D|NUM_COLS
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|19||0|-1|32|L|,NUM_COLS,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|21||0|-1|6|D|FILAS_TABLERO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|21||0|-1|6|L|,FILAS_TABLERO,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|22||0|-1|7|D|COLUMNAS_TABLERO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|22||0|-1|7|L|,COLUMNAS_TABLERO,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|24||0|-1|7|D|COLUMN_BOARD_SIZE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|24||0|-1|7|L|,COLUMN_BOARD_SIZE,,+equ,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|25||0|-1|1|D|ROW_BOARD_SIZE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|25||0|-1|1|L|,ROW_BOARD_SIZE,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|27||0|2|32783|F|LEFT_COUNTER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|27||0|2|32783|L|,LEFT_COUNTER,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|28||0|2|32784|F|RIGHT_COUNTER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|28||0|2|32784|L|,RIGHT_COUNTER,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|30||0|2|32785|F|TOP_BORDER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|30||0|2|32785|L|,TOP_BORDER,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|31||0|2|32793|F|TABLERO_ACTUAL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm|31||0|2|32793|L|,TABLERO_ACTUAL,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|8||0|2|32849|F|K_SON
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|8||0|2|32849|L|,K_SON,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|9||0|2|32849|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|13||0|2|32851|F|KSON_BUCLE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|13||0|2|32851|L|,KSON_BUCLE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|14||0|2|32851|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|15||0|2|32853|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|16||0|2|32855|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|17||0|2|32857|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|19||0|2|32859|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|20||0|2|32861|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|21||0|2|32863|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|22||0|2|32865|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|24||0|2|32867|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|26||0|2|32869|F|KSON_N
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|26||0|2|32869|L|,KSON_N,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|27||0|2|32869|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|28||0|2|32871|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|30||0|2|32873|F|KSON_S
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|30||0|2|32873|L|,KSON_S,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|31||0|2|32873|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|35||0|2|32875|F|KSON_RELEASE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|35||0|2|32875|L|,KSON_RELEASE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|36||0|2|32875|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|37||0|2|32877|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|38||0|2|32879|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|39||0|2|32881|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|41||0|2|32883|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|45||0|2|32884|F|K_LR_E_F
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|45||0|2|32884|L|,K_LR_E_F,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|46||0|2|32884|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|47||0|2|32886|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|52||0|2|32887|F|KLREF_BUCLE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|52||0|2|32887|L|,KLREF_BUCLE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|53||0|2|32887|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|54||0|2|32890|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|55||0|2|32892|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|56||0|2|32894|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|57||0|2|32896|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|58||0|2|32898|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|59||0|2|32900|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|60||0|2|32902|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|61||0|2|32904|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|62||0|2|32906|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|63||0|2|32908|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|65||0|2|32910|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|66||0|2|32912|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|67||0|2|32914|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|68||0|2|32916|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|70||0|2|32918|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|75||0|2|32920|F|KLREF_BUCLE_J2
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|75||0|2|32920|L|,KLREF_BUCLE_J2,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|76||0|2|32920|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|77||0|2|32922|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|78||0|2|32924|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|79||0|2|32926|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|80||0|2|32928|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|81||0|2|32930|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|82||0|2|32932|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|83||0|2|32934|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|85||0|2|32936|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|86||0|2|32938|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|87||0|2|32940|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|88||0|2|32942|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|90||0|2|32944|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|92||0|2|32946|F|KLREF_P
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|92||0|2|32946|L|,KLREF_P,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|93||0|2|32946|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|94||0|2|32948|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|96||0|2|32950|F|KLREF_O
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|96||0|2|32950|L|,KLREF_O,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|97||0|2|32950|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|98||0|2|32952|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|100||0|2|32954|F|KLREF_I
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|100||0|2|32954|L|,KLREF_I,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|101||0|2|32954|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|105||0|2|32956|F|KLREF_RELEASE_IOP
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|105||0|2|32956|L|,KLREF_RELEASE_IOP,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|106||0|2|32956|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|107||0|2|32958|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|108||0|2|32960|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|109||0|2|32962|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|110||0|2|32964|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|111||0|2|32966|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|112||0|2|32967|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|114||0|2|32968|F|KLREF_E
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|114||0|2|32968|L|,KLREF_E,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|115||0|2|32968|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|116||0|2|32970|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|118||0|2|32972|F|KLREF_W
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|118||0|2|32972|L|,KLREF_W,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|119||0|2|32972|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|120||0|2|32974|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|122||0|2|32976|F|KLREF_Q
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|122||0|2|32976|L|,KLREF_Q,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|123||0|2|32976|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|127||0|2|32978|F|KLREF_RELEASE_QWE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|127||0|2|32978|L|,KLREF_RELEASE_QWE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|128||0|2|32978|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|129||0|2|32980|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|130||0|2|32982|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|131||0|2|32984|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|132||0|2|32986|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|133||0|2|32988|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|134||0|2|32989|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|136||0|2|32990|F|KLREF_F
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|136||0|2|32990|L|,KLREF_F,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|137||0|2|32990|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|141||0|2|32992|F|KLREF_RELEASE_F
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|141||0|2|32992|L|,KLREF_RELEASE_F,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|142||0|2|32992|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|143||0|2|32994|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|144||0|2|32996|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|145||0|2|32998|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|146||0|2|33000|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|147||0|2|33002|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm|148||0|2|33003|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|14||0|2|33004|F|PRINTAT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|14||0|2|33004|L|,PRINTAT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|14||0|2|33004|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|20||0|2|33007|F|PRINTSTR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|20||0|2|33007|L|,PRINTSTR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|20||0|2|33007|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|21||0|2|33010|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|22||0|2|33011|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|23||0|2|33012|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|24||0|2|33015|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|25||0|2|33017|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|32||0|2|33019|F|PREP_PRT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|32||0|2|33019|L|,PREP_PRT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|32||0|2|33019|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|33||0|2|33022|F|PREP_PRT_2
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|33||0|2|33022|L|,PREP_PRT_2,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|33||0|2|33022|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|34||0|2|33025|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|45||0|2|33028|F|CRtoSCREEN
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|45||0|2|33028|L|,CRtoSCREEN,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|46||0|2|33028|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|47||0|2|33029|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|48||0|2|33031|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|49||0|2|33033|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|51||0|2|33034|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|52||0|2|33035|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|53||0|2|33037|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|54||0|2|33038|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|55||0|2|33039|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|56||0|2|33040|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|57||0|2|33041|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|58||0|2|33042|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|59||0|2|33045|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|72||0|2|33046|F|CRtoATTR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|72||0|2|33046|L|,CRtoATTR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|73||0|2|33046|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|74||0|2|33047|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|75||0|2|33048|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|76||0|2|33049|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|77||0|2|33050|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|78||0|2|33051|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|79||0|2|33053|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|80||0|2|33055|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|82||0|2|33056|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|83||0|2|33057|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|84||0|2|33059|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|85||0|2|33060|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|87||0|2|33061|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|88||0|2|33064|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|96||0|2|33065|F|PRINTCHNUM
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|96||0|2|33065|L|,PRINTCHNUM,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|97||0|2|33065|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|98||0|2|33067|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|99||0|2|33068|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|100||0|2|33069|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|101||0|2|33070|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|102||0|2|33071|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|103||0|2|33074|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|104||0|2|33075|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|112||0|2|33076|F|PRINTCHAR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|112||0|2|33076|L|,PRINTCHAR,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|113||0|2|33076|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|114||0|2|33078|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|116||0|2|33081|F|BYTEPCHAR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|116||0|2|33081|L|,BYTEPCHAR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|116||0|2|33081|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|117||0|2|33082|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|118||0|2|33083|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|119||0|2|33084|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|120||0|2|33085|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|121||0|2|33087|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|122||0|2|33090|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|123||0|2|33093|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|124||0|2|33094|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|125||0|2|33097|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|126||0|2|33098|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|127||0|2|33101|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|128||0|2|33102|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|137||0|2|33103|F|INK2PAPER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|137||0|2|33103|L|,INK2PAPER,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|137||0|2|33103|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|138||0|2|33106|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|139||0|2|33108|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|140||0|2|33109|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|141||0|2|33110|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|142||0|2|33111|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|143||0|2|33113|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|144||0|2|33116|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|150||0|2|33117|F|CLEARSCR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|150||0|2|33117|L|,CLEARSCR,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|150||0|2|33117|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|151||0|2|33120|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|152||0|2|33123|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|153||0|2|33126|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|154||0|2|33128|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|155||0|2|33130|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|158:1:14||0|2|33131|F|SCR_CUR_PTR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|158:1:14||0|2|33131|L|,SCR_CUR_PTR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|159||0|2|33133|F|SCR_ATTR_PTR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|159||0|2|33133|L|,SCR_ATTR_PTR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|160||0|2|33135|F|PRINT_ATTR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|160||0|2|33135|L|,PRINT_ATTR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|162||0|2|33136|F|CHARSET
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm|162||0|2|33136|L|,CHARSET,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|3||0|2|33904|F|STRING_FILA_VACIA_B
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|3||0|2|33904|L|,STRING_FILA_VACIA_B,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|4||0|2|33929|F|STRING_BIENVENIDA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|4||0|2|33929|L|,STRING_BIENVENIDA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|5||0|2|33954|F|STRING_JUGAR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|5||0|2|33954|L|,STRING_JUGAR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|6||0|2|33978|F|STRING_FILA_VACIA_J
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|6||0|2|33978|L|,STRING_FILA_VACIA_J,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|7||0|2|34002|F|STRING_FILA_VACIA_A
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|7||0|2|34002|L|,STRING_FILA_VACIA_A,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|8||0|2|34015|F|STRING_ADIOS
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|8||0|2|34015|L|,STRING_ADIOS,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|9||0|2|34028|F|STRING_EMPATE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|9||0|2|34028|L|,STRING_EMPATE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|10||0|2|34043|F|STRING_FILA_VACIA_E
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|10||0|2|34043|L|,STRING_FILA_VACIA_E,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|11||0|2|34058|F|STRING_OTRA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|11||0|2|34058|L|,STRING_OTRA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|12||0|2|34091|F|STRING_CONTROLES_J1
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|12||0|2|34091|L|,STRING_CONTROLES_J1,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|13||0|2|34104|F|STRING_CONTROLES_J2
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|13||0|2|34104|L|,STRING_CONTROLES_J2,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|14||0|2|34117|F|STRING_BAJAR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|14||0|2|34117|L|,STRING_BAJAR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|15||0|2|34127|F|STRING_BJ1
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|15||0|2|34127|L|,STRING_BJ1,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|16||0|2|34129|F|STRING_BJ2
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|16||0|2|34129|L|,STRING_BJ2,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|17||0|2|34131|F|MENSAJE_VICTORIA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|17||0|2|34131|L|,MENSAJE_VICTORIA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|18||0|2|34154|F|NOMBRE_GANADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|18||0|2|34154|L|,NOMBRE_GANADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|25||0|2|34238|F|CHAR_CARACTER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|25||0|2|34238|L|,CHAR_CARACTER,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|28||0|2|34240|F|PANTALLA_BIENVENIDA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|28||0|2|34240|L|,PANTALLA_BIENVENIDA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|29||0|2|41152|F|PANTALLA_JUEGO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|29||0|2|41152|L|,PANTALLA_JUEGO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|31||0|2|48064|F|GB_BIENVENIDA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|31||0|2|48064|L|,GB_BIENVENIDA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|33:1:13||0|2|48064|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|33:13:22||0|2|48065|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|33:22:31||0|2|48066|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|33:31||0|2|48067|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|36||0|2|48068|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|37||0|2|48071|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|38||0|2|48074|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|39||0|2|48077|F|BIENVENIDA_BUCLE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|39||0|2|48077|L|,BIENVENIDA_BUCLE,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|40||0|2|48077|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|45||0|2|48079|F|PRINT_BIENVENIDA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|45||0|2|48079|L|,PRINT_BIENVENIDA,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|46||0|2|48079|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|47||0|2|48081|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|48||0|2|48083|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|49||0|2|48087|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|50||0|2|48090|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|51||0|2|48092|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|52||0|2|48096|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|53||0|2|48099|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|54||0|2|48101|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|55||0|2|48103|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|56||0|2|48107|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|59||0|2|48110|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|60||0|2|48112|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|61||0|2|48114|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|62||0|2|48118|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|63||0|2|48121|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|64||0|2|48123|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|65||0|2|48127|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|66||0|2|48130|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|67||0|2|48132|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|68||0|2|48134|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|69||0|2|48138|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|71||0|2|48141|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|74||0|2|48143|F|GB_PRUEBA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|74||0|2|48143|L|,GB_PRUEBA,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|75||0|2|48143|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|76||0|2|48145|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|77||0|2|48147|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|78||0|2|48150|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|79:1:12||0|2|48151|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|79:12:20||0|2|48152|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|79:20:28||0|2|48153|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|79:28||0|2|48154|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|81||0|2|48155|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|83||0|2|48156|F|GB_BLINKER_JUGAR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|83||0|2|48156|L|,GB_BLINKER_JUGAR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|84||0|2|48156|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|85||0|2|48158|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|86||0|2|48160|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|87||0|2|48163|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|88||0|2|48164|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|90||0|2|48165|F|GB_PRINT_CHAR_SON
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|90||0|2|48165|L|,GB_PRINT_CHAR_SON,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|91||0|2|48165|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|92||0|2|48167|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|93||0|2|48169|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|94||0|2|48173|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|96||0|2|48176|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|98||0|2|48177|F|GB_ADIOS
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|98||0|2|48177|L|,GB_ADIOS,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|99||0|2|48177|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|100||0|2|48180|F|PRINT_ADIOS
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|100||0|2|48180|L|,PRINT_ADIOS,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|101||0|2|48180|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|102||0|2|48182|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|103||0|2|48184|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|104||0|2|48186|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|105||0|2|48190|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|106||0|2|48193|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|107||0|2|48195|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|108||0|2|48197|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|109||0|2|48201|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|110||0|2|48204|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|111||0|2|48206|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|112||0|2|48208|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|113||0|2|48212|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|115||0|2|48215|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|120||0|2|48216|F|GB_FIN_NEXT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|120||0|2|48216|L|,GB_FIN_NEXT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|121:1:13||0|2|48216|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|121:13:22||0|2|48217|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|121:22:31||0|2|48218|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|121:31||0|2|48219|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|122||0|2|48220|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|123:1:12||0|2|48223|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|123:12:20||0|2|48224|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|123:20:28||0|2|48225|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|123:28||0|2|48226|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|124||0|2|48227|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|129||0|2|48228|F|GB_EMPATE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|129||0|2|48228|L|,GB_EMPATE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|130:1:13||0|2|48228|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|130:13:22||0|2|48229|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|130:22:31||0|2|48230|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|130:31||0|2|48231|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|131||0|2|48232|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|132||0|2|48236|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|133||0|2|48238|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|134||0|2|48240|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|135||0|2|48242|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|136||0|2|48245|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|137||0|2|48247|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|138||0|2|48250|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|139||0|2|48252|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|140||0|2|48256|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|141:1:12||0|2|48259|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|141:12:20||0|2|48260|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|141:20:28||0|2|48261|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|141:28||0|2|48262|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|142||0|2|48263|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|144||0|2|48264|F|PRINT_FIN
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|144||0|2|48264|L|,PRINT_FIN,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|145||0|2|48264|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|146||0|2|48266|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|147||0|2|48268|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|148||0|2|48270|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|149||0|2|48274|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|152||0|2|48277|F|PRINT_OTRA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|152||0|2|48277|L|,PRINT_OTRA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|153||0|2|48277|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|154||0|2|48279|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|155||0|2|48281|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|156||0|2|48283|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|157||0|2|48287|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|158||0|2|48290|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|159||0|2|48292|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|160||0|2|48295|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|165||0|2|48296|F|GB_PTLLA_INICIO_DE_JUEGO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|165||0|2|48296|L|,GB_PTLLA_INICIO_DE_JUEGO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|167||0|2|48296|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|169:1:13||0|2|48299|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|169:13:22||0|2|48300|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|169:22:31||0|2|48301|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|169:31||0|2|48302|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|172||0|2|48303|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|173||0|2|48306|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|174||0|2|48309|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|175||0|2|48312|F|PTLLA_JUEGO_BUCLE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|175||0|2|48312|L|,PTLLA_JUEGO_BUCLE,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|176||0|2|48312|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|178:1:12||0|2|48314|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|178:12:20||0|2|48315|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|178:20:28||0|2|48316|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|178:28||0|2|48317|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|181||0|2|48318|F|PRINT_CONTROLES
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|181||0|2|48318|L|,PRINT_CONTROLES,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|182||0|2|48318|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|183||0|2|48320|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|184||0|2|48322|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|185||0|2|48324|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|186||0|2|48328|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|187||0|2|48331|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|188||0|2|48333|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|189||0|2|48335|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|190||0|2|48339|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|191||0|2|48342|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|192||0|2|48344|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|193||0|2|48346|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|194||0|2|48348|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|195||0|2|48352|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|196||0|2|48355|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|197||0|2|48357|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|198||0|2|48359|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|199||0|2|48361|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|200||0|2|48365|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|201||0|2|48368|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|202||0|2|48370|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|203||0|2|48372|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|204||0|2|48374|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|205||0|2|48378|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|206||0|2|48381|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|209||0|2|48382|F|PRINT_GANADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|209||0|2|48382|L|,PRINT_GANADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|210||0|2|48382|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|211||0|2|48385|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|212||0|2|48387|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|213||0|2|48389|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|214||0|2|48391|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|215||0|2|48395|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|216||0|2|48398|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|217||0|2|48400|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|218||0|2|48402|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|219||0|2|48403|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|220:1:21||0|2|48407|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|220:21||0|2|48410|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|221:1:13||0|2|48411|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|221:13||0|2|48412|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|222||0|2|48413|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|223||0|2|48415|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|224||0|2|48418|F|CONSEGUIR_GANADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|224||0|2|48418|L|,CONSEGUIR_GANADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|225||0|2|48418|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|226||0|2|48420|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|227||0|2|48422|F|IMPRIMIR_GANADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|227||0|2|48422|L|,IMPRIMIR_GANADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|228:1:12||0|2|48422|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|228:12||0|2|48423|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|229||0|2|48424|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|230||0|2|48427|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|231||0|2|48430|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|233||0|2|48431|F|PTLLA_NEGRA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|233||0|2|48431|L|,PTLLA_NEGRA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|235:1:13||0|2|48431|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|235:13:22||0|2|48432|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|235:22:31||0|2|48433|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|235:31||0|2|48434|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|237||0|2|48435|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|238||0|2|48438|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|239||0|2|48441|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|240||0|2|48443|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|241||0|2|48446|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|243:1:12||0|2|48448|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|243:12:20||0|2|48449|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|243:20:28||0|2|48450|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|243:28||0|2|48451|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|244||0|2|48452|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|247||0|2|48453|F|GB_PRINT_FONDO_GANADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|247||0|2|48453|L|,GB_PRINT_FONDO_GANADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|248:1:14||0|2|48453|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|248:14:24||0|2|48454|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|248:24||0|2|48455|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|249||0|2|48456|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|250||0|2|48459|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|251||0|2|48461|F|BUCLE_PTLLA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|251||0|2|48461|L|,BUCLE_PTLLA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|252||0|2|48461|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|253||0|2|48462|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|254||0|2|48463|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|255||0|2|48464|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|256||0|2|48466|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|257:1:13||0|2|48468|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|257:13:22||0|2|48469|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|257:22||0|2|48470|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm|258||0|2|48471|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|8||0|2|48472|F|GC_COLOR_JUGADOR_ACTUAL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|8||0|2|48472|L|,GC_COLOR_JUGADOR_ACTUAL,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|9||0|2|48472|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|10||0|2|48475|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|11:1:10||0|2|48478|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|11:10||0|2|48480|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|12||0|2|48483|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|13||0|2|48486|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|14||0|2|48488|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|15||0|2|48491|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|17||0|2|48492|F|SET_HL_J2
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|17||0|2|48492|L|,SET_HL_J2,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|18||0|2|48492|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|19||0|2|48495|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|23||0|2|48496|F|GC_COLOR_CIRCLE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|23||0|2|48496|L|,GC_COLOR_CIRCLE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|24:1:13||0|2|48496|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|24:13:22||0|2|48497|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|24:22:31||0|2|48498|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|24:31||0|2|48499|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|25||0|2|48500|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|26||0|2|48503|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|27||0|2|48506|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|28:1:21||0|2|48507|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|28:21:31||0|2|48509|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|28:31||0|2|48510|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|29:1:16||0|2|48511|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|29:16:24||0|2|48512|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|29:24:36||0|2|48513|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|29:36:44||0|2|48514|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|29:44:56||0|2|48515|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|29:56||0|2|48516|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|30:1:16||0|2|48517|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|30:16:24||0|2|48518|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|30:24:36||0|2|48519|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|30:36:44||0|2|48520|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|30:44:56||0|2|48521|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|30:56||0|2|48522|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|31:1:16||0|2|48523|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|31:16:24||0|2|48524|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|31:24:36||0|2|48525|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|31:36:44||0|2|48526|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|31:44:56||0|2|48527|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|31:56||0|2|48528|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|32:1:12||0|2|48529|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|32:12:20||0|2|48530|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|32:20:28||0|2|48531|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|32:28||0|2|48532|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|34||0|2|48533|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|42||0|2|48534|F|GC_LEFT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|42||0|2|48534|L|,GC_LEFT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|43||0|2|48534|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|44||0|2|48535|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|45||0|2|48537|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|46||0|2|48540|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|47||0|2|48541|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|48||0|2|48544|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|49||0|2|48546|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|50||0|2|48549|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|52||0|2|48550|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|58||0|2|48551|F|GC_RIGHT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|58||0|2|48551|L|,GC_RIGHT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|59||0|2|48551|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|60||0|2|48552|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|61||0|2|48554|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|62||0|2|48557|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|63||0|2|48558|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|64||0|2|48561|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|65||0|2|48563|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|66||0|2|48566|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|68||0|2|48567|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|73||0|2|48568|F|GC_ENTER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|73||0|2|48568|L|,GC_ENTER,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|74||0|2|48568|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|75||0|2|48569|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|76||0|2|48570|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|82||0|2|48571|F|SOLTAR_FICHA_BUCLE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|82||0|2|48571|L|,SOLTAR_FICHA_BUCLE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|84||0|2|48571|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|85||0|2|48573|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|87||0|2|48576|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|88||0|2|48577|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|89||0|2|48580|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|91||0|2|48583|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|94||0|2|48586|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|96||0|2|48589|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|97||0|2|48592|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|98||0|2|48593|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|99||0|2|48595|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|104||0|2|48597|F|FICHA_LANDED
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|104||0|2|48597|L|,FICHA_LANDED,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|106||0|2|48597|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|107||0|2|48598|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|108||0|2|48601|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|109||0|2|48604|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|111:1:12||0|2|48607|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|111:12:21||0|2|48608|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|111:21||0|2|48609|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm|112||0|2|48610|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|9||0|2|48611|F|LF_INICIALIZACION
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|9||0|2|48611|L|,LF_INICIALIZACION,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|10||0|2|48611|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|11||0|2|48612|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|12||0|2|48615|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|13||0|2|48616|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|14||0|2|48617|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|15||0|2|48620|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|21||0|2|48621|F|LF_SWITCH_JUGADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|21||0|2|48621|L|,LF_SWITCH_JUGADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|22||0|2|48621|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|23||0|2|48624|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|24||0|2|48626|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|25||0|2|48628|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|26||0|2|48630|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|27||0|2|48632|F|SET_P1
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|27||0|2|48632|L|,SET_P1,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|28||0|2|48632|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|29||0|2|48633|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|30||0|2|48635|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|31||0|2|48638|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|32||0|2|48640|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|33||0|2|48643|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|34||0|2|48644|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|35||0|2|48646|F|SET_P2
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|35||0|2|48646|L|,SET_P2,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|36||0|2|48646|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|37||0|2|48647|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|38||0|2|48649|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|39||0|2|48652|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|40||0|2|48654|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|41||0|2|48657|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|42||0|2|48658|F|SALIDA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|42||0|2|48658|L|,SALIDA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|43||0|2|48658|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|46||0|2|48659|F|LF_BOARD_RESET
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|46||0|2|48659|L|,LF_BOARD_RESET,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|47||0|2|48659|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|48||0|2|48660|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|49||0|2|48663|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|50||0|2|48666|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|52||0|2|48669|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|53||0|2|48671|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|54||0|2|48675|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|55||0|2|48676|F|BR_BUCLE_EXTERNO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|55||0|2|48676|L|,BR_BUCLE_EXTERNO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|56||0|2|48676|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|57||0|2|48677|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|58||0|2|48679|F|BR_BUCLE_INTERNO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|58||0|2|48679|L|,BR_BUCLE_INTERNO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|59||0|2|48679|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|60||0|2|48682|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|61||0|2|48684|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|62||0|2|48686|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|63||0|2|48687|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|64||0|2|48689|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|65||0|2|48691|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|68||0|2|48692|F|LF_JUGADA_DESPLAZAMIENTO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|68||0|2|48692|L|,LF_JUGADA_DESPLAZAMIENTO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|69:1:12||0|2|48692|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|69:12||0|2|48694|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|70:1:12||0|2|48697|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|70:12||0|2|48699|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|71:1:12||0|2|48702|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|71:12||0|2|48704|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|72:1:12||0|2|48707|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|72:12||0|2|48709|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|73||0|2|48712|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm|74||0|2|48714|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|3||0|-1|49153|D|ULTIMA_FICHA_COLUMNA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|3||0|-1|49153|L|,ULTIMA_FICHA_COLUMNA,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|4||0|-1|49154|D|ULTIMA_FICHA_FILA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|4||0|-1|49154|L|,ULTIMA_FICHA_FILA,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|5||0|-1|7|D|TABLERO_ANCHO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|5||0|-1|7|L|,TABLERO_ANCHO,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|6||0|-1|6|D|TABLERO_ALTO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|6||0|-1|6|L|,TABLERO_ALTO,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|7||0|-1|53248|D|ESTADO_TABLERO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|7||0|-1|53248|L|,ESTADO_TABLERO,,+equ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|11||0|2|48715|F|LC_COMPROBAR_RESULTADO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|11||0|2|48715|L|,LC_COMPROBAR_RESULTADO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|12||0|2|48715|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|13:1:10||0|2|48718|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|13:10||0|2|48720|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|14||0|2|48721|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|15:1:10||0|2|48724|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|15:10||0|2|48726|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|16:1:15||0|2|48727|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|16:15||0|2|48729|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|17||0|2|48730|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|20||0|2|48731|F|LC_COMPROBAR_TABLERO_LLENO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|20||0|2|48731|L|,LC_COMPROBAR_TABLERO_LLENO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|21||0|2|48731|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|22||0|2|48735|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|23||0|2|48737|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|24||0|2|48740|F|CTL_BUCLE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|24||0|2|48740|L|,CTL_BUCLE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|25||0|2|48740|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|26||0|2|48743|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|27||0|2|48744|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|28||0|2|48745|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|29||0|2|48747|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|30||0|2|48749|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|31||0|2|48751|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|34||0|2|48752|F|LC_COMPROBAR_VICTORIA_JUGADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|34||0|2|48752|L|,LC_COMPROBAR_VICTORIA_JUGADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|36||0|2|48752|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|37||0|2|48755|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|38||0|2|48757|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|41||0|2|48759|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|42||0|2|48762|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|43||0|2|48764|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|46||0|2|48766|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|47||0|2|48769|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|48||0|2|48771|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|51||0|2|48773|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|52||0|2|48775|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|53||0|2|48776|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|55||0|2|48777|F|VICTORIA_CONFIRMADA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|55||0|2|48777|L|,VICTORIA_CONFIRMADA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|56||0|2|48777|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|57||0|2|48780|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|60||0|2|48781|F|HAY_GANADOR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|60||0|2|48781|L|,HAY_GANADOR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|61||0|2|48781|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|62||0|2|48784|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|63||0|2|48787|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|64||0|2|48788|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|71||0|2|48789|F|LC_COMPROBAR_4_EN_RAYA_HORIZONTAL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|71||0|2|48789|L|,LC_COMPROBAR_4_EN_RAYA_HORIZONTAL,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|72||0|2|48789|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|73||0|2|48790|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|74||0|2|48794|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|75||0|2|48797|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|76||0|2|48800|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|77||0|2|48802|F|CONTAR_IZQUIERDA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|77||0|2|48802|L|,CONTAR_IZQUIERDA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|78||0|2|48802|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|79||0|2|48805|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|80||0|2|48806|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|81||0|2|48808|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|82||0|2|48811|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|83||0|2|48812|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|84||0|2|48815|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|86||0|2|48817|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|87||0|2|48818|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|88||0|2|48821|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|89||0|2|48824|F|CONTAR_DERECHA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|89||0|2|48824|L|,CONTAR_DERECHA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|90||0|2|48824|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|91||0|2|48827|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|92||0|2|48828|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|93||0|2|48830|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|94||0|2|48833|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|95||0|2|48834|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|96||0|2|48837|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|97||0|2|48839|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|98||0|2|48842|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|101||0|2|48843|F|LC_COMPROBAR_4_EN_RAYA_VERTICAL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|101||0|2|48843|L|,LC_COMPROBAR_4_EN_RAYA_VERTICAL,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|102||0|2|48843|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|103||0|2|48844|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|104||0|2|48848|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|105||0|2|48851|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|106||0|2|48853|F|CONTAR_ARRIBA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|106||0|2|48853|L|,CONTAR_ARRIBA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|107||0|2|48853|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|108||0|2|48856|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|109||0|2|48857|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|110||0|2|48859|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|111||0|2|48862|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|112||0|2|48863|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|113||0|2|48866|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|115||0|2|48868|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|116||0|2|48869|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|117||0|2|48872|F|CONTAR_ABAJO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|117||0|2|48872|L|,CONTAR_ABAJO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|118||0|2|48872|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|119||0|2|48875|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|120||0|2|48876|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|121||0|2|48878|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|122||0|2|48881|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|123||0|2|48882|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|124||0|2|48885|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|125||0|2|48887|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|126||0|2|48890|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|129||0|2|48891|F|LC_COMPROBAR_4_EN_RAYA_DIAGONALES
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|129||0|2|48891|L|,LC_COMPROBAR_4_EN_RAYA_DIAGONALES,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|130||0|2|48891|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|131||0|2|48895|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|133||0|2|48898|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|134||0|2|48899|F|CONTAR_UPPER_LEFT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|134||0|2|48899|L|,CONTAR_UPPER_LEFT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|135||0|2|48899|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|136||0|2|48900|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|137||0|2|48901|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|138||0|2|48903|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|139||0|2|48904|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|140||0|2|48905|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|142:1:11||0|2|48907|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|142:11||0|2|48908|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|143||0|2|48909|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|145||0|2|48912|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|146||0|2|48915|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|147||0|2|48916|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|148||0|2|48919|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|149||0|2|48920|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|150||0|2|48922|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|151||0|2|48925|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|152||0|2|48927|F|FIN_UPPER_LEFT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|152||0|2|48927|L|,FIN_UPPER_LEFT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|153||0|2|48927|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|154||0|2|48928|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|155||0|2|48929|F|CONTAR_LOWER_RIGHT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|155||0|2|48929|L|,CONTAR_LOWER_RIGHT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|156||0|2|48929|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|157||0|2|48930|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|158||0|2|48932|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|159||0|2|48934|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|160||0|2|48935|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|161||0|2|48937|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|163:1:11||0|2|48939|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|163:11||0|2|48940|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|164||0|2|48941|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|166||0|2|48944|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|167||0|2|48947|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|168||0|2|48948|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|169||0|2|48951|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|170||0|2|48952|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|171||0|2|48954|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|172||0|2|48957|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|173||0|2|48959|F|FIN_LOWER_RIGHT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|173||0|2|48959|L|,FIN_LOWER_RIGHT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|174||0|2|48959|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|175||0|2|48960|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|176||0|2|48963|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|177||0|2|48964|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|178||0|2|48965|F|CONTAR_UPPER_RIGHT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|178||0|2|48965|L|,CONTAR_UPPER_RIGHT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|180||0|2|48965|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|181||0|2|48966|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|182||0|2|48967|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|183||0|2|48969|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|184||0|2|48970|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|185||0|2|48972|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|187:1:11||0|2|48974|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|187:11||0|2|48975|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|188||0|2|48976|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|190||0|2|48979|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|191||0|2|48982|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|193||0|2|48983|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|194||0|2|48986|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|195||0|2|48987|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|197||0|2|48989|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|198||0|2|48992|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|199||0|2|48994|F|FIN_UPPER_RIGHT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|199||0|2|48994|L|,FIN_UPPER_RIGHT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|201||0|2|48994|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|202||0|2|48995|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|204||0|2|48996|F|CONTAR_LOWER_LEFT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|204||0|2|48996|L|,CONTAR_LOWER_LEFT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|206||0|2|48996|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|207||0|2|48997|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|208||0|2|48999|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|209||0|2|49001|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|210||0|2|49002|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|211||0|2|49003|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|213:1:11||0|2|49005|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|213:11||0|2|49006|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|214||0|2|49007|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|216||0|2|49010|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|217||0|2|49013|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|219||0|2|49014|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|220||0|2|49017|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|221||0|2|49018|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|223||0|2|49020|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|224||0|2|49023|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|225||0|2|49025|F|FIN_LOWER_LEFT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|225||0|2|49025|L|,FIN_LOWER_LEFT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|227||0|2|49025|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|228||0|2|49026|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|229||0|2|49029|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|232||0|2|49030|F|CONTAR_TOTALES
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|232||0|2|49030|L|,CONTAR_TOTALES,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|233||0|2|49030|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|234||0|2|49033|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|235||0|2|49034|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|236||0|2|49037|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|237||0|2|49038|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|239||0|2|49039|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|240||0|2|49041|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|241||0|2|49043|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|242||0|2|49045|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|243||0|2|49048|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|244||0|2|49051|F|SALIDA_CONTAR_TOTALES
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|244||0|2|49051|L|,SALIDA_CONTAR_TOTALES,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|245||0|2|49051|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|246||0|2|49052|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|249||0|2|49053|F|INC_CNT_IZQ
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|249||0|2|49053|L|,INC_CNT_IZQ,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|250||0|2|49053|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|251||0|2|49054|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|252||0|2|49057|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|253||0|2|49058|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|254||0|2|49061|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|255||0|2|49062|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|258||0|2|49063|F|INC_CNT_DER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|258||0|2|49063|L|,INC_CNT_DER,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|259||0|2|49063|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|260||0|2|49064|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|261||0|2|49067|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|262||0|2|49068|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|263||0|2|49071|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|264||0|2|49072|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|267||0|2|49073|F|LC_SLOT_POINTER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|267||0|2|49073|L|,LC_SLOT_POINTER,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|275||0|2|49073|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|276||0|2|49074|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|277:1:11||0|2|49075|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|277:11:18||0|2|49076|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|277:18||0|2|49077|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|278||0|2|49079|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|279||0|2|49080|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|280:1:11||0|2|49081|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|280:11:18||0|2|49082|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|280:18||0|2|49083|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|281||0|2|49085|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|282:1:11||0|2|49086|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|282:11:18||0|2|49088|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|282:18:25||0|2|49090|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|282:25:32||0|2|49092|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|282:32||0|2|49094|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|283||0|2|49096|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|284||0|2|49097|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|285||0|2|49098|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|286:1:11||0|2|49099|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|286:11:18||0|2|49101|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|286:18||0|2|49103|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|287||0|2|49105|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|288||0|2|49107|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|290||0|2|49108|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|291||0|2|49109|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|293||0|2|49110|F|LC_VALIDPLAY
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|293||0|2|49110|L|,LC_VALIDPLAY,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|299||0|2|49110|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|300:1:12||0|2|49111|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|300:12||0|2|49113|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|301:1:12||0|2|49115|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|301:12||0|2|49117|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|302:1:12||0|2|49119|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|302:12||0|2|49121|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|303:1:12||0|2|49123|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|303:12||0|2|49125|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|304:1:12||0|2|49127|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|304:12||0|2|49129|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|305:1:12||0|2|49131|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|305:12||0|2|49133|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|306:1:12||0|2|49135|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|306:12||0|2|49137|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|309||0|2|49139|F|VALIDLEFT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|309||0|2|49139|L|,VALIDLEFT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|310||0|2|49139|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|311||0|2|49140|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|312||0|2|49143|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|313||0|2|49146|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|314||0|2|49147|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|315||0|2|49148|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|316||0|2|49150|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|317||0|3|49152|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|320||0|3|49154|F|VALIDRIGHT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|320||0|3|49154|L|,VALIDRIGHT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|321||0|3|49154|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|322||0|3|49155|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|323||0|3|49158|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|324||0|3|49161|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|325||0|3|49162|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|326||0|3|49163|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|327||0|3|49165|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|328||0|3|49167|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|329||0|3|49169|F|VALIDENTER
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|329||0|3|49169|L|,VALIDENTER,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|330:1:13||0|3|49169|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|330:13||0|3|49170|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|331||0|3|49171|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|332||0|3|49174|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|333:1:12||0|3|49177|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|333:12||0|3|49178|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|334:1:10||0|3|49179|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|334:10||0|3|49181|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|337||0|3|49183|F|NONVALID
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|337||0|3|49183|L|,NONVALID,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|338||0|3|49183|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|339||0|3|49185|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|340||0|3|49186|F|VALID
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|340||0|3|49186|L|,VALID,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|341||0|3|49186|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm|342||0|3|49188|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|1||0|3|49189|F|UTILITIES
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|1||0|3|49189|L|,UTILITIES,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|1||0|3|49189|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|3||0|3|49191|F|U_CALC_TABLERO_POS
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|3||0|3|49191|L|,U_CALC_TABLERO_POS,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|7||0|3|49191|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|8||0|3|49192|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|9||0|3|49193|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|10||0|3|49194|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|11||0|3|49195|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|12||0|3|49196|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|13||0|3|49197|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|15||0|3|49198|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|16||0|3|49202|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|17||0|3|49204|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|18||0|3|49205|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|20||0|3|49207|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|23||0|3|49208|F|U_ESPERAR
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|23||0|3|49208|L|,U_ESPERAR,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|24||0|3|49208|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|25||0|3|49209|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|27||0|3|49212|F|ESPERAR_LOOP
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|27||0|3|49212|L|,ESPERAR_LOOP,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|28||0|3|49212|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|29||0|3|49213|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|30||0|3|49214|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|31||0|3|49215|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|32||0|3|49216|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|33||0|3|49217|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|34||0|3|49218|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|36||0|3|49220|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm|37||0|3|49221|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|24||0|3|49222|F|INICIO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|24||0|3|49222|L|,INICIO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|25||0|3|49222|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|26||0|3|49225|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|27||0|3|49228|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|28||0|3|49229|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|29||0|3|49232|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|30||0|3|49234|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|31||0|3|49237|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|32||0|3|49240|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|33||0|3|49242|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|34||0|3|49245|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|35||0|3|49247|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|38||0|3|49250|F|ADIOS
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|38||0|3|49250|L|,ADIOS,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|39||0|3|49250|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|40||0|3|49253|F|FINAL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|40||0|3|49253|L|,FINAL,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|41||0|3|49253|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|42||0|3|49255|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|43||0|3|49258|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|44||0|3|49260|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|47||0|3|49261|F|FIN_NEXT
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|47||0|3|49261|L|,FIN_NEXT,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|48||0|3|49261|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|49||0|3|49264|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|50||0|3|49267|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|51||0|3|49268|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|52||0|3|49270|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|53||0|3|49273|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|54||0|3|49275|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|56||0|3|49278|F|EMPATE
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|56||0|3|49278|L|,EMPATE,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|57||0|3|49278|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|58||0|3|49281|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|59||0|3|49284|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|60||0|3|49285|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|61||0|3|49287|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|62||0|3|49290|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|63||0|3|49292|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|65||0|3|49295|F|LOGICA_JUEGO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|65||0|3|49295|L|,LOGICA_JUEGO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|66||0|3|49295|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|67||0|3|49298|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|68||0|3|49301|F|BUCLE_JUEGO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|68||0|3|49301|L|,BUCLE_JUEGO,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|69||0|3|49301|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|70||0|3|49304|F|GESTIONAR_JUGADA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|70||0|3|49304|L|,GESTIONAR_JUGADA,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|71||0|3|49304|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|72||0|3|49307|F|JUGADA
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|72||0|3|49307|L|,JUGADA,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|73||0|3|49307|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|74||0|3|49310|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|75||0|3|49311|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|76||0|3|49312|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|77||0|3|49315|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|78||0|3|49317|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|79||0|3|49319|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|80:1:12||0|3|49320|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|80:12||0|3|49322|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|81:1:12||0|3|49325|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|81:12||0|3|49327|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|82:1:12||0|3|49330|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|82:12||0|3|49332|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|83:1:12||0|3|49335|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|83:12||0|3|49337|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|84:1:12||0|3|49340|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|84:12||0|3|49342|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|85:1:12||0|3|49344|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|85:12||0|3|49346|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|86:1:12||0|3|49349|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|86:12||0|3|49351|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|88:1:12||0|3|49354|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|88:12||0|3|49356|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|90||0|3|49359|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|91||0|3|49361|F|PROCESAR_JUGADA_FINAL
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|91||0|3|49361|L|,PROCESAR_JUGADA_FINAL,,+used
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|92||0|3|49361|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|95||0|3|49364|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|96||0|3|49367|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|100||0|3|49369|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|101||0|3|49371|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|102||0|3|49373|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|104||0|3|49375|F|COMPROBAR_FIN_JUEGO
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|104||0|3|49375|L|,COMPROBAR_FIN_JUEGO,
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|105||0|3|49375|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|106||0|3|49378|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|107||0|3|49380|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|108||0|3|49382|T|
-C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm|109||0|3|49384|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|4||0|-1|-1|Z|pages.size:16384,pages.count:4,slots.count:4,slots.adr:0,16384,32768,49152
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|6||0|2|32768|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|7||0|2|32771|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|8||0|2|32773|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|9||0|2|32775|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|3||0|-1|1|D|COLOR_TEXTO_AZUL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|3||0|-1|1|L|,COLOR_TEXTO_AZUL,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|4||0|-1|2|D|COLOR_TEXTO_ROJO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|4||0|-1|2|L|,COLOR_TEXTO_ROJO,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|5||0|-1|6|D|COLOR_TEXTO_AMARILLO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|5||0|-1|6|L|,COLOR_TEXTO_AMARILLO,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|6||0|-1|128|D|BLINK
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|6||0|-1|128|L|,BLINK,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|8||0|-1|0|D|NEGRO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|8||0|-1|0|L|,NEGRO,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|9||0|-1|1|D|AZUL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|9||0|-1|1|L|,AZUL,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|11||0|-1|2|D|COLOR_ROJO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|11||0|-1|2|L|,COLOR_ROJO,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|12||0|-1|3|D|COLOR_MAGENTA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|12||0|-1|3|L|,COLOR_MAGENTA,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|13||0|-1|4|D|COLOR_VERDE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|13||0|-1|4|L|,COLOR_VERDE,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|14||0|-1|5|D|COLOR_CELESTE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|14||0|-1|5|L|,COLOR_CELESTE,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|15||0|-1|6|D|COLOR_AMARILLO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|15||0|-1|6|L|,COLOR_AMARILLO,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|16||0|-1|7|D|COLOR_BLANCO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|16||0|-1|7|L|,COLOR_BLANCO,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|18||0|-1|0|D|COLOR_NEGRO_FONDO_GANADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm|18||0|-1|0|L|,COLOR_NEGRO_FONDO_GANADOR,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|1||0|2|32778|F|VARIABLES
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|1||0|2|32778|L|,VARIABLES,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|1||0|2|32778|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|3||0|-1|1|D|JUGADOR1
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|3||0|-1|1|L|,JUGADOR1,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|4||0|-1|2|D|JUGADOR2
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|4||0|-1|2|L|,JUGADOR2,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|8||0|-1|5|D|COLOR_JUGADOR1
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|8||0|-1|5|L|,COLOR_JUGADOR1,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|9||0|-1|3|D|COLOR_JUGADOR2
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|9||0|-1|3|L|,COLOR_JUGADOR2,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|11||0|2|32780|F|JUGADOR_ACTUAL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|11||0|2|32780|L|,JUGADOR_ACTUAL,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|12||0|2|32781|F|COLOR_JUGADOR_ACTUAL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|12||0|2|32781|L|,COLOR_JUGADOR_ACTUAL,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|13||0|2|32782|F|GANADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|13||0|2|32782|L|,GANADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|15||0|-1|1573|D|CONTADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|15||0|-1|1573|L|,CONTADOR,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|17||0|-1|24|D|NUM_FILAS
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|17||0|-1|24|L|,NUM_FILAS,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|19||0|-1|32|D|NUM_COLS
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|19||0|-1|32|L|,NUM_COLS,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|21||0|-1|6|D|FILAS_TABLERO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|21||0|-1|6|L|,FILAS_TABLERO,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|22||0|-1|7|D|COLUMNAS_TABLERO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|22||0|-1|7|L|,COLUMNAS_TABLERO,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|24||0|-1|7|D|COLUMN_BOARD_SIZE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|24||0|-1|7|L|,COLUMN_BOARD_SIZE,,+equ,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|25||0|-1|1|D|ROW_BOARD_SIZE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|25||0|-1|1|L|,ROW_BOARD_SIZE,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|27||0|2|32783|F|LEFT_COUNTER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|27||0|2|32783|L|,LEFT_COUNTER,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|28||0|2|32784|F|RIGHT_COUNTER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|28||0|2|32784|L|,RIGHT_COUNTER,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|30||0|2|32785|F|TOP_BORDER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|30||0|2|32785|L|,TOP_BORDER,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|31||0|2|32793|F|TABLERO_ACTUAL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm|31||0|2|32793|L|,TABLERO_ACTUAL,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|8||0|2|32849|F|K_SON
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|8||0|2|32849|L|,K_SON,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|9||0|2|32849|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|13||0|2|32851|F|KSON_BUCLE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|13||0|2|32851|L|,KSON_BUCLE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|14||0|2|32851|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|15||0|2|32853|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|16||0|2|32855|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|17||0|2|32857|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|19||0|2|32859|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|20||0|2|32861|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|21||0|2|32863|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|22||0|2|32865|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|24||0|2|32867|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|26||0|2|32869|F|KSON_N
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|26||0|2|32869|L|,KSON_N,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|27||0|2|32869|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|28||0|2|32871|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|30||0|2|32873|F|KSON_S
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|30||0|2|32873|L|,KSON_S,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|31||0|2|32873|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|35||0|2|32875|F|KSON_RELEASE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|35||0|2|32875|L|,KSON_RELEASE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|36||0|2|32875|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|37||0|2|32877|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|38||0|2|32879|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|39||0|2|32881|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|41||0|2|32883|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|45||0|2|32884|F|K_LR_E_F
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|45||0|2|32884|L|,K_LR_E_F,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|46||0|2|32884|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|47||0|2|32886|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|52||0|2|32887|F|KLREF_BUCLE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|52||0|2|32887|L|,KLREF_BUCLE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|53||0|2|32887|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|54||0|2|32890|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|55||0|2|32892|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|56||0|2|32894|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|57||0|2|32896|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|58||0|2|32898|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|59||0|2|32900|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|60||0|2|32902|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|61||0|2|32904|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|62||0|2|32906|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|63||0|2|32908|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|65||0|2|32910|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|66||0|2|32912|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|67||0|2|32914|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|68||0|2|32916|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|70||0|2|32918|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|75||0|2|32920|F|KLREF_BUCLE_J2
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|75||0|2|32920|L|,KLREF_BUCLE_J2,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|76||0|2|32920|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|77||0|2|32922|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|78||0|2|32924|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|79||0|2|32926|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|80||0|2|32928|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|81||0|2|32930|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|82||0|2|32932|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|83||0|2|32934|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|85||0|2|32936|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|86||0|2|32938|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|87||0|2|32940|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|88||0|2|32942|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|90||0|2|32944|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|92||0|2|32946|F|KLREF_P
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|92||0|2|32946|L|,KLREF_P,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|93||0|2|32946|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|94||0|2|32948|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|96||0|2|32950|F|KLREF_O
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|96||0|2|32950|L|,KLREF_O,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|97||0|2|32950|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|98||0|2|32952|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|100||0|2|32954|F|KLREF_I
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|100||0|2|32954|L|,KLREF_I,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|101||0|2|32954|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|105||0|2|32956|F|KLREF_RELEASE_IOP
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|105||0|2|32956|L|,KLREF_RELEASE_IOP,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|106||0|2|32956|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|107||0|2|32958|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|108||0|2|32960|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|109||0|2|32962|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|110||0|2|32964|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|111||0|2|32966|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|112||0|2|32967|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|114||0|2|32968|F|KLREF_E
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|114||0|2|32968|L|,KLREF_E,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|115||0|2|32968|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|116||0|2|32970|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|118||0|2|32972|F|KLREF_W
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|118||0|2|32972|L|,KLREF_W,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|119||0|2|32972|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|120||0|2|32974|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|122||0|2|32976|F|KLREF_Q
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|122||0|2|32976|L|,KLREF_Q,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|123||0|2|32976|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|127||0|2|32978|F|KLREF_RELEASE_QWE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|127||0|2|32978|L|,KLREF_RELEASE_QWE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|128||0|2|32978|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|129||0|2|32980|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|130||0|2|32982|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|131||0|2|32984|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|132||0|2|32986|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|133||0|2|32988|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|134||0|2|32989|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|136||0|2|32990|F|KLREF_F
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|136||0|2|32990|L|,KLREF_F,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|137||0|2|32990|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|141||0|2|32992|F|KLREF_RELEASE_F
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|141||0|2|32992|L|,KLREF_RELEASE_F,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|142||0|2|32992|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|143||0|2|32994|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|144||0|2|32996|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|145||0|2|32998|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|146||0|2|33000|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|147||0|2|33002|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm|148||0|2|33003|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|14||0|2|33004|F|PRINTAT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|14||0|2|33004|L|,PRINTAT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|14||0|2|33004|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|20||0|2|33007|F|PRINTSTR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|20||0|2|33007|L|,PRINTSTR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|20||0|2|33007|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|21||0|2|33010|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|22||0|2|33011|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|23||0|2|33012|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|24||0|2|33015|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|25||0|2|33017|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|32||0|2|33019|F|PREP_PRT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|32||0|2|33019|L|,PREP_PRT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|32||0|2|33019|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|33||0|2|33022|F|PREP_PRT_2
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|33||0|2|33022|L|,PREP_PRT_2,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|33||0|2|33022|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|34||0|2|33025|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|45||0|2|33028|F|CRtoSCREEN
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|45||0|2|33028|L|,CRtoSCREEN,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|46||0|2|33028|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|47||0|2|33029|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|48||0|2|33031|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|49||0|2|33033|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|51||0|2|33034|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|52||0|2|33035|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|53||0|2|33037|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|54||0|2|33038|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|55||0|2|33039|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|56||0|2|33040|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|57||0|2|33041|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|58||0|2|33042|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|59||0|2|33045|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|72||0|2|33046|F|CRtoATTR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|72||0|2|33046|L|,CRtoATTR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|73||0|2|33046|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|74||0|2|33047|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|75||0|2|33048|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|76||0|2|33049|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|77||0|2|33050|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|78||0|2|33051|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|79||0|2|33053|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|80||0|2|33055|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|82||0|2|33056|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|83||0|2|33057|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|84||0|2|33059|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|85||0|2|33060|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|87||0|2|33061|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|88||0|2|33064|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|96||0|2|33065|F|PRINTCHNUM
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|96||0|2|33065|L|,PRINTCHNUM,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|97||0|2|33065|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|98||0|2|33067|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|99||0|2|33068|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|100||0|2|33069|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|101||0|2|33070|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|102||0|2|33071|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|103||0|2|33074|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|104||0|2|33075|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|112||0|2|33076|F|PRINTCHAR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|112||0|2|33076|L|,PRINTCHAR,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|113||0|2|33076|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|114||0|2|33078|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|116||0|2|33081|F|BYTEPCHAR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|116||0|2|33081|L|,BYTEPCHAR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|116||0|2|33081|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|117||0|2|33082|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|118||0|2|33083|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|119||0|2|33084|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|120||0|2|33085|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|121||0|2|33087|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|122||0|2|33090|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|123||0|2|33093|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|124||0|2|33094|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|125||0|2|33097|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|126||0|2|33098|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|127||0|2|33101|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|128||0|2|33102|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|137||0|2|33103|F|INK2PAPER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|137||0|2|33103|L|,INK2PAPER,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|137||0|2|33103|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|138||0|2|33106|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|139||0|2|33108|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|140||0|2|33109|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|141||0|2|33110|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|142||0|2|33111|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|143||0|2|33113|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|144||0|2|33116|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|150||0|2|33117|F|CLEARSCR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|150||0|2|33117|L|,CLEARSCR,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|150||0|2|33117|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|151||0|2|33120|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|152||0|2|33123|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|153||0|2|33126|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|154||0|2|33128|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|155||0|2|33130|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|158:1:14||0|2|33131|F|SCR_CUR_PTR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|158:1:14||0|2|33131|L|,SCR_CUR_PTR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|159||0|2|33133|F|SCR_ATTR_PTR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|159||0|2|33133|L|,SCR_ATTR_PTR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|160||0|2|33135|F|PRINT_ATTR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|160||0|2|33135|L|,PRINT_ATTR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|162||0|2|33136|F|CHARSET
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm|162||0|2|33136|L|,CHARSET,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|3||0|2|33904|F|STRING_FILA_VACIA_B
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|3||0|2|33904|L|,STRING_FILA_VACIA_B,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|4||0|2|33929|F|STRING_BIENVENIDA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|4||0|2|33929|L|,STRING_BIENVENIDA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|5||0|2|33954|F|STRING_JUGAR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|5||0|2|33954|L|,STRING_JUGAR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|6||0|2|33978|F|STRING_FILA_VACIA_J
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|6||0|2|33978|L|,STRING_FILA_VACIA_J,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|7||0|2|34002|F|STRING_FILA_VACIA_A
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|7||0|2|34002|L|,STRING_FILA_VACIA_A,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|8||0|2|34015|F|STRING_ADIOS
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|8||0|2|34015|L|,STRING_ADIOS,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|9||0|2|34028|F|STRING_EMPATE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|9||0|2|34028|L|,STRING_EMPATE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|10||0|2|34043|F|STRING_FILA_VACIA_E
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|10||0|2|34043|L|,STRING_FILA_VACIA_E,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|11||0|2|34058|F|STRING_OTRA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|11||0|2|34058|L|,STRING_OTRA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|12||0|2|34091|F|STRING_CONTROLES_J1
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|12||0|2|34091|L|,STRING_CONTROLES_J1,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|13||0|2|34104|F|STRING_CONTROLES_J2
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|13||0|2|34104|L|,STRING_CONTROLES_J2,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|14||0|2|34117|F|STRING_BAJAR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|14||0|2|34117|L|,STRING_BAJAR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|15||0|2|34127|F|STRING_BJ1
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|15||0|2|34127|L|,STRING_BJ1,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|16||0|2|34129|F|STRING_BJ2
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|16||0|2|34129|L|,STRING_BJ2,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|17||0|2|34131|F|MENSAJE_VICTORIA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|17||0|2|34131|L|,MENSAJE_VICTORIA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|18||0|2|34154|F|NOMBRE_GANADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|18||0|2|34154|L|,NOMBRE_GANADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|25||0|2|34238|F|CHAR_CARACTER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|25||0|2|34238|L|,CHAR_CARACTER,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|28||0|2|34240|F|PANTALLA_BIENVENIDA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|28||0|2|34240|L|,PANTALLA_BIENVENIDA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|29||0|2|41152|F|PANTALLA_JUEGO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|29||0|2|41152|L|,PANTALLA_JUEGO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|31||0|2|48064|F|GB_BIENVENIDA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|31||0|2|48064|L|,GB_BIENVENIDA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|33:1:13||0|2|48064|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|33:13:22||0|2|48065|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|33:22:31||0|2|48066|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|33:31||0|2|48067|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|36||0|2|48068|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|37||0|2|48071|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|38||0|2|48074|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|39||0|2|48077|F|BIENVENIDA_BUCLE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|39||0|2|48077|L|,BIENVENIDA_BUCLE,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|40||0|2|48077|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|45||0|2|48079|F|PRINT_BIENVENIDA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|45||0|2|48079|L|,PRINT_BIENVENIDA,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|46||0|2|48079|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|47||0|2|48081|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|48||0|2|48083|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|49||0|2|48087|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|50||0|2|48090|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|51||0|2|48092|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|52||0|2|48096|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|53||0|2|48099|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|54||0|2|48101|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|55||0|2|48103|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|56||0|2|48107|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|59||0|2|48110|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|60||0|2|48112|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|61||0|2|48114|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|62||0|2|48118|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|63||0|2|48121|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|64||0|2|48123|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|65||0|2|48127|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|66||0|2|48130|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|67||0|2|48132|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|68||0|2|48134|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|69||0|2|48138|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|71||0|2|48141|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|74||0|2|48143|F|GB_PRUEBA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|74||0|2|48143|L|,GB_PRUEBA,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|75||0|2|48143|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|76||0|2|48145|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|77||0|2|48147|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|78||0|2|48150|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|79:1:12||0|2|48151|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|79:12:20||0|2|48152|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|79:20:28||0|2|48153|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|79:28||0|2|48154|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|81||0|2|48155|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|83||0|2|48156|F|GB_BLINKER_JUGAR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|83||0|2|48156|L|,GB_BLINKER_JUGAR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|84||0|2|48156|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|85||0|2|48158|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|86||0|2|48160|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|87||0|2|48163|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|88||0|2|48164|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|90||0|2|48165|F|GB_PRINT_CHAR_SON
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|90||0|2|48165|L|,GB_PRINT_CHAR_SON,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|91||0|2|48165|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|92||0|2|48167|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|93||0|2|48169|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|94||0|2|48173|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|96||0|2|48176|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|98||0|2|48177|F|GB_ADIOS
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|98||0|2|48177|L|,GB_ADIOS,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|99||0|2|48177|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|100||0|2|48180|F|PRINT_ADIOS
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|100||0|2|48180|L|,PRINT_ADIOS,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|101||0|2|48180|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|102||0|2|48182|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|103||0|2|48184|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|104||0|2|48186|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|105||0|2|48190|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|106||0|2|48193|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|107||0|2|48195|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|108||0|2|48197|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|109||0|2|48201|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|110||0|2|48204|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|111||0|2|48206|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|112||0|2|48208|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|113||0|2|48212|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|115||0|2|48215|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|120||0|2|48216|F|GB_FIN_NEXT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|120||0|2|48216|L|,GB_FIN_NEXT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|121:1:13||0|2|48216|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|121:13:22||0|2|48217|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|121:22:31||0|2|48218|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|121:31||0|2|48219|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|122||0|2|48220|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|123:1:12||0|2|48223|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|123:12:20||0|2|48224|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|123:20:28||0|2|48225|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|123:28||0|2|48226|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|124||0|2|48227|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|129||0|2|48228|F|GB_EMPATE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|129||0|2|48228|L|,GB_EMPATE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|130:1:13||0|2|48228|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|130:13:22||0|2|48229|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|130:22:31||0|2|48230|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|130:31||0|2|48231|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|131||0|2|48232|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|132||0|2|48235|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|133||0|2|48237|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|134||0|2|48239|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|135||0|2|48241|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|136||0|2|48245|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|137||0|2|48248|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|138||0|2|48250|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|139||0|2|48252|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|140||0|2|48254|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|141||0|2|48258|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|142||0|2|48261|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|143||0|2|48263|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|144||0|2|48265|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|145||0|2|48267|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|146||0|2|48271|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|147:1:12||0|2|48274|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|147:12:20||0|2|48275|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|147:20:28||0|2|48276|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|147:28||0|2|48277|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|148||0|2|48278|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|150||0|2|48279|F|PRINT_FIN
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|150||0|2|48279|L|,PRINT_FIN,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|151||0|2|48279|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|152||0|2|48281|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|153||0|2|48283|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|154||0|2|48285|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|155||0|2|48289|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|158||0|2|48292|F|PRINT_OTRA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|158||0|2|48292|L|,PRINT_OTRA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|159||0|2|48292|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|160||0|2|48294|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|161||0|2|48296|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|162||0|2|48298|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|163||0|2|48302|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|164||0|2|48305|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|165||0|2|48307|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|166||0|2|48310|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|171||0|2|48311|F|GB_PTLLA_INICIO_DE_JUEGO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|171||0|2|48311|L|,GB_PTLLA_INICIO_DE_JUEGO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|173||0|2|48311|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|175:1:13||0|2|48314|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|175:13:22||0|2|48315|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|175:22:31||0|2|48316|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|175:31||0|2|48317|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|178||0|2|48318|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|179||0|2|48321|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|180||0|2|48324|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|181||0|2|48327|F|PTLLA_JUEGO_BUCLE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|181||0|2|48327|L|,PTLLA_JUEGO_BUCLE,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|182||0|2|48327|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|184:1:12||0|2|48329|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|184:12:20||0|2|48330|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|184:20:28||0|2|48331|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|184:28||0|2|48332|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|187||0|2|48333|F|PRINT_CONTROLES
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|187||0|2|48333|L|,PRINT_CONTROLES,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|188||0|2|48333|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|189||0|2|48335|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|190||0|2|48337|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|191||0|2|48339|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|192||0|2|48343|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|193||0|2|48346|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|194||0|2|48348|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|195||0|2|48350|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|196||0|2|48354|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|197||0|2|48357|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|198||0|2|48359|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|199||0|2|48361|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|200||0|2|48363|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|201||0|2|48367|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|202||0|2|48370|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|203||0|2|48372|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|204||0|2|48374|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|205||0|2|48376|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|206||0|2|48380|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|207||0|2|48383|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|208||0|2|48385|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|209||0|2|48387|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|210||0|2|48389|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|211||0|2|48393|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|212||0|2|48396|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|215||0|2|48397|F|PRINT_GANADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|215||0|2|48397|L|,PRINT_GANADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|216||0|2|48397|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|217||0|2|48400|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|218||0|2|48402|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|219||0|2|48404|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|220||0|2|48406|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|221||0|2|48410|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|222||0|2|48413|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|223||0|2|48415|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|224||0|2|48417|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|225||0|2|48418|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|226:1:21||0|2|48422|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|226:21||0|2|48425|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|227:1:13||0|2|48426|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|227:13||0|2|48427|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|228||0|2|48428|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|229||0|2|48430|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|230||0|2|48433|F|CONSEGUIR_GANADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|230||0|2|48433|L|,CONSEGUIR_GANADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|231||0|2|48433|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|232||0|2|48435|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|233||0|2|48437|F|IMPRIMIR_GANADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|233||0|2|48437|L|,IMPRIMIR_GANADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|234:1:12||0|2|48437|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|234:12||0|2|48438|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|235||0|2|48439|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|236||0|2|48442|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|237||0|2|48445|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|239||0|2|48446|F|PTLLA_NEGRA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|239||0|2|48446|L|,PTLLA_NEGRA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|241:1:13||0|2|48446|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|241:13:22||0|2|48447|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|241:22:31||0|2|48448|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|241:31||0|2|48449|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|243||0|2|48450|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|244||0|2|48453|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|245||0|2|48456|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|246||0|2|48458|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|247||0|2|48461|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|249:1:12||0|2|48463|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|249:12:20||0|2|48464|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|249:20:28||0|2|48465|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|249:28||0|2|48466|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|250||0|2|48467|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|253||0|2|48468|F|GB_PRINT_FONDO_GANADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|253||0|2|48468|L|,GB_PRINT_FONDO_GANADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|254:1:14||0|2|48468|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|254:14:24||0|2|48469|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|254:24||0|2|48470|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|255||0|2|48471|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|256||0|2|48474|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|257||0|2|48476|F|BUCLE_PTLLA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|257||0|2|48476|L|,BUCLE_PTLLA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|258||0|2|48476|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|259||0|2|48477|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|260||0|2|48478|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|261||0|2|48479|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|262||0|2|48481|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|263:1:13||0|2|48483|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|263:13:22||0|2|48484|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|263:22||0|2|48485|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm|264||0|2|48486|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|8||0|2|48487|F|GC_COLOR_JUGADOR_ACTUAL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|8||0|2|48487|L|,GC_COLOR_JUGADOR_ACTUAL,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|9||0|2|48487|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|10||0|2|48490|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|11:1:10||0|2|48493|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|11:10||0|2|48495|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|12||0|2|48498|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|13||0|2|48501|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|14||0|2|48503|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|15||0|2|48506|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|17||0|2|48507|F|SET_HL_J2
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|17||0|2|48507|L|,SET_HL_J2,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|18||0|2|48507|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|19||0|2|48510|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|23||0|2|48511|F|GC_COLOR_CIRCLE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|23||0|2|48511|L|,GC_COLOR_CIRCLE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|24:1:13||0|2|48511|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|24:13:22||0|2|48512|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|24:22:31||0|2|48513|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|24:31||0|2|48514|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|25||0|2|48515|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|26||0|2|48518|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|27||0|2|48521|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|28:1:21||0|2|48522|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|28:21:31||0|2|48524|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|28:31||0|2|48525|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|29:1:16||0|2|48526|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|29:16:24||0|2|48527|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|29:24:36||0|2|48528|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|29:36:44||0|2|48529|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|29:44:56||0|2|48530|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|29:56||0|2|48531|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|30:1:16||0|2|48532|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|30:16:24||0|2|48533|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|30:24:36||0|2|48534|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|30:36:44||0|2|48535|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|30:44:56||0|2|48536|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|30:56||0|2|48537|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|31:1:16||0|2|48538|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|31:16:24||0|2|48539|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|31:24:36||0|2|48540|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|31:36:44||0|2|48541|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|31:44:56||0|2|48542|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|31:56||0|2|48543|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|32:1:12||0|2|48544|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|32:12:20||0|2|48545|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|32:20:28||0|2|48546|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|32:28||0|2|48547|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|34||0|2|48548|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|42||0|2|48549|F|GC_LEFT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|42||0|2|48549|L|,GC_LEFT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|43||0|2|48549|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|44||0|2|48550|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|45||0|2|48552|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|46||0|2|48555|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|47||0|2|48556|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|48||0|2|48559|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|49||0|2|48561|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|50||0|2|48564|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|52||0|2|48565|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|58||0|2|48566|F|GC_RIGHT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|58||0|2|48566|L|,GC_RIGHT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|59||0|2|48566|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|60||0|2|48567|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|61||0|2|48569|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|62||0|2|48572|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|63||0|2|48573|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|64||0|2|48576|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|65||0|2|48578|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|66||0|2|48581|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|68||0|2|48582|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|73||0|2|48583|F|GC_ENTER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|73||0|2|48583|L|,GC_ENTER,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|74||0|2|48583|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|75||0|2|48584|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|76||0|2|48585|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|82||0|2|48586|F|SOLTAR_FICHA_BUCLE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|82||0|2|48586|L|,SOLTAR_FICHA_BUCLE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|84||0|2|48586|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|85||0|2|48588|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|87||0|2|48591|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|88||0|2|48592|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|89||0|2|48595|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|91||0|2|48598|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|94||0|2|48601|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|96||0|2|48604|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|97||0|2|48607|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|98||0|2|48608|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|99||0|2|48610|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|104||0|2|48612|F|FICHA_LANDED
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|104||0|2|48612|L|,FICHA_LANDED,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|106||0|2|48612|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|107||0|2|48613|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|108||0|2|48616|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|109||0|2|48619|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|111:1:12||0|2|48622|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|111:12:21||0|2|48623|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|111:21||0|2|48624|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm|112||0|2|48625|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|9||0|2|48626|F|LF_INICIALIZACION
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|9||0|2|48626|L|,LF_INICIALIZACION,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|10||0|2|48626|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|11||0|2|48627|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|12||0|2|48630|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|13||0|2|48631|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|14||0|2|48632|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|15||0|2|48635|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|21||0|2|48636|F|LF_SWITCH_JUGADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|21||0|2|48636|L|,LF_SWITCH_JUGADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|22||0|2|48636|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|23||0|2|48639|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|24||0|2|48641|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|25||0|2|48643|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|26||0|2|48645|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|27||0|2|48647|F|SET_P1
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|27||0|2|48647|L|,SET_P1,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|28||0|2|48647|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|29||0|2|48648|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|30||0|2|48650|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|31||0|2|48653|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|32||0|2|48655|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|33||0|2|48658|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|34||0|2|48659|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|35||0|2|48661|F|SET_P2
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|35||0|2|48661|L|,SET_P2,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|36||0|2|48661|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|37||0|2|48662|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|38||0|2|48664|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|39||0|2|48667|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|40||0|2|48669|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|41||0|2|48672|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|42||0|2|48673|F|SALIDA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|42||0|2|48673|L|,SALIDA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|43||0|2|48673|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|46||0|2|48674|F|LF_BOARD_RESET
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|46||0|2|48674|L|,LF_BOARD_RESET,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|47||0|2|48674|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|48||0|2|48675|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|49||0|2|48678|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|50||0|2|48681|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|52||0|2|48684|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|53||0|2|48686|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|54||0|2|48690|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|55||0|2|48691|F|BR_BUCLE_EXTERNO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|55||0|2|48691|L|,BR_BUCLE_EXTERNO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|56||0|2|48691|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|57||0|2|48692|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|58||0|2|48694|F|BR_BUCLE_INTERNO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|58||0|2|48694|L|,BR_BUCLE_INTERNO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|59||0|2|48694|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|60||0|2|48697|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|61||0|2|48699|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|62||0|2|48701|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|63||0|2|48702|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|64||0|2|48704|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|65||0|2|48706|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|68||0|2|48707|F|LF_JUGADA_DESPLAZAMIENTO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|68||0|2|48707|L|,LF_JUGADA_DESPLAZAMIENTO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|69:1:12||0|2|48707|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|69:12||0|2|48709|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|70:1:12||0|2|48712|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|70:12||0|2|48714|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|71:1:12||0|2|48717|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|71:12||0|2|48719|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|72:1:12||0|2|48722|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|72:12||0|2|48724|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|73||0|2|48727|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm|74||0|2|48729|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|3||0|-1|49153|D|ULTIMA_FICHA_COLUMNA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|3||0|-1|49153|L|,ULTIMA_FICHA_COLUMNA,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|4||0|-1|49154|D|ULTIMA_FICHA_FILA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|4||0|-1|49154|L|,ULTIMA_FICHA_FILA,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|5||0|-1|7|D|TABLERO_ANCHO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|5||0|-1|7|L|,TABLERO_ANCHO,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|6||0|-1|6|D|TABLERO_ALTO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|6||0|-1|6|L|,TABLERO_ALTO,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|7||0|-1|53248|D|ESTADO_TABLERO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|7||0|-1|53248|L|,ESTADO_TABLERO,,+equ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|11||0|2|48730|F|LC_COMPROBAR_RESULTADO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|11||0|2|48730|L|,LC_COMPROBAR_RESULTADO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|12||0|2|48730|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|13:1:10||0|2|48733|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|13:10||0|2|48735|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|14||0|2|48736|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|15:1:11||0|2|48739|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|15:11||0|2|48741|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|16:1:15||0|2|48742|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|16:15||0|2|48744|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|17||0|2|48745|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|20||0|2|48746|F|LC_COMPROBAR_TABLERO_LLENO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|20||0|2|48746|L|,LC_COMPROBAR_TABLERO_LLENO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|21||0|2|48746|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|22||0|2|48750|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|23||0|2|48752|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|24||0|2|48755|F|CTL_BUCLE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|24||0|2|48755|L|,CTL_BUCLE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|25||0|2|48755|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|26||0|2|48758|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|27||0|2|48759|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|28||0|2|48760|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|29||0|2|48762|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|30||0|2|48764|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|31||0|2|48766|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|34||0|2|48767|F|LC_COMPROBAR_VICTORIA_JUGADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|34||0|2|48767|L|,LC_COMPROBAR_VICTORIA_JUGADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|36||0|2|48767|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|37||0|2|48770|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|38||0|2|48772|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|41||0|2|48774|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|42||0|2|48777|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|43||0|2|48779|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|46||0|2|48781|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|47||0|2|48784|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|48||0|2|48786|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|51||0|2|48788|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|52||0|2|48790|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|53||0|2|48791|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|55||0|2|48792|F|VICTORIA_CONFIRMADA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|55||0|2|48792|L|,VICTORIA_CONFIRMADA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|56||0|2|48792|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|57||0|2|48795|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|60||0|2|48796|F|HAY_GANADOR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|60||0|2|48796|L|,HAY_GANADOR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|61||0|2|48796|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|62||0|2|48799|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|63||0|2|48802|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|64||0|2|48803|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|71||0|2|48804|F|LC_COMPROBAR_4_EN_RAYA_HORIZONTAL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|71||0|2|48804|L|,LC_COMPROBAR_4_EN_RAYA_HORIZONTAL,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|72||0|2|48804|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|73||0|2|48805|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|74||0|2|48809|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|75||0|2|48812|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|76||0|2|48815|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|77||0|2|48817|F|CONTAR_IZQUIERDA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|77||0|2|48817|L|,CONTAR_IZQUIERDA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|78||0|2|48817|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|79||0|2|48820|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|80||0|2|48821|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|81||0|2|48823|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|82||0|2|48826|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|83||0|2|48827|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|84||0|2|48830|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|86||0|2|48832|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|87||0|2|48833|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|88||0|2|48836|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|89||0|2|48839|F|CONTAR_DERECHA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|89||0|2|48839|L|,CONTAR_DERECHA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|90||0|2|48839|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|91||0|2|48842|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|92||0|2|48843|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|93||0|2|48845|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|94||0|2|48848|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|95||0|2|48849|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|96||0|2|48852|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|97||0|2|48854|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|98||0|2|48857|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|101||0|2|48858|F|LC_COMPROBAR_4_EN_RAYA_VERTICAL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|101||0|2|48858|L|,LC_COMPROBAR_4_EN_RAYA_VERTICAL,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|102||0|2|48858|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|103||0|2|48859|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|104||0|2|48863|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|105||0|2|48866|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|106||0|2|48868|F|CONTAR_ARRIBA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|106||0|2|48868|L|,CONTAR_ARRIBA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|107||0|2|48868|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|108||0|2|48871|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|109||0|2|48872|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|110||0|2|48874|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|111||0|2|48877|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|112||0|2|48878|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|113||0|2|48881|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|115||0|2|48883|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|116||0|2|48884|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|117||0|2|48887|F|CONTAR_ABAJO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|117||0|2|48887|L|,CONTAR_ABAJO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|118||0|2|48887|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|119||0|2|48890|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|120||0|2|48891|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|121||0|2|48893|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|122||0|2|48896|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|123||0|2|48897|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|124||0|2|48900|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|125||0|2|48902|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|126||0|2|48905|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|129||0|2|48906|F|LC_COMPROBAR_4_EN_RAYA_DIAGONALES
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|129||0|2|48906|L|,LC_COMPROBAR_4_EN_RAYA_DIAGONALES,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|130||0|2|48906|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|131||0|2|48910|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|133||0|2|48913|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|134||0|2|48914|F|CONTAR_UPPER_LEFT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|134||0|2|48914|L|,CONTAR_UPPER_LEFT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|135||0|2|48914|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|136||0|2|48915|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|137||0|2|48916|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|138||0|2|48918|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|139||0|2|48919|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|140||0|2|48920|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|142:1:11||0|2|48922|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|142:11||0|2|48923|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|143||0|2|48924|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|145||0|2|48927|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|146||0|2|48930|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|147||0|2|48931|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|148||0|2|48934|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|149||0|2|48935|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|150||0|2|48937|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|151||0|2|48940|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|152||0|2|48942|F|FIN_UPPER_LEFT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|152||0|2|48942|L|,FIN_UPPER_LEFT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|153||0|2|48942|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|154||0|2|48943|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|155||0|2|48944|F|CONTAR_LOWER_RIGHT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|155||0|2|48944|L|,CONTAR_LOWER_RIGHT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|156||0|2|48944|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|157||0|2|48945|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|158||0|2|48947|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|159||0|2|48949|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|160||0|2|48950|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|161||0|2|48952|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|163:1:11||0|2|48954|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|163:11||0|2|48955|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|164||0|2|48956|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|166||0|2|48959|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|167||0|2|48962|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|168||0|2|48963|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|169||0|2|48966|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|170||0|2|48967|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|171||0|2|48969|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|172||0|2|48972|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|173||0|2|48974|F|FIN_LOWER_RIGHT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|173||0|2|48974|L|,FIN_LOWER_RIGHT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|174||0|2|48974|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|175||0|2|48975|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|176||0|2|48978|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|177||0|2|48979|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|178||0|2|48980|F|CONTAR_UPPER_RIGHT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|178||0|2|48980|L|,CONTAR_UPPER_RIGHT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|180||0|2|48980|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|181||0|2|48981|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|182||0|2|48982|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|183||0|2|48984|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|184||0|2|48985|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|185||0|2|48987|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|187:1:11||0|2|48989|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|187:11||0|2|48990|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|188||0|2|48991|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|190||0|2|48994|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|191||0|2|48997|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|193||0|2|48998|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|194||0|2|49001|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|195||0|2|49002|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|197||0|2|49004|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|198||0|2|49007|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|199||0|2|49009|F|FIN_UPPER_RIGHT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|199||0|2|49009|L|,FIN_UPPER_RIGHT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|201||0|2|49009|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|202||0|2|49010|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|204||0|2|49011|F|CONTAR_LOWER_LEFT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|204||0|2|49011|L|,CONTAR_LOWER_LEFT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|206||0|2|49011|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|207||0|2|49012|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|208||0|2|49014|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|209||0|2|49016|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|210||0|2|49017|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|211||0|2|49018|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|213:1:11||0|2|49020|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|213:11||0|2|49021|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|214||0|2|49022|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|216||0|2|49025|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|217||0|2|49028|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|219||0|2|49029|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|220||0|2|49032|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|221||0|2|49033|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|223||0|2|49035|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|224||0|2|49038|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|225||0|2|49040|F|FIN_LOWER_LEFT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|225||0|2|49040|L|,FIN_LOWER_LEFT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|227||0|2|49040|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|228||0|2|49041|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|229||0|2|49044|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|232||0|2|49045|F|CONTAR_TOTALES
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|232||0|2|49045|L|,CONTAR_TOTALES,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|233||0|2|49045|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|234||0|2|49048|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|235||0|2|49049|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|236||0|2|49052|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|237||0|2|49053|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|239||0|2|49054|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|240||0|2|49056|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|241||0|2|49058|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|242||0|2|49060|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|243||0|2|49063|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|244||0|2|49066|F|SALIDA_CONTAR_TOTALES
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|244||0|2|49066|L|,SALIDA_CONTAR_TOTALES,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|245||0|2|49066|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|246||0|2|49067|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|249||0|2|49068|F|INC_CNT_IZQ
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|249||0|2|49068|L|,INC_CNT_IZQ,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|250||0|2|49068|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|251||0|2|49069|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|252||0|2|49072|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|253||0|2|49073|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|254||0|2|49076|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|255||0|2|49077|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|258||0|2|49078|F|INC_CNT_DER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|258||0|2|49078|L|,INC_CNT_DER,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|259||0|2|49078|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|260||0|2|49079|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|261||0|2|49082|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|262||0|2|49083|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|263||0|2|49086|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|264||0|2|49087|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|267||0|2|49088|F|LC_SLOT_POINTER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|267||0|2|49088|L|,LC_SLOT_POINTER,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|275||0|2|49088|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|276||0|2|49089|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|277:1:11||0|2|49090|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|277:11:18||0|2|49091|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|277:18||0|2|49092|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|278||0|2|49094|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|279||0|2|49095|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|280:1:11||0|2|49096|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|280:11:18||0|2|49097|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|280:18||0|2|49098|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|281||0|2|49100|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|282:1:11||0|2|49101|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|282:11:18||0|2|49103|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|282:18:25||0|2|49105|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|282:25:32||0|2|49107|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|282:32||0|2|49109|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|283||0|2|49111|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|284||0|2|49112|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|285||0|2|49113|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|286:1:11||0|2|49114|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|286:11:18||0|2|49116|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|286:18||0|2|49118|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|287||0|2|49120|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|288||0|2|49122|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|290||0|2|49123|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|291||0|2|49124|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|293||0|2|49125|F|LC_VALIDPLAY
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|293||0|2|49125|L|,LC_VALIDPLAY,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|299||0|2|49125|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|300:1:12||0|2|49126|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|300:12||0|2|49128|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|301:1:12||0|2|49130|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|301:12||0|2|49132|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|302:1:12||0|2|49134|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|302:12||0|2|49136|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|303:1:12||0|2|49138|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|303:12||0|2|49140|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|304:1:12||0|2|49142|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|304:12||0|2|49144|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|305:1:12||0|2|49146|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|305:12||0|2|49148|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|306:1:12||0|2|49150|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|306:12||0|3|49152|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|309||0|3|49154|F|VALIDLEFT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|309||0|3|49154|L|,VALIDLEFT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|310||0|3|49154|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|311||0|3|49155|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|312||0|3|49158|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|313||0|3|49161|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|314||0|3|49162|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|315||0|3|49163|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|316||0|3|49165|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|317||0|3|49167|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|320||0|3|49169|F|VALIDRIGHT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|320||0|3|49169|L|,VALIDRIGHT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|321||0|3|49169|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|322||0|3|49170|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|323||0|3|49173|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|324||0|3|49176|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|325||0|3|49177|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|326||0|3|49178|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|327||0|3|49180|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|328||0|3|49182|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|329||0|3|49184|F|VALIDENTER
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|329||0|3|49184|L|,VALIDENTER,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|330:1:13||0|3|49184|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|330:13||0|3|49185|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|331||0|3|49186|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|332||0|3|49189|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|333:1:12||0|3|49192|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|333:12||0|3|49193|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|334:1:10||0|3|49194|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|334:10||0|3|49196|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|337||0|3|49198|F|NONVALID
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|337||0|3|49198|L|,NONVALID,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|338||0|3|49198|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|339||0|3|49200|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|340||0|3|49201|F|VALID
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|340||0|3|49201|L|,VALID,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|341||0|3|49201|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm|342||0|3|49203|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|1||0|3|49204|F|UTILITIES
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|1||0|3|49204|L|,UTILITIES,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|1||0|3|49204|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|3||0|3|49206|F|U_CALC_TABLERO_POS
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|3||0|3|49206|L|,U_CALC_TABLERO_POS,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|7||0|3|49206|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|8||0|3|49207|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|9||0|3|49208|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|10||0|3|49209|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|11||0|3|49210|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|12||0|3|49211|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|13||0|3|49212|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|15||0|3|49213|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|16||0|3|49217|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|17||0|3|49219|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|18||0|3|49220|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|20||0|3|49222|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|23||0|3|49223|F|U_ESPERAR
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|23||0|3|49223|L|,U_ESPERAR,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|24||0|3|49223|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|25||0|3|49224|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|27||0|3|49227|F|ESPERAR_LOOP
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|27||0|3|49227|L|,ESPERAR_LOOP,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|28||0|3|49227|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|29||0|3|49228|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|30||0|3|49229|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|31||0|3|49230|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|32||0|3|49231|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|33||0|3|49232|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|34||0|3|49233|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|36||0|3|49235|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm|37||0|3|49236|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|24||0|3|49237|F|INICIO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|24||0|3|49237|L|,INICIO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|25||0|3|49237|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|26||0|3|49240|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|27||0|3|49243|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|28||0|3|49244|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|29||0|3|49247|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|30||0|3|49249|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|31||0|3|49252|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|32||0|3|49255|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|33||0|3|49257|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|34||0|3|49260|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|35||0|3|49262|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|38||0|3|49265|F|ADIOS
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|38||0|3|49265|L|,ADIOS,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|39||0|3|49265|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|40||0|3|49268|F|FINAL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|40||0|3|49268|L|,FINAL,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|41||0|3|49268|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|42||0|3|49270|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|43||0|3|49273|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|44||0|3|49275|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|47||0|3|49276|F|FIN_NEXT
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|47||0|3|49276|L|,FIN_NEXT,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|48||0|3|49276|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|49||0|3|49279|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|50||0|3|49282|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|51||0|3|49283|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|52||0|3|49285|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|53||0|3|49288|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|54||0|3|49290|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|56||0|3|49293|F|EMPATE
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|56||0|3|49293|L|,EMPATE,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|57||0|3|49293|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|58||0|3|49296|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|59||0|3|49299|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|60||0|3|49300|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|61||0|3|49302|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|62||0|3|49305|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|63||0|3|49307|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|65||0|3|49310|F|LOGICA_JUEGO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|65||0|3|49310|L|,LOGICA_JUEGO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|66||0|3|49310|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|67||0|3|49313|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|68||0|3|49316|F|BUCLE_JUEGO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|68||0|3|49316|L|,BUCLE_JUEGO,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|69||0|3|49316|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|70||0|3|49319|F|GESTIONAR_JUGADA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|70||0|3|49319|L|,GESTIONAR_JUGADA,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|71||0|3|49319|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|72||0|3|49322|F|JUGADA
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|72||0|3|49322|L|,JUGADA,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|73||0|3|49322|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|74||0|3|49325|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|75||0|3|49326|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|76||0|3|49327|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|77||0|3|49330|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|78||0|3|49332|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|79||0|3|49334|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|80:1:12||0|3|49335|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|80:12||0|3|49337|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|81:1:12||0|3|49340|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|81:12||0|3|49342|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|82:1:12||0|3|49345|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|82:12||0|3|49347|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|83:1:12||0|3|49350|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|83:12||0|3|49352|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|84:1:12||0|3|49355|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|84:12||0|3|49357|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|85:1:12||0|3|49359|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|85:12||0|3|49361|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|86:1:12||0|3|49364|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|86:12||0|3|49366|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|88:1:12||0|3|49369|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|88:12||0|3|49371|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|90||0|3|49374|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|91||0|3|49376|F|PROCESAR_JUGADA_FINAL
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|91||0|3|49376|L|,PROCESAR_JUGADA_FINAL,,+used
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|92||0|3|49376|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|95||0|3|49379|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|96||0|3|49382|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|100||0|3|49384|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|101||0|3|49386|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|102||0|3|49388|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|104||0|3|49390|F|COMPROBAR_FIN_JUEGO
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|104||0|3|49390|L|,COMPROBAR_FIN_JUEGO,
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|105||0|3|49390|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|106||0|3|49393|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|107||0|3|49395|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|108||0|3|49397|T|
+C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm|109||0|3|49399|T|

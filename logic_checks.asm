@@ -12,8 +12,8 @@ LC_COMPROBAR_RESULTADO:
     CALL LC_COMPROBAR_VICTORIA_JUGADOR
     CP 0: RET Z ; RET SI ALGUIEN GANÓ, A = 0
     CALL LC_COMPROBAR_TABLERO_LLENO
-    CP 64: RET C ; RET SI NADIE GANÓ Y SE LLENÓ EL TABLERO, A = 1
-    LD A, 128: OR A
+    CP 32: RET Z ; RET SI NADIE GANÓ Y SE LLENÓ EL TABLERO, A = 32
+    LD A, 128: OR A ; OR A PARA MODIFICAR LOS FLAGS
     RET ; RET SI NADIE GANÓ Y NO SE LLENÓ EL TABLERO, A = 128
 
 ; Rutina para comprobar si el tablero se ha llenado
@@ -28,7 +28,7 @@ CTL_BUCLE:
     ADD IX, DE  ; Salta a la siguiente posicion para comprobar ( IX + 6, siguiente fila)
     DJNZ CTL_BUCLE
     LD A, 32 ; No encontro huecos
-    RET ; RET CON EMPATE, A = 128
+    RET ; RET CON EMPATE, A = 64
    
 ; Rutina que comprueba si el jugador ha ganado por alguna línea, ya sea vertical, horizontal o diagonal.
 LC_COMPROBAR_VICTORIA_JUGADOR:
