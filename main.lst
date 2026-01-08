@@ -1,4 +1,4 @@
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm
   1   0000              ; main.asm - Programa principal Conecta 4 (ZX Spectrum)
   2   0000              ; Inicialización, bucle principal, gestión de jugadas y subrutinas auxiliares
   3   0000
@@ -7,11 +7,11 @@
   6   8000 31 00 00         LD SP, 0
   7   8003 3E 00            LD A, 0 ; Valor inicial de A
   8   8005 D3 FE            OUT ($FE), A ; Colorea el marco de la pantalla en negro
-  9   8007 C3 58 C0         JP INICIO
+  9   8007 C3 65 C0         JP INICIO
  10   800A
  11   800A              ; INCLUDES - módulos y rutinas auxiliares
  12   800A                  INCLUDE "colors.asm"         ; Definiciones de colores y jugadores
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm
   1+  800A              ; CONSTANTES DE COLORES
   2+  800A              ; Valores de atributos de color (ej.: usado para imprimir texto en pantalla)
   3+  800A              COLOR_TEXTO_AZUL     EQU 1    ; Color azul (atributo de color 1)
@@ -30,9 +30,9 @@
  16+  800A              COLOR_BLANCO              EQU 7
  17+  800A
  18+  800A              COLOR_NEGRO_FONDO_GANADOR EQU 0
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\colors.asm
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\colors.asm
  13   800A                  INCLUDE "variables.asm"      ; Variables globales y estado del juego
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm
   1+  800A 18 FE        VARIABLES: JR VARIABLES
   2+  800C              ; variables.asm - Definición de constantes globales para el juego
   3+  800C              JUGADOR1 EQU 1
@@ -81,9 +81,9 @@
  38+  804A FF FF FF FF                  DB $FF, $FF, $FF, $FF, $FF, $FF, $FF
  38+  804E FF FF FF
  39+  8051
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\variables.asm
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\variables.asm
  14   8051                  INCLUDE "keyboard.asm"       ; Rutinas de lectura de teclado
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm
   1+  8051              ; keyboard.asm - rutinas de lectura de teclado
   2+  8051              ; Convención general:
   3+  8051              ;  - El puerto de teclado se accede con IN A,(C) usando C=$FE (puerto 0xFE típico de ZX Spectrum)
@@ -232,9 +232,9 @@
 146+  80E8 20 F6            JR NZ, KLREF_RELEASE_F
 147+  80EA F1               POP AF
 148+  80EB C9               RET
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\keyboard.asm
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\keyboard.asm
  15   80EC                  INCLUDE "printat.asm"        ; Rutina de impresión en pantalla
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm
   1+  80EC              ; -------------------------------
   2+  80EC              ; ZX Spectrum Text print library
   3+  80EC              ; Daniel León - AOC - UFV 2020
@@ -399,9 +399,9 @@
 161+  8170
 162+  8170              CHARSET: incbin "charset.bin"			; Charset used
 163+  8470
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\printat.asm
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\printat.asm
  16   8470                  INCLUDE "graphics_basic.asm" ; Rutinas gráficas básicas
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm
   1+  8470              ; STRINGS PARA IMPRESION
   2+  8470
   3+  8470 20 20 20 20  STRING_FILA_VACIA_B: DB "                        ", 0    ; fila vacía (ancho para portada)
@@ -773,9 +773,9 @@
 264+  BD67 C1             POP BC
 264+  BD68 E1             POP HL
 265+  BD69 C9               RET
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_basic.asm
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_basic.asm
  17   BD6A                  INCLUDE "graphics_core.asm"  ; Rutinas gráficas avanzadas
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm
   1+  BD6A              ; GC_COLOR_JUGADOR_ACTUAL
   2+  BD6A              ;  - Pone el atributo/color del jugador actual en un bloque 3x3
   3+  BD6A              ;  - Convenios:
@@ -890,10 +890,10 @@
  88+  BDD3 3A 0D 80         LD A, (COLOR_JUGADOR_ACTUAL)
  89+  BDD6 CD 82 BD         CALL GC_COLOR_CIRCLE
  90+  BDD9                  ; Esperar
- 91+  BDD9 CD 4A C0         CALL U_ESPERAR
+ 91+  BDD9 CD 57 C0         CALL U_ESPERAR
  92+  BDDC
  93+  BDDC                  ; Comprobar si se puede volver a pintar
- 94+  BDDC CD 39 C0         CALL U_CALC_TABLERO_POS      ; Devuelve IX en la posición (H,L) fila, columna actual.
+ 94+  BDDC CD 46 C0         CALL U_CALC_TABLERO_POS      ; Devuelve IX en la posición (H,L) fila, columna actual.
  95+  BDDF                  ; Comprobar si la posición de abajo está libre
  96+  BDDF DD 7E 00         LD A, (IX)
  97+  BDE2 B7               OR A
@@ -906,7 +906,7 @@
 104+  BDE7              FICHA_LANDED:
 105+  BDE7                  ; Calculate correct TABLERO_ACTUAL position and save piece
 106+  BDE7 25               DEC H
-107+  BDE8 CD 39 C0         CALL U_CALC_TABLERO_POS      ; IX apunta a la posición actual en memoria
+107+  BDE8 CD 46 C0         CALL U_CALC_TABLERO_POS      ; IX apunta a la posición actual en memoria
 108+  BDEB 3A 0C 80         LD A, (JUGADOR_ACTUAL) ; 1 o 2, según el turno.
 109+  BDEE DD 77 00         LD (IX), A ; Guarda que ese espacio está ocupado por el jugador que ha tirado
 110+  BDF1
@@ -914,9 +914,9 @@
 111+  BDF2 C1             POP BC
 111+  BDF3 F1            POP AF
 112+  BDF4 C9               RET
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\graphics_core.asm
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\graphics_core.asm
  18   BDF5                  INCLUDE "logic_flow.asm"     ; Flujo principal del juego
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm
   1+  BDF5              ; logic_flow.asm - Rutinas de control de flujo principal del juego
   2+  BDF5
   3+  BDF5
@@ -995,9 +995,9 @@
  72+  BE57 CC A8 BD       CALL Z, GC_LEFT               ; Desplaza ficha a la izquierda
  73+  BE5A 3E FF            LD A, $FF
  74+  BE5C C9               RET
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_flow.asm
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_flow.asm
  19   BE5D                  INCLUDE "logic_checks.asm"   ; Comprobaciones de victoria y jugadas
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm
   1+  BE5D              ; Lógica de comprobaciones del juego (Conecta 4)
   2+  BE5D              ; Constantes y configuración:
   3+  BE5D              ULTIMA_FICHA_COLUMNA EQU $C001 ; Byte (0-6) con la columna de la última ficha jugada
@@ -1074,7 +1074,7 @@
  71+  BEA7              LC_COMPROBAR_4_EN_RAYA_HORIZONTAL:
  72+  BEA7 E5               PUSH HL
  73+  BEA8 DD 21 19 80      LD IX, TABLERO_ACTUAL
- 74+  BEAC CD 39 C0         CALL U_CALC_TABLERO_POS ; Calcula la direccion de memoria exacta de la ultima ficha puesta en IX
+ 74+  BEAC CD 46 C0         CALL U_CALC_TABLERO_POS ; Calcula la direccion de memoria exacta de la ultima ficha puesta en IX
  75+  BEAF 11 F9 FF         LD DE, $FFF9 ; -7 en complemento a 2 para desplazarse por columnas hacia la izquierda en IX
  76+  BEB2 0E 00            LD C, 0
  77+  BEB4              CONTAR_IZQUIERDA:
@@ -1087,7 +1087,7 @@
  84+  BEC1 28 F1            JR Z, CONTAR_IZQUIERDA ; Si fueron iguales, podemos continuar contando más fichas en esta dirección
  85+  BEC3
  86+  BEC3 E1               POP HL
- 87+  BEC4 CD 39 C0         CALL U_CALC_TABLERO_POS ; Volvemos al IX de la ficha que fue soltada en este turno
+ 87+  BEC4 CD 46 C0         CALL U_CALC_TABLERO_POS ; Volvemos al IX de la ficha que fue soltada en este turno
  88+  BEC7 11 07 00         LD DE, COLUMN_BOARD_SIZE ; Cargamos 7 en DE
  89+  BECA              CONTAR_DERECHA: ; Mismo concepto que CONTAR_IZQUIERDA, pero desplaza en columnas hacia la derecha en vez de la izquierda
  90+  BECA 3A 0C 80         LD A, (JUGADOR_ACTUAL)
@@ -1104,7 +1104,7 @@
 101+  BEDD              LC_COMPROBAR_4_EN_RAYA_VERTICAL: ; Mismo concepto que comprobación en horizontal, pero puede hacer DEC IX e INC IX directamente
 102+  BEDD E5               PUSH HL
 103+  BEDE DD 21 19 80      LD IX, TABLERO_ACTUAL
-104+  BEE2 CD 39 C0         CALL U_CALC_TABLERO_POS
+104+  BEE2 CD 46 C0         CALL U_CALC_TABLERO_POS
 105+  BEE5 0E 00            LD C, 0
 106+  BEE7              CONTAR_ARRIBA:
 107+  BEE7 3A 0C 80         LD A, (JUGADOR_ACTUAL)
@@ -1116,7 +1116,7 @@
 113+  BEF4 28 F1            JR Z, CONTAR_ARRIBA
 114+  BEF6
 115+  BEF6 E1               POP HL
-116+  BEF7 CD 39 C0         CALL U_CALC_TABLERO_POS
+116+  BEF7 CD 46 C0         CALL U_CALC_TABLERO_POS
 117+  BEFA              CONTAR_ABAJO:
 118+  BEFA 3A 0C 80         LD A, (JUGADOR_ACTUAL)
 119+  BEFD 47               LD B, A
@@ -1131,7 +1131,7 @@
 128+  BF0D              ; COMPROBACION DE VICTORIA EN DIAGONALES
 129+  BF0D              LC_COMPROBAR_4_EN_RAYA_DIAGONALES:
 130+  BF0D DD 21 19 80      LD IX, TABLERO_ACTUAL
-131+  BF11 CD 39 C0         CALL U_CALC_TABLERO_POS
+131+  BF11 CD 46 C0         CALL U_CALC_TABLERO_POS
 132+  BF14                  ;LD C, 0
 133+  BF14 E5               PUSH HL
 134+  BF15              CONTAR_UPPER_LEFT:
@@ -1144,7 +1144,7 @@
 141+  BF1D
 142+  BF1D 25               DEC H
 142+  BF1E 2D             DEC L ; Movemos IX a la posición diagonal superior izquierda
-143+  BF1F CD 39 C0         CALL U_CALC_TABLERO_POS ; Aqui B se corrompe con el numero de columna
+143+  BF1F CD 46 C0         CALL U_CALC_TABLERO_POS ; Aqui B se corrompe con el numero de columna
 144+  BF22                  ; DESPLAZAMIENTO DE IX
 145+  BF22 3A 0C 80         LD A, (JUGADOR_ACTUAL)  ; Se vuelve a leer quien esta jugando
 146+  BF25 47               LD B, A ; Se restaura el valor correcto de B
@@ -1166,7 +1166,7 @@
 162+  BF3D
 163+  BF3D 24               INC H
 163+  BF3E 2C             INC L ; Movemos IX a la posición diagonal inferior derecha
-164+  BF3F CD 39 C0         CALL U_CALC_TABLERO_POS
+164+  BF3F CD 46 C0         CALL U_CALC_TABLERO_POS
 165+  BF42                  ; DESPLAZAMIENTO DE IX
 166+  BF42 3A 0C 80         LD A, (JUGADOR_ACTUAL)
 167+  BF45 47               LD B, A
@@ -1191,7 +1191,7 @@
 186+  BF60
 187+  BF60 25               DEC H
 187+  BF61 2C             INC L
-188+  BF62 CD 39 C0         CALL U_CALC_TABLERO_POS
+188+  BF62 CD 46 C0         CALL U_CALC_TABLERO_POS
 189+  BF65                  ; MOVIMIENTO
 190+  BF65 3A 0C 80         LD A, (JUGADOR_ACTUAL)
 191+  BF68 47               LD B, A
@@ -1218,7 +1218,7 @@
 212+  BF7F
 213+  BF7F 24               INC H
 213+  BF80 2D             DEC L
-214+  BF81 CD 39 C0         CALL U_CALC_TABLERO_POS
+214+  BF81 CD 46 C0         CALL U_CALC_TABLERO_POS
 215+  BF84                  ; MOVIMIENTO
 216+  BF84 3A 0C 80         LD A, (JUGADOR_ACTUAL)
 217+  BF87 47               LD B, A
@@ -1327,7 +1327,7 @@
 305+  BFFD FE 50            CP 'P'
 305+  BFFF 28 22          JR Z, VALIDENTER
 306+  C001 FE 46            CP 'F'
-306+  C003 28 2F          JR Z, VALID ; F = Fin de la partida, siempre es válido
+306+  C003 28 3C          JR Z, VALID ; F = Fin de la partida, siempre es válido
 307+  C005
 308+  C005              ; Comprueba si fue una pulsación váida para mover la ficha a la izquierda
 309+  C005              VALIDLEFT:
@@ -1337,8 +1337,8 @@
 313+  C00C 7E               LD A, (HL)
 314+  C00D E1               POP HL
 315+  C00E FE 80            CP BLINK ; si el atributo de color en HL es menor que blink (que lo será si no está sobre la posición más izquierda del tablero)
-316+  C010 38 22            JR C, VALID ; se hará una activación del flag C, por lo que será válida la pulsación
-317+  C012 18 1D            JR NONVALID
+316+  C010 38 2F            JR C, VALID ; se hará una activación del flag C, por lo que será válida la pulsación
+317+  C012 18 2A            JR NONVALID
 318+  C014
 319+  C014              ; Comprueba si fue una pulsación válida para mover la ficha a la derecha
 320+  C014              VALIDRIGHT:
@@ -1348,157 +1348,164 @@
 324+  C01B 7E               LD A, (HL)
 325+  C01C E1               POP HL
 326+  C01D FE 80            CP BLINK
-327+  C01F 38 13            JR C, VALID
-328+  C021 18 0E            JR NONVALID
+327+  C01F 38 20            JR C, VALID
+328+  C021 18 1B            JR NONVALID
 329+  C023              VALIDENTER: ; mismo concepto que validleft y right, pero la comparación se hace con la ficha inmediatamente inferior
 330+  C023 D5               PUSH DE
 330+  C024 E5             PUSH HL
-331+  C025 CD 39 C0         CALL U_CALC_TABLERO_POS
+331+  C025 CD 46 C0         CALL U_CALC_TABLERO_POS
 332+  C028 DD 7E 00         LD A, (IX)
 333+  C02B E1               POP HL
 333+  C02C D1             POP DE
 334+  C02D FE 00            CP 0
-334+  C02F 28 03          JR Z, VALID ; si aquí no saltó a valid, lee directamente la siguiente instrucción,
+334+  C02F 28 10          JR Z, VALID ; si aquí no saltó a valid, lee directamente la siguiente instrucción,
 335+  C031                                    ; que serán las correspondientes a NONVALID
-336+  C031
-337+  C031              NONVALID:
-338+  C031 3E 01            LD A, 1
-339+  C033 C9               RET
-340+  C034              VALID:
-341+  C034 3E 02            LD A, 2
-342+  C036 C9               RET
-343+  C037
-344+  C037
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\logic_checks.asm
- 20   C037                  INCLUDE "utilities.asm"      ; Rutinas que no son características de ninguna función particular
-# file opened: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm
-  1+  C037 18 FE        UTILITIES: JR UTILITIES
-  2+  C039
-  3+  C039              U_CALC_TABLERO_POS:
-  4+  C039                  ; Calcula IX = TABLERO_ACTUAL + (L * 7) + H
-  5+  C039                  ; Donde H = row, L = columna en coordenadas originales de tablero
-  6+  C039
-  7+  C039 7D               LD A, L                    ; Guarda columna (L)
-  8+  C03A 47               LD B, A                    ; guarda L en B
-  9+  C03B 87               ADD A, A                   ; A = L * 2
- 10+  C03C 87               ADD A, A                   ; A = L * 4
- 11+  C03D 87               ADD A, A                   ; A = L * 8
- 12+  C03E 90               SUB B                      ; A = L * 7 (ya que 8L - L = 7L)
- 13+  C03F 84               ADD A, H                   ; A = (L * 7) + H
- 14+  C040
- 15+  C040 DD 21 19 80      LD IX, TABLERO_ACTUAL      ; Dirección de (0,0)
- 16+  C044 16 00            LD D, 0
- 17+  C046 5F               LD E, A                    ; DE = desplazamiento
- 18+  C047 DD 19            ADD IX, DE                 ; IX apunta a tablero actual (h,l)
- 19+  C049
- 20+  C049 C9               RET
- 21+  C04A
- 22+  C04A              ; Rutina de espera
- 23+  C04A              U_ESPERAR:
- 24+  C04A C5               PUSH BC
- 25+  C04B 01 7B 2C         LD BC, 11387
- 26+  C04E
- 27+  C04E              ESPERAR_LOOP:
- 28+  C04E 0B               DEC BC                     ; 6C
- 29+  C04F 78               LD A, B                    ; 4C
- 30+  C050 B1               OR C                       ; 4C
- 31+  C051 00               NOP                        ; 4C
- 32+  C052 00               NOP                        ; 4C
- 33+  C053 00               NOP                        ; 4C
- 34+  C054 20 F8            JR NZ, ESPERAR_LOOP        ; 12C
- 35+  C056
- 36+  C056 C1               POP BC
- 37+  C057 C9               RET
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\utilities.asm
- 21   C058
- 22   C058              ; INICIO DEL FLUJO DEL PROGRAMA FUNCIONAL
- 23   C058              ; Pantalla de bienvenida y gestión de entrada inicial
- 24   C058              INICIO:
- 25   C058 CD C0 BB         CALL GB_BIENVENIDA           ; Dibuja pantalla de bienvenida
- 26   C05B CD 51 80         CALL K_SON                   ; Lee teclado (S/N)
- 27   C05E 7A               LD A, D
- 28   C05F 32 BE 85         LD (CHAR_CARACTER), A        ; Guarda la tecla pulsada
- 29   C062 3E 06            LD A, COLOR_TEXTO_AMARILLO
- 30   C064 CD 25 BC         CALL GB_PRINT_CHAR_SON       ; Imprime la tecla pulsada
- 31   C067 3A BE 85         LD A, (CHAR_CARACTER)
- 32   C06A FE 53            CP 'S'
- 33   C06C CC A1 C0         CALL Z, LOGICA_JUEGO         ; Si se pulsó 'S', comienza la lógica del juego
- 34   C06F FE 4E            CP 'N'
- 35   C071 CC 74 C0         CALL Z, ADIOS                ; Si se pulsó 'N', muestra pantalla de despedida
- 36   C074
- 37   C074              ; Pantalla de despedida
- 38   C074              ADIOS:
- 39   C074 CD 31 BC         CALL GB_ADIOS                ; Dibuja pantalla de adiós
- 40   C077              FINAL: ; Bucle final (espera y halt)
- 41   C077 06 0A            LD B, 10
- 42   C079 CD 4A C0         CALL U_ESPERAR
- 43   C07C 10 F9            DJNZ FINAL
- 44   C07E 76               HALT
- 45   C07F
- 46   C07F              ; Pantalla de fin de partida y opción de reinicio
- 47   C07F              FIN_NEXT:
- 48   C07F CD 58 BC         CALL GB_FIN_NEXT             ; Dibuja pantalla de fin y pregunta S/N
- 49   C082 CD 51 80         CALL K_SON                   ; Lee teclado (S/N)
- 50   C085 7A               LD A, D
- 51   C086 FE 53            CP 'S'
- 52   C088 CC A1 C0         CALL Z, LOGICA_JUEGO         ; Si se pulsó 'S', inicia nuevo juego
- 53   C08B FE 4E            CP 'N'
- 54   C08D CC 74 C0         CALL Z, ADIOS                ; Si se pulsó 'N', muestra pantalla de despedida
- 55   C090
- 56   C090              EMPATE:
- 57   C090 CD 64 BC         CALL GB_EMPATE
- 58   C093 CD 51 80         CALL K_SON                   ; Lee teclado (S/N)
- 59   C096 7A               LD A, D
- 60   C097 FE 53            CP 'S'
- 61   C099 CC A1 C0         CALL Z, LOGICA_JUEGO         ; Si se pulsó 'S', inicia nuevo juego
- 62   C09C FE 4E            CP 'N'
- 63   C09E CC 74 C0         CALL Z, ADIOS                ; Si se pulsó 'N', muestra pantalla de despedida
- 64   C0A1              ; Lógica principal del juego
- 65   C0A1              LOGICA_JUEGO:
- 66   C0A1 CD BA BC         CALL GB_PTLLA_INICIO_DE_JUEGO ; Dibuja pantalla de inicio de juego
- 67   C0A4 CD F5 BD         CALL LF_INICIALIZACION        ; Inicializa condiciones del juego
- 68   C0A7              BUCLE_JUEGO:
- 69   C0A7 CD FF BD         CALL LF_SWITCH_JUGADOR        ; Cambia de jugador
- 70   C0AA              GESTIONAR_JUGADA:
- 71   C0AA CD 6A BD         CALL GC_COLOR_JUGADOR_ACTUAL  ; Muestra el jugador actual en pantalla (HL = $5845)
- 72   C0AD              JUGADA:
- 73   C0AD CD 74 80         CALL K_LR_E_F             ; Lee entrada (Q/W/O/P/ENTER/F)
- 74   C0B0 7A               LD A, D
- 75   C0B1 F5               PUSH AF
- 76   C0B2 CD E8 BF         CALL LC_VALIDPLAY             ; Comprueba si la jugada es válida
- 77   C0B5 FE 01            CP 1
- 78   C0B7 28 F4            JR Z, JUGADA                  ; Si no fue válida, espera nueva jugada
- 79   C0B9 F1               POP AF
- 80   C0BA FE 51            CP 'Q'
- 80   C0BC CC 46 BE       CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
- 81   C0BF FE 57            CP 'W'
- 81   C0C1 CC 46 BE      CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la izquierda
- 82   C0C4 FE 49            CP 'I'
- 82   C0C6 CC 46 BE       CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
- 83   C0C9 FE 4F            CP 'O'
- 83   C0CB CC 46 BE      CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la izquierda
- 84   C0CE FE FF            CP $FF
- 84   C0D0 28 DB          JR Z, JUGADA
- 85   C0D2 FE 45            CP 'E'
- 85   C0D4 CC E3 C0       CALL Z, PROCESAR_JUGADA_FINAL
- 86   C0D7 FE 50            CP 'P'
- 86   C0D9 CC E3 C0       CALL Z, PROCESAR_JUGADA_FINAL             ; Ejecuta acción de soltar ficha
- 87   C0DC
- 88   C0DC FE 46            CP 'F'
- 88   C0DE CC 7F C0       CALL Z, FIN_NEXT              ; Termina partida
- 89   C0E1
- 90   C0E1 18 CA            JR JUGADA
- 91   C0E3              PROCESAR_JUGADA_FINAL:
- 92   C0E3 CD CA BD         CALL GC_ENTER             ; La ficha cae
- 93   C0E6
- 94   C0E6                  ; AQUI CONECTAMOS CON LA LOGICA
- 95   C0E6 CD 5D BE         CALL LC_COMPROBAR_RESULTADO
- 96   C0E9 FE 00            CP 0
- 96   C0EB 28 92          JR Z, FIN_NEXT            ; ¡SI (A=0), HA GANADO, SE VA A LA PANTALLA
- 97   C0ED
- 98   C0ED                  ; SI NO GANASTE, COMPROBAR EMPATE O SEGUIR (MIRAMOS EL FLAG C YA QUE SI SE ACTIVA ES EMPATE(EL 1 DE EMPATE ES MENOR QUE 64))
- 99   C0ED                  ; SI NO SE ACTIVA EL FLAG C = CONTINUAR PARTIDA (128 = CONTINUAR PARTIDA Y ES > 64)
-100   C0ED FE 40            CP 64   ; COMPRUEBA EMPATE O SEGUIR JUEGO (NUMERO RANDOM ENTRE EL 1(EMPATE) Y 128(SEGUIR JUGANDO))
-101   C0EF 38 9F            JR C, EMPATE
-102   C0F1 18 B4            JR BUCLE_JUEGO
-# file closed: C:\Users\luisx\OneDrive - UFV\curso2\AOC\ejerYpruebas\L34-Parte1\main.asm
+336+  C031 F5               PUSH AF
+337+  C032 3E 02            LD A, COLOR_ROJO
+338+  C034 D3 FE            OUT ($FE), A
+339+  C036 CD 57 C0         CALL U_ESPERAR
+340+  C039 3E 00            LD A, 0
+341+  C03B D3 FE            OUT ($FE), A
+342+  C03D F1               POP AF
+343+  C03E
+344+  C03E              NONVALID:
+345+  C03E 3E 01            LD A, 1
+346+  C040 C9               RET
+347+  C041              VALID:
+348+  C041 3E 02            LD A, 2
+349+  C043 C9               RET
+350+  C044
+351+  C044
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\logic_checks.asm
+ 20   C044                  INCLUDE "utilities.asm"      ; Rutinas que no son características de ninguna función particular
+# file opened: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm
+  1+  C044 18 FE        UTILITIES: JR UTILITIES
+  2+  C046
+  3+  C046              U_CALC_TABLERO_POS:
+  4+  C046                  ; Calcula IX = TABLERO_ACTUAL + (L * 7) + H
+  5+  C046                  ; Donde H = row, L = columna en coordenadas originales de tablero
+  6+  C046
+  7+  C046 7D               LD A, L                    ; Guarda columna (L)
+  8+  C047 47               LD B, A                    ; guarda L en B
+  9+  C048 87               ADD A, A                   ; A = L * 2
+ 10+  C049 87               ADD A, A                   ; A = L * 4
+ 11+  C04A 87               ADD A, A                   ; A = L * 8
+ 12+  C04B 90               SUB B                      ; A = L * 7 (ya que 8L - L = 7L)
+ 13+  C04C 84               ADD A, H                   ; A = (L * 7) + H
+ 14+  C04D
+ 15+  C04D DD 21 19 80      LD IX, TABLERO_ACTUAL      ; Dirección de (0,0)
+ 16+  C051 16 00            LD D, 0
+ 17+  C053 5F               LD E, A                    ; DE = desplazamiento
+ 18+  C054 DD 19            ADD IX, DE                 ; IX apunta a tablero actual (h,l)
+ 19+  C056
+ 20+  C056 C9               RET
+ 21+  C057
+ 22+  C057              ; Rutina de espera
+ 23+  C057              U_ESPERAR:
+ 24+  C057 C5               PUSH BC
+ 25+  C058 01 7B 2C         LD BC, 11387
+ 26+  C05B
+ 27+  C05B              ESPERAR_LOOP:
+ 28+  C05B 0B               DEC BC                     ; 6C
+ 29+  C05C 78               LD A, B                    ; 4C
+ 30+  C05D B1               OR C                       ; 4C
+ 31+  C05E 00               NOP                        ; 4C
+ 32+  C05F 00               NOP                        ; 4C
+ 33+  C060 00               NOP                        ; 4C
+ 34+  C061 20 F8            JR NZ, ESPERAR_LOOP        ; 12C
+ 35+  C063
+ 36+  C063 C1               POP BC
+ 37+  C064 C9               RET
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\utilities.asm
+ 21   C065
+ 22   C065              ; INICIO DEL FLUJO DEL PROGRAMA FUNCIONAL
+ 23   C065              ; Pantalla de bienvenida y gestión de entrada inicial
+ 24   C065              INICIO:
+ 25   C065 CD C0 BB         CALL GB_BIENVENIDA           ; Dibuja pantalla de bienvenida
+ 26   C068 CD 51 80         CALL K_SON                   ; Lee teclado (S/N)
+ 27   C06B 7A               LD A, D
+ 28   C06C 32 BE 85         LD (CHAR_CARACTER), A        ; Guarda la tecla pulsada
+ 29   C06F 3E 06            LD A, COLOR_TEXTO_AMARILLO
+ 30   C071 CD 25 BC         CALL GB_PRINT_CHAR_SON       ; Imprime la tecla pulsada
+ 31   C074 3A BE 85         LD A, (CHAR_CARACTER)
+ 32   C077 FE 53            CP 'S'
+ 33   C079 CC AE C0         CALL Z, LOGICA_JUEGO         ; Si se pulsó 'S', comienza la lógica del juego
+ 34   C07C FE 4E            CP 'N'
+ 35   C07E CC 81 C0         CALL Z, ADIOS                ; Si se pulsó 'N', muestra pantalla de despedida
+ 36   C081
+ 37   C081              ; Pantalla de despedida
+ 38   C081              ADIOS:
+ 39   C081 CD 31 BC         CALL GB_ADIOS                ; Dibuja pantalla de adiós
+ 40   C084              FINAL: ; Bucle final (espera y halt)
+ 41   C084 06 0A            LD B, 10
+ 42   C086 CD 57 C0         CALL U_ESPERAR
+ 43   C089 10 F9            DJNZ FINAL
+ 44   C08B 76               HALT
+ 45   C08C
+ 46   C08C              ; Pantalla de fin de partida y opción de reinicio
+ 47   C08C              FIN_NEXT:
+ 48   C08C CD 58 BC         CALL GB_FIN_NEXT             ; Dibuja pantalla de fin y pregunta S/N
+ 49   C08F CD 51 80         CALL K_SON                   ; Lee teclado (S/N)
+ 50   C092 7A               LD A, D
+ 51   C093 FE 53            CP 'S'
+ 52   C095 CC AE C0         CALL Z, LOGICA_JUEGO         ; Si se pulsó 'S', inicia nuevo juego
+ 53   C098 FE 4E            CP 'N'
+ 54   C09A CC 81 C0         CALL Z, ADIOS                ; Si se pulsó 'N', muestra pantalla de despedida
+ 55   C09D
+ 56   C09D              EMPATE:
+ 57   C09D CD 64 BC         CALL GB_EMPATE
+ 58   C0A0 CD 51 80         CALL K_SON                   ; Lee teclado (S/N)
+ 59   C0A3 7A               LD A, D
+ 60   C0A4 FE 53            CP 'S'
+ 61   C0A6 CC AE C0         CALL Z, LOGICA_JUEGO         ; Si se pulsó 'S', inicia nuevo juego
+ 62   C0A9 FE 4E            CP 'N'
+ 63   C0AB CC 81 C0         CALL Z, ADIOS                ; Si se pulsó 'N', muestra pantalla de despedida
+ 64   C0AE              ; Lógica principal del juego
+ 65   C0AE              LOGICA_JUEGO:
+ 66   C0AE CD BA BC         CALL GB_PTLLA_INICIO_DE_JUEGO ; Dibuja pantalla de inicio de juego
+ 67   C0B1 CD F5 BD         CALL LF_INICIALIZACION        ; Inicializa condiciones del juego
+ 68   C0B4              BUCLE_JUEGO:
+ 69   C0B4 CD FF BD         CALL LF_SWITCH_JUGADOR        ; Cambia de jugador
+ 70   C0B7              GESTIONAR_JUGADA:
+ 71   C0B7 CD 6A BD         CALL GC_COLOR_JUGADOR_ACTUAL  ; Muestra el jugador actual en pantalla (HL = $5845)
+ 72   C0BA              JUGADA:
+ 73   C0BA CD 74 80         CALL K_LR_E_F             ; Lee entrada (Q/W/O/P/ENTER/F)
+ 74   C0BD 7A               LD A, D
+ 75   C0BE F5               PUSH AF
+ 76   C0BF CD E8 BF         CALL LC_VALIDPLAY             ; Comprueba si la jugada es válida
+ 77   C0C2 FE 01            CP 1
+ 78   C0C4 28 F4            JR Z, JUGADA                  ; Si no fue válida, espera nueva jugada
+ 79   C0C6 F1               POP AF
+ 80   C0C7 FE 51            CP 'Q'
+ 80   C0C9 CC 46 BE       CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
+ 81   C0CC FE 57            CP 'W'
+ 81   C0CE CC 46 BE      CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la izquierda
+ 82   C0D1 FE 49            CP 'I'
+ 82   C0D3 CC 46 BE       CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la derecha
+ 83   C0D6 FE 4F            CP 'O'
+ 83   C0D8 CC 46 BE      CALL Z, LF_JUGADA_DESPLAZAMIENTO ; Desplaza ficha a la izquierda
+ 84   C0DB FE FF            CP $FF
+ 84   C0DD 28 DB          JR Z, JUGADA
+ 85   C0DF FE 45            CP 'E'
+ 85   C0E1 CC F0 C0       CALL Z, PROCESAR_JUGADA_FINAL
+ 86   C0E4 FE 50            CP 'P'
+ 86   C0E6 CC F0 C0       CALL Z, PROCESAR_JUGADA_FINAL             ; Ejecuta acción de soltar ficha
+ 87   C0E9
+ 88   C0E9 FE 46            CP 'F'
+ 88   C0EB CC 8C C0       CALL Z, FIN_NEXT              ; Termina partida
+ 89   C0EE
+ 90   C0EE 18 CA            JR JUGADA
+ 91   C0F0              PROCESAR_JUGADA_FINAL:
+ 92   C0F0 CD CA BD         CALL GC_ENTER             ; La ficha cae
+ 93   C0F3
+ 94   C0F3                  ; AQUI CONECTAMOS CON LA LOGICA
+ 95   C0F3 CD 5D BE         CALL LC_COMPROBAR_RESULTADO
+ 96   C0F6 FE 00            CP 0
+ 96   C0F8 28 92          JR Z, FIN_NEXT            ; ¡SI (A=0), HA GANADO, SE VA A LA PANTALLA
+ 97   C0FA
+ 98   C0FA                  ; SI NO GANASTE, COMPROBAR EMPATE O SEGUIR (MIRAMOS EL FLAG C YA QUE SI SE ACTIVA ES EMPATE(EL 1 DE EMPATE ES MENOR QUE 64))
+ 99   C0FA                  ; SI NO SE ACTIVA EL FLAG C = CONTINUAR PARTIDA (128 = CONTINUAR PARTIDA Y ES > 64)
+100   C0FA FE 40            CP 64   ; COMPRUEBA EMPATE O SEGUIR JUEGO (NUMERO RANDOM ENTRE EL 1(EMPATE) Y 128(SEGUIR JUGANDO))
+101   C0FC 38 9F            JR C, EMPATE
+102   C0FE 18 B4            JR BUCLE_JUEGO
+# file closed: C:\Users\Manuel Cencerrado\OneDrive - UFV\Escritorio\UFV\ING.INF\2\AOC\Practicas\Ejercicios\practicaConecta4\main.asm

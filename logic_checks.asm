@@ -332,7 +332,15 @@ VALIDENTER: ; mismo concepto que validleft y right, pero la comparación se hace
     LD A, (IX)
     POP HL: POP DE
     CP 0: JR Z, VALID ; si aquí no saltó a valid, lee directamente la siguiente instrucción,
-                      ; que serán las correspondientes a NONVALID 
+                      ; que serán las correspondientes a NONVALID
+    ; Marco en rojo si la columna esta llena 
+    PUSH AF
+    LD A, COLOR_ROJO
+    OUT ($FE), A
+    CALL U_ESPERAR
+    LD A, 0
+    OUT ($FE), A
+    POP AF
 
 NONVALID:
     LD A, 1
