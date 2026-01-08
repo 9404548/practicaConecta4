@@ -1,4 +1,14 @@
 UTILITIES: JR UTILITIES
+; #######################################################################
+; PLANTILLA DOCUMENTACION DE RUTINAS
+; #######################################################################
+; TITULO_RUTINA
+; RECIBE: [VALORES O REGISTROS QUE RECIBE PARA FUNCIONAR CORRECTAMENTE]
+; DEVUELVE: [VALORES O REGISTROS QUE DEVUELVE AL TERMINAR EJECUCION]
+; USO: [PARA QUE SE UTILIZA]
+; NOTAS: [ASPECTOS A CONSIDERAR EN EL USO DE LA RUTINA] 
+
+
 
 U_CALC_TABLERO_POS:
     ; Calcula IX = TABLERO_ACTUAL + (L * 7) + H
